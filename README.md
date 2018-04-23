@@ -1,3 +1,21 @@
-# My Awesome Book
+# Summary
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+* [Introduction](README.md)
+* [01\_Initial\_setup](01initial-setup.md)
+  * [01\_A\_VM\_setup](01initial-setup/01a-vm-setup.md)
+  * [01\_B\_x11\_setup](01initial-setup/01b-x11setup.md)
+* [02\_Docker\_setup](02docker-setup.md)
+* [03\_ROS\_setup](03ros-setup.md)
+* [04\_Python\_setup](04python-setup.md)
+  * [04\_A\_Jupyter\_setup](04python-setup/04a-jupyter-setup.md)
+* [05\_CUDA\_setup](05cuda-setup.md)
+  * [05\_A\_Tensorflow\_setup](05cuda-setup/05a-tensorflow-setup.md)
+  * [05\_B\_Caffe\_setup](05cuda-setup/05b-caffe-setup.md)
+  * [05\_C\_PyTorch\_setup](05cuda-setup/05c-pytorch-setup.md)
+* 08\_Library\_setup
+  * [08\_A\_PCL\_setup](08a-pcl-setup.md)
+* [09\_Device\_setup](09device-setup.md)
+  * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
+  * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)
+  * [09\_C\_Fusion\_Velo\_PtGrey](09device-setup/09c-fusion-velo-ptgrey.md)
+
