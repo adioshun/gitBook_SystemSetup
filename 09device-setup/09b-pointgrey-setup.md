@@ -4,11 +4,12 @@ BFLY-PGE-31S4C-C
 
 ### 2.1 Installation 
 
-
+> ref :[Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/KB/10548)
 
 1. Download : flycapture2-2.9.3.43-amd64-pkg.tgz [[Link]](https://www.ptgrey.com/support/downloads)
 
 2. Dependent Package 
+ - Ubuntu 16.04: `sudo apt-get install libraw1394-11 libgtkmm-2.4-1v5 libglademm-2.4-1v5 libgtkglextmm-x11-1.2-dev libgtkglextmm-x11-1.2 libusb-1.0-0`
  - Ubuntu 14.04: `sudo apt-get install libraw1394-11 libgtkmm-2.4-1c2a libglademm-2.4-1c2a libgtkglextmm-x11-1.2-dev libgtkglextmm-x11-1.2 libusb-1.0-0 libglademm-2.4-dev`
  - Ubuntu 12.04: `sudo apt-get install libraw1394-11 libgtk2.0-0 libgtkmm-2.4-dev libglademm-2.4-dev libgtkglextmm-x11-1.2-dev libusb-1.0-0 libglademm-2.4-dev`
 
@@ -40,7 +41,7 @@ pip install pyflycap2
 > [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
 
 
-> error : Failed to start with error: PointGreyCamera::start Failed to start capture | FlyCapture2::ErrorType 33 Error starting isochronous stream. --> ??
+> error : Failed to start with error: PointGreyCamera::start Failed to start capture | FlyCapture2::ErrorType 33 Error starting isochronous stream. --> [reducing the frame rate](https://stackoverflow.com/questions/12070778/trouble-in-driving-point-grey-grasshoper-cameras)
 
 > error : IMAGE_CONSISTENCY_ERRORS ->  [sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576](http://www.ptgrey.com/KB/10016), Packet size 중간, Packet delay 높게, Jumbo packet(MTU) 최대
 
