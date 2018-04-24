@@ -1,11 +1,13 @@
 ## 1. Velodyne
 
-[velodyne](http://wiki.ros.org/velodyne)
 
+### Velovuew 
 
-$ Veloview 
+[Linux 64bit](http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.1&type=app&os=win32&downloadFile=VeloView-3.5.0-Linux-64bit.sh)
 
 ### 1.2 Velodyne for ROS  
+
+> [ROS_velodyne](http://wiki.ros.org/velodyne)
 
 #### A. ROS dependencies 설치 
 
@@ -36,25 +38,14 @@ cd ~/catkin_ws/ && catkin_make
 > ref : [velodyne-ROS wiki](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
 
 #### C. 확인 
-```
-# Velodyne 노드 실행 & 데이터 수집 
-$ roslaunch velodyne_pointcloud VLP16_points.launch
-# Now, the necessary nodes are running. You can check this with the following command
 
-# 실행 노드 확인 
-$ rosnode list
-# You'll can see the messages being published and subscribed in the following topic:
+Velodyne 노드 실행 & 데이터 수집 : `$ roslaunch velodyne_pointcloud VLP16_points.launch`
 
-# 메시지 출력 
-$ rostopic echo /velodyne_points
-# After That, launch rviz, with the "velodyne" as a fixed frame:
 
-# rviz이용 시각화 
-$ rosrun rviz rviz -f velodyne
-# In the "displays" panel, click "Add", then select "Point Cloud2", then press "OK".
-# In the "Topic" field of the new "Point Cloud2" tab, enter "/velodyne_points"
-# Congratulations. Now, your Velodyne is ready to builds the "real" world inside your system. Enjoy it.
-```
+메시지 출력 : `$ rostopic echo /velodyne_points --noarr`
+
+
+rviz이용 시각화 : `$ rosrun rviz rviz -f velodyne`
 
 ### 1.3 Calibration in ROS
 
