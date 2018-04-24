@@ -183,9 +183,21 @@ Lidar 거리 : 2m `Keeping the LiDAR about 2.0 meters away from board with these
 
 ## 2. 파일 설정
 
+### 2.1  `lidar_camera_calibration.yaml` 파일
+
+참고 해야 하는 카메라와 라이다 TOPIC명시 `Contains name of camera and velodyne topics that the node will subscribe to.`
+
+```
+lidar_camera_calibration:
+camera_frame_topic: /frontNear/left/image_raw   # [중요] 반드시 변경
+camera_info_topic: /frontNear/left/camera_info  # [중요] 반드시 변경
+velodyne_topic: /velodyne_points
+```
+
+
 > `lidar_camera_calibration/launch/find_transform.launch` 을이용하여 값 찾을수 있음
 
-######  `config_file.txt` 파일
+### 2.2  `config_file.txt` 파일
 
 ```
 1280 720 # image_width image_height
@@ -208,12 +220,12 @@ Lidar 거리 : 2m `Keeping the LiDAR about 2.0 meters away from board with these
                 # The final transformation that is estimated by the package accounts for this initial rotation.
 ```
 
-###### `marker_coordinates.txt` 파일
+### 2.3 `marker_coordinates.txt` 파일
 
 
 The ArUco markers are stuck on the board such that when it is hung from a corner, the ArUco marker is on the left side of the board.
 
-![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/aruco_axis.png)
+
 Notice how the axis are aligned.
 
 y-axis should point outwards, x-axis along the breadth (s2) and z-axis along the length (s1).
@@ -222,7 +234,7 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 
 
 
-![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/board_dim_label.jpg)
+
 ```
 # cm 단위로 표기
 2     # 'N' the number of boards
@@ -237,17 +249,11 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 5.0   # b2
 20.5  # e
 ```
+![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/board_dim_label.jpg)
 
-######  `lidar_camera_calibration.yaml` 파일
+![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/aruco_axis.png)
 
-참고 해야 하는 카메라와 라이다 TOPIC명시 `Contains name of camera and velodyne topics that the node will subscribe to.`
 
-```
-lidar_camera_calibration:
-camera_frame_topic: /frontNear/left/image_raw
-camera_info_topic: /frontNear/left/camera_info
-velodyne_topic: /velodyne_points
-```
 
 ###### `find_transform.launch` 파일
 
