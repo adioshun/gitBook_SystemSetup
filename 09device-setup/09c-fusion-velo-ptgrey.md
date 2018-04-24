@@ -26,6 +26,8 @@ catkin_make install
 ```
 > /root/catkin_ws/devel/lib/aruco_mapping/aruco_mapping
 
+실행 : `roslaunch lidar_camera_calibration find_transform.launch`
+
 ### 3.2. Hector 방식 (2017)
 
 [ROS packages related to calibration of robots and subsystems (cameras, LIDAR, kinematics)](https://github.com/tu-darmstadt-ros-pkg/hector_calibration)
