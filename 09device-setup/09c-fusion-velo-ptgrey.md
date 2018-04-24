@@ -13,6 +13,19 @@
 - Slightly modified aruco_mapping 
 
 
+```
+cd ~
+cp -r lidar_camera_calibration/dependencies/aruco_ros/ catkin_ws/src/
+cd catkin_ws/
+catkin_make
+cp -r ~/lidar_camera_calibration/dependencies/aruco_mapping/ ~/catkin_ws/src/
+catkin_make
+cp -r ~/lidar_camera_calibration ~/catkin_ws/src/
+catkin_make
+catkin_make install 
+```
+> /root/catkin_ws/devel/lib/aruco_mapping/aruco_mapping
+
 ### 3.2. Hector 방식 (2017)
 
 [ROS packages related to calibration of robots and subsystems (cameras, LIDAR, kinematics)](https://github.com/tu-darmstadt-ros-pkg/hector_calibration)
