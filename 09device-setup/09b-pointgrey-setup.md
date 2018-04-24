@@ -3,7 +3,8 @@
 BFLY-PGE-31S4C-C
 
 ### 2.1 Installation 
-> consistency error : Packet size 중간, Packet delay 높게, Jumbo packet(MTU) 최대
+
+
 
 1. Download : flycapture2-2.9.3.43-amd64-pkg.tgz [[Link]](https://www.ptgrey.com/support/downloads)
 
@@ -39,9 +40,20 @@ pip install pyflycap2
 > [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
 
 
-> error : Failed to start with error: PointGreyCamera::start Failed to start capture | FlyCapture2::ErrorType 33 Error starting isochronous stream. --> 
+> error : Failed to start with error: PointGreyCamera::start Failed to start capture | FlyCapture2::ErrorType 33 Error starting isochronous stream. --> ??
+
+> error : IMAGE_CONSISTENCY_ERRORS ->  [sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576](http://www.ptgrey.com/KB/10016), Packet size 중간, Packet delay 높게, Jumbo packet(MTU) 최대
+
+
+
 
 ### 2.4 PointGrey for ROS
+
+#### A. Apt install 
+
+apt-get install ros-indigo-pointgrey-camera-driver
+
+#### B. Source install 
 
 [pointgrey_camera_driver](http://wiki.ros.org/pointgrey_camera_driver)
 
