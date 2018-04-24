@@ -29,7 +29,8 @@ BFLY-PGE-31S4C-C
    FlyCapture2Test
    ```
 
-1. Run 
+6. Run
+
    * Applications -&gt; Point Grey Research -&gt; FlyCapture
    * `$ FlyCap2`
 
