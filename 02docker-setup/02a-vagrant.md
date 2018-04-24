@@ -5,11 +5,13 @@
 
 ### 1. Install
 
+`apt-get install virtualbox`
 `apt-get install vagrant`
 
 
 ### 2. 확인 
 ```
+VBoxManage -v
 vagrant -v
 vagrant status
 ```
