@@ -4,7 +4,7 @@
 |학회/년도| arXiv2017, [논문](https://arxiv.org/pdf/1705.09785.pdf)|
 |키워드| VLP-16, Point Gray Blackfly, ZED stereo camera|
 |데이터셋/모델||
-|참고|[저자홈페이지](https://ankitdhall.github.io/), [ROS Package](http://wiki.ros.org/lidar_camera_calibration)|
+|참고|[저자홈페이지](https://ankitdhall.github.io/), [ROS Package](http://wiki.ros.org/lidar_camera_calibration))|
 |코드|[깃허브](), [tutorial.ytb](https://youtu.be/SiPGPwNKE-Q), [comparison.ytb](https://youtu.be/AbjRDtHLdz0), [Stereo_demo.ytb](https://youtu.be/Om1SFPAZ5Lc) |
 
 # Lidar - Camera 3D-3D
@@ -292,6 +292,7 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 ![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/aruco_axis.png)
 
 
+> [Aruco Marker Generator](https://terpconnect.umd.edu/~jwelsh12/enes100/markergen.html): ID 25, 582
 
 
 ## 3. 실행
