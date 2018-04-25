@@ -24,21 +24,12 @@ catkin_make install
 
 ### 1.2 설정 
 
-
-
 > /root/catkin\_ws/devel/lib/aruco\_mapping/aruco\_mapping
 
 실행 : `roslaunch lidar_camera_calibration find_transform.launch`
 
 
-
-# 칼리브레이션
-
-## 1. 사전 준비
-
-## 2. 파일 설정
-
-### 2.1 `lidar_camera_calibration.yaml` 파일 수정
+#### A `lidar_camera_calibration.yaml` 파일 수정
 
 참고 해야 하는 카메라와 라이다 TOPIC명시 `Contains name of camera and velodyne topics that the node will subscribe to.`
 
@@ -52,7 +43,7 @@ velodyne_topic: /velodyne_points
 
 > `lidar_camera_calibration/launch/find_transform.launch` 을이용하여 값 찾을수 있음
 
-### 2.2 `config_file.txt` 파일 수정
+#### B. `config_file.txt` 파일 수정
 
 ```
 1280 720 # image_width image_height
@@ -77,7 +68,7 @@ velodyne_topic: /velodyne_points
 
 
 
-### 2.3 `find_transform.launch` 파일 수정
+#### C. `find_transform.launch` 파일 수정
 
 `aruco_mapping`노드에게 필요한 정보들 `Parameters are required for the aruco_mapping node and need to be specfied here.`
 - Ensure that the topics are mapped correctly for the node to function. Other parameters required are:
@@ -112,7 +103,7 @@ velodyne_topic: /velodyne_points
 
 
 
-### 2.4 `marker_coordinates.txt` 파일
+#### D. `marker_coordinates.txt` 파일
 
 
 The ArUco markers are stuck on the board such that when it is hung from a corner, the ArUco marker is on the left side of the board.
