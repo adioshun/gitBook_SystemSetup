@@ -12,6 +12,7 @@
 
 ```
 cd ~
+git clone https://github.com/ankitdhall/lidar_camera_calibration.git 
 cp -r lidar_camera_calibration/dependencies/aruco_ros/ catkin_ws/src/
 cd catkin_ws/
 catkin_make
