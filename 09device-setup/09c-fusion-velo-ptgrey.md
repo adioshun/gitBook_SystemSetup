@@ -83,7 +83,7 @@ velodyne_topic: /velodyne_points
 
 <!-- ArUco mapping -->
 <!-- <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
-<remap from="/image_raw" to="/frontNear/left/image_raw"/> ## 수정필요?
+<remap from="/image_raw" to="/image_raw"/> ## Must
 
 <param name="calibration_file" type="string" value="$(find aruco_mapping)/data/geniusF100.ini" /> # 칼리브레이션 파일(ini)
 <param name="num_of_markers" type="int" value="2" /> # 마커 갯수
