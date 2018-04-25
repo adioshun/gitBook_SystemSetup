@@ -183,7 +183,7 @@ Lidar 거리 : 2m `Keeping the LiDAR about 2.0 meters away from board with these
 
 ## 2. 파일 설정
 
-### 2.1  `lidar_camera_calibration.yaml` 파일
+### 2.1  `lidar_camera_calibration.yaml` 파일 수정
 
 참고 해야 하는 카메라와 라이다 TOPIC명시 `Contains name of camera and velodyne topics that the node will subscribe to.`
 
@@ -197,7 +197,7 @@ velodyne_topic: /velodyne_points
 
 > `lidar_camera_calibration/launch/find_transform.launch` 을이용하여 값 찾을수 있음
 
-### 2.2  `config_file.txt` 파일
+### 2.2  `config_file.txt` 파일 수정
 
 ```
 1280 720 # image_width image_height
@@ -220,7 +220,45 @@ velodyne_topic: /velodyne_points
                 # The final transformation that is estimated by the package accounts for this initial rotation.
 ```
 
-### 2.3 `marker_coordinates.txt` 파일
+
+
+### 2.3 `find_transform.launch` 파일 수정
+
+`aruco_mapping`노드에게 필요한 정보들 `Parameters are required for the aruco_mapping node and need to be specfied here.`
+- Ensure that the topics are mapped correctly for the node to function. Other parameters required are:
+  - calibration_file(.ini format)
+  - num_of_markers
+  - marker_size(in meters)
+  
+```xml
+<?xml version="1.0"?>
+<launch>
+  <!-- <param name="/use_sim_time" value="true"/> -->
+
+
+  <!-- ArUco mapping -->
+ <!--  <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
+    <remap from="/image_raw" to="/frontNear/left/image_raw"/>
+
+    <param name="calibration_file" type="string" value="$(find aruco_mapping)/data/zed_left_uurmi.ini" />  # 칼리브레이션 파일(ini)
+    <param name="num_of_markers" type="int" value="2" />  # 마커 갯수
+    <param name="marker_size" type="double" value="0.205"/> # 마커 크기
+    <param name="space_type" type="string" value="plane" />
+    <param name="roi_allowed" type="bool" value="false" />
+
+
+  </node>  -->
+
+
+  <rosparam command="load" file="$(find lidar_camera_calibration)/conf/lidar_camera_calibration.yaml" />
+  <node pkg="lidar_camera_calibration" type="find_transform" name="find_transform" output="screen">
+  </node>
+</launch>
+```
+
+
+
+### 2.4 `marker_coordinates.txt` 파일 
 
 
 The ArUco markers are stuck on the board such that when it is hung from a corner, the ArUco marker is on the left side of the board.
@@ -255,38 +293,6 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 
 
 
-###### `find_transform.launch` 파일
-
-`aruco_mapping`노드에게 필요한 정보들 `Parameters are required for the aruco_mapping node and need to be specfied here.`
-- Ensure that the topics are mapped correctly for the node to function. Other parameters required are:
-  - calibration_file(.ini format)
-  - num_of_markers
-  - marker_size(in meters)
-```
-<?xml version="1.0"?>
-<launch>
-  <!-- <param name="/use_sim_time" value="true"/> -->
-
-
-  <!-- ArUco mapping -->
- <!--  <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
-    <remap from="/image_raw" to="/frontNear/left/image_raw"/>
-
-    <param name="calibration_file" type="string" value="$(find aruco_mapping)/data/zed_left_uurmi.ini" />  # 칼리브레이션 파일(ini)
-    <param name="num_of_markers" type="int" value="2" />  # 마커 갯수
-    <param name="marker_size" type="double" value="0.205"/> # 마커 크기
-    <param name="space_type" type="string" value="plane" />
-    <param name="roi_allowed" type="bool" value="false" />
-
-
-  </node>  -->
-
-
-  <rosparam command="load" file="$(find lidar_camera_calibration)/conf/lidar_camera_calibration.yaml" />
-  <node pkg="lidar_camera_calibration" type="find_transform" name="find_transform" output="screen">
-  </node>
-</launch>
-```
 
 ## 3. 실행
 
