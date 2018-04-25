@@ -6,6 +6,7 @@ BFLY-PGE-31S4C-C
 
 > ref :[Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/KB/10548)
 
+
 #### A. flycapture2 (ubuntu 14, 16)
 
 1. Download : flycapture2-2.9.3.43-amd64-pkg.tgz [\[Link\]](https://www.ptgrey.com/support/downloads)
@@ -53,10 +54,14 @@ BFLY-PGE-31S4C-C
 pip install pyflycap2
 
 > [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
->
-> error : Failed to start with error: PointGreyCamera::start Failed to start capture \| FlyCapture2::ErrorType 33 Error starting isochronous stream. --&gt; [reducing the frame rate](https://stackoverflow.com/questions/12070778/trouble-in-driving-point-grey-grasshoper-cameras)
->
-> error : IMAGE\_CONSISTENCY\_ERRORS -&gt;  [sudo sysctl -w net.core.rmem\_max=1048576 net.core.rmem\_default=1048576](http://www.ptgrey.com/KB/10016), Packet size 중간, Packet delay 높게, Jumbo packet\(MTU\) 최대
+
+
+|에러코드|해결책|
+|-|-|
+|Failed to start with error: PointGreyCamera::start Failed to start capture \| FlyCapture2::ErrorType 33 Error starting isochronous stream|[reducing the frame rate](https://stackoverflow.com/questions/12070778/trouble-in-driving-point-grey-grasshoper-cameras) `modprobe usbcore usbfs_memory_mb=1024` [[영구 설정]](https://stackoverflow.com/questions/43297480/failed-isochronous-start-error-0x2-when-starting-reading-from-2-cameras-ptgre)|
+|IMAGE\_CONSISTENCY\_ERRORS|[sudo sysctl -w net.core.rmem\_max=1048576 net.core.rmem\_default=1048576](http://www.ptgrey.com/KB/10016), Packet size 중간, Packet delay 높게, Jumbo packet\(MTU\) 최대|
+|Low level failure writing register 0x60c with value 0x8004. Error: 0x3||
+||`sudo ip link set eth0 mtu 9000`& `ip link show eth0`|
 
 ### 2.4 PointGrey for ROS
 
