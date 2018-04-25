@@ -1,6 +1,7 @@
 ## 2. PointGrey
 
-BFLY-PGE-31S4C-C
+[BFLY-PGE-31S4C-C](http://www.av-iq.com/avcat/ctl17578/index.cfm?manufacturer=point-grey-research-flir&product=bfly-pge-31s4c-c)
+- 2048x1536 
 
 ### 2.1 Installation
 
