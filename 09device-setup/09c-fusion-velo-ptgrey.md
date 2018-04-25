@@ -10,13 +10,11 @@
 
 ### 1.1 설치 
 
-```
+```bash
 cd ~
 git clone https://github.com/ankitdhall/lidar_camera_calibration.git 
 cp -r lidar_camera_calibration/dependencies/aruco_ros/ catkin_ws/src/
 cd catkin_ws/
-catkin_make
-cp -r ~/lidar_camera_calibration/dependencies/aruco_mapping/ ~/catkin_ws/src/
 catkin_make
 cp -r ~/lidar_camera_calibration ~/catkin_ws/src/
 catkin_make
@@ -34,10 +32,10 @@ catkin_make install
 
 참고 해야 하는 카메라와 라이다 TOPIC명시 `Contains name of camera and velodyne topics that the node will subscribe to.`
 
-```
+```python
 lidar_camera_calibration:
-camera_frame_topic: /frontNear/left/image_raw # [중요] 반드시 변경
-camera_info_topic: /frontNear/left/camera_info # [중요] 반드시 변경
+camera_frame_topic: /image_raw # [중요] 반드시 변경
+camera_info_topic: /camera_info # [중요] 반드시 변경
 velodyne_topic: /velodyne_points
 ```
 
@@ -46,14 +44,14 @@ velodyne_topic: /velodyne_points
 
 #### B. `config_file.txt` 파일 수정
 
-```
-1280 720                 # image_width image_height
+```python
+480 640                 # image_width image_height
 -2.5 2.5                 # x- x+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
 -4.0 4.0                 # y- y+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
 0.0 2.5                 # z- z+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
 0.05 # cloud_intensity_threshold # Intensity가 낮는 포인트 제거를 위한 필터의 기준
 2                 # number_of_markers
-0                 # use_camera_info_topic? # `camera_info topic`을 사용하려면 `1` / '0'은 `config_file.txt`의 값 사용
+1                 # use_camera_info_topic? # `camera_info topic`을 사용하려면 `1` / '0'은 `config_file.txt`의 값 사용
 611.651245 0.0 642.388357 0.0 # fx 0 cx 0
 0.0 688.443726 365.971718 0.0 # 0 fy cy 0
 0.0 0.0 1.0 0.0 # MAX_ITERS
@@ -87,7 +85,7 @@ velodyne_topic: /velodyne_points
 <!-- <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
 <remap from="/image_raw" to="/frontNear/left/image_raw"/> ## 수정필요?
 
-<param name="calibration_file" type="string" value="$(find aruco_mapping)/data/zed_left_uurmi.ini" /> # 칼리브레이션 파일(ini)
+<param name="calibration_file" type="string" value="$(find aruco_mapping)/data/geniusF100.ini" /> # 칼리브레이션 파일(ini)
 <param name="num_of_markers" type="int" value="2" /> # 마커 갯수
 <param name="marker_size" type="double" value="0.24"/> # 마커 크기 (m)
 <param name="space_type" type="string" value="plane" />
