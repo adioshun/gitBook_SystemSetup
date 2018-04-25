@@ -46,24 +46,24 @@ velodyne_topic: /velodyne_points
 #### B. `config_file.txt` 파일 수정
 
 ```
-1280 720 # image_width image_height
--2.5 2.5 # x- x+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
--4.0 4.0 # y- y+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
-0.0 2.5 # z- z+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
+1280 720                 # image_width image_height
+-2.5 2.5                 # x- x+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
+-4.0 4.0                 # y- y+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
+0.0 2.5                 # z- z+, 불필요한 포인트 제거를 위한 필터, mark the board edges를 쉽게 함
 0.05 # cloud_intensity_threshold # Intensity가 낮는 포인트 제거를 위한 필터의 기준
-2 # number_of_markers
-0 # use_camera_info_topic? # `camera_info topic`을 사용하려면 `1` / '0'은 `config_file.txt`의 값 사용
+2                 # number_of_markers
+0                 # use_camera_info_topic? # `camera_info topic`을 사용하려면 `1` / '0'은 `config_file.txt`의 값 사용
 611.651245 0.0 642.388357 0.0 # fx 0 cx 0
 0.0 688.443726 365.971718 0.0 # 0 fy cy 0
 0.0 0.0 1.0 0.0 # MAX_ITERS
-# After MAX_ITERS, the node outputs an average translation vector (3x1) and an average rotation matrix (3x3).
-# Averaging the translation vector is trivial;
-# the rotations matrices are converted to quaternions and averaged,
-# then converted back to a 3x3 rotation matrix
+                # After MAX_ITERS, the node outputs an average translation vector (3x1) and an average rotation matrix (3x3).
+                # Averaging the translation vector is trivial;
+                # the rotations matrices are converted to quaternions and averaged,
+                # then converted back to a 3x3 rotation matrix
 1.57 -1.57 0.0 # initial_rot_x initial_rot_y initial_rot_z
-# 카메라대비 Lidar의 초기 회전 여부, Initial orientation of the lidar with respect to the camera, in radians.
-# The default values are for the case when both the lidar and the camera are both pointing forward.
-# The final transformation that is estimated by the package accounts for this initial rotation.
+                # 카메라대비 Lidar의 초기 회전 여부, Initial orientation of the lidar with respect to the camera, in radians.
+                # The default values are for the case when both the lidar and the camera are both pointing forward.
+                # The final transformation that is estimated by the package accounts for this initial rotation.
 ```
 
 
@@ -75,6 +75,7 @@ velodyne_topic: /velodyne_points
 - calibration_file(.ini format)
 - num_of_markers
 - marker_size(in meters)
+
 ```xml
 <?xml version="1.0"?>
 <launch>
@@ -121,23 +122,28 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 ```
 # cm 단위로 표기
 2 # 'N' the number of boards
-48.4 # length (s1)
-46.8 # breadth (s2)
-4.0 # border_width_along_length (b1)
-5.0 # border_width_along_breadth (b2)
-20.5 # edge_length_of_ArUco_marker (e)
-49.0 # s1
-46.8 # s2
-4.0 # b1
-5.0 # b2
-20.5 # e
+24.0 # length (s1)
+24.0 # breadth (s2)
+2.0 # border_width_along_length (b1)
+2.0 # border_width_along_breadth (b2)
+13.6 # edge_length_of_ArUco_marker (e)
+24.0 # s1
+24.0 # s2
+2.0 # b1
+2.0 # b2
+13.6 # e
 ```
+> [Aruco Marker Generator](https://terpconnect.umd.edu/~jwelsh12/enes100/markergen.html): ID 25, 582 , Marker Size = 205(e), padding = 50 (b1, b2)
+
+
+
+
 ![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/board_dim_label.jpg)
 
 ![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/aruco_axis.png)
 
 
-> [Aruco Marker Generator](https://terpconnect.umd.edu/~jwelsh12/enes100/markergen.html): ID 25, 582
+
 
 
 ## 3. 실행
