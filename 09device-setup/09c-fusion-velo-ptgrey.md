@@ -8,7 +8,7 @@
 
 목적 : The package finds a rotation and translation that transform all the points in the LiDAR frame to the \(monocular\) camera frame.
 
-### 1.1 설치 
+### 1.1 설치
 
 ```bash
 cd ~
@@ -21,12 +21,11 @@ catkin_make
 catkin_make install
 ```
 
-### 1.2 설정 
+### 1.2 설정
 
 > /root/catkin\_ws/devel/lib/aruco\_mapping/aruco\_mapping
 
 실행 : `roslaunch lidar_camera_calibration find_transform.launch`
-
 
 #### A `lidar_camera_calibration.yaml` 파일 수정
 
@@ -38,7 +37,6 @@ camera_frame_topic: /image_raw # [중요] 반드시 변경
 camera_info_topic: /camera_info # [중요] 반드시 변경
 velodyne_topic: /velodyne_points
 ```
-
 
 > `lidar_camera_calibration/launch/find_transform.launch` 을이용하여 값 찾을수 있음
 
@@ -65,15 +63,14 @@ velodyne_topic: /velodyne_points
                 # The final transformation that is estimated by the package accounts for this initial rotation.
 ```
 
-
-
 #### C. `find_transform.launch` 파일 수정
 
 `aruco_mapping`노드에게 필요한 정보들 `Parameters are required for the aruco_mapping node and need to be specfied here.`
-- Ensure that the topics are mapped correctly for the node to function. Other parameters required are:
-- calibration_file(.ini format)
-- num_of_markers
-- marker_size(in meters)
+
+* Ensure that the topics are mapped correctly for the node to function. Other parameters required are:
+* calibration\_file\(.ini format\)
+* num\_of\_markers
+* marker\_size\(in meters\)
 
 ```xml
 <?xml version="1.0"?>
@@ -101,22 +98,15 @@ velodyne_topic: /velodyne_points
 </launch>
 ```
 
-
-
 #### D. `marker_coordinates.txt` 파일
-
 
 The ArUco markers are stuck on the board such that when it is hung from a corner, the ArUco marker is on the left side of the board.
 
-
 Notice how the axis are aligned.
 
-y-axis should point outwards, x-axis along the breadth (s2) and z-axis along the length (s1).
+y-axis should point outwards, x-axis along the breadth \(s2\) and z-axis along the length \(s1\).
 
-The markers are also arranged so that the ArUco id are in ascending order. (마커의 ArUco ids는 오름차순으로 있어야 한다.)
-
-
-
+The markers are also arranged so that the ArUco id are in ascending order. \(마커의 ArUco ids는 오름차순으로 있어야 한다.\)
 
 ```
 # cm 단위로 표기
@@ -132,18 +122,12 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 2.0 # b2
 13.6 # e
 ```
-> [Aruco Marker Generator](https://terpconnect.umd.edu/~jwelsh12/enes100/markergen.html): ID 25, 582 , Marker Size = 205(e), padding = 50 (b1, b2)
 
-
-
+> [Aruco Marker Generator](https://terpconnect.umd.edu/~jwelsh12/enes100/markergen.html): ID 25, 582 , Marker Size = 205\(e\), padding = 50 \(b1, b2\)
 
 ![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/board_dim_label.jpg)
 
 ![](https://github.com/ankitdhall/lidar_camera_calibration/raw/master/images/aruco_axis.png)
-
-
-
-
 
 ## 3. 실행
 
@@ -153,7 +137,7 @@ The markers are also arranged so that the ArUco id are in ascending order. (마�
 roslaunch lidar_camera_calibration find_transform.launch
 ```
 
-An initial [R|t] between the camera and the various ArUco markers will be estimated. Following this, a filtered point cloud (according to the specifications in the config_file.txt) will be displayed. The user needs to mark each edge of the rectangular board.
+An initial \[R\|t\] between the camera and the various ArUco markers will be estimated. Following this, a filtered point cloud \(according to the specifications in the config\_file.txt\) will be displayed. The user needs to mark each edge of the rectangular board.
 
 Each board will have 4 line segments and need to be marked from leftmost board to the rightmost board. Marking a line segment is quite straight-forward, one needs to draw a quadrilateral around the line being marked. Click and press a key to confirm the corner of the quadrilateral. Once 4 points are clicked, each followed by a key-press, the program will move on to the next line segment. Continue marking the line segments for all boards until complete. Line segments for each board are to be marked in clock-wise order starting from the top-left.
 
@@ -162,7 +146,6 @@ After marking all the line-segments, the rigid-body transformation between the c
 결과 값들은 `conf/points.txt`에 저장 된다.
 
 ###### `conf/points.txt`파일
-
 
 ```
 8 # num_of_sensors(2로 고정)*num_of_markers*points_per_board(4개, 코너)
@@ -192,9 +175,7 @@ After marking all the line-segments, the rigid-body transformation between the c
 0.28515 -0.0755282 1.2928
 ```
 
-
-
---- 
+---
 
 ## 2. Hector 방식 \(2017\)
 
