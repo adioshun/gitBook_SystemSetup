@@ -6,6 +6,8 @@ BFLY-PGE-31S4C-C
 
 > ref :[Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/KB/10548)
 
+#### A. flycapture2 (ubuntu 14, 16)
+
 1. Download : flycapture2-2.9.3.43-amd64-pkg.tgz [\[Link\]](https://www.ptgrey.com/support/downloads)
 
 2. Dependent Package
@@ -35,6 +37,16 @@ BFLY-PGE-31S4C-C
    * `$ FlyCap2`
 
 > [Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/tan/10548)
+
+#### B. Spinnaker (Strongly recommended ubuntu 16)
+
+1. Download
+
+2. Dependent package 
+   * Ubuntu 16.04: `sudo apt-get install libavcodec-ffmpeg56 libavformat-ffmpeg56   libswscale-ffmpeg3 libswresample-ffmpeg1 libavutil-ffmpeg54 libusb-1.0-0`
+   
+4. `sudo sh install_spinnaker.sh`
+
 
 ### 2.2 PointGrey for Python
 
