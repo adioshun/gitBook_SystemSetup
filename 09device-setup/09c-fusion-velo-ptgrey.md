@@ -88,7 +88,7 @@ velodyne_topic: /velodyne_points
 
 <param name="calibration_file" type="string" value="$(find aruco_mapping)/data/zed_left_uurmi.ini" /> # 칼리브레이션 파일(ini)
 <param name="num_of_markers" type="int" value="2" /> # 마커 갯수
-<param name="marker_size" type="double" value="0.205"/> # 마커 크기
+<param name="marker_size" type="double" value="0.24"/> # 마커 크기 (m)
 <param name="space_type" type="string" value="plane" />
 <param name="roi_allowed" type="bool" value="false" />
 
