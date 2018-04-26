@@ -49,6 +49,11 @@ rviz이용 시각화 : `$ rosrun rviz rviz -f velodyne`
 
 ### 1.3 Calibration in ROS
 
+After the installation, you will need to create a calibration file for the device.
+
+복사만 하면 됨 `cp /ros/indigo/share/velodyne_pointcloud/params/VLP16db.yaml ~/`
+
+
 
 
 we need to calibrate generate calibration data in YAML file. 
