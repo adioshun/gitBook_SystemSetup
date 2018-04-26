@@ -134,6 +134,8 @@ The markers are also arranged so that the ArUco id are in ascending order. \(마
 > 동영상 설명 : [Youtube](https://youtu.be/SiPGPwNKE-Q)
 
 ```
+roslaunch velodyne_pointcloud VLP16_points.launch
+roslaunch pointgrey_camera_driver camera.launch
 roslaunch lidar_camera_calibration find_transform.launch
 ```
 
