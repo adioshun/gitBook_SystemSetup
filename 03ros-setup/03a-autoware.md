@@ -27,9 +27,8 @@ $ catkin_init_workspace
 $ cd ../
 $ ./catkin_make_release
 $ source devel/setup.bash
+$ ./run
 ```
-
-> Could NOT find GLEW -&gt; `sudo apt-get install libglew-dev`
 
 If you use archives:
 
@@ -42,6 +41,13 @@ $ cd ../
 $ ./catkin_make_release
 $ source devel/setup.bash
 ```
+
+|Error Code | Solution|
+|-|-|
+|Could NOT find GLEW | `sudo apt-get install libglew-dev`|
+|gconf_value_free: assertion 'value != NULL' failed | `ssh -X localhost`, `./run`|
+
+
 
 ### 1.2 Docker 설치
 
