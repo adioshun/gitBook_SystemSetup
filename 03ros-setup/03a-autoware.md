@@ -14,12 +14,12 @@
 
 NOTE: Please **do not** install `ros-indigo-velodyne-pointcloud` package. Please uninstall it if you already installed.
 
-
-### 1.1 소스 설치 
+### 1.1 소스 설치
 
 Get Autoware by following steps. Then build and install it.
 
 If you get the latest autoware form github
+
 ```shell
 $ git clone https://github.com/CPFL/Autoware.git
 $ cd Autoware/ros/src
@@ -29,9 +29,10 @@ $ ./catkin_make_release
 $ source devel/setup.bash
 ```
 
-> Could NOT find GLEW -> `sudo apt-get install libglew-dev`
+> Could NOT find GLEW -&gt; `sudo apt-get install libglew-dev`
 
 If you use archives:
+
 ```shell
 $ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
 $ unzip Autoware-beta.zip
@@ -42,7 +43,7 @@ $ ./catkin_make_release
 $ source devel/setup.bash
 ```
 
-### 1.2 Docker 설치 
+### 1.2 Docker 설치
 
 ```
 docker pull kunfengchen/u14-indigo-autoware 
@@ -51,25 +52,29 @@ docker pull nownicked/autoware-x11running7
 
 ## 2. 실행
 
-### 2.1 소스설치시 
+### 2.1 소스설치시
 
-### 2.2 Docker 설치시 
+### 2.2 Docker 설치시
 
-- xmanager - 연결 설정 - Connection/SSH/Tunneling/X11 Forwarding 체크, xManager체크 
+* xmanager - 연결 설정 - Connection/SSH/Tunneling/X11 Forwarding 체크, xManager체크
 
-- 도커 실생 
-```
-- docker run -it --rm \
-   --net host \
-   --env="DISPLAY" \
-   --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \
-   --volume "$HOME/sharefolder:/sharefolder" \
-   {Docker Image ID} /bin/bash
-```
+* 도커 실생   
+  \`\`\`
 
-- 도커 내에서 
+* docker run -it --rm \  
+   --net host \  
+   --env="DISPLAY" \  
+   --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \  
+   --volume "$HOME/sharefolder:/sharefolder" \  
+   {Docker Image ID} /bin/bash  
+  \`\`\`
+
+* 도커 내에서
 
 ```
 cd /src/Autoware/ros/
 ./run
 ```
+
+
+
