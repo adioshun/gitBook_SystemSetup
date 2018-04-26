@@ -3,7 +3,10 @@
 
 ## 0. Autoware의 방법 
 
-> ref : [How to Calibrate Camera](https://github.com/CPFL/Autoware/wiki/Calibration)
+> ref : [How to Calibrate Camera](https://github.com/CPFL/Autoware/wiki/Calibration), [Youtube](https://www.youtube.com/watch?v=pfBmfgHf6zg)
+
+
+- Lidar 부분 배경 색상 변경 : `b`  (Cloud point도 검은색이라 보이지 않음)
 
 ---
 
@@ -12,6 +15,15 @@
 [Lidar-camera calibration for DiDi competition](https://github.com/preritj/lidar-camera-calibration) 
 - 간단한 코드로 구성 되어 원리 이해하기 좋을듯 
 - [jupyter & python](http://nbviewer.jupyter.org/github/preritj/lidar-camera-calibration/blob/master/Calibration.ipynb) 이용
+
+---
+
+## Sensor Box (2017)
+
+- [깃허브](https://github.com/h3ct0r/sensor_box_itv)
+
+
+
 
 ---
 
