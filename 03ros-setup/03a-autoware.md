@@ -4,8 +4,6 @@
 
 ## 1. 설치
 
-apt-get install qtbase5-dev
-
 ```
 % sudo apt-get install ros-indigo-desktop-full ros-indigo-nmea-msgs ros-indigo-nmea-navsat-driver ros-indigo-sound-play ros-indigo-jsk-visualization ros-indigo-grid-map ros-indigo-gps-common
 % sudo apt-get install ros-indigo-controller-manager ros-indigo-ros-control ros-indigo-ros-controllers ros-indigo-gazebo-ros-control ros-indigo-sicktoolbox ros-indigo-sicktoolbox-wrapper ros-indigo-joystick-drivers ros-indigo-novatel-span-driver
@@ -14,7 +12,7 @@ apt-get install qtbase5-dev
 % sudo apt-get install libmosquitto-dev
 ```
 
-NOTE: Please do not install ros-indigo-velodyne-pointcloud package. Please uninstall it if you already installed.
+NOTE: Please **do not** install `ros-indigo-velodyne-pointcloud` package. Please uninstall it if you already installed.
 
 
 ### 1.1 소스 설치 
