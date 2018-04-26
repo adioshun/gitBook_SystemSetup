@@ -56,7 +56,7 @@ camera:=/my_camera
 
 [http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera\_calibration\(2f\)Tutorials\(2f\)MonocularCalibration/mono\_0.png](http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration%282f%29Tutorials%282f%29MonocularCalibration/mono_0.png)
 
-\([http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera\_calibration\(2f\)Tutorials\(2f\)MonocularCalibration/mono\_0.png\)\](http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration%282f%29Tutorials%282f%29MonocularCalibration/mono_0.png%29\)\)
+\([http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera\_calibration\(2f\)Tutorials\(2f\)MonocularCalibration/mono\_0.png\)\](http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration%282f%29Tutorials%282f%29MonocularCalibration/mono_0.png%29%29\)
 
 위 GUI 상에서 다은 [Youtube](https://www.youtube.com/watch?v=yAYqt3RpT6c)처럼 칼리브레이션 작업 수행하여 `CALIBRATE`버튼 활성화 시 `SAVE`버튼 클릭
 
