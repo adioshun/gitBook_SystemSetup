@@ -1,10 +1,19 @@
-# Lidar + Camear Calibration
+# Lidar + Camear Calibration (Camera lidar alignment)
 
 
 ## 0. Autoware의 방법 
 
 > ref : [How to Calibrate Camera](https://github.com/CPFL/Autoware/wiki/Calibration)
 
+---
+
+## 0. preritj의 방법  
+
+[Lidar-camera calibration for DiDi competition](https://github.com/preritj/lidar-camera-calibration) 
+- 간단한 코드로 구성 되어 원리 이해하기 좋을듯 
+- [jupyter & python](http://nbviewer.jupyter.org/github/preritj/lidar-camera-calibration/blob/master/Calibration.ipynb) 이용
+
+---
 
 ## 1. Ankitdhall의 방법
 
@@ -210,5 +219,31 @@ Vagrant제공
 * PCl 1.7 and
 * OpenCV 2.x library
 
+---
 
+## The Laser-Camera Calibration Toolbox (2017 or 2006)
+
+- 실행 툴을 이용한 간편한 작업 가능 
+- [깃허브-2017](https://github.com/zhixy/Laser-Camera-Calibration-Toolbox), [홈페이지-2006](http://www.cs.cmu.edu/~ranjith/lcct.html)
+
+---
+
+## Extrinsic Calibration of a 3D Lidar and Camera (2017)
+
+- "Automatic Targetless Extrinsic Calibration of a 3D Lidar and Camera by Maximizing Mutual Information." in AAAI, special track on robotics, July 2012, Toronto, Canada.
+- [깃허브](https://github.com/anlif/mi-extrinsic-calib), [홈페이지](http://robots.engin.umich.edu/SoftwareData/ExtrinsicCalib)
+
+---
+
+## 0. ~~Kitti Calibration Server 이용 방법~~ 
+
+> [Kitti 칼리브레이션 파일 설명](https://stackoverflow.com/questions/29407474/how-to-understand-kitti-camera-calibration-files): `calib_cam_to_cam.txt`
+
+[사용법](https://github.com/dsqx71/lidar-cam-calibration)
+- prepare calibration data
+- upload calibration data to kitti calibration server
+- download the calibration result
+- use this tool and rectify new data.
+
+[현재는 서버 동작 안하는 듯]
 
