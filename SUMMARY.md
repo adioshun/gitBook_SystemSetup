@@ -19,6 +19,7 @@
 * [09\_Device\_setup](09device-setup.md)
   * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
   * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)
+  * [09\_B\_WebCam](09device-setup/09b-webcam.md)
   * [09\_C\_Fusion\_Velo\_PtGrey](09device-setup/09c-fusion-velo-ptgrey.md)
   * [09\_C\_Paper\_3D3DPoint](09device-setup/09c-paper-3d3dpoint.md)
 
