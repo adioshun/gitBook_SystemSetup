@@ -9,6 +9,7 @@
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)
 * [03\_ROS\_setup](03ros-setup.md)
   * [03\_A\_Autoware](03ros-setup/03a-autoware.md)
+  * [03\_B\_Apollo](03ros-setup/03b-apollo.md)
 * [04\_Python\_setup](04python-setup.md)
   * [04\_A\_Jupyter\_setup](04python-setup/04a-jupyter-setup.md)
 * [05\_CUDA\_setup](05cuda-setup.md)
