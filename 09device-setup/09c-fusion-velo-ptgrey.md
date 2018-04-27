@@ -16,6 +16,9 @@
 
 - [메뉴얼](https://github.com/ApolloAuto/apollo/tree/master/docs/quickstart)
 
+wget https://github.com/ApolloAuto/apollo/releases/download/v2.0.0/calibration.tar.gz
+
+
 
 ---
 
