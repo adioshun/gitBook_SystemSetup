@@ -20,6 +20,14 @@ bash docker/scripts/dev_start.sh
 bash docker/scripts/dev_into.sh  # attach docker
 ```
 
+Build
+
+```
+./apollo.sh build_no_perception dbg #CPU
+# bash apollo.sh build $ GPU
+```
+
+
 start 
 ```
 bash scripts/bootstrap.sh
