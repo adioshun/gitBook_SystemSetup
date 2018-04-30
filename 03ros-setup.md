@@ -106,13 +106,32 @@ echo $ROS_PACKAGE_PATH
 4th terminal : rosrun rqt_graph rqt_graph
 ```
 
-## 권장 개발 에디터 (qtcreator)
+## Could not find a package configuration file provided by
 
 ```
-sudo apt-get install qtcreator 
-qtcreator
+Could not find a package configuration file provided by "Qt5Core"
+  (requested version 5.0) with any of the following names:
+
+    Qt5CoreConfig.cmake
+    qt5core-config.cmake
+
+  Add the installation prefix of "Qt5Core" to CMAKE_PREFIX_PATH or set
+  "Qt5Core_DIR" to a directory containing one of the above files.  If
+  "Qt5Core" provides a separate development package or SDK, be sure it has
+  been installed.
 ```
 
+run `apt-file search Qt5CoreConfig.cmake`
 
----
+review the result
+
+```
+qtbase5-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
+qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
+```
+
+Install the missing package `sudo apt install qtbase5-dev`
+
+> ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
+
 
