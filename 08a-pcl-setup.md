@@ -8,6 +8,9 @@ apt-get install libpcl-all
 ```
 > [에러] add-apt-repository command not found -> `apt-get install software-properties-common python-software-properties`
 
+
+? `$ sudo apt-get install pcl-tools`의 역할은
+
 ## 1.2 deb 설치 
 ```
 wget https://www.dropbox.com/s/9llzm20pc4opdn9/PCL-1.8.0-Linux.deb?dl=0 #파일명 에서 `?dl=0`제거 
