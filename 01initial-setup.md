@@ -42,9 +42,22 @@
 
 버젼확인 : tmux -V
 
+### APT Install
+
 ```
 apt-get install tmux
 tmux new -s <원하는 이름>
+```
+
+### Source Install
+
+```
+cd ~
+git clone https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+/configure && make
+
 ```
 
 * 창 나누기 Ctrl + b, " \(새로\) Ctrl + b, % \(가로\) 
