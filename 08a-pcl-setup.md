@@ -38,11 +38,6 @@ pip install numpy
 git clone https://github.com/strawlab/python-pcl.git
 cd python-pcl
 
-## For python2
-python setup.py build_ext -i
-python setup.py install
-
-## re-install 
 sudo python setup.py clean
 sudo make clean
 sudo make all
@@ -65,6 +60,26 @@ python3 setup.py install
 ### 2.2 conda 설치 (ROS충돌 위험) 
 ```
 conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
+```
+
+
+### 2.3 Python-pcl docker
+
+```
+#Dockerfile
+
+FROM ubuntu:14.04
+
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+RUN apt-get update && \
+    apt-get install -y libpcl-all
+
+RUN apt-get install -y python-pip git
+RUN apt-get install -y python-dev
+RUN pip install cython
+RUN pip install numpy
+RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
 ```
 
 ## 3. PCL for ROS
