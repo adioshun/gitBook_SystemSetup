@@ -30,19 +30,11 @@
 
 * [TOast UI](https://nhnent.github.io/tui.editor/)
 
-## zsh변경
-
-    sudo apt-get install zsh curl
-    chsh -s `which zsh`
-    sudo curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-> zsh가 느리게 시작 할때 `sudo rm -rf /private/var/log/asl*.as`
->
-> [oh-my-zsh](https://nolboo.kim/blog/2015/08/21/oh-my-zsh/)
-
-[삭제 스크립트](https://github.com/robbyrussell/oh-my-zsh/blob/master/tools/uninstall.sh)
-
 ---
+
+## bashrc
+
+`cp /home/adioshun/.bashrc /root/.bashrc; source /root/.bashrc`
 
 ## TMUX
 
@@ -201,6 +193,20 @@ tmux attach -t $SESSION
     colorscheme jellybeans
 
 > color schem dir : `/usr/share/vim/vimNN/colors`
+
+## zsh변경
+
+    sudo apt-get install zsh curl
+    chsh -s `which zsh`
+    sudo curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+> zsh가 느리게 시작 할때 `sudo rm -rf /private/var/log/asl*.as`
+>
+> [oh-my-zsh](https://nolboo.kim/blog/2015/08/21/oh-my-zsh/)
+
+[삭제 스크립트](https://github.com/robbyrussell/oh-my-zsh/blob/master/tools/uninstall.sh)
+
+
 
 ## github 키 등록
 
