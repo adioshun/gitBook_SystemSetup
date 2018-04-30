@@ -53,6 +53,12 @@ python3 setup.py install
 
 > 참고 : [python-pcl, python 3, ubuntu 14.04](http://adamsteer.blogspot.kr/2016/01/python-pcl-python-3-ubuntu-1404.html)
 
+
+|에러코드|해결책|원인|
+|-|-|-|
+|fatal error: pcl/features/cppf.h: No such file or directory|`sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl;sudo apt-get update;sudo apt-get upgrade libpcl-features-dev libpcl-io-1.7 libpcl-io-1.7-dev`|ubnutu 14 떄문인|
+
+
 ### 2.2 conda 설치 (ROS충돌 위험) 
 ```
 conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
