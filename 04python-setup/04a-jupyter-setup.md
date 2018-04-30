@@ -1,4 +1,12 @@
+# Jupyter (ubuntu 16.4)
+
+> ubuntu 14.4 : `sudo apt-get install ipython ipython3-notebook` & `ipython notebook`
+
+
+
 ### 설치 
+
+
 
 - pip 이용 설치 : `pip install jupyter` / `pip3 install jupyter`
 
