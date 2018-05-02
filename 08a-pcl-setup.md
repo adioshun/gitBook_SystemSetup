@@ -9,7 +9,7 @@
 ```
 sudo apt-get install git
 cd
-git clone git@github.com:PointCloudLibrary/pcl.git
+git clone https://github.com/PointCloudLibrary/pcl.git
 cd pcl
 mkdir build
 cd build
