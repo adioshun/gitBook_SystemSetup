@@ -3,13 +3,43 @@
 
 # 1. PCL for C++ 설치 
 
-## 1.1 apt 설치 [[공식 설치 가이드]](http://pointclouds.org/downloads/linux.html) 
+## 1.1 Source 설치 
+
+```
+sudo apt-get install git
+cd
+git clone git@github.com:PointCloudLibrary/pcl.git
+cd pcl
+mkdir build
+cd build
+cmake ..
+make
+make install 
+
+#checkinstall #apt-get install checkinstall
+
+```
+
+|Error Code | Solution|
+|-|-|
+|package 'eigen3' not found | apt-get install libeigen3-dev|
+|package 'flann>=1.7.0' not found|apt-get install libflann-dev|
+
+
+
+
+
+## 1.1 apt 설치 
 ```
 add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 apt-get update
 apt-get install libpcl-all
 ```
-> [에러] add-apt-repository command not found -> `apt-get install software-properties-common python-software-properties`
+
+|Error Code | Solution|
+|-|-|
+|add-apt-repository command not found | `apt-get install software-properties-common python-software-properties`|
+|Unable to locate package libpcl-all|apt-get install libpcl1|
 
 
 ? `$ sudo apt-get install pcl-tools`의 역할은
