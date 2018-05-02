@@ -5,6 +5,7 @@
 
 ## 1.1 Source 설치 
 
+
 ```
 sudo apt-get install git
 cd
@@ -17,8 +18,8 @@ make
 make install 
 
 #checkinstall #apt-get install checkinstall
-
 ```
+
 
 |Error Code | Solution|
 |-|-|
