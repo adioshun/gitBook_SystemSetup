@@ -12,7 +12,7 @@
   * [03\_B\_Apollo](03ros-setup/03b-apollo.md)
 * [04\_Python\_setup](04python-setup.md)
   * [04\_A\_Jupyter\_setup](04python-setup/04a-jupyter-setup.md)
-  * [04-B\_Pip\_Conda\_Pipenv](04python-setup/04-bpip-conda-pipenv.md)
+  * [04-B-Pip\_Conda\_Pipenv](04python-setup/04-bpip-conda-pipenv.md)
 * [05\_CUDA\_setup](05cuda-setup.md)
   * [05\_A\_Tensorflow\_setup](05cuda-setup/05a-tensorflow-setup.md)
   * [05\_B\_Caffe\_setup](05cuda-setup/05b-caffe-setup.md)
