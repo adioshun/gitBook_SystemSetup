@@ -44,7 +44,7 @@ apt-get install libpcl-all
 |pip10, ImportError: cannot import name main|Downgrade: `python2 -m pip install --user --upgrade pip==9.0.3`|
 
 
-? `$ sudo apt-get install pcl-tools`의 역할은
+
 
 ## 1.2 deb 설치 
 ```
@@ -55,6 +55,19 @@ dpkg -i PCL-1.8.0-Linux.deb
 > 출처 : [POINT CLOUD LIBRARY ON UBUNTU 16.04 LTS](https://larrylisky.com/2016/11/03/point-cloud-library-on-ubuntu-16-04-lts/)
 
 > [PLC for Ubuntu 16.4 & 17.10](https://askubuntu.com/questions/916260/how-to-install-point-cloud-library-v1-8-pcl-1-8-0-on-ubuntu-16-04-2-lts-for)
+
+
+
+###### PCl Tools
+
+`sudo apt-get install pcl-tools` [[github]](https://github.com/ryanfb/pcl-tools)
+- pcd2ply - convert PCD files to PLY files
+- ply2pcd - convert PLY files to PCD files
+- statistical_removal - statistical outliers removal
+- pcd_viewer - PCL PCD viewer with added 
+- pcdnormal2ply - convert PCD files with normals to PLY files
+- normal_estimation_omp - estimate normals in a PCD using PCL's OpenMP implementation
+
 
 
 # 2. PCL for Python 설치 
@@ -72,13 +85,13 @@ cd python-pcl
 
 sudo python setup.py clean
 sudo make clean
-sudo make all
+
+sudo make all 
 sudo python setup.py install
 
-
-## For python3
-python3 setup.py build
-python3 setup.py install
+# Or
+python setup.py build
+python setup.py install
 ```
 
 > 참고 : [python-pcl, python 3, ubuntu 14.04](http://adamsteer.blogspot.kr/2016/01/python-pcl-python-3-ubuntu-1404.html)
@@ -97,6 +110,8 @@ conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 
 ### 2.3 Python-pcl docker
 
+
+
 ```
 #Dockerfile
 
@@ -113,6 +128,38 @@ RUN pip install cython
 RUN pip install numpy
 RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
 ```
+
+
+###### pcl_helper.py
+
+[github](https://github.com/udacity/RoboND-Perception-Exercises#documentation-for-pcl_helperpy), [Code](https://github.com/udacity/RoboND-Perception-Exercises/tree/master/Exercise-2/sensor_stick/scripts)
+
+
+
+`random_color_gen()` : Generates a random set of r,g,b values
+- Return: a 3-tuple with r,g,b values (range 0-255)
+
+`ros_to_pcl(sensor_msgs/PointCloud2)` : Converts sensor_msgs/PointCloud2 to XYZRGB Point Cloud
+- Return: pcl.PointCloud_PointXYZRGB
+
+`pcl_to_ros(pcl.PointCloud_PointXYZRGB)`: Converts XYZRGB Point Cloud to sensor_msgs/PointCloud2
+- Return: sensor_msgs/PointCloud2
+
+`XYZRGB_to_XYZ(XYZRGB_cloud)`: Converts XYZRGB Point Cloud to XYZ Point CLoud
+- Return: pcl.PointCloud
+
+`XYZ_to_XYZRGB(XYZ_cloud, color)`:Takes a 3-tuple as color and adds it to XYZ Point Cloud
+- Return: pcl.PointCloud_PointXYZRGB
+
+`rgb_to_float(color)`:Converts 3-tuple color to a single float32
+- Return: rgb packed as a single float32
+
+`get_color_list(cluster_count)` : Creates a list of 3-tuple (rgb) with length of the list = cluster_count
+- Return: get_color_list.color_list
+
+
+
+
 
 ## 3. PCL for ROS
 
@@ -135,7 +182,7 @@ rospack list | grep {velodyne}
 rospack find {}
 ```
 
-## 4. VALIDATION 
+## 3. VALIDATION 
 
 ### 3.1 PCL for C++
 
