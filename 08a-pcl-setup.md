@@ -41,6 +41,7 @@ apt-get install libpcl-all
 |-|-|
 |add-apt-repository command not found | `apt-get install software-properties-common python-software-properties`|
 |Unable to locate package libpcl-all|apt-get install libpcl1|
+|pip10, ImportError: cannot import name main|Downgrade: `python2 -m pip install --user --upgrade pip==9.0.3`|
 
 
 ? `$ sudo apt-get install pcl-tools`의 역할은
