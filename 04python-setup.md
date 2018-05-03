@@ -9,6 +9,7 @@ pip3 install --upgrade pip
 ```
 
 - 스크립트 이용 설치 
+
 ```
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
@@ -36,6 +37,7 @@ bash Anaconda2-4.4.0-Linux-x86_64.sh
 ### 3.1 OpenCV
 
 - OpenCv 
+
 ```bash
 # python3
 conda install -c https://conda.binstar.org/menpo opencv3 #conda install -c menpo opencv3=3.2.0
@@ -48,6 +50,7 @@ pip install opencv_python
 ```
 
 - Anaconda 삭제
+
 ```
 conda install anaconda-clean   # install the package anaconda clean
 anaconda-clean --yes           # clean all anaconda related files and directories 
