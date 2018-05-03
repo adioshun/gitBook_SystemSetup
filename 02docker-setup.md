@@ -188,6 +188,7 @@ docker push adioshun/deeplearning:opencv3
 2. Docker RUN시 `--privileged` 옵션 추가 
 3. Docker 내에서 `/dev/video0` 확인
 4. x11이 된다면 `apt-get install guvcview`를 설치 하여 웹캠 작동 확인 가능 
+
 ```
 import numpy as np
 import cv2
