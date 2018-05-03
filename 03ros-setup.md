@@ -1,8 +1,7 @@
 # ROS kinetic - in ubuntu 16.04 
 
-- !!! 아나콘다 삭제후 진행 anaconda is not recommended 
+!!! 아나콘다 삭제후 진행 anaconda is not recommended [[Solution]](https://github.com/udacity/RoboND-Python-StarterKit/blob/master/doc/linux_ros_anaconda_warning.md)
 
-> docker : sudo docker pull osrf/ros:kinetic-desktop-full
 
 ```bash
 
