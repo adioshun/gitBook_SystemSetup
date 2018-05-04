@@ -10,6 +10,7 @@
 #### A. flycapture2 \(ubuntu 14, 16\)
 
 1. Download : flycapture2-2.9.3.43-amd64-pkg.tgz [\[Link\]](https://www.ptgrey.com/support/downloads)
+   - `wget https://github.com/adioshun/gitBook_SystemSetup/raw/master/09device-setup/flycapture2-2.9.3.43-amd64-pkg.tgz`
 
 2. Dependent Package
 
