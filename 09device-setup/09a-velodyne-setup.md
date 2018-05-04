@@ -1,7 +1,7 @@
 ## 1. Velodyne
 
 
-### Velovuew 
+### Veloview 
 
 [Linux 64bit](http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.1&type=app&os=win32&downloadFile=VeloView-3.5.0-Linux-64bit.sh)
 
