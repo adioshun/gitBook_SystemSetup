@@ -47,6 +47,11 @@ Velodyne 노드 실행 & 데이터 수집 : `$ roslaunch velodyne_pointcloud VLP
 
 rviz이용 시각화 : `$ rosrun rviz rviz -f velodyne`
 
+```
+$ roslaunch velodyne_pointcloud VPL16_points.launch pcap:=/home/soowon/Documents/County_Fair.pcap
+$ rosrun velodyne_pointcloud cloud_node _calibration:=/home/velodyne_pointcloud/params/VLP16db.yaml
+```
+
 ### 1.3 Calibration in ROS
 
 After the installation, you will need to create a calibration file for the device.
@@ -84,7 +89,7 @@ rviz 실행 : `$ rosrun rviz rviz -f velodyne`
 
 - [VLP16](https://goo.gl/MJDfWA)
             
-# VeloView 뷰어 
+# VeloView 뷰어 (paraview??)
 
 - [Wiki](https://www.paraview.org/Wiki/VeloView), [Homepage](https://www.paraview.org/VeloView/), [Github](https://github.com/Kitware/VeloView)
 - `.pcap` files 재생 
