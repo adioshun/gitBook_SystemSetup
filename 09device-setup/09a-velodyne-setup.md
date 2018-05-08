@@ -159,3 +159,7 @@ if __name__ == '__main__':
 ```
 
 > To prevent exception: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd4 in position 0: invalid continuation byte we need to use binary mode for open file: dpkt.pcap.Reader(open(filename,'rb'))
+
+
+---
+
