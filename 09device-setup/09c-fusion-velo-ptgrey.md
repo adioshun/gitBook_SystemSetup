@@ -271,3 +271,45 @@ Vagrant제공
 
 [현재는 서버 동작 안하는 듯]
 
+
+--- 
+
+![](https://i.imgur.com/Vh0eQZ9.png)
+
+
+[A Lidar and Vision-based Approach for Pedestrian and Vehicle Detection and Tracking](https://www.researchgate.net/publication/4283222_A_Lidar_and_Vision-based_Approach_for_Pedestrian_and_Vehicle_Detection_and_Tracking): 2007
+
+
+[Automatic Camera and Range Sensor Calibration using a single Shot](https://pdfs.semanticscholar.org/9f95/9f20efcbc1489a0019746fa5bed0899f703d.pdf): 2012
+
+[Automatic Extrinsic Calibration of Vision and Lidar by Maximizing Mutual Information](http://robots.engin.umich.edu/publications/gpandey-2015a.pdf):
+
+[Automatic Online Calibration of Cameras and Lasers](http://driving.stanford.edu/papers/RSS2013.pdf): 스탠포드, 2013
+
+A NEW AUTOMATIC SYSTEM CALIBRATION OF MULTI-CAMERAS AND LIDAR SENSORS. : Hassanein, M.; Moussa, A.; El-Sheimy, N., 2016
+
+[Automatic Calibration of Lidar and Camera Images using Normalized Mutual Information](https://pdfs.semanticscholar.org/fc08/d41be320a827c3f045c4429e13495da5a1cc.pdf)
+
+[Automatic Calibration of a Range Sensor and Camera System](https://www.ri.cmu.edu/pub_files/2012/10/alismail_3dimpvt_2012.pdf): 2012, CMU
+
+[Pedestrian Detection Combining RGB and Dense LIDAR Data](http://home.isr.uc.pt/~cpremebida/files_cp/Pedestrian%20Detection%20Combining%20RGB%20and%20Dense%20LIDAR%20Data.pdf)
+
+A Survey of ADAS Technologies for the Future Perspective of Sensor Fusion, 2016
+
+[3D object tracking using RGB and LIDAR data](https://ieeexplore.ieee.org/abstract/document/7795718/): 2016
+
+딥러닝 기반 카메라, 라이더 센서 융합 인지기술
+
+라이다-카메라 데이터 융합 방법 연구
+
+Calibration of RGB camera with velodyne Lidar, Martin Velas, 2014
+
+[Pedestrian detection combining RGB and dense LIDAR data](https://ieeexplore.ieee.org/document/6943141/),Cristiano Premebida, IROS 2014
+
+## Tools
+
+[LiDAR-Camera Calibration using 3D-3D Point correspondences](https://arxiv.org/abs/1705.09785): 2017, [깃허브](https://github.com/ankitdhall/lidar_camera_calibration)
+
+Camera and LIDAR Calibration and Visualization in ROS: 2016, [깃허브](https://github.com/swyphcosmo/ros-camera-lidar-calibration): ROS기반, vagrant제공, [[youtube]](https://www.youtube.com/watch?v=Zc4Ev_ggHIA)
+
+kalibr : [깃허브](https://github.com/ethz-asl/kalibr), [구글그룹](https://groups.google.com/forum/#!forum/kalibr-users)
