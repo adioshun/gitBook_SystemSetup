@@ -168,3 +168,13 @@ if __name__ == '__main__':
 
 ---
 
+## pcap to rosbag 변환 
+서로 다른 터미널에서 실행 
+```
+roscore
+rosrun velodyne_driver velodyne_node _model:=VLP16 _pcap:=/your/pcap/path/data.pcap _read_once:=true
+rosrun rosbag record -O your_vlp16_070815.bag /velodyne_packets
+```
+
+
+
