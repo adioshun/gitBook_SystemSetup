@@ -13,8 +13,8 @@
 sudo apt-get purge docker.io 
 
 # 최신 docker 설치
-sudo wget -qO- https://get.docker.com/ | sh 
-# sudo apt-get update; sudo apt-get install docker-engine 
+sudo apt install docker.io #sudo apt-get update; sudo apt-get install docker-engine 
+sudo wget -qO- https://get.docker.com/ | sh
 
 docker 버전 확인
 # docker version
