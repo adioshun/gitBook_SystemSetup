@@ -180,6 +180,35 @@ docker push adioshun/deeplearning:opencv3
 
 ```
 
+
+
+# Docker 저장 위치 변경 [[참고]](https://sanenthusiast.com/change-default-image-container-location-docker/)
+
+```bash
+docker info #저장 위치 확인
+sudo systemctl stop docker
+sudo mkdir /etc/systemd/system/docker.service.d # 폴더 없으면 생성 
+sudo vi /etc/systemd/system/docker.service.d/docker.conf # 설정 파일 생성 & 아래 참고 하여 수정
+sudo systemctl daemon-reload 
+sudo systemctl start docker
+```
+
+설정 파일
+```
+# docker.conf
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd --graph="/mnt/new_volume" --storage-driver=devicemapper 
+```
+
+
+# Docker 이미지 복사 
+
+```
+cp –rp /var/lib/docker /mnt/new_volume 
+# ln -s /mnt/new_volume /var/lib/docker
+```
+
 ---
 
 ## Webcam 연결
