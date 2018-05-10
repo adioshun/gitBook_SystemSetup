@@ -246,9 +246,9 @@ $ git commit -m ""
 $ git push --set-upstream origin master
 ```
 
-> ## [git 자동 완성 트릭](https://github.com/progit/progit/blob/master/ko/02-git-basics/01-chapter2.markdown#자동완성)
->
-> # 추천 유틸
+## [git 자동 완성 트릭](https://github.com/progit/progit/blob/master/ko/02-git-basics/01-chapter2.markdown#자동완성)
+
+# 추천 유틸
 
 ## 1. 디스크공간
 
