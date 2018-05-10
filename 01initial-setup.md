@@ -266,5 +266,7 @@ apt-get clean
 pip clean?
 ```
 
+## 멀티 부팅 USB 만들기
 
+- [MultiBootUSB](http://multibootusb.org/page_download/) : [설명](https://itsfoss.com/multiple-linux-one-usb/), `wget https://github.com/mbusb/multibootusb/releases/download/v8.8.0/python3-multibootusb_8.8.0-1_all.deb`
 
