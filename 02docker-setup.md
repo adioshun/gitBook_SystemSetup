@@ -205,8 +205,8 @@ ExecStart=/usr/bin/dockerd --graph="/mnt/new_volume" --storage-driver=devicemapp
 # Docker 이미지 복사 
 
 ```
-cp –rp /var/lib/docker /mnt/new_volume 
-# ln -s /mnt/new_volume /var/lib/docker
+docker save -o example.tar docker-image-name:tag 
+docker load -i example.tar 
 ```
 
 ---
