@@ -1,9 +1,11 @@
 # 초기 설정
 
-## 한글 입력
+- [한글 입력 패키지 설정](http://awesometic.tistory.com/87) : ubtuntu 17, 18
+- [한글 입력 단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) : ubnutu 18
 
-- [패키지 설정](http://awesometic.tistory.com/87) : ubtuntu 17, 18
-- [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) ubnutu 18
+- 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
+
+
 
 ## Monitoring
 
