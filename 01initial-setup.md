@@ -6,7 +6,6 @@
 - 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
 
-
 ## Monitoring
 
 * CPU
