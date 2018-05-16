@@ -5,6 +5,9 @@
 
 - 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
+- bashrc
+
+- vimrc : [이번에는 우분투 호환 vimrc](http://chanacademy.tistory.com/38), [좋은 vimrc를 찾았다](http://chanacademy.tistory.com/37)
 
 ## Monitoring
 
