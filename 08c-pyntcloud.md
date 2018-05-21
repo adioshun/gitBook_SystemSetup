@@ -8,3 +8,11 @@
 Lightweigth visualizer
 
 ![](https://raw.githubusercontent.com/daavoo/pyntcloud/master/docs/images/plot1.gif)
+
+
+
+# pypcd
+
+- PCD to numpy / pandas
+
+- [github](https://github.com/dimatura/pypcd)
