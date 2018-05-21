@@ -76,6 +76,7 @@ E: Unable to correct problems, you have held broken packages.
 > root@ubuntu16:/tmp# sudo apt-get install docker-ce={17.12.0~ce-0~ubuntu}
 
 
+---
 
 # How to use 
 
@@ -109,9 +110,17 @@ docker images
 ## Create Container 
 ```
 docker run -i -t --name Ubuntu ubuntu /bin/bash
+
 sudo docker run -i -t -p 2222:2222 -p 8585:8585 --volume /home/adioshun/docker:/root --name 'Ubuntu' ubuntu /bin/bash 
+
 sudo nvidia-docker run -i -t -p 2222:2222 -p 8585:8585 --volume /home/adioshun/docker:/root --name 'Ubuntu' ubuntu /bin/bash 
 sudo docker --runtime=nvidia -it 
+
+docker run -it --net host --env="DISPLAY" -p 2222:2222 -p 8585:8585 --volume /mnt/docker:/workspace --name 'Ubuntu' --volume "$HOME/.Xauthority:/root/.Xauthority:rw" {image_name} /bin/bash
+
+nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
+
+
 ```
 
 > nvidia 도커 실행시 `nvcc --version`확인후 `echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc` 설정
