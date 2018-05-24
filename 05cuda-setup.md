@@ -153,15 +153,21 @@ sudo apt install nvidia-381
 ```
 
 
-ubuntu 18
+[ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
 
 ```
+ubuntu-drivers devices
+apt install nvidia-driver-390
+# OR 
+ubuntu-drivers autoinstall
+apt install nvidia-settings
+## Disable nouveau
 # lsmod | grep nouveau
 # vi /etc/modprobe.d/blacklist-nouveau.conf
 # sudo update-initramfs -u
 # reboot
-ubuntu-drivers autoinstall
 ```
+
 
 
 ### 0.1 For Ubuntu 14.04
