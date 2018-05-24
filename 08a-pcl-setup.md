@@ -66,6 +66,8 @@ dpkg -i PCL-1.8.0-Linux.deb
 - [Python bindings for the Point Cloud Library](http://pointclouds.org/news/tags/python), [[Code Sample]](https://github.com/strawlab/python-pcl/tree/master/examples)
 - 요구 사항 : `Python 2.7.6, 3.4.0, 3.5.2`, `pcl 1.7.0`, `Cython`
 
+> python 2 Only??
+
 ## 2.1 apt 설치
 
 ```
@@ -208,4 +210,20 @@ Output -> hello, world!
 ```
 python
 import pcl
+```
+
+
+-----------
+
+Point clouds can be viewed as NumPy arrays, so modifying them is possible using all the familiar NumPy functionality:
+
+```python
+import numpy as np
+import pcl
+p = pcl.PointCloud(10)  # "empty" point cloud
+a = np.asarray(p)       # NumPy view on the cloud
+a[:] = 0                # fill with zeros
+print(p[3])             # prints (0.0, 0.0, 0.0)
+a[:, 0] = 1             # set x coordinates to 1
+print(p[3])             # prints (1.0, 0.0, 0.0)
 ```
