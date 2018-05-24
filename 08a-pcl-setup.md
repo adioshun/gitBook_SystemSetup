@@ -66,26 +66,17 @@ dpkg -i PCL-1.8.0-Linux.deb
 - [Python bindings for the Point Cloud Library](http://pointclouds.org/news/tags/python), [[Code Sample]](https://github.com/strawlab/python-pcl/tree/master/examples)
 - 요구 사항 : `Python 2.7.6, 3.4.0, 3.5.2`, `pcl 1.7.0`, `Cython`
 
-> python 2 Only??
-
-## 2.1 apt 설치
+## 2.1 pip 설치 (Pythin3 Recommended_
 
 ```
 apt-get install build-essential
-pip install cython==0.25.2
-pip install numpy
+pip3 install cython
+pip3 install numpy
 git clone https://github.com/strawlab/python-pcl.git
 cd python-pcl
 
-sudo python setup.py clean
-sudo make clean
-
-sudo make all 
-sudo python setup.py install
-
-# Or
-python setup.py build
-python setup.py install
+python3 setup.py build
+python3 setup.py install
 ```
 
 > 참고 : [python-pcl, python 3, ubuntu 14.04](http://adamsteer.blogspot.kr/2016/01/python-pcl-python-3-ubuntu-1404.html)
