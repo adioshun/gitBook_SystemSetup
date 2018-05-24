@@ -1,5 +1,5 @@
 
-
+apt-get install python-pip python-dev build-essential 
 
 
 > [주피터설정하기](https://github.com/adioshun/Blog_Jekyll/blob/master/2017-07-18_Jupyter_setup.md)
