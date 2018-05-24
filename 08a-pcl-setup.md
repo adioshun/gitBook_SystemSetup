@@ -63,10 +63,11 @@ dpkg -i PCL-1.8.0-Linux.deb
 
 
 # 2. PCL for Python 설치 
-- [Python bindings for the Point Cloud Library](http://pointclouds.org/news/tags/python), [[Code Sample]](https://github.com/strawlab/python-pcl/tree/master/examples)
-- 요구 사항 : `Python 2.7.6, 3.4.0, 3.5.2`, `pcl 1.7.0`, `Cython`
 
-## 2.1 pip 설치 (Pythin3 Recommended_
+
+> Recommend CONDA Installation 
+
+## 2.1 pip 설치 
 
 ```
 apt-get install build-essential
@@ -95,8 +96,6 @@ conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 
 ### 2.3 Python-pcl docker
 
-
-
 ```
 #Dockerfile
 
@@ -113,9 +112,6 @@ RUN pip install cython
 RUN pip install numpy
 RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
 ```
-
-
-
 
 
 
