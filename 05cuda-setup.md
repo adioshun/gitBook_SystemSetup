@@ -153,6 +153,17 @@ sudo apt install nvidia-381
 ```
 
 
+ubuntu 18
+
+```
+# lsmod | grep nouveau
+# vi /etc/modprobe.d/blacklist-nouveau.conf
+# sudo update-initramfs -u
+# reboot
+ubuntu-drivers autoinstall
+```
+
+
 ### 0.1 For Ubuntu 14.04
 ```
 CUDA_REPO_PKG=http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
