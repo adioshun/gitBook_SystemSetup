@@ -1,7 +1,57 @@
+### [참고] 드라이버 설치 
+
+- GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
+
+- nvidia graphic driver [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us) 
+
+- [Nvidia Driver Instalation](https://goo.gl/kfzWfJ) 
+
+- [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
+
+```
+sudo add-apt-repository -y ppa:xorg-edgers/ppa -y
+sudo apt-get update
+sudo apt-get install nvidia-current
+
+sudo apt purge nvidia-*
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-381
+# cd /usr/lib/nvidia-xxxx 로 확인 가능 
+```
+
+
+[ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
+
+```
+ubuntu-drivers devices
+apt install nvidia-driver-390
+# OR 
+ubuntu-drivers autoinstall
+apt install nvidia-settings
+## Disable nouveau
+# lsmod | grep nouveau
+# vi /etc/modprobe.d/blacklist-nouveau.conf
+# sudo update-initramfs -u
+# reboot
+```
+
+
+
+
+
 # Driver & CUDA install script 
 
 |참고 : 설치 후 재 부팅 |
 |-|
+
+Ubuntu 18.04 - CUDA 9
+
+> NVIDIA proprietary driver (390 for CUDA 9) 
+
+```
+sudo apt update && sudo apt install nvidia-cuda-toolkit
+```
 
 Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
 ```bash
@@ -130,45 +180,6 @@ sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.s
 해당 볼더 제거 
 
 ---
-### [참고] 드라이버 설치 
-
-- GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
-
-- nvidia graphic driver [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us) 
-
-- [Nvidia Driver Instalation](https://goo.gl/kfzWfJ) 
-
-- [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
-
-```
-sudo add-apt-repository -y ppa:xorg-edgers/ppa -y
-sudo apt-get update
-sudo apt-get install nvidia-current
-
-sudo apt purge nvidia-*
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt install nvidia-381
-# cd /usr/lib/nvidia-xxxx 로 확인 가능 
-```
-
-
-[ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
-
-```
-ubuntu-drivers devices
-apt install nvidia-driver-390
-# OR 
-ubuntu-drivers autoinstall
-apt install nvidia-settings
-## Disable nouveau
-# lsmod | grep nouveau
-# vi /etc/modprobe.d/blacklist-nouveau.conf
-# sudo update-initramfs -u
-# reboot
-```
-
-
 
 ### 0.1 For Ubuntu 14.04
 ```
