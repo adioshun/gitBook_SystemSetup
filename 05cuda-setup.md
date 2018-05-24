@@ -50,7 +50,9 @@ Ubuntu 18.04 - CUDA 9
 > NVIDIA proprietary driver (390 for CUDA 9) 
 
 ```
-sudo apt update && sudo apt install nvidia-cuda-toolkit
+sudo apt update && sudo apt install nvidia-cuda-toolkit gcc-6
+nvcc --version
+reboot
 ```
 
 Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
