@@ -1,4 +1,4 @@
-### [참고] 드라이버 설치 
+## Nvidia 드라이버 설치 
 
 - GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
 
@@ -7,18 +7,6 @@
 - [Nvidia Driver Instalation](https://goo.gl/kfzWfJ) 
 
 - [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
-
-```
-sudo add-apt-repository -y ppa:xorg-edgers/ppa -y
-sudo apt-get update
-sudo apt-get install nvidia-current
-
-sudo apt purge nvidia-*
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt install nvidia-381
-# cd /usr/lib/nvidia-xxxx 로 확인 가능 
-```
 
 
 [ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
@@ -40,14 +28,25 @@ apt install nvidia-settings
 # reboot
 ```
 
+```
+sudo add-apt-repository -y ppa:xorg-edgers/ppa -y
+sudo apt-get update
+sudo apt-get install nvidia-current
+
+sudo apt purge nvidia-*
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-381
+# cd /usr/lib/nvidia-xxxx 로 확인 가능 
+```
 
 
 
 
-# Driver & CUDA install script 
 
-|참고 : 설치 후 재 부팅 |
-|-|
+
+### CUDA install script 
+
 
 Ubuntu 18.04 - CUDA 9
 
@@ -59,7 +58,9 @@ nvcc --version
 reboot
 ```
 
+
 Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
+
 ```bash
 #!/bin/bash
 echo "Checking for CUDA and installing."
@@ -87,9 +88,6 @@ fi
 ```
 
 ---
-
-## 1. CUDA설치 
-
 
 
 ### 1.0 사전 작업 
