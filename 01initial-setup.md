@@ -1,7 +1,9 @@
 # 초기 설정
 
-- [한글 입력 패키지 설정](http://awesometic.tistory.com/87) : ubtuntu 17, 18
-- [한글 입력 단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) : ubnutu 18
+
+한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) 
+
+> Korean(hangul)이 안보이면 reboot 
 
 ```
 sudo add-apt-repository ppa:createsc/3beol
@@ -9,11 +11,11 @@ apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
 ```
 
-- 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
+멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
-- bashrc
+bashrc
 
-- vimrc : [이번에는 우분투 호환 vimrc](http://chanacademy.tistory.com/38), [좋은 vimrc를 찾았다](http://chanacademy.tistory.com/37)
+vimrc : [이번에는 우분투 호환 vimrc](http://chanacademy.tistory.com/38), [좋은 vimrc를 찾았다](http://chanacademy.tistory.com/37)
 
 ## Monitoring
 
