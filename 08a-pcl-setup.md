@@ -88,7 +88,7 @@ python3 setup.py install
 |fatal error: pcl/features/cppf.h: No such file or directory|`sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl;sudo apt-get update;sudo apt-get upgrade libpcl-features-dev libpcl-io-1.7 libpcl-io-1.7-dev`|ubnutu 14 떄문인|
 
 
-### 2.2 conda 설치 (ROS충돌 위험) 
+### 2.2 conda 설치
 ```
 conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 ```
