@@ -32,6 +32,9 @@ make install
 add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 apt-get update
 apt-get install libpcl-all
+
+# for Ubuntu 16.04
+sudo apt install libpcl-dev  # depends: libvtk6-dev
 ```
 
 |Error Code | Solution|
