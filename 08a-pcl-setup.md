@@ -225,3 +225,40 @@ python setup.py
 - PCD to Images
 
 - ROS지원 : [설치](https://github.com/dimatura/pypcd#using-with-ros) & [사용법]()
+
+
+---
+
+```python
+from __future__ import print_function
+import pcl
+import numpy as np
+
+
+#p = pcl.PointCloud()
+#p.from_file("test.pcd") # Deprecated; use pcl.load instead.
+
+pc = pcl.load("sample_sec.pcd")
+pa = pc.to_array()
+
+print(type(pc))
+print(type(pa))
+
+print(pa.shape)
+print(pa.ndim)
+print(pa.dtype)
+
+print(pa)
+
+pc.width
+
+
+cloud = pcl.load('sample_sec.pcd')
+print ('Loaded ' + str(cloud.width * cloud.height) + ' data points from test_pcd.pcd with the following fields: ')
+for i in range(0, cloud.size):
+    print ('x: ' + str(cloud[i][0]) + ', y : ' + str(cloud[i][1]) + ', z : ' + str(cloud[i][2]))
+
+```
+
+
+
