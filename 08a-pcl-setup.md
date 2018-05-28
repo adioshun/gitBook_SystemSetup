@@ -119,6 +119,8 @@ RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
 
 ## 3. PCL for ROS
 
+> How-to : Gitbook - ros_autoware - rospcl
+
 ### 3.1 Source 설치 (ubuntu 14)
 
 ```
