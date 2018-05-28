@@ -7,7 +7,7 @@
 * [02\_Docker\_setup](02docker-setup.md)
   * [02\_A\_Vagrant](02docker-setup/02a-vagrant.md)
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)
-  * [02\_Docker\_how-to-use](02docker-setup/02docker-how-to-use.md)
+  * [02\_Docker\_how-to](02docker-setup/02docker-how-to-use.md)
 * [03\_ROS\_setup](03ros-setup.md)
   * [03\_A\_Autoware](03ros-setup/03a-autoware.md)
   * [03\_B\_Apollo](03ros-setup/03b-apollo.md)
