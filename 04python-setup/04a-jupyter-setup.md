@@ -68,6 +68,8 @@ jupyter contrib nbextension install --user
 
 > [conda install nb_conda](https://blog.naver.com/ryu_0108/221198673685)
 
+기존 Jupyter에 새 커널 추가 하기 (conda사용시)
+
 ```
 jupyter kernelspec list
 source activate py2torch
@@ -96,14 +98,17 @@ python2 -m ipykernel install --user
 
 ### [jupyter-tensorboard ](https://github.com/lspvic/jupyter_tensorboard)
 
-- 주피터 노트북에서 tensorboard를 바로 킬 수 있게 해줍니다.
+> 주피터 노트북에서 tensorboard를 바로 킬 수 있게 해줍니다.
 
-- 설치
+설치
+
 ```
 1. Be sure that tensorflow(-gpu)>=1.3.0 has been installed.
 2. Install the pip package: pip(3) install jupyter-tensorboard
 ```
-- 실행
+
+실행
+
 ```
 1. jupyter로 logdir로 이동한다.
 2. new - tensorboard
