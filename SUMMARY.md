@@ -22,6 +22,7 @@
   * [08\_A\_PCL\_setup](08a-pcl-setup.md)
   * [08\_B\_PDAL\_setup](08b-pdal-setup.md)
   * [08\_C\_pyntcloud](08c-pyntcloud.md)
+  * [08\_A\_PCL\_how-to](08a-pcl-how-to.md)
 * [09\_Device\_setup](09device-setup.md)
   * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
   * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)

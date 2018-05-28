@@ -11,10 +11,3 @@ Lightweigth visualizer
 
 
 
-# pypcd
-
-- PCD to numpy / pandas
-
-- PCD to Images
-
-- [github](https://github.com/dimatura/pypcd)
