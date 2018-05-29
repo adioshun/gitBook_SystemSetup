@@ -29,10 +29,9 @@ docker images
 
 ## Create Container 
 ```
-sudo docker run -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
+sudo docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
 
-sudo nvidia-docker run -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
-sudo docker --runtime=nvidia -it 
+docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
 
 docker run -it --net host --env="DISPLAY" --volume /mnt/docker:/workspace --name 'Ubuntu' --volume "$HOME/.Xauthority:/root/.Xauthority:rw" {image_name} /bin/bash
 
@@ -59,6 +58,7 @@ docker start Ubuntu
 ## Connect/Use the Container 
 ```
 docker attach Ubuntu
+docker exec -it [컨테이너명] bash # 쉘 접속 
 docker exec -it [컨테이너명] su - ubuntu  #exec 로 접속 했을땐 접속을 해제 하여도 도커 컨테이너가 중지되지 않습니다.
 ```
 
