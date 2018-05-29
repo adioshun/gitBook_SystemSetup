@@ -91,6 +91,7 @@ python3 setup.py install
 
 ### 2.2 conda 설치
 ```
+conda create -n pcl3 python=3 numpy numba scipy pandas
 conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 ```
 
@@ -100,12 +101,12 @@ conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 ```
 #Dockerfile
 
-FROM ubuntu:14.04
+FROM ubuntu:14.04  
 
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 RUN apt-get update && \
-    apt-get install -y libpcl-all
+    apt-get install -y libpcl-all  #유분투 16에서 동작 암함 
 
 RUN apt-get install -y python-pip git
 RUN apt-get install -y python-dev
@@ -115,6 +116,9 @@ RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
 ```
 
 
+|에러|해결책|
+|-|-|
+|Python locale error: unsupported locale setting|$ export LC_ALL="en_US.UTF-8"<br>$ export LC_CTYPE="en_US.UTF-8"<br>$ sudo dpkg-reconfigure locales|
 
 
 

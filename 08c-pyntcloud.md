@@ -15,6 +15,10 @@ pip install git+https://github.com/daavoo/pyntcloud
 
 Lightweigth visualizer
 
+```
+form pytcloud import PyntCloud
+```
+
 ![](https://raw.githubusercontent.com/daavoo/pyntcloud/master/docs/images/plot1.gif)
 
 
