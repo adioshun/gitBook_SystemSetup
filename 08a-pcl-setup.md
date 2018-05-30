@@ -94,7 +94,7 @@ python3 setup.py install
 # conda config --set channel_priority false 
 conda config --add channels conda-forge
 conda install -c sirokujira python-pcl 
-#conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
+#conda install -c https://conda.anaconda.org/ccordoba12 python-pcl  #outdated
 ```
 
 
