@@ -64,19 +64,25 @@ dpkg -i PCL-1.8.0-Linux.deb
 
 # 2. PCL for Python 설치 
 
-> [홈페이지](http://strawlab.github.io/python-pcl/), [example](https://github.com/strawlab/python-pcl/tree/master/examples)
+- [공식 홈페이지](http://strawlab.github.io/python-pcl/), [example](https://github.com/strawlab/python-pcl/tree/master/examples)
 
-> Recommend CONDA Installation 
+- conda를 이용한 설치 방법 추천 
 
 ## 2.1 pip 설치 
 
 ```
+# 
 apt-get install build-essential
+apt-get install -y python-pip git python-dev
 apt install pkg-config
 
 pip install numpy cython 
-pip install git+https://github.com/strawlab/python-pcl
 
+# ubunutu 14??
+pip install git+https://github.com/strawlab/python-pcl
+#pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl
+
+# ubuntu 16??
 #git clone https://github.com/strawlab/python-pcl.git
 #cd python-pcl
 #python3 setup.py build
@@ -112,8 +118,7 @@ RUN add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 RUN apt-get update && \
     apt-get install -y libpcl-all  #유분투 16에서 동작 암함 
 
-RUN apt-get install -y python-pip git
-RUN apt-get install -y python-dev
+RUN apt-get install -y python-pip git python-dev
 RUN pip install cython
 RUN pip install numpy
 RUN pip install git+https://github.com/strawlab/python-pcl.git#egg=pcl

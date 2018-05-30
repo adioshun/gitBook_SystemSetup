@@ -25,7 +25,7 @@ docker build --tag gingertea/centos-nginx:0.1 .
 docker images
 ```
 
-> 도커 이름 변경 : `docker remane {원래이름} {변경 이름}`
+> 컨테이너 이름 변경 : `docker remane {원래이름} {변경 이름}`
 
 ## Create Container 
 ```
