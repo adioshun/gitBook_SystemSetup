@@ -72,7 +72,9 @@ dpkg -i PCL-1.8.0-Linux.deb
 
 ```
 apt-get install build-essential
-pip3 install numpy cython 
+apt install pkg-config
+
+pip install numpy cython 
 pip install git+https://github.com/strawlab/python-pcl
 
 #git clone https://github.com/strawlab/python-pcl.git
