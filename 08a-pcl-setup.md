@@ -91,8 +91,10 @@ python3 setup.py install
 
 ### 2.2 conda 설치
 ```
-conda create -n pcl3 python=3 numpy numba scipy pandas
-conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
+# conda config --set channel_priority false 
+conda config --add channels conda-forge
+conda install -c sirokujira python-pcl 
+#conda install -c https://conda.anaconda.org/ccordoba12 python-pcl
 ```
 
 
