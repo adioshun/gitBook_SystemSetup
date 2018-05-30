@@ -90,11 +90,11 @@ python3 setup.py install
 
 
 ### 2.2 conda 설치
+
 ```
-# conda config --set channel_priority false 
 conda config --add channels conda-forge
-conda install -c sirokujira python-pcl 
-#conda install -c https://conda.anaconda.org/ccordoba12 python-pcl  #outdated
+conda install -c sirokujira python-pcl #v0.3
+#conda install -c https://conda.anaconda.org/ccordoba12 python-pcl  #v0.2
 ```
 
 
