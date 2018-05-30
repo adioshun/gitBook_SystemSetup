@@ -72,13 +72,13 @@ dpkg -i PCL-1.8.0-Linux.deb
 
 ```
 apt-get install build-essential
-pip3 install cython
-pip3 install numpy
-git clone https://github.com/strawlab/python-pcl.git
-cd python-pcl
+pip3 install numpy cython 
+pip install git+https://github.com/strawlab/python-pcl
 
-python3 setup.py build
-python3 setup.py install
+#git clone https://github.com/strawlab/python-pcl.git
+#cd python-pcl
+#python3 setup.py build
+#python3 setup.py install
 ```
 
 > 참고 : [python-pcl, python 3, ubuntu 14.04](http://adamsteer.blogspot.kr/2016/01/python-pcl-python-3-ubuntu-1404.html)
