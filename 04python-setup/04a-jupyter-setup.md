@@ -21,6 +21,7 @@ c.NotebookApp.open_browser = False # L201 원격접속으로 활용할 것이기
 c.NotebookApp.port = 8888 # L213 포트를 설정해준다. 기본포트로 8888이 자동 배정된다.
 c.NotebookApp.password = 'sha1:a8dee43a3a44:b18f1ad149a60efb4838da44cf127985d64a5e70' # L210 python 실행후 from notebook.auth import passwd; passwd\(\)
 # c.NotebookApp.password = 'sha1:a4a97a70ed7c:a554dcc8f9c76c44129cb9bce3d954a6d8bfc1ae' #snu2018
+# c.NotebookApp.password = 'sha1:834d30a0973a:3ff75a3b19f0aa52bf6402eb8778b7fa6da04537' #ubuntu
 
 c.NotebookApp.notebook_dir = '/workspace' # L195 기본 디렉터리를 지정시켜준다.
 ```
