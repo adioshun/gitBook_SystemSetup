@@ -28,15 +28,11 @@
 > Docker에서 x11접속은 [여기](https://github.com/adioshun/System_Setup/wiki/3_Docker-Setup#docker%EC%97%90%EC%84%9C-guix11-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0)랑 [여기ROS Wiki: Dokcer Tutorial/GUI](http://wiki.ros.org/docker/Tutorials/GUI)참고
 
 ## 도커 실행 
-```bash
-- docker run -it --rm \
-   --net host \ 
-   --env="DISPLAY" \
-   -p 2233:2233 \
-   --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \
-   {Docker Image ID} /bin/bash
 
-docker run -it --net host --env="DISPLAY" -e USER=root --privileged -p 1122:1122 -p 1188:1188 --volume "$HOME/.Xauthority:/root/.Xauthority:rw" -v /workspace/docker_{}:/workspace {Docker Image ID} /bin/bash
+```                
+xhost + 
+docker run -it --rm --net host --env="DISPLAY" --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -p 1122:22 --volume "$HOME/.Xauthority:/root/.Xauthority:rw" --name "x11" adioshun/ubuntu16:Open3D /bin/bash
+
 ```
 
 > SSH접속을 위해서는 도커 컨테이너의 port번호를 22에서 다른것으로 변경 후 dock를 실행한 서버에서 ssh -X -p 2233 root@IP 로 접속 시도  

@@ -97,23 +97,9 @@ docker pull nownicked/autoware-x11running7
 
 * xmanager - 연결 설정 - Connection/SSH/Tunneling/X11 Forwarding 체크, xManager체크
 
-* 도커 실생   
-  \`\`\`
+* 도커 실생   `docker run -it --rm --net host --env="DISPLAY" --privileged -v /tmp/.X11-unix:/tmp/.X11-unix --volume "$HOME/.Xauthority:/root/.Xauthority:rw" --name "x11" adioshun/ubuntu16:Open3D /bin/bash`
 
-* docker run -it --rm \  
-   --net host \  
-   --env="DISPLAY" \  
-   --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \  
-   --volume "$HOME/sharefolder:/sharefolder" \  
-   {Docker Image ID} /bin/bash  
-  \`\`\`
-
-* 도커 내에서
-
-```
-cd /src/Autoware/ros/
-./run
-```
+* 도커 내에서 `cd /src/Autoware/ros/ && ./run`
 
 
 

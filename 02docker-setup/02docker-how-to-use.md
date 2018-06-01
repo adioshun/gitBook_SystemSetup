@@ -28,21 +28,16 @@ docker images
 > 컨테이너 이름 변경 : `docker remane {원래이름} {변경 이름}`
 
 ## Create Container 
-```
-sudo docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
 
+```python
 docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
 
-docker run -it --net host --env="DISPLAY" --volume /mnt/docker:/workspace --name 'Ubuntu' --volume "$HOME/.Xauthority:/root/.Xauthority:rw" {image_name} /bin/bash
-
-nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
-
+#x11
+xhost + 
+docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
+docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix --env="DISPLAY" --net host -p 1122:22 --volume "$HOME/.Xauthority:/root/.Xauthority:rw" --name "x11" adioshun/ubuntu16:Open3D /bin/bash
 
 ```
-
-> nvidia 도커 실행시 `nvcc --version`확인후 `echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc` 설정
-
-> VM에서실행시 `firewall ingress/egress` 설정필요, [[AWS 포트 개방하기]](http://blog.naver.com/alice_k106/220340515017)
 
 
 ## Check the running status 
