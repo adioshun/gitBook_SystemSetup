@@ -1,7 +1,7 @@
 ssh 샘플
 
 ```
-FROM       ubuntu:12.04
+FROM       ubuntu:16.04
 MAINTAINER Aleksandar Diklic "https://github.com/rastasheep"
 
 RUN apt-get update
