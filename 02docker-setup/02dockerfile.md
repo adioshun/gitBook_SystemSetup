@@ -24,3 +24,6 @@ EXPOSE 22
 CMD    ["/usr/sbin/sshd", "-D"]
 
 ```
+
+
+docker build --tag hello:0.1 .
