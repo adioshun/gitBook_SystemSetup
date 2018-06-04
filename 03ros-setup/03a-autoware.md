@@ -78,6 +78,7 @@ $ source devel/setup.bash
 ### 1.2 Docker 설치
 
 ```
+docker pull autoware/autoware:1.7.0-kinetic
 docker pull kunfengchen/u14-indigo-autoware 
 docker pull nownicked/autoware-x11running7
 ```
