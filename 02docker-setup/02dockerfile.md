@@ -2,6 +2,26 @@
 
 docker build --tag hello:0.1 .
 
+ref : https://rampart81.github.io/post/dockerfile_instructions/
+
+
+
+## 자동 실행 /데몬 
+
+```
+FROM adioshun/pcls:pcl
+
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd", "-D"]
+
+EXPOSE 8888
+
+CMD ["jupyter notebook --allow-root", "-D"]
+
+ENTRYPOINT ["/entrypoint.sh"]
+```
 
 
 ## ssh 샘플
