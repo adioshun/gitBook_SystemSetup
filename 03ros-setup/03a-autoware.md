@@ -44,31 +44,20 @@ source ~/.bashrc
 
 ### 1.1 소스 설치
 
-Get Autoware by following steps. Then build and install it.
 
-If you get the latest autoware form github
-
-```shell
-$ git clone https://github.com/CPFL/Autoware.git
-$ cd Autoware/ros/src
+```python
+$ cd $HOME
+$ git clone https://github.com/CPFL/Autoware.git --recurse-submodules
+$ cd ~/Autoware/ros/src
 $ catkin_init_workspace
 $ cd ../
+$ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 $ ./catkin_make_release
-$ source devel/setup.bash
+
+$ cd $HOME/Autoware/ros
 $ ./run
 ```
 
-If you use archives:
-
-```shell
-$ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
-$ unzip Autoware-beta.zip
-$ cd Autoware-beta/ros/src
-$ catkin_init_workspace
-$ cd ../
-$ ./catkin_make_release
-$ source devel/setup.bash
-```
 
 | Error Code | Solution |
 | --- | --- |
