@@ -5,30 +5,20 @@
 
 ```bash
 apt-get install lsb-release
-sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trust main" > /etc/apt/sources.list.d/ros-latest.list'
-#sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-
+sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-
 apt-get update
 
-apt-get install ros-kinetic-desktop-full #OR ros-kinetic-desktop-base 
-
-apt-get install ros-kinetic-catkin
-
-sudo rosdep init
-
-rosdep update
+apt-get install ros-kinetic-desktop-full ros-kinetic-catkin -y
+rosdep init
+rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # GET ROSINSTALL
-sudo apt-get install python-rosinstall
-
-
-sudo apt-get install python-rosinstall  #Create a ROS Workspace까지해야import ros가능
+sudo apt-get install python-rosinstall -y
 
 ```
 
@@ -83,10 +73,10 @@ ROS_ROOT and ROS_PACKAGE_PATH 확인  : `printenv | grep ROS`
 source /opt/ros/kinetic/setup.bash
 
 # CREATING A ROS CATKIN WORKSPACE
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
+mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/
 catkin_make
-#Run "make -j4 -l4" in "/workspace/ros/build"
+cd ./build 
+make -j4 -l4
 
 
 # SOURCING  CATKIN ENVIRONMENT - and automatically get it to source from now on
@@ -95,7 +85,6 @@ source ~/catkin_ws/devel/setup.bash; source ~/.bashrc
 echo $ROS_PACKAGE_PATH
 
 ```
-> 확인 : `echo $ROS_PACKAGE_PATH` 
 
 ## 설치 확인 
 
@@ -106,7 +95,9 @@ echo $ROS_PACKAGE_PATH
 4th terminal : rosrun rqt_graph rqt_graph
 ```
 
-## Could not find a package configuration file provided by
+---
+
+## [패키지 설치시 에러처리] Could not find a package configuration file provided by
 
 ```
 Could not find a package configuration file provided by "Qt5Core"
