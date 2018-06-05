@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [개요](README.md)
 * [01\_Initial\_setup](01initial-setup.md)
   * [01\_A\_VM\_setup](01initial-setup/01a-vm-setup.md)
   * [01\_B\_x11\_setup](01initial-setup/01b-x11setup.md)
@@ -30,4 +30,3 @@
   * [09\_C\_Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
-
