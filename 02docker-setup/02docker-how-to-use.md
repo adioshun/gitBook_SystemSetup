@@ -34,8 +34,8 @@ docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/
 
 #x11
 xhost + 
-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix --env="DISPLAY" --net host -p 1122:22 --volume "$HOME/.Xauthority:/root/.Xauthority:rw" --name "x11" adioshun/ubuntu16:Open3D /bin/bash
+docker run --runtime=nvidia -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
+docker run --runtime=nvidia -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix --env="DISPLAY" --net host -p 1122:22 --volume "$HOME/.Xauthority:/root/.Xauthority:rw" --name "x11" adioshun/ubuntu16:Open3D /bin/bash
 
 ```
 
