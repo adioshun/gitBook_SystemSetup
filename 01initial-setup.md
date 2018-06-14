@@ -22,6 +22,8 @@ apt install nvidia-settings
 #apt install nvidia-340
 ```
 
+> [How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
+
 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
 bashrc
