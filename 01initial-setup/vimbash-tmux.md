@@ -15,17 +15,6 @@ apt-get install tmux
 tmux new -s <원하는 이름>
 ```
 
-### Source Install
-
-```
-cd ~
-git clone https://github.com/tmux/tmux.git
-cd tmux
-sh autogen.sh
-/configure && make
-
-```
-
 * 창 나누기 Ctrl + b, " \(새로\) Ctrl + b, % \(가로\) 
 * Ctrl + b, 방향키 : 화면 이동
 * 창 이동 Ctrl + b, o\(알파벳\)

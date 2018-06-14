@@ -30,3 +30,7 @@
   * [09\_C\_Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
+
+
+가능 버젼 확인 : apt-cache search libpcl-dev
+설치 버젼 확인 : apt-get -s install libpcl-dev

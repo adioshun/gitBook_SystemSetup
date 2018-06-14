@@ -16,6 +16,8 @@ sudo apt-get purge docker.io
 sudo wget -qO- https://get.docker.com/ | sh
 # sudo apt install docker.io #sudo apt-get update; sudo apt-get install docker-engine 
 
+sudo apt-get upgrade docker
+
 docker 버전 확인
 # docker version
 ##  ~17.12 : nvidia-docker 1
