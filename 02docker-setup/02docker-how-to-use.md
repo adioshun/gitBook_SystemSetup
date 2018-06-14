@@ -38,6 +38,8 @@ docker run --runtime=nvidia -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e
 
 ```
 
+~~--volume "$HOME/.Xauthority:/root/.Xauthority:rw"~~
+
 
 ## Check the running status 
 ```
