@@ -44,7 +44,9 @@ source ~/.bashrc
 
 ### 1.1 소스 설치
 
-PCL소스 설치법으로 사전 설치 필요 (VTK, etc.)
+PCL소스 설치 후 진행  
+
+OR PCL 패키지 설치 후 libopenni2-dev, VTK 설치 필요 
 
 
 ```python
