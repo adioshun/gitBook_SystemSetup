@@ -13,20 +13,33 @@
 sudo apt-get purge docker.io 
 
 # 최신 docker 설치
-sudo apt install docker.io #sudo apt-get update; sudo apt-get install docker-engine 
 sudo wget -qO- https://get.docker.com/ | sh
+# sudo apt install docker.io #sudo apt-get update; sudo apt-get install docker-engine 
 
 docker 버전 확인
 # docker version
+##  ~17.12 : nvidia-docker 1
+##  17.12~ : nvidia-docker 2 
+
 ```
 
+Dependency 에러시 특정 패키지 버젼 지정하여 설치 하기 
+```
+The following packages have unmet dependencies:
+ nvidia-docker2 : Depends: docker-ce (= 17.12.0~ce-0~ubuntu) but 18.02.0~ce-0~ubuntu is to be installed or
+                           docker-ee (= 17.12.0~ee-0~ubuntu) but it is not installable
+E: Unable to correct problems, you have held broken packages.
+
+## Solution
+root@ubuntu16:/tmp# sudo apt-get install docker-ce={17.12.0~ce-0~ubuntu}
+```
+
+
+
+
+
+
 ## 2. nvidia-docker 설치 (GPU지원 도커) 
-
-1. Docker(CPU) 설치 
-
-2. [GPU Driver,CUDA install](https://github.com/adioshun/System_Setup/wiki/4_CUDA_CuDNN-Setup)
-
-3. nvidia Docker설치
 
 ####### 버젼 1
 
@@ -43,7 +56,7 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 ```
 > Ndivia-docker binary : [Download](https://github.com/NVIDIA/nvidia-docker/releases), [Manual](https://github.com/NVIDIA/nvidia-docker)
 
-####### 버젼 2 (14.04/16.04/18.04)
+####### 버젼 2 
 
 ```python
 
@@ -71,14 +84,7 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 ```
 
-Dependency 에러시 특정 패키지 버젼 지정하여 설치 하기 
-```
-The following packages have unmet dependencies:
- nvidia-docker2 : Depends: docker-ce (= 17.12.0~ce-0~ubuntu) but 18.02.0~ce-0~ubuntu is to be installed or
-                           docker-ee (= 17.12.0~ee-0~ubuntu) but it is not installable
-E: Unable to correct problems, you have held broken packages.
-```
-> root@ubuntu16:/tmp# sudo apt-get install docker-ce={17.12.0~ce-0~ubuntu}
+
 
 
 ---
