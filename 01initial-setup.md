@@ -1,7 +1,7 @@
 # 초기 설정
 
 
-한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) 
+1. 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) 
 
 > Korean(hangul)이 안보이면 reboot 
 
@@ -11,7 +11,7 @@ apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
 ```
 
-Nvidia Driver (ubuntu 16, 18)
+2. Nvidia Driver (ubuntu 16, 18)
 
 ```
 #sudo apt-get install ubuntu-drivers-common
@@ -25,7 +25,7 @@ apt install nvidia-settings
 > [How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
 
 
-Chrome install (Ubuntu 16)
+3. Chrome install (Ubuntu 16)
 
 ```
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb sudo apt-get in
@@ -34,11 +34,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
 
-멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
+4. 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
-bashrc
 
-vimrc : [이번에는 우분투 호환 vimrc](http://chanacademy.tistory.com/38), [좋은 vimrc를 찾았다](http://chanacademy.tistory.com/37)
 
 ## Monitoring
 

@@ -125,6 +125,8 @@ tmux attach -t $SESSION
 
 ## 3. VIM
 
+```
+
     # ~/.vimrc
     set hlsearch " 검색어 하이라이팅
     set nu " 줄번호
@@ -170,8 +172,13 @@ tmux attach -t $SESSION
 
     " 컬러 스킴 사용
     colorscheme jellybeans
+```
 
 > color schem dir : `/usr/share/vim/vimNN/colors`
+
+vimrc : [이번에는 우분투 호환 vimrc](http://chanacademy.tistory.com/38), [좋은 vimrc를 찾았다](http://chanacademy.tistory.com/37)
+
+
 
 ## zsh변경
 
