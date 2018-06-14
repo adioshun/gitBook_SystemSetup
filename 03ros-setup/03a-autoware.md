@@ -44,8 +44,12 @@ source ~/.bashrc
 
 ### 1.1 소스 설치
 
+PCL소스 설치법으로 사전 설치 필요 (VTK, etc.)
+
 
 ```python
+
+
 $ cd $HOME
 $ git clone https://github.com/CPFL/Autoware.git --recurse-submodules
 $ cd ~/Autoware/ros/src
