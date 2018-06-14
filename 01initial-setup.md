@@ -1,8 +1,6 @@
 # 초기 설정
 
 
-
-
 2. Nvidia Driver (ubuntu 16, 18)
 
 ```
@@ -20,7 +18,7 @@ apt install nvidia-settings
 3. Chrome install (Ubuntu 16)
 
 ```
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb sudo apt-get in
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
