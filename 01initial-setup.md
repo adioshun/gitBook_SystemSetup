@@ -14,6 +14,7 @@ ibus-setup #ibus-setup-hangul
 Nvidia Driver (ubuntu 18.04)
 
 ```
+#sudo apt-get install ubuntu-drivers-common
 ubuntu-drivers devices
 
 ubuntu-drivers autoinstall
