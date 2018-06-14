@@ -11,6 +11,16 @@ apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
 ```
 
+Nvidia Driver (ubuntu 18.04)
+
+```
+ubuntu-drivers devices
+
+ubuntu-drivers autoinstall
+apt install nvidia-settings
+#apt install nvidia-340
+```
+
 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
 bashrc
