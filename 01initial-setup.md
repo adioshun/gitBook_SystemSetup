@@ -11,7 +11,7 @@ apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
 ```
 
-Nvidia Driver (ubuntu 18.04)
+Nvidia Driver (ubuntu 16, 18)
 
 ```
 #sudo apt-get install ubuntu-drivers-common
@@ -23,6 +23,16 @@ apt install nvidia-settings
 ```
 
 > [How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
+
+
+Chrome install (Ubuntu 16)
+
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb sudo apt-get in
+sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
+
 
 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
