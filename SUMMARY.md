@@ -6,6 +6,7 @@
   * [01\_B\_x11\_setup](01initial-setup/01b-x11setup.md)
   * [VIM\_BASH\_TMUX](01initial-setup/vimbash-tmux.md)
   * [Mount](01initial-setup/mount.md)
+  * [KoreanInput](01initial-setup/koreaninput.md)
 * [02\_Docker\_setup](02docker-setup.md)
   * [02\_A\_Vagrant](02docker-setup/02a-vagrant.md)
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)

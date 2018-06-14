@@ -1,15 +1,7 @@
 # 초기 설정
 
 
-1. 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) 
 
-> Korean(hangul)이 안보이면 reboot 
-
-```
-sudo add-apt-repository ppa:createsc/3beol
-apt-get update; sudo apt-get install ibus ibus-hangul
-ibus-setup #ibus-setup-hangul
-```
 
 2. Nvidia Driver (ubuntu 16, 18)
 
