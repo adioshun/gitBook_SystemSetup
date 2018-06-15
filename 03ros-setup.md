@@ -29,8 +29,8 @@ rosdep update #rosdep fix-permissions && rosdep update
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-# GET ROSINSTALL
-sudo apt-get install python-rosinstall -y
+# Dependencies for building packages
+sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
 ```
 
