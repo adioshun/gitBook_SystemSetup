@@ -68,7 +68,7 @@ echo $ROS_PACKAGE_PATH
 
 ---
 
-## [패키지 설치시 에러처리] Could not find a package configuration file provided by
+#### [패키지 설치시 에러처리] Could not find a package configuration file provided by
 
 ```
 Could not find a package configuration file provided by "Qt5Core"
