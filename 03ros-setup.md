@@ -5,32 +5,6 @@
 
 ```bash
 apt-get install lsb-release
-sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-apt-get update
-
-apt-get install ros-kinetic-desktop-full ros-kinetic-catkin -y
-rosdep init
-rosdep fix-permissions && rosdep update
-
-# ENVIRONMENT SETUP
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
-# GET ROSINSTALL
-sudo apt-get install python-rosinstall -y
-
-```
-
-> Ref :[ROS Wiki](http://wiki.ros.org/kinetic/Installation/Ubuntu)
-
-
-
-# ROS INDIGO - in ubuntu 14.04
-
-
-```bash 
-# INSTALL ROS INDIGO - in ubuntu 14.04
 
 # ADD TO APT REPOSITORY LIST
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -43,43 +17,25 @@ sudo apt-get update
 
 # INSTALL THE DESKTOP FULL VERSION
 sudo apt-get install ros-indigo-desktop-full
-
-# BARE BONES VERSION - NO GUI 
-# sudo apt-get install ros-indigo-ros-base
+sudo apt-get install ros-kinetic-desktop-full ros-kinetic-catkin -y
+sudo apt-get install ros-melodic-desktop-full
+#apt-cache search ros-melodic
 
 # INITIALIZE ROSDEP
 sudo rosdep init
-rosdep update
+rosdep update #rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
-echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # GET ROSINSTALL
-sudo apt-get install python-rosinstall
+sudo apt-get install python-rosinstall -y
 
 ```
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
 
-
-```
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-
-sudo apt-get update
-
-sudo apt-get install ros-melodic-desktop-full
-#apt-cache search ros-melodic
-
-sudo rosdep init
-rosdep update
-
-
-
-
-```
 
 
 # Setup
