@@ -32,77 +32,21 @@ touch /root/.tmux.conf
 
 ```
 ## set mouse for tmux 2.1 as shipped with Ubuntu 14.04
-set-option -g mouse on 
+wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/.tmux.conf_2.1
 
-bind -n WheelUpPane   select-pane -t= \; copy-mode -e \; send-keys -M
-bind -n WheelDownPane select-pane -t= \;                 send-keys -M
-
-# Set the default terminal mode to 256color mode
-set -g default-terminal "screen-256color"
-
-# enable activity alerts
-setw -g monitor-activity on
-set -g visual-activity on
-
-# Center the window list
-set -g status-justify centre
-```
-
-```
 # Use mouse for 2.6+
-set -g mouse on
+wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/.tmux.conf_2.6+
 
-setw -g mode-keys vi
 
-# Use Alt-arrow keys without prefix key to switch panes
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
 
-# Shift arrow to switch windows
-bind -n S-Left  previous-window
-bind -n S-Right next-window
-
-# scrollback buffer size increase
-set -g history-limit 100000
-
-# change window order
-bind-key -n C-S-Left swap-window -t -1
-bind-key -n C-S-Right swap-window -t +1
-
-# disable window name auto change
-set-option -g allow-rename off
-
-# bar color
-set -g status-bg black
-set -g status-fg white
-```
-
-```
 # Use mouse for 1.8
-setw -g mode-mouse on
-set -g mouse-select-window on
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
-set -g mouse-utf on
-```
+wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/.tmux.conf_1.8
 
-## 4-windows Startup
+## start_tmux.sh
 
-script `start_tmux.sh`
+wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/start_tmux.sh
 
-```
-echo 'start tmux'
-#set session name
-export SESSION=tmux
-tmux -2 new-session -d -s $SESSION 
-tmux split-window -v -t $SESSION  
-tmux split-window -v -t $SESSION    
-tmux split-window -h -t $SESSION  
 
-tmux attach -t $SESSION
-```
 
 > [tmux shortcuts & cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
 >
