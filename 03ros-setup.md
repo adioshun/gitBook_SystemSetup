@@ -26,7 +26,7 @@ sudo rosdep init
 rosdep update #rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/{배포판}/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # Dependencies for building packages
@@ -37,14 +37,9 @@ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
 
 
-
-# Setup
-
-ROS_ROOT and ROS_PACKAGE_PATH 확인  : `printenv | grep ROS`
-
 ## Create a ROS Workspace
 
-```bash 
+```python
 # SOURCING  ENVIRONMENT - for kinetic version
 source /opt/ros/kinetic/setup.bash
 
