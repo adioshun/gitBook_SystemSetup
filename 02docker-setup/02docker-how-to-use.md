@@ -30,12 +30,13 @@ docker images
 ## Create Container 
 
 ```python
-docker run --runtime=nvidia -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
+docker run -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 'Ubuntu' ubuntu /bin/bash 
 
 #x11
 xhost + 
-docker run --runtime=nvidia -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <image>
+docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /worksspace:/workspace --name "docker" <image> /bin/bash
 
+# --runtime=nvidia  #For Nvidia Docker2, Not or 1 
 ```
 
 ~~--volume "$HOME/.Xauthority:/root/.Xauthority:rw"~~
