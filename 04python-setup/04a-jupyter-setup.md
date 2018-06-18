@@ -9,6 +9,10 @@
 ### Jupyter Configuration
 
 ```bash
+mkdir ~/.jupyter && cd ~/.jupyter 
+wget https://gist.githubusercontent.com/adioshun/383e4f722712e94dcc9a5d8c9fda2bf4/raw/bbd7d9a23af2af47cd518261c74ef10a2c304ccd/jupyter_notebook_config.py
+
+
 jupyter notebook --generate-config --allow-root
 vi /root/.jupyter/jupyter_notebook_config.py
 ```
