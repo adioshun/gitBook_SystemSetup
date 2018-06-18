@@ -34,7 +34,7 @@ docker run -i -t -p 2222:22 -p 8585:8888 --volume /mnt/docker:/workspace --name 
 
 #x11
 xhost + 
-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /worksspace:/workspace --name "docker" <image> /bin/bash
+sudo docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /worksspace:/workspace --name "docker" adioshun/ubuntu16: /bin/bash
 
 # --runtime=nvidia  #For Nvidia Docker2, Not or 1 
 ```
