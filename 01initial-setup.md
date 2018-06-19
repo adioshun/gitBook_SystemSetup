@@ -26,7 +26,11 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 4. 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
 
+5. LIB 추가 
 
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:XXX
+```
 
 ## Monitoring
 
