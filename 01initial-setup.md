@@ -29,7 +29,8 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 5. LIB 추가 
 
 ```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:XXX
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/bin
+
 ```
 
 ## Monitoring
