@@ -72,6 +72,7 @@ umount /mnt/s3-drive
 ### 4.3 sshfs
 
 - 설치 및 접속 
+
 ```
 apt-get install sshfs
 sshfs {원격주소:원격폴더} {로컬 폴더}
