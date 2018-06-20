@@ -37,3 +37,13 @@ docker run -it --rm --net host --env="DISPLAY" --privileged -v /tmp/.X11-unix:/t
 
 > SSH접속을 위해서는 도커 컨테이너의 port번호를 22에서 다른것으로 변경 후 dock를 실행한 서버에서 ssh -X -p 2233 root@IP 로 접속 시도  
 
+
+--- 
+
+**GLFW Error: GLX: Failed to create context**
+
+OpenGL 지원 여부 확인 필요 : glxgears, glxinfo  
+
+apt-get install mesa-utils
+
+
