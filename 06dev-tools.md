@@ -1,10 +1,7 @@
 
 
 
-1. Home 디렉토리의 .profile 또는 /etc/.profile 에 라이브러리를 추가
-
-* .profile은 숨김파일로 ls -al 옵션을 함께 줘야 보여진다.
-
+.bashrc에 지정 : echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/" >> ~/.bashrc && source ~/.bashrc
  
 
 2. 쉘에서 Path 지정.
