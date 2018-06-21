@@ -33,6 +33,8 @@ source ~/.bashrc
 # Dependencies for building packages
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
+pip3 install PyYAML rospkg catkin_pkg
+
 ```
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
