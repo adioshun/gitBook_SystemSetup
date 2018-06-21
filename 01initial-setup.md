@@ -85,6 +85,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/bin
 
 ## git 폴더 연동
 
+
+
 ```
 #로컬 폴더로 이동 
 $ git init
