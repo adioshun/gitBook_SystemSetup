@@ -77,7 +77,7 @@ apt-get install ros-$ROS_DISTRO-velodyne
 
 #### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
-- apt-get install apt-file
+- apt-get install apt-file && apt-file update
 ```
 Could not find a package configuration file provided by "Qt5Core"
   (requested version 5.0) with any of the following names:
