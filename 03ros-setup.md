@@ -26,7 +26,7 @@ sudo rosdep init
 rosdep update #rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
-echo "source /opt/ros/{배포판}/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # Dependencies for building packages
