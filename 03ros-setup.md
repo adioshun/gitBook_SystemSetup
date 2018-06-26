@@ -60,16 +60,30 @@ echo $ROS_PACKAGE_PATH
 
 ```
 
-## 설치 확인 
-
-```
-1st terminal : roscore
-2nd terminal : rosrun turtlesim turtlesim_node
-3rd terminal : rosrun turtlesim turtle_teleop_key
-4th terminal : rosrun rqt_graph rqt_graph
-```
 
 ---
+
+## 2. 패키지 설치 방법 
+
+### 2.1 소스 설치 
+
+```python
+# INDIGO VERSION
+cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/velodyne.git
+cd velodyne/
+rosdep install --from-paths ./ --ignore-src --rosdistro indigo -y
+cd ~/catkin_ws/ && catkin_make
+```
+
+### 2.2 apt설치 
+
+```
+apt-get install ros-kinetic-velodyne
+```
+
+
+  
+
 
 #### [패키지 설치시 에러처리] Could not find a package configuration file provided by
 
