@@ -77,6 +77,7 @@ apt-get install ros-$ROS_DISTRO-velodyne
 
 #### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
+- apt-get install apt-file
 ```
 Could not find a package configuration file provided by "Qt5Core"
   (requested version 5.0) with any of the following names:
@@ -90,16 +91,15 @@ Could not find a package configuration file provided by "Qt5Core"
   been installed.
 ```
 
-run `apt-file search Qt5CoreConfig.cmake`
-
-review the result
+- run `apt-file search Qt5CoreConfig.cmake`
+  - review the result
 
 ```
 qtbase5-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
 qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
 ```
 
-Install the missing package `sudo apt install qtbase5-dev`
+- Install the missing package `sudo apt install qtbase5-dev`
 
 > ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
 
