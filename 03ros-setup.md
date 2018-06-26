@@ -1,7 +1,6 @@
 # ROS
 
-!!! 아나콘다 삭제후 진행 anaconda is not recommended [[Solution]](https://github.com/udacity/RoboND-Python-StarterKit/blob/master/doc/linux_ros_anaconda_warning.md)
-
+!!! 아나콘다 삭제후 진행 anaconda is not recommended [\[Solution\]](https://github.com/udacity/RoboND-Python-StarterKit/blob/master/doc/linux_ros_anaconda_warning.md)
 
 ```bash
 apt-get install lsb-release
@@ -34,11 +33,9 @@ source ~/.bashrc
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
 pip3 install PyYAML rospkg catkin_pkg
-
 ```
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
-
 
 ## Create a ROS Workspace
 
@@ -57,15 +54,13 @@ make -j4 -l4
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/catkin_ws/devel/setup.bash; source ~/.bashrc
 echo $ROS_PACKAGE_PATH
-
 ```
-
 
 ---
 
-## 2. 패키지 설치 방법 
+## 2. 패키지 설치 방법
 
-### 2.1 소스 설치 
+### 2.1 소스 설치
 
 ```python
 # INDIGO VERSION
@@ -75,17 +70,13 @@ rosdep install --from-paths ./ --ignore-src --rosdistro indigo -y
 cd ~/catkin_ws/ && catkin_make
 ```
 
-### 2.2 apt설치 
+### 2.2 apt설치
 
 ```
 apt-get install ros-kinetic-velodyne
 ```
 
-
-  
-
-
-#### [패키지 설치시 에러처리] Could not find a package configuration file provided by
+#### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
 ```
 Could not find a package configuration file provided by "Qt5Core"
@@ -112,5 +103,6 @@ qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
 Install the missing package `sudo apt install qtbase5-dev`
 
 > ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
+
 
 
