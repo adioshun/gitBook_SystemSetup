@@ -32,5 +32,5 @@
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
 * [06\_Dev\_Tools](06dev-tools.md)
   * [VSCODE](vscode.md)
-  * lib\_problem
+  * [lib\_problem](libproblem.md)
 
