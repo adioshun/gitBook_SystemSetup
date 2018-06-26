@@ -67,7 +67,7 @@ pip install pyflycap2
 
 #### A. Apt install
 
-apt-get install ros-indigo-pointgrey-camera-driver
+apt-get install ros-$ROS_DISTRO-pointgrey-camera-driver
 
 #### B. Source install
 

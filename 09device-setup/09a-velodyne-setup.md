@@ -11,7 +11,7 @@
 
 #### A. ROS dependencies 설치 
 
-`$ sudo apt-get install ros-kinetic-velodyne`  # kinetic버젼 용
+`$ sudo apt-get install ros-$ROS_DISTRO-velodyne`  
 
 
 #### B. 드라이버 설치 
