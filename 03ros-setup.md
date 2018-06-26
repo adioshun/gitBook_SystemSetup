@@ -16,17 +16,16 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365
 sudo apt-get update
 
 # INSTALL THE DESKTOP FULL VERSION
-sudo apt-get install ros-indigo-desktop-full
-sudo apt-get install ros-kinetic-desktop-full ros-kinetic-catkin -y
-sudo apt-get install ros-melodic-desktop-full
-#apt-cache search ros-melodic
+sudo apt-get install ros-$ROS_DISTRO-desktop-full
+
+
 
 # INITIALIZE ROSDEP
 sudo rosdep init
 rosdep update #rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # Dependencies for building packages
@@ -41,7 +40,7 @@ pip3 install PyYAML rospkg catkin_pkg
 
 ```python
 # SOURCING  ENVIRONMENT - for kinetic version
-source /opt/ros/kinetic/setup.bash
+source /opt/ros/$ROS_DISTRO/setup.bash
 
 # CREATING A ROS CATKIN WORKSPACE
 mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/
@@ -66,14 +65,14 @@ echo $ROS_PACKAGE_PATH
 # INDIGO VERSION
 cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/velodyne.git
 cd velodyne/
-rosdep install --from-paths ./ --ignore-src --rosdistro indigo -y
+rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
 cd ~/catkin_ws/ && catkin_make
 ```
 
 ### 2.2 apt설치
 
 ```
-apt-get install ros-kinetic-velodyne
+apt-get install ros-$ROS_DISTRO-velodyne
 ```
 
 #### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
