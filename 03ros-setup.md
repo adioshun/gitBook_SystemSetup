@@ -78,26 +78,26 @@ apt-get install ros-$ROS_DISTRO-velodyne
 #### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
 - apt-get install apt-file && apt-file update
-```
-Could not find a package configuration file provided by "Qt5Core"
-  (requested version 5.0) with any of the following names:
-
-    Qt5CoreConfig.cmake
-    qt5core-config.cmake
-
-  Add the installation prefix of "Qt5Core" to CMAKE_PREFIX_PATH or set
-  "Qt5Core_DIR" to a directory containing one of the above files.  If
-  "Qt5Core" provides a separate development package or SDK, be sure it has
-  been installed.
+  ```python
+  Could not find a package configuration file provided by "Qt5Core"
+    (requested version 5.0) with any of the following names:
+  
+      Qt5CoreConfig.cmake
+      qt5core-config.cmake
+  
+    Add the installation prefix of "Qt5Core" to CMAKE_PREFIX_PATH or set
+    "Qt5Core_DIR" to a directory containing one of the above files.  If
+    "Qt5Core" provides a separate development package or SDK, be sure it has
+    been installed.
 ```
 
 - run `apt-file search Qt5CoreConfig.cmake`
   - review the result
 
-```
-qtbase5-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
-qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
-```
+  ```python
+  qtbase5-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
+  qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
+  ```
 
 - Install the missing package `sudo apt install qtbase5-dev`
 
