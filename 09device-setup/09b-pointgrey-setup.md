@@ -18,7 +18,7 @@ pip install pyflycap2
 IMAGE_CONSISTENCY_ERRORS --> receive buffer memory settings (Packet size 중간, Packet delay 높게, Jumbo packet(MTU) 최대)
 임시 
 - `sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576`
-
+- sudo sh -c 'echo 1024 > /sys/module/usbcore/parameters/usbfs_memory_mb'
 영적으로 적용 
 - echo "net.core.rmem_max=1048576" >> /etc/sysctl.conf
 - echo "net.core.rmem_default=1048576" >> /etc/sysctl.conf
