@@ -27,13 +27,12 @@
   * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
   * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)
   * [09\_B\_WebCam](09device-setup/09b-webcam.md)
-  * [09\_C\_Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
+  * [09\_C\_Lidar-Camera-Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
+  * [09\_C\_Camerar-Calibration](09device-setup/09c-camerar-calibration.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
 * [06\_Dev\_Tools](06dev-tools.md)
   * [VSCODE](vscode.md)
   * [lib\_problem](libproblem.md)
 * [PCL](https://adioshun.gitbooks.io/pcl/content/installtion.html)
-
-
 
