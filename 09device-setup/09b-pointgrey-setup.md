@@ -15,7 +15,7 @@ pip install pyflycap2
 | Low level failure writing register 0x60c with value 0x8004. Error: 0x3 |  |
 |  | `sudo ip link set eth0 mtu 9000`& `ip link show eth0` |
 
-receive buffer memory settings
+IMAGE_CONSISTENCY_ERRORS --> receive buffer memory settings (Packet size 중간, Packet delay 높게, Jumbo packet(MTU) 최대)
 임시 
 - `sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576`
 
