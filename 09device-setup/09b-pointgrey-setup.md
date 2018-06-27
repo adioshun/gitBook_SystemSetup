@@ -40,10 +40,9 @@ apt-get install ros-$ROS_DISTRO-pointgrey-camera-driver
 
 ```
 # INDIGO VERSION
-sudo apt-get install ros-indigo-pointgrey-camera-driver
 cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/pointgrey_camera_driver.git
 cd pointgrey_camera_driver
-rosdep install --from-paths ./ --ignore-src --rosdistro indigo -y
+rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
 cd ~/catkin_ws/ && catkin_make
 ```
 
