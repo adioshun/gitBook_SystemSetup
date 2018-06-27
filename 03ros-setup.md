@@ -16,7 +16,7 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365
 sudo apt-get update
 
 # INSTALL THE DESKTOP FULL VERSION
-sudo apt-get install ros-$ROS_DISTRO-desktop-full
+sudo apt-get install ros-kinetic-desktop-full
 
 
 
