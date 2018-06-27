@@ -3,7 +3,7 @@
 #### A. 패키지 설치 및 최초 설정값 확인
 
 ```
-$ sudo apt-get install ros-indigo-camera-calibration
+$ sudo apt-get install ros-$ROS_DISTRO-camera-calibration
   # rosdep install camera_calibration
   # rosmake camera_calibration
 $ rosrun uvc_camera uvc_camera_node
