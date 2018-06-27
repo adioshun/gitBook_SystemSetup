@@ -102,3 +102,7 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 3. `sudo sh install_spinnaker.sh`
 
 
+---
+https://answers.ros.org/question/258537/pointgrey-camera-works-only-once/
+
+
