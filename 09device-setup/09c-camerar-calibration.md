@@ -12,7 +12,9 @@ $ rostopic echo /camera_info  #칼리브레이션 정보가 없으므로 0으로
 
 #### B. 칼리브레이션 수행
 
-1m 크기 \[체스 보드\]\([http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera\_calibration\(2f\)Tutorials\(2f\)MonocularCalibration/check-108.pdf](http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration%282f%29Tutorials%282f%29MonocularCalibration/check-108.pdf)\) 준비 : 8x6의 체스 보드\(가로 9개 네모, 교차점 8개, 세로로 7개 세모, 교차점 6개\)
+8x6의 체스 보드 : http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration(2f)Tutorials(2f)MonocularCalibration/check-108.pdf
+
+
 
 ```
 $ rosrun camera_calibration cameracalibrator.py \
