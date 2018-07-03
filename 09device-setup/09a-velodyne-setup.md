@@ -31,7 +31,7 @@ OR
 # INDIGO VERSION
 cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/velodyne.git
 cd velodyne/
-rosdep install --from-paths ./ --ignore-src --rosdistro indigo -y
+rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
 cd ~/catkin_ws/ && catkin_make
 ```
 
