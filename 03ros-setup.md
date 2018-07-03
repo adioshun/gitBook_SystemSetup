@@ -32,6 +32,13 @@ source ~/.bashrc
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
 pip3 install PyYAML rospkg catkin_pkg
+
+
+# 머신러닝 관련 패키지 
+pip install scikit-learn && pip3 install scikit-learn
+pip install scipy && pip3 install scipy
+
+
 ```
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
