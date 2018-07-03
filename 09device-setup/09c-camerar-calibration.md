@@ -23,7 +23,7 @@ $ rosrun camera_calibration cameracalibrator.py \
 image:=/my_camera/image \ # 
 camera:=/my_camera
 
-rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/cameara/image_raw camera:=/camera --no-service-check
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.025 image:=/camera/image_raw camera:=/camera --no-service-check
 ```
 
 ![](http://library.isr.ist.utl.pt/docs/roswiki/attachments/camera_calibration%282f%29Tutorials%282f%29MonocularCalibration/mono_0.png)
