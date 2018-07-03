@@ -31,7 +31,7 @@ source ~/.bashrc
 # Dependencies for building packages
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
-pip3 install PyYAML rospkg catkin_pkg
+pip install PyYAML rospkg catkin_pkg && pip3 install PyYAML rospkg catkin_pkg
 
 
 # 머신러닝 관련 패키지 
