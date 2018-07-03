@@ -17,18 +17,6 @@
 #### B. 드라이버 설치 
 
 ```
-cd 
-git clone https://github.com/ros-drivers/velodyne.git
-cd velodyne
-mkdir src
-cp -r velodyne* ./src
-catkin_make -j8
-source ./devel/setup.bash
-```
-OR 
-
-```
-# INDIGO VERSION
 cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/velodyne.git
 cd velodyne/
 rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
