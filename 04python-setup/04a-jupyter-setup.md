@@ -58,8 +58,8 @@ conda install nb_conda -c conda-forge
 
 ##### Unofficial:[ref](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
 ```
-conda install -c conda-forge jupyter_contrib_nbextensions
-#pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+#conda install -c conda-forge jupyter_contrib_nbextensions
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 jupyter contrib nbextension install --user
 ```
 [참고](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
