@@ -126,3 +126,17 @@ pip clean?
 
 - [MultiBootUSB](http://multibootusb.org/page_download/) : [설명](https://itsfoss.com/multiple-linux-one-usb/), `wget https://github.com/mbusb/multibootusb/releases/download/v8.8.0/python3-multibootusb_8.8.0-1_all.deb`
 
+
+## 테마 
+
+### [paper 테마 ](https://snwh.org/paper)
+
+
+
+```python
+sudo add-apt-repository -u ppa:snwh/ppa
+
+sudo apt-get install paper-icon-theme
+```
+
+
