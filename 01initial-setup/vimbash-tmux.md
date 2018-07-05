@@ -46,7 +46,7 @@ wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b1
 
 wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/start_tmux.sh
 
-
+```
 
 > [tmux shortcuts & cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
 >
