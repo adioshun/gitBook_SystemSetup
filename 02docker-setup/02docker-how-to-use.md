@@ -171,6 +171,7 @@ cv2.destroyAllWindows()
 
 # Docker Manager 
 - [홈페이지](https://github.com/kevana/ui-for-docker)
+
 ```
 docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
 http://<dockerd host ip>:9000
@@ -200,6 +201,24 @@ sudo chmod 755 ./dcs
 sudo mv ./dcs /usr/bin/dcs
 dcs
 ```
+
+
+### [NexClipper](https://github.com/TheNexCloud/NexClipper)
+
+```python
+sudo docker pull nexclipper/nexclipper;
+
+sudo docker run \
+	     --detach=true \
+	     --name NexClipper \
+	     -p 10001:9001 \
+	     --volume /var/run/docker.sock:/var/run/docker.sock \
+	     --volume /var/lib/docker:/var/lib/docker \
+	     nexclipper/nexclipper;
+
+# NexClipper is now running (in the background) on http://localhost:10001.
+```
+
 
 ---
 
