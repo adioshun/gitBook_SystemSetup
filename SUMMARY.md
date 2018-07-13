@@ -7,6 +7,7 @@
   * [VIM\_BASH\_TMUX](01initial-setup/vimbash-tmux.md)
   * [Mount](01initial-setup/mount.md)
   * [한글 입력](01initial-setup/koreaninput.md)
+  * [tools](01initial-setup/tools.md)
 * [02\_Docker\_setup](02docker-setup.md)
   * [02\_A\_Vagrant](02docker-setup/02a-vagrant.md)
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)
