@@ -40,6 +40,7 @@ cd ..
 rm -rf fonts
 ```
 
+guake 연동을 위한 설정 : https://bosnadev.com/2015/02/26/awesome-looking-terminal-with-oh-my-zsh/
 
 
 ## 2. TMUX
