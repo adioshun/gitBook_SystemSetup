@@ -2,6 +2,46 @@
 
 `cp /home/adioshun/.bashrc /root/.bashrc; source /root/.bashrc`
 
+## 2. zsh
+
+sudo apt-get install zsh
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+쉘변경 확인 : echo $SHELL
+
+기본 shell 변경 : `chsh -s /usr/bin/zsh 유저명`
+
+~/.zshrc 설정
+
+```
+THEME="agnoster"
+
+
+plugins=(
+git zsh-autosuggestions zsh-syntax-highlighting autojump
+)
+```
+
+> 플러그인 위치 : `/home/유저명/.oh-my-zsh/custom/plugins/플러그인명`
+
+http://heetop.blogspot.com/2017/10/oh-my-zsh_12.html
+
+[폰드 깨지면](https://github.com/powerline/fonts) : `sudo apt-get install fonts-powerline`
+
+```
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+
+
+
 ## 2. TMUX
 
 > [홈페이지](https://github.com/tmux/tmux/wiki), [설치](http://code4rain.tistory.com/1169527180), [자동설치 스크립트](https://gist.github.com/bbelgodere/f77ee5e37ca661ad10ebe1f00020a8fd)
