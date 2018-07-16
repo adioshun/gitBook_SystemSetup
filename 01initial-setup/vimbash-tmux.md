@@ -40,6 +40,9 @@ cd ..
 rm -rf fonts
 ```
 
+sudo cp *.otf /usr/share/fonts/opentype
+sudo fc-cache -fv
+
 guake 연동을 위한 설정 : https://bosnadev.com/2015/02/26/awesome-looking-terminal-with-oh-my-zsh/
 
 
