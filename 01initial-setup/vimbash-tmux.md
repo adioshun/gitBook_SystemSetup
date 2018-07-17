@@ -1,4 +1,3 @@
-> [리눅스에서 터미널 생활 즐기기.](http://black7375.tistory.com/15)
 
 ## 1. bashrc
 
