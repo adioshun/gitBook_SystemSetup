@@ -1,3 +1,5 @@
+> [리눅스에서 터미널 생활 즐기기.](http://black7375.tistory.com/15)
+
 ## 1. bashrc
 
 `cp /home/adioshun/.bashrc /root/.bashrc; source /root/.bashrc`
@@ -46,7 +48,9 @@ sudo fc-cache -fv
 guake 연동을 위한 설정 : https://bosnadev.com/2015/02/26/awesome-looking-terminal-with-oh-my-zsh/
 
 
-## 2. TMUX
+## 2. TMUX && BYOBU
+
+sudo apt-get install byobu
 
 > [홈페이지](https://github.com/tmux/tmux/wiki), [설치](http://code4rain.tistory.com/1169527180), [자동설치 스크립트](https://gist.github.com/bbelgodere/f77ee5e37ca661ad10ebe1f00020a8fd)
 
