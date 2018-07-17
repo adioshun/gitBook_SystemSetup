@@ -10,3 +10,4 @@ tmux 21 : 터미널 실수로 꺼도 똑같은 상태로 다시 킬 수 있는 �
 
 > [리눅스에서 터미널 생활 즐기기.](http://black7375.tistory.com/15), [개발자들을 위한 툴 리스트](https://www.codentalks.com/t/topic/181)
 
+d
