@@ -1,3 +1,6 @@
+![](https://raw.githubusercontent.com/oguzhaninan/Stacer/native/screenshots/header.png)
+
+
 [ 우분투 16.04에서 obs로 화면 녹화하기)(http://www.kwangsiklee.com/ko/2017/12/%EC%9A%B0%EB%B6%84%ED%88%AC-16-04%EC%97%90%EC%84%9C-obs%EB%A1%9C-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/)
 
 googler 71 : 터미널에서 구글 검색을 할 수 있게 해줍니다.
