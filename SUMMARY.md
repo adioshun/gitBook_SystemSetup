@@ -24,6 +24,7 @@
   * [05\_B\_Caffe\_setup](05cuda-setup/05b-caffe-setup.md)
   * [05\_C\_PyTorch\_setup](05cuda-setup/05c-pytorch-setup.md)
 * [08\_Library\_setup](08library-setup.md)
+  * [opencv](08library-setup/opencv.md)
 * [09\_Device\_setup](09device-setup.md)
   * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
   * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)
