@@ -3,4 +3,6 @@
 
  
  
+ ## Apt 설치 
  
+ - apt-get install libopencv-dev
