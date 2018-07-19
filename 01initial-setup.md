@@ -16,53 +16,6 @@ apt install nvidia-settings
 > [How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
 
 
-3. Chrome install (Ubuntu 16)
-
-```
-snap install chrome
-```
-
-```
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-```
-
-
-4. 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정 
-
-5. LIB 추가 
-
-```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/bin
-
-```
-
-## Monitoring
-
-* CPU
-
-  * htop : `sudo apt-get install htop`
-  * nmon : `sudo apt-get install nmon`
-
-* GPU Monitoring :
-
-  * `nvidia-smi -l 2` : `Failed to initialize NVML: Driver/library version mismatch` 에러시 `Reboot`
-  * 한줄로보기, gpustat : `sudo pip install gpustat`, `watch --color -n1.0 gpustat`[\[참고\]](https://github.com/wookayin/gpustat)
-  * htop처럼 보기, glances : `sudo pip install glances[gpu]`, `sudo glances` \(n, z, d\)
-    * `wget -O- https://bit.ly/glances | /bin/bash` [\[홈페이지\]](https://pypi.python.org/pypi/Glances)
-  * intel-gpu-tools : `sudo apt-get install intel-gpu-tools`, `intel_gpu_top`
-
-![](http://i.imgur.com/XjyHkIF.png)
-
-## 학습 모니터링
-
-* 앱기반 : [Hyperdash](https://hyperdash.io/), `pip install hyperdash && hyperdash login`
-* 웹기반 : [LabNotebook](https://github.com/henripal/labnotebook)
-
-| ![](http://i.imgur.com/QCEGtYx.png) | ![](https://github.com/henripal/labnotebook/raw/master/nbs/img/labnotebook.gif) |
-| --- | --- |
-| Hyperdash | LabNotebook |
 
 ---
 
