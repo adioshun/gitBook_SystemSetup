@@ -80,6 +80,7 @@ tmux new -s <원하는 이름>
 touch /root/.tmux.conf
 
 ```
+
 ## set mouse for tmux 2.1 as shipped with Ubuntu 14.04
 wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/.tmux.conf_2.1
 
