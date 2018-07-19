@@ -31,14 +31,15 @@ docker images
 
 ```python
 # 일반 실행 
-docker run -i -t -p 2222:22 -p 8585:8888 --volume /workspace:/workspace -h <name> --name 'Ubuntu' ubuntu /bin/bash 
+docker run -i -t -p 2222:22 -p 8585:8888 --volume /workspace:/workspace -h <name> --name 'Ubuntu' <image> /bin/bash 
 
 #x11
 xhost + 
-sudo docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /worksspace:/workspace -h <name> --name "docker" adioshun/ubuntu16: /bin/bash
+sudo docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /worksspace:/workspace -h <name> --name "docker" <image> /bin/bash
 
 #ROS용 실행 (net)
-docker run -i -t --net=host --volume /workspace:/workspace --name 'Ubuntu' ubuntu /bin/bash 
+docker run -it --net=host --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash 
+docker run -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
 
 
 
