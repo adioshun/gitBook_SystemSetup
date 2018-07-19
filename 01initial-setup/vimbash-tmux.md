@@ -16,6 +16,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ~/.zshrc 설정
 
 ```
+source ~/.bashrc > /dev/null 2>&1  # .bashrc설정 읽어 오고, 에러는 출력 안함
+
 THEME="agnoster"
 
 
