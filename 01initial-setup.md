@@ -1,8 +1,6 @@
-
 # 초기 설정
 
-
-2. Nvidia Driver (ubuntu 16, 18)
+1. Nvidia Driver \(ubuntu 16, 18\)
 
 ```
 #sudo apt-get install ubuntu-drivers-common
@@ -15,8 +13,6 @@ apt install nvidia-settings
 
 > [How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
 
-
-
 ---
 
 ## Editor
@@ -24,9 +20,6 @@ apt install nvidia-settings
 * [TOast UI](https://nhnent.github.io/tui.editor/)
 
 ---
-
-
-
 
 ## github 키 등록
 
@@ -38,8 +31,6 @@ apt install nvidia-settings
 ```
 
 ## git 폴더 연동
-
-
 
 ```
 #로컬 폴더로 이동 
@@ -65,7 +56,7 @@ $ git push --set-upstream origin master
 apt-get install ncdu
 ```
 
-- 동영상 포맷 변환 : handbrake.fr
+* 동영상 포맷 변환 : handbrake.fr
 
 # Tip
 
@@ -79,19 +70,17 @@ pip clean?
 
 ## 멀티 부팅 USB 만들기
 
-- [MultiBootUSB](http://multibootusb.org/page_download/) : [설명](https://itsfoss.com/multiple-linux-one-usb/), `wget https://github.com/mbusb/multibootusb/releases/download/v8.8.0/python3-multibootusb_8.8.0-1_all.deb`
+* [MultiBootUSB](http://multibootusb.org/page_download/) : [설명](https://itsfoss.com/multiple-linux-one-usb/), `wget https://github.com/mbusb/multibootusb/releases/download/v8.8.0/python3-multibootusb_8.8.0-1_all.deb`
 
-
-## 테마 
+## 테마
 
 ### [paper 테마 ](https://snwh.org/paper)
-
-
 
 ```python
 sudo add-apt-repository -u ppa:snwh/ppa
 
 sudo apt-get install paper-icon-theme
 ```
+
 
 
