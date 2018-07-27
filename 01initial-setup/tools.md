@@ -11,9 +11,9 @@ tmux 21 : 터미널 실수로 꺼도 똑같은 상태로 다시 킬 수 있는 �
 | --- | --- | --- |
 | sudo add-apt-repository ppa:oguzhaninan/stacer<br> sudo apt-get install stacer| [NVIDIA GPU Stats Too](https://extensions.gnome.org/extension/1320/nvidia-gpu-stats-tool/) |  |
 
-* Terminator
+Terminator
 
-* Chrome install \(Ubuntu 16\)
+Chrome install \(Ubuntu 16\)
 
 ```
 snap install chrome
@@ -25,13 +25,11 @@ sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
-1. 멀티 부팅 [GRUB](http://programmingskills.net/archives/190) 설정
+멀티 부팅 
+- [GRUB](http://programmingskills.net/archives/190) 설정
+- GUI Tool : `sudo add-apt-repository ppa:danielrichter2007/grub-customizer` - `sudo apt-get install grub-customizer`
 
-2. LIB 추가
 
-```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/bin
-```
 
 ## Monitoring
 
