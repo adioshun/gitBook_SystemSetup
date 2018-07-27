@@ -1,8 +1,57 @@
+
 ## 1. bashrc
 
 `cp /home/adioshun/.bashrc /root/.bashrc; source /root/.bashrc`
 
-## 2. TMUX
+## 2. zsh
+
+sudo apt-get install zsh
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+쉘변경 확인 : echo $SHELL
+
+기본 shell 변경 : `chsh -s /usr/bin/zsh 유저명`
+
+~/.zshrc 설정
+
+```
+source ~/.bashrc > /dev/null 2>&1  # .bashrc설정 읽어 오고, 에러는 출력 안함
+
+THEME="agnoster"
+
+
+plugins=(
+git zsh-autosuggestions zsh-syntax-highlighting autojump
+)
+```
+
+> 플러그인 위치 : `/home/유저명/.oh-my-zsh/custom/plugins/플러그인명`
+
+http://heetop.blogspot.com/2017/10/oh-my-zsh_12.html
+
+[폰드 깨지면](https://github.com/powerline/fonts) : `sudo apt-get install fonts-powerline`
+
+```
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+
+sudo cp *.otf /usr/share/fonts/opentype
+sudo fc-cache -fv
+
+guake 연동을 위한 설정 : https://bosnadev.com/2015/02/26/awesome-looking-terminal-with-oh-my-zsh/
+
+
+## 2. TMUX && BYOBU
+
+sudo apt-get install byobu
 
 > [홈페이지](https://github.com/tmux/tmux/wiki), [설치](http://code4rain.tistory.com/1169527180), [자동설치 스크립트](https://gist.github.com/bbelgodere/f77ee5e37ca661ad10ebe1f00020a8fd)
 
@@ -31,6 +80,7 @@ tmux new -s <원하는 이름>
 touch /root/.tmux.conf
 
 ```
+
 ## set mouse for tmux 2.1 as shipped with Ubuntu 14.04
 wget https://gist.githubusercontent.com/adioshun/5334a2fdbec7b79c6ed62e5158901b13/raw/f231167155b09bcfabe09939de1219010535f39a/.tmux.conf_2.1
 

@@ -53,7 +53,7 @@ Ubuntu 18.04 - CUDA 9
 > NVIDIA proprietary driver (390 for CUDA 9) 
 
 ```
-sudo apt update && sudo apt install nvidia-cuda-toolkit gcc-6
+sudo apt update && sudo apt install nvidia-cuda-toolkit gcc-6 g++-6  #18.04
 nvcc --version
 reboot
 ```
@@ -157,10 +157,12 @@ echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local
 ### 2.1 소스코드 설치 cuDNN v6.0 Library for Linux
 - Download : https://developer.nvidia.com/cudnn ->  cuDNN 5.1 (August 10, 2016) for CUDA 8.0
 
+```python
+#copy the following files into the cuda toolkit directory.
+sudo cp -P cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64/
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 
-
-
-```
 wget http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/cudnn-8.0-linux-x64-v6.0.tgz
 tar cvzpf cudnn-8.0-linux-x64-v5.1.tgz ./
 
