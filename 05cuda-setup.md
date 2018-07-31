@@ -48,6 +48,9 @@ sudo apt install nvidia-381
 ### CUDA install script 
 
 
+|sudo apt install nvidia-cuda-toolkit|
+|-|
+
 Ubuntu 18.04 - CUDA 9
 
 > NVIDIA proprietary driver (390 for CUDA 9) 

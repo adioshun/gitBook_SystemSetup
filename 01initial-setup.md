@@ -58,7 +58,6 @@ apt-get install ncdu
 
 * 동영상 포맷 변환 : handbrake.fr
 
-# Tip
 
 ## 공간 환보
 
@@ -82,5 +81,5 @@ sudo apt-get update
 sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
 ```
 
-
+gnome-tweak를 통해 변경 
 
