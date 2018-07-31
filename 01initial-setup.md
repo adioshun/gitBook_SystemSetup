@@ -1,5 +1,7 @@
 # 초기 설정
 
+## Driver 
+
 1. Nvidia Driver \(ubuntu 16, 18\)
 
 ```
@@ -18,6 +20,46 @@ apt install nvidia-settings
 ## Editor
 
 * [TOast UI](https://nhnent.github.io/tui.editor/)
+
+* leafpad
+
+## Terminal 
+
+* sudo apt-get install terminator
+
+
+
+## 테마 
+
+> [paper 테마](https://snwh.org/paper)
+
+```python
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt-get update
+sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
+```
+
+gnome-tweak를 통해 변경 
+
+
+## Chrome
+
+```
+snap install chrome
+```
+
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
+
+멀티 부팅 
+- [GRUB](http://programmingskills.net/archives/190) 설정
+- GUI Tool : `sudo add-apt-repository ppa:danielrichter2007/grub-customizer` - `sudo apt-get install grub-customizer`
+
+
+
 
 ---
 
@@ -71,15 +113,15 @@ pip clean?
 
 * [MultiBootUSB](http://multibootusb.org/page_download/) : [설명](https://itsfoss.com/multiple-linux-one-usb/), `wget https://github.com/mbusb/multibootusb/releases/download/v8.8.0/python3-multibootusb_8.8.0-1_all.deb`
 
-## 테마
 
-### [paper 테마 ](https://snwh.org/paper)
+\[ 우분투 16.04에서 obs로 화면 녹화하기\)\([http://www.kwangsiklee.com/ko/2017/12/우분투-16-04에서-obs로-화면-녹화하기/](http://www.kwangsiklee.com/ko/2017/12/우분투-16-04에서-obs로-화면-녹화하기/)\)
 
-```python
-sudo add-apt-repository -u ppa:snwh/ppa
-sudo apt-get update
-sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
-```
+googler 71 : 터미널에서 구글 검색을 할 수 있게 해줍니다.  
+stacer 31 : 리눅스의 시스템 최적화 툴 입니다.  
+fzf 26 : 파일찾기에 유용한 툴 입니다.  
+tmux 21 : 터미널 실수로 꺼도 똑같은 상태로 다시 킬 수 있는 툴 입니다.
 
-gnome-tweak를 통해 변경 
+> [리눅스에서 터미널 생활 즐기기.](http://black7375.tistory.com/15), [개발자들을 위한 툴 리스트](https://www.codentalks.com/t/topic/181)
+
+
 
