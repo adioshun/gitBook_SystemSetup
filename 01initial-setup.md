@@ -21,11 +21,11 @@ apt install nvidia-settings
 
 * [TOast UI](https://nhnent.github.io/tui.editor/)
 
-* leafpad
+* leafpad : `sudo apt install leafpad`
 
 ## Terminal 
 
-* sudo apt-get install terminator
+* 멀티창 : `sudo apt-get install terminator`
 
 
 
