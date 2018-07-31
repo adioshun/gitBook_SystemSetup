@@ -78,8 +78,8 @@ pip clean?
 
 ```python
 sudo add-apt-repository -u ppa:snwh/ppa
-
-sudo apt-get install paper-icon-theme
+sudo apt-get update
+sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
 ```
 
 
