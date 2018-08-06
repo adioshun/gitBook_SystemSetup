@@ -2,9 +2,9 @@
 
 ## ubuntu 18
 
-1. 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04) 
+1. 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04)
 
-> Korean(hangul)이 안보이면 reboot 
+> Korean(hangul)이 안보이면 reboot
 
 ```
 sudo add-apt-repository ppa:createsc/3beol
@@ -16,12 +16,12 @@ ibus-setup #ibus-setup-hangul
 
 ibus : http://techlog.gurucat.net/288
 
-    
+
     sudo add-apt-repository ppa:createsc/3beol
     sudo apt-get update; sudo apt-get install ibus ibus-hangul
-    
 
-키 맵핑 
+
+키 맵핑
 
     System Settings에서 Keyboard 실행
     Shortcuts 탭 선택한 후 Typing 항목 선택
@@ -33,4 +33,13 @@ ibus : http://techlog.gurucat.net/288
 fcitx : http://androidtest.tistory.com/52, http://snowdeer.github.io/linux/2018/01/21/ubuntu-16p04-install-korean-keyboard/
 
 
+---
+## NIMF
 
+```
+sudo add-apt-repository ppa:hodong/nimf
+sudo apt-get update
+sudo apt install nimf nimf-libhangul
+
+https://ncube.net/13986
+```
