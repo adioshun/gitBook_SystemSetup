@@ -7,6 +7,7 @@
   * [VIM\_BASH\_TMUX](01initial-setup/vimbash-tmux.md)
   * [Mount](01initial-setup/mount.md)
   * [한글 입력](01initial-setup/koreaninput.md)
+  * [모니터링 tools](01initial-setup/tools.md)
 * [02\_Docker\_setup](02docker-setup.md)
   * [02\_A\_Vagrant](02docker-setup/02a-vagrant.md)
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)
@@ -23,10 +24,11 @@
   * [05\_B\_Caffe\_setup](05cuda-setup/05b-caffe-setup.md)
   * [05\_C\_PyTorch\_setup](05cuda-setup/05c-pytorch-setup.md)
 * [08\_Library\_setup](08library-setup.md)
+  * [opencv](08library-setup/opencv.md)
 * [09\_Device\_setup](09device-setup.md)
   * [09\_A\_Velodyne\_setup](09device-setup/09a-velodyne-setup.md)
   * [09\_B\_Pointgrey\_setup](09device-setup/09b-pointgrey-setup.md)
-  * [09\_B\_WebCam](09device-setup/09b-webcam.md)
+  * [09\_B\_USB Cam](09device-setup/09b-webcam.md)
   * [09\_C\_Lidar-Camera-Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
   * [09\_C\_Camerar-Calibration](09device-setup/09c-camerar-calibration.md)
 * [10\_References](10references.md)
@@ -36,4 +38,3 @@
   * [lib\_problem](libproblem.md)
 * [PCL](https://adioshun.gitbooks.io/pcl/content/installtion.html)
 
-2018
