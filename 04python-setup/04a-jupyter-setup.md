@@ -20,7 +20,7 @@ vi /root/.jupyter/jupyter_notebook_config.py
 ```
 # -*- coding: utf-8 -*- 
 
-c.NotebookApp.ip = '*'  #L158
+c.NotebookApp.ip = '0.0.0.0'  #L158
 c.NotebookApp.open_browser = False # L201 원격접속으로 활용할 것이기 때문에 비활성화 시켰다.
 c.NotebookApp.port = 8888 # L213 포트를 설정해준다. 기본포트로 8888이 자동 배정된다.
 c.NotebookApp.password = 'sha1:a8dee43a3a44:b18f1ad149a60efb4838da44cf127985d64a5e70' # L210 python 실행후 from notebook.auth import passwd; passwd\(\)
