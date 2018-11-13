@@ -141,9 +141,34 @@ IRkernel::installspec()
 
 ## 3. C++용 Jupyter 
 
-## 3.1 소스 설치 
+[Blog](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92)
 
-https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake
+## 3.1 소스 설치 (ubuntu 16기준)
+
+> https://askubuntu.com/questions/899313/how-to-install-cling-kernel-in-jupyter-notebook [[Download]](https://root.cern.ch/download/cling/)
+
+```sh
+# 기존 커널 삭제 
+~/cling_2017-03-30_ubuntu16/share/cling/Jupyter/kernel
+jupyter kernelspec uninstall cling-cpp11
+
+# 새로 설치 
+mkdir -p ~/builds && cd ~/builds
+wget https://root.cern.ch/download/cling/cling_2018-11-05_sources.tar.bz2
+tar jxf cling_2018-11-05_sources.tar.bz2
+mv src cling_2018-11-05
+mkdir -p ~/builds/cling_2018-11-05/build
+cd ~/builds/cling_2018-11-05/build
+cmake -DCMAKE_BUILD_TYPE=Release ../
+make -j8
+sudo make install
+sudo ldconfig
+cd /usr/local/share/cling/Jupyter/kernel
+sud pip3 install -e .
+sudo jupyer kernelspec install cling-cpp11
+cd ~ && jupyter notebook
+```
+
 
 ### 3.2 바이너리 설치 (실패)
 
@@ -161,6 +186,14 @@ cling 설치
 - $cd cling_2018-11-05_ubuntu16/share/cling/Jupyter/kernel/
 - $pip install -e .
 - $jupyter-kernelspec install --user cling-cpp17
+
+
+### 3.3 Conda 설치 
+
+> https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake 
+
+
+
 
 
 
