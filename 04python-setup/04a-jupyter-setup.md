@@ -139,7 +139,13 @@ IRkernel::installspec()
 > [메뉴얼필독](https://www.r-bloggers.com/jupyter-and-r-markdown-notebooks-with-r/amp/)
 
 
-## 3. C++용 Jupyter (실패)
+## 3. C++용 Jupyter 
+
+## 3.1 소스 설치 
+
+https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake
+
+### 3.2 바이너리 설치 (실패)
 
 > https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks(caffe2,-tensorflow)/
 
