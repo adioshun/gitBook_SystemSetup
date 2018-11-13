@@ -199,12 +199,16 @@ cling 설치
 > https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake 
 
 
+```
+conda create -n cling
+source activate cling
+conda install xeus-cling notebook -c QuantStack -c conda-forge
+```
 
 
 
+--- 
 
-
--- 
 # Jupyter Tips
 
 - [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
