@@ -138,6 +138,27 @@ IRkernel::installspec()
 > 패키지설치시: install.packages("ldavis", "/home/user/anaconda3/lib/R/library")
 > [메뉴얼필독](https://www.r-bloggers.com/jupyter-and-r-markdown-notebooks-with-r/amp/)
 
+
+## 3. C++용 Jupyter (실패)
+
+> https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks(caffe2,-tensorflow)/
+
+zeromq설치 
+- apt-get install zeromq 또는 
+- wget https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh (sudo 명령어 삭제필요)
+
+cling 설치 
+- 18 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu18.tar.bz2
+- 16 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu16.tar.bz2
+- tar xvf {파일명}
+- vi ~/.bashrc -> `PATH=/root/builds/cling_2018-11-05_ubuntu16:$PATH`
+- $cd cling_2018-11-05_ubuntu16/share/cling/Jupyter/kernel/
+- $pip install -e .
+- $jupyter-kernelspec install --user cling-cpp17
+
+
+
+
 -- 
 # Jupyter Tips
 
