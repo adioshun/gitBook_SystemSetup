@@ -143,6 +143,11 @@ IRkernel::installspec()
 
 [Blog](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92)
 
+```cpp
+#include <iostream>
+std::cout << "some output" << std::endl;
+```
+
 ## 3.1 소스 설치 (ubuntu 16기준)
 
 > https://askubuntu.com/questions/899313/how-to-install-cling-kernel-in-jupyter-notebook [[Download]](https://root.cern.ch/download/cling/)
