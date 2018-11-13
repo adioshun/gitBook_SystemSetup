@@ -175,7 +175,7 @@ cd ~ && jupyter notebook
 ```
 
 
-### 3.2 바이너리 설치 (실패)
+### 3.2 바이너리 설치 
 
 > https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks(caffe2,-tensorflow)/
 
@@ -187,9 +187,10 @@ cling 설치
 - 18 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu18.tar.bz2
 - 16 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu16.tar.bz2
 - tar xvf {파일명}
-- vi ~/.bashrc -> `PATH=/root/builds/cling_2018-11-05_ubuntu16:$PATH`
+- vi ~/.bashrc -> `PATH=/root/cling_2018-11-05_ubuntu16/bin:$PATH`
+- source ~/.bashrc
 - $cd cling_2018-11-05_ubuntu16/share/cling/Jupyter/kernel/
-- $pip install -e .
+- $pip3 install -e .
 - $jupyter-kernelspec install --user cling-cpp17
 
 
