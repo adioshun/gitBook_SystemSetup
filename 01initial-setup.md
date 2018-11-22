@@ -126,11 +126,3 @@ tmux 21 : 터미널 실수로 꺼도 똑같은 상태로 다시 킬 수 있는 �
 > [리눅스에서 터미널 생활 즐기기.](http://black7375.tistory.com/15), [개발자들을 위한 툴 리스트](https://www.codentalks.com/t/topic/181)
 
 
-### 스크린샷 GIF 생성
-
-- [Peek - an animated GIF recorder](https://github.com/phw/peek): [설명글](https://www.omgubuntu.co.uk/2016/08/peek-desktop-gif-screen-recorder-linux)
-
-```
-sudo add-apt-repository ppa:peek-developers/stable
-sudo apt update && sudo apt install peek
-```
