@@ -26,3 +26,5 @@ make serve
 ---
 
 댓글 상자 : https://devmjun.github.io/archive/addComments
+
+https://www.google.co.kr/search?q=github+disqus+%EC%82%AC%EC%9A%A9%EB%B2%95&oq=disqus+github&aqs=chrome.1.69i57j0l3.15105j0j4&client=tablet-android-samsung&sourceid=chrome-mobile&ie=UTF-8
