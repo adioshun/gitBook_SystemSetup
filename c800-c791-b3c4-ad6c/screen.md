@@ -14,4 +14,4 @@ sudo apt update && sudo apt install peek
 
 ## markdown용 스크린샷 URL생성 
 
-* [Gnome Shell extension for making and uploading screenshots](https://github.com/OttoAllmendinger/gnome-shell-screenshot)
+[Gnome Shell extension for making and uploading screenshots](https://github.com/OttoAllmendinger/gnome-shell-screenshot)
