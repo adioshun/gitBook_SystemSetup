@@ -36,7 +36,4 @@
 | --- | --- |
 | Hyperdash | LabNotebook |
 
-* [Gnome Shell extension for making and uploading screenshots](https://github.com/OttoAllmendinger/gnome-shell-screenshot)
-
-
 
