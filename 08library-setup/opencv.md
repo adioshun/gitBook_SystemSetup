@@ -8,4 +8,20 @@
  - apt-get install libopencv-dev libcv-bridge-dev
  
  
+ ## pip install 
+ 
  pip install opencv-python
+ 
+ 
+ 에러 : `ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type`
+
+```python 
+import sys
+print(sys.path)
+
+find '/opt/ros/kinetic/lib/python2.7/dist-packages'
+
+remove it : `sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')`
+```
+
+https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv
