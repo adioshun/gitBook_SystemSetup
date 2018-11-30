@@ -17,6 +17,8 @@ $ conda install pytorch torchvision cuda80 -c soumith
 
 ```
 
+pip install torch torchvision
+
 ## Visdom for PyTorch Visualization
 ```bash
 pip install visdom
