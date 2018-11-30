@@ -56,7 +56,6 @@ mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/
 catkin_make
 cd ./build
 make -j4 -l4
-#catkin init
 
 
 # SOURCING  CATKIN ENVIRONMENT - and automatically get it to source from now on
@@ -64,6 +63,18 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/catkin_ws/devel/setup.bash; source ~/.bashrc
 echo $ROS_PACKAGE_PATH
 ```
+
+## Create a ROS Workspace 2
+
+```
+#apt-get install python-catkin-tools
+
+mkdir ~/catkin_workspace
+cd ~/catkin_workspace
+mkdir src
+catkin init
+```
+
 
 ---
 
