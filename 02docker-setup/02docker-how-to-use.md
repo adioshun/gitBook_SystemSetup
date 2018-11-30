@@ -1,5 +1,9 @@
 # How to use
 
+```python
+docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+```
+
 
 ## Image search on the server
 ```
@@ -38,8 +42,9 @@ xhost +
 sudo docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -p 1122:22 -p 1188:8888 -v /workspace:/workspace -h <name> --name "docker" <image> /bin/bash
 
 #ROS용 실행 (net)
+docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
 docker run -it --net=host --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash 
-docker run -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+
 
 
 
