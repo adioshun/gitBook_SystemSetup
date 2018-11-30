@@ -64,9 +64,9 @@ source ~/catkin_ws/devel/setup.bash; source ~/.bashrc
 echo $ROS_PACKAGE_PATH
 ```
 
-## Create a ROS Workspace 2
+## [Create a ROS Workspace 2](http://korearosnews.blogspot.com/2015/03/catkin-catkintools.html)
 
-```
+```python
 #apt-get install python-catkin-tools
 
 mkdir ~/catkin_workspace
