@@ -30,6 +30,8 @@ source ~/.bashrc
 
 # Dependencies for building packages
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+sudo apt-get install python-catkin-tools python3-dev python3-catkin-pkg-modules python3-numpy python3-yaml ros-kinetic-cv-bridge
+
 
 pip install PyYAML rospkg catkin_pkg && pip3 install PyYAML rospkg catkin_pkg
 
@@ -54,6 +56,7 @@ mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/
 catkin_make
 cd ./build
 make -j4 -l4
+#catkin init
 
 
 # SOURCING  CATKIN ENVIRONMENT - and automatically get it to source from now on
