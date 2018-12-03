@@ -29,3 +29,11 @@ make serve
 
 
 jupyter theme : https://github.com/nsonnad/base16-ipython-notebook/blob/master/ipython-3/output/base16-google-light.css
+
+
+https://github.com/transcranial/jupyter-themer
+
+
+https://github.com/yirending/Jupyter-blog
+
+https://github.com/yirending/Jupyter-blog
