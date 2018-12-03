@@ -26,3 +26,6 @@ make serve
 
 [https://www.google.co.kr/search?q=github+disqus+사용법&oq=disqus+github&aqs=chrome.1.69i57j0l3.15105j0j4&client=tablet-android-samsung&sourceid=chrome-mobile&ie=UTF-8](https://www.google.co.kr/search?q=github+disqus+사용법&oq=disqus+github&aqs=chrome.1.69i57j0l3.15105j0j4&client=tablet-android-samsung&sourceid=chrome-mobile&ie=UTF-8)
 
+
+
+jupyter theme : https://github.com/nsonnad/base16-ipython-notebook/blob/master/ipython-3/output/base16-google-light.css
