@@ -37,3 +37,7 @@ https://github.com/transcranial/jupyter-themer
 https://github.com/yirending/Jupyter-blog
 
 https://github.com/yirending/Jupyter-blog
+
+
+web.tpl : https://gist.github.com/frankcleary/bf7a63680a1945942195
+
