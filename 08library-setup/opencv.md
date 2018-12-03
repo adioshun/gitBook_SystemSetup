@@ -36,6 +36,9 @@ https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-im
 
 # Opencv for ROS (cv-bridge)
 
+> ROS + python3에서 cv-bridge문제 있는 듯 
+
+
 ```python
 # `python-catkin-tools` is needed for catkin tool
 # `python3-dev` and `python3-catkin-pkg-modules` is needed to build cv_bridge
