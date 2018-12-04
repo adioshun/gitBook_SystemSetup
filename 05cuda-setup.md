@@ -18,6 +18,8 @@
   
 ### 1.1 일방적 방법 
 
+
+
 ```python
 sudo apt purge nvidia-*
 sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
@@ -68,9 +70,9 @@ apt install nvidia-settings
 ### 2.1 일반적 방법 
 
 ```python
-sudo apt install nvidia-cuda-toolkit 
+sudo apt install nvidia-cuda-toolkit  #ubuntu 16.04
 
-sudo apt-get install cuda #This will install the latest toolkit  and the latest drive|
+sudo apt-get install cuda #This will install the latest toolkit  and the latest drive
 ```
 
 ### 2.2 Ubuntu 18.04 - CUDA 9
