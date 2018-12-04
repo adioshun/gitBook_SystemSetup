@@ -9,13 +9,12 @@ $ jupyter nbextension enable --py mayavi --user
 ```
 
 ###### Conda 설치  
-    - python2 : `conda install -c anaconda mayavi`
-    - python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
+
+- python2 : `conda install -c anaconda mayavi`
+- python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
 
 
-> ImportError: Could not import backend for traits 
-> - conda install -c conda-forge pyside=1.2.4 
-> - {OR} conda install pyqt=4
+> ImportError: Could not import backend for traits : `conda install -c conda-forge pyside=1.2.4 ` OR `conda install pyqt=4`
 
 ###### Pip 설치 
 
