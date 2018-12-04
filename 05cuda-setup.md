@@ -38,13 +38,25 @@ sudo apt install nvidia-381
 # cd /usr/lib/nvidia-xxxx 로 확인 가능
 ```
 
+> NVIDIA 드라이버 설치 확인 : `cat /proc/driver/nvidia/version` 미 설치시 하단 설명 참고
+
+```
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get update
+sudo apt-get install linux-generic (VM 사용시 설치)
+```
+
 ### CUDA install script
 
 | sudo apt install nvidia-cuda-toolkit |
 | --- |
+|sudo apt-get install cuda |
+|#This will install the latest toolkit  and the latest drive|
 
-
-Ubuntu 18.04 - CUDA 9
+### 1. Ubuntu 18.04 - CUDA 9
 
 > NVIDIA proprietary driver \(390 for CUDA 9\)
 
@@ -54,7 +66,7 @@ nvcc --version
 reboot
 ```
 
-Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
+### 2. Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
 
 ```bash
 #!/bin/bash
@@ -69,7 +81,29 @@ if ! dpkg-query -W cuda; then
 fi
 ```
 
-Ubuntu 14.04 LTS - CUDA 8 with latest driver:
+
+```
+## Network 버젼 
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+
+## Local 버젼 
+wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb` 1.9G
+
+sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+sudo apt-get update
+#sudo apt-get install cuda
+echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
+
+
+export PATH="/usr/local/cuda/bin:$PATH"  
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+export CUDA_HOME=/usr/local/cuda
+source ~/.bashrc
+```
+
+
+
+### 3. Ubuntu 14.04 LTS - CUDA 8 with latest driver:
 
 ```bahs
 #!/bin/bash
@@ -84,49 +118,6 @@ if ! dpkg-query -W cuda; then
 fi
 ```
 
----
-
-### 1.0 사전 작업
-
-> NVIDIA 드라이버 설치 확인 : `cat /proc/driver/nvidia/version`  미 설치시 하단 설명 참고
-
-```
-sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install --no-install-recommends libboost-all-dev
-sudo apt-get update
-sudo apt-get install linux-generic (VM 사용시 설치)
-```
-
-### 1.1 CUDA by apt-get install
-
-```
-sudo apt-get install cuda #This will install the latest toolkit  and the latest drive
-```
-
-### 1.1 CUDA 8 for Ubuntu16.04 x86
-
-    ## Network 버젼 
-    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-
-    ## Local 버젼 
-    wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb` 1.9G
-
-    sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-    sudo apt-get update
-    #sudo apt-get install cuda
-    echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
-
-```
-export PATH="/usr/local/cuda/bin:$PATH"  
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
-export CUDA_HOME=/usr/local/cuda
-source ~/.bashrc
-```
-
-### 1.2 CUDA 8 for Ubuntu14.04 x86
-
 ```
 ## Network 버젼
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
@@ -137,6 +128,7 @@ sudo apt-get install cuda
 echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:\$LD_LIBRARY_PATH; " >>~/.bashrc && source ~/.bashrc
 ```
 
+
 ### 1.3 cuda 설치 확인
 
 `nvcc --version`
@@ -146,6 +138,9 @@ echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local
 `apt-get purge cuda`
 
 ## `/usr/local/cuda/uninstall.xx.sh`
+
+
+---
 
 ## 2. cuDNN 설치
 
