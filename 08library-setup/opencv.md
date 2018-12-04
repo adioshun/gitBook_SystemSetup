@@ -5,48 +5,19 @@
  apt-get install libopencv-dev libcv-bridge-dev
  
  
-## python-opencv 설치  
+## 2. python-opencv 설치  
  
 pip install opencv-python
  
-## ROS용 cv-bridge설치 
+## 3. ROS용 cv-bridge설치 
  
  
 sudo apt-get install ros-(ROS version name)-cv-bridge
 
 sudo apt-get install ros-(ROS version name)-vision-opencv
- 
- 
-### 에러처리 
- 
-###### [`ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type`](https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv)
 
-```python 
-~/.bashrc : PYTHONPATH="/usr/lib/python3.5/site-packages:$PYTHONPATH" 
-```
+## 3-1 ROS용 cv-bridge설치 for python3
 
-```python
-import sys
-print(sys.path)
-
-find '/opt/ros/kinetic/lib/python2.7/dist-packages'
-
-remove it : `sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')`
-```
-
-###### [`ImportError: dynamic module does not define module export function (PyInit_cv_bridge_boost)`](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3)
-
-
-- python3에서 `from cv_bridge.boost.cv_bridge_boost import getCvType`시 발생
-
-
-
-
-
-
----
-
-# Opencv for ROS (cv-bridge)
 
 > ROS + python3에서 cv-bridge문제 있는 듯 
 
@@ -91,9 +62,31 @@ source install/setup.bash --extend
 
 ## 에러처리 
 
-### [Could not find the following Boost libraries: boost_python3](https://github.com/andrewssobral/bgslibrary/issues/96)
+###### [Could not find the following Boost libraries: boost_python3](https://github.com/andrewssobral/bgslibrary/issues/96)
 
 ```
 /usr/lib/x86_64-linux-gnu# ln -s libboost_python-py35.so libboost_python3.so
 
 ```
+  
+###### [`ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type`](https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv)
+
+```python 
+~/.bashrc : PYTHONPATH="/usr/lib/python3.5/site-packages:$PYTHONPATH" 
+```
+
+```python
+import sys
+print(sys.path)
+
+find '/opt/ros/kinetic/lib/python2.7/dist-packages'
+
+remove it : `sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')`
+```
+
+###### [`ImportError: dynamic module does not define module export function (PyInit_cv_bridge_boost)`](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3)
+
+
+- python3에서 `from cv_bridge.boost.cv_bridge_boost import getCvType`시 발생
+
+
