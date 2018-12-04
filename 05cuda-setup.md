@@ -2,7 +2,7 @@
 
 ## 1. Nvidia 드라이버 설치
 
-> nvidia graphic driver [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us), [Nvidia Driver Instalation](https://goo.gl/kfzWfJ)
+ nvidia graphic driver : [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us), [Nvidia Driver Instalation-14.04 ](https://goo.gl/kfzWfJ)
 
 1. GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
 
@@ -24,7 +24,7 @@
 sudo apt purge nvidia-*
 sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
 sudo apt update
-sudo apt install nvidia-current #nvidia-381
+sudo apt install nvidia-current #nvidia-390
 # cd /usr/lib/nvidia-xxxx 로 확인 가능
 ```
 
@@ -86,6 +86,8 @@ reboot
 ```
 
 ### 2.3 Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
+
+apt-get install curl wget
 
 ```bash
 #!/bin/bash
