@@ -1,40 +1,28 @@
-## Nvidia 드라이버 설치
+# CUDA 활용 환경 구성
 
-* GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
+## 1. Nvidia 드라이버 설치
 
-* nvidia graphic driver [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us)
+> nvidia graphic driver [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us), [Nvidia Driver Instalation](https://goo.gl/kfzWfJ)
 
-* [Nvidia Driver Instalation](https://goo.gl/kfzWfJ)
+1. GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
 
-* [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
+2. [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
+  
+  ```
+  # Disable nouveau
+  lsmod | grep nouveau
+  vi /etc/modprobe.d/blacklist-nouveau.conf
+  sudo update-initramfs -u
+  reboot
+  ```
+  
+### 1.1 일방적 방법 
 
-[ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
-
-```
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-
-ubuntu-drivers devices
-apt install nvidia-driver-390
-# OR 
-ubuntu-drivers autoinstall
-apt install nvidia-settings
-## Disable nouveau
-# lsmod | grep nouveau
-# vi /etc/modprobe.d/blacklist-nouveau.conf
-# sudo update-initramfs -u
-# reboot
-```
-
-```
-sudo add-apt-repository -y ppa:xorg-edgers/ppa -y
-sudo apt-get update
-sudo apt-get install nvidia-current
-
+```python
 sudo apt purge nvidia-*
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
 sudo apt update
-sudo apt install nvidia-381
+sudo apt install nvidia-current #nvidia-381
 # cd /usr/lib/nvidia-xxxx 로 확인 가능
 ```
 
@@ -49,14 +37,43 @@ sudo apt-get update
 sudo apt-get install linux-generic (VM 사용시 설치)
 ```
 
-### CUDA install script
 
-| sudo apt install nvidia-cuda-toolkit |
-| --- |
-|sudo apt-get install cuda |
-|#This will install the latest toolkit  and the latest drive|
 
-### 1. Ubuntu 18.04 - CUDA 9
+### 1.2 [ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
+
+> 18부터 `ubuntu-drivers autoinstall` 지원 
+
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+
+ubuntu-drivers devices
+apt install nvidia-driver-390
+
+# OR 
+
+ubuntu-drivers autoinstall
+apt install nvidia-settings
+
+
+```
+
+
+## 2. CUDA 설치 
+
+- cuda 설치 확인: `nvcc --version`
+
+- 삭제 : `apt-get purge cuda` or `/usr/local/cuda/uninstall.xx.sh`
+
+### 2.1 일반적 방법 
+
+```python
+sudo apt install nvidia-cuda-toolkit 
+
+sudo apt-get install cuda #This will install the latest toolkit  and the latest drive|
+```
+
+### 2.2 Ubuntu 18.04 - CUDA 9
 
 > NVIDIA proprietary driver \(390 for CUDA 9\)
 
@@ -66,7 +83,7 @@ nvcc --version
 reboot
 ```
 
-### 2. Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
+### 2.3 Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver:
 
 ```bash
 #!/bin/bash
@@ -80,9 +97,9 @@ if ! dpkg-query -W cuda; then
   apt-get install cuda -y
 fi
 ```
+or
 
-
-```
+```bash
 ## Network 버젼 
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 
@@ -103,7 +120,7 @@ source ~/.bashrc
 
 
 
-### 3. Ubuntu 14.04 LTS - CUDA 8 with latest driver:
+### 2.4 Ubuntu 14.04 LTS - CUDA 8 with latest driver:
 
 ```bahs
 #!/bin/bash
@@ -117,7 +134,7 @@ if ! dpkg-query -W cuda; then
   apt-get install linux-headers-$(uname -r) -y
 fi
 ```
-
+or 
 ```
 ## Network 버젼
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
@@ -129,15 +146,7 @@ echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local
 ```
 
 
-### 1.3 cuda 설치 확인
 
-`nvcc --version`
-
-### 1.4 삭제
-
-`apt-get purge cuda`
-
-## `/usr/local/cuda/uninstall.xx.sh`
 
 
 ---
