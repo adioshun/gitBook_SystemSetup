@@ -84,6 +84,10 @@ find '/opt/ros/kinetic/lib/python2.7/dist-packages'
 remove it : `sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')`
 ```
 
+mv /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so~
+
+
+
 ###### [`ImportError: dynamic module does not define module export function (PyInit_cv_bridge_boost)`](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3)
 
 
