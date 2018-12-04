@@ -2,19 +2,14 @@
 
 # 1. OpenCV 설치 
  
- 
-## Apt 설치 
- 
- - apt-get install libopencv-dev libcv-bridge-dev
+ apt-get install libopencv-dev libcv-bridge-dev
  
  
-## pip install 
+## python-opencv 설치  
  
- pip install opencv-python
+pip install opencv-python
  
- 
- 
-# 2. ROS용 cv-bridge설치 
+## ROS용 cv-bridge설치 
  
  
 sudo apt-get install ros-(ROS version name)-cv-bridge
@@ -22,9 +17,9 @@ sudo apt-get install ros-(ROS version name)-cv-bridge
 sudo apt-get install ros-(ROS version name)-vision-opencv
  
  
-# 3. 에러처리 
+### 에러처리 
  
- ### [`ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type`](https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv)
+###### [`ImportError: /opt/ros/kinetic/lib/python2.7/dist-packages/cv2.so: undefined symbol: PyCObject_Type`](https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv)
 
 ```python 
 ~/.bashrc : PYTHONPATH="/usr/lib/python3.5/site-packages:$PYTHONPATH" 
@@ -39,7 +34,7 @@ find '/opt/ros/kinetic/lib/python2.7/dist-packages'
 remove it : `sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')`
 ```
 
-### [`ImportError: dynamic module does not define module export function (PyInit_cv_bridge_boost)`](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3)
+###### [`ImportError: dynamic module does not define module export function (PyInit_cv_bridge_boost)`](https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3)
 
 
 - python3에서 `from cv_bridge.boost.cv_bridge_boost import getCvType`시 발생
