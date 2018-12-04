@@ -70,9 +70,8 @@ apt install nvidia-settings
 ### 2.1 일반적 방법 
 
 ```python
-sudo apt install nvidia-cuda-toolkit  #ubuntu 16.04
+sudo apt install nvidia-cuda-toolkit  
 
-sudo apt-get install cuda #This will install the latest toolkit  and the latest drive
 ```
 
 ### 2.2 Ubuntu 18.04 - CUDA 9
