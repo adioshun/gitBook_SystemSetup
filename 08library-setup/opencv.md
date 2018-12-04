@@ -93,3 +93,12 @@ catkin build cv_bridge
 # Extend environment with new package
 source install/setup.bash --extend
 ```
+
+## 에러처리 
+
+### [Could not find the following Boost libraries: boost_python3](https://github.com/andrewssobral/bgslibrary/issues/96)
+
+```
+/usr/lib/x86_64-linux-gnu# ln -s libboost_python-py35.so libboost_python3.so
+
+```
