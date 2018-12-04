@@ -69,22 +69,29 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # 추천 유틸
 
-## 1. 디스크공간
+- 디스크공간 `apt-get install ncdu`
 
-```
-apt-get install ncdu
-```
-
-* 동영상 포맷 변환 : handbrake.fr
+- 동영상 포맷 변환 : handbrake.fr
 
 
 ## 공간 환보
 
 ```
 apt-get clean
-
 pip clean?
+
+#용량큰 폴더는 
+$ cd /
+$ sudo du -ckx | sort -n > /tmp/duck-root
 ```
+
+- 이전 커널 삭제 
+```
+uname -r #현커널 확인
+apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic linux-image-extra-xx-genric 
+#boot공간 확보 
+```
+
 
 ## 멀티 부팅 USB 만들기
 
