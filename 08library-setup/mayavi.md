@@ -2,7 +2,7 @@
 # ubuntu 16.04 tested (??)
 $ pip install numpy mayavi
 
-$ pip install PyQt5
+$ pip install PyQt5 #mayavi backend로 추후 필요 
 
 $ jupyter nbextension install --py mayavi --user
 $ jupyter nbextension enable --py mayavi --user
