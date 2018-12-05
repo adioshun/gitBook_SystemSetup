@@ -1,11 +1,12 @@
-```python
-# ubuntu 16.04 
 
+###### Pip 설치 
+
+```python
 $ sudo apt-get install vtk6 libvtk6-dev #tcl-vtk python-vtk   #python3-vtk는 없음 
 $ python3 -c "import vtk"
 
 $ pip3 install numpy mayavi
-$ pip3 install pyqt5==5.7.1 sip==4.18  #mayavi backend로 추후 필요 
+$ pip3 install pyqt5==5.7.1 sip==4.19  #mayavi backend로 추후 필요 #ubuntu 16.04, pyqt5
 $ python3 -c "import mayavi.mlab as mlab"
 
 
@@ -20,9 +21,14 @@ $ jupyter nbextension enable --py mayavi --user
 - python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
 
 
-> ImportError: Could not import backend for traits : `conda install -c conda-forge pyside=1.2.4 ` OR `conda install pyqt=4`
 
-###### Pip 설치 
+## 에러 처리 
+
+ImportError: Could not import backend for traits : `conda install -c conda-forge pyside=1.2.4 ` OR `conda install pyqt=4`
+
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found : 
+
+
 
 
 ```bash
