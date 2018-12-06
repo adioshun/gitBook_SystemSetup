@@ -215,6 +215,11 @@ conda install xeus-cling notebook -c QuantStack -c conda-forge
 
 - [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
 
+```
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))
+```
+
 - [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분 
 
 - 슬라이드로 만들기 
