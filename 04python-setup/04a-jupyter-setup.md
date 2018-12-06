@@ -213,9 +213,10 @@ conda install xeus-cling notebook -c QuantStack -c conda-forge
 
 - [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
 
-## [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분 
+- [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
 
-## 슬라이드로 만들기 
+- [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분 
 
-- View → Cell Toolbar → Slideshow
-- jupyter nbconvert Jupyter\ Slides.ipynb --to slides --post serve
+- 슬라이드로 만들기 
+    - View → Cell Toolbar → Slideshow
+    - jupyter nbconvert Jupyter\ Slides.ipynb --to slides --post serve
