@@ -1,4 +1,3 @@
-
 ###### Pip 설치 
 
 ```python
@@ -16,6 +15,8 @@ $ jupyter nbextension enable --py mayavi --user
 ```
 
 ###### Conda 설치  
+
+- conda install -c anaconda vtk 
 
 - python2 : `conda install -c anaconda mayavi`
 - python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
