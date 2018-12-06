@@ -1,5 +1,13 @@
 ###### Pip 설치 
 
+요구 사항 
+- VTK
+- A GUI toolkit, either PyQt4, PySide, PyQt5 or wxPython.
+    - python3 : On Python 3.x you will need to install `PyQt5`
+    - On 2.7.x :  PySide, PyQt4, and wxPython. by pip
+
+> [홈페이지상 설치 방법](http://docs.enthought.com/mayavi/mayavi/installation.html#), [깃북](https://adioshun.gitbooks.io/pcl/content/visualization.html) 
+
 ```python
 $ sudo apt-get install vtk6 libvtk6-dev #tcl-vtk python-vtk   #python3-vtk는 없음 
 $ python3 -c "import vtk"
@@ -14,13 +22,42 @@ $ jupyter nbextension install --py mayavi --user
 $ jupyter nbextension enable --py mayavi --user
 ```
 
+테스트 코드 
+
+```python 
+from mayavi import mlab
+mlab.init_notebook()
+s = mlab.test_plot3d()
+s
+```
+
 ###### Conda 설치  
 
+
+```python 
+
+## python 2.7
+$ conda create --name pyforge --clone root # conda create --name pyforge python=2.7
+$ conda config --add channels conda-forge
+$ source activate pyforge
+$ conda install vtk
+$ conda install pyqt=4
+$ conda install mayavi
+$ mayavi2 #테스트 
+
+
+## python3.5
+$ conda create -n pyconda python=3.5 pyqt=4
+$ source activate pyconda
+$ conda install -c menpo mayavi
+
+
+```
+OR 
 - conda install -c anaconda vtk 
 
 - python2 : `conda install -c anaconda mayavi`
 - python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
-
 
 
 ## 에러 처리 
