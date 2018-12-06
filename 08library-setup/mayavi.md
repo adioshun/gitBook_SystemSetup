@@ -37,7 +37,7 @@ s
 ```python 
 
 ## python 2.7
-$ conda create --name pyforge --clone root # conda create --name pyforge python=2.7
+$ conda create --name pyforge python=2.7 #conda create --name pyforge --clone root # 
 $ conda config --add channels conda-forge
 $ source activate pyforge
 $ conda install vtk
