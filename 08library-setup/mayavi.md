@@ -89,3 +89,17 @@ sudo apt-get install python-pyqt4 for pyqt4
 I suspect libvtk6-dev is installed by ROS because ROS Kinetic requires PCL 1.7.x, which is provided by package libpcl-dev, which depends on libvtk6-dev.
 
 http://www.ros.org/reps/rep-0003.html#kinetic-kame-may-2016-may-2021
+
+
+---
+# DOcker 
+
+docker pull jjpr/blender-mayavi-jupyter
+
+Gtk-Message: Failed to load module "canberra-gtk-module" -> apt install libcanberra-gtk-module libcanberra-gtk3-module
+
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+
+
+

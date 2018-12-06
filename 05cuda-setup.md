@@ -214,3 +214,9 @@ wget "$ML_REPO_PKG" -O /tmp/ml-repo.deb && sudo dpkg -i /tmp/ml-repo.deb && rm -
 
 
 
+---
+
+# 에러 
+
+libGL error: failed to load driver: swrast : ubuntu 16 + Nvidia에서 발생, ubuntu 18은 해결 
+https://askubuntu.com/questions/834254/steam-libgl-error-no-matching-fbconfigs-or-visuals-found-libgl-error-failed-t
