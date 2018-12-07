@@ -2,6 +2,11 @@
 
 > http://pytorch.org/
 
+pip install torch torchvision
+
+pip3 install torch torchvision
+
+
 ```bash 
 # conda (python2.7, CPU)
 $ conda install pytorch torchvision -c soumith
@@ -17,7 +22,6 @@ $ conda install pytorch torchvision cuda80 -c soumith
 
 ```
 
-pip install torch torchvision
 
 ## Visdom for PyTorch Visualization
 ```bash
