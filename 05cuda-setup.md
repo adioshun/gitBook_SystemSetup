@@ -4,7 +4,7 @@
 
  nvidia graphic driver : [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us), [Nvidia Driver Instalation-14.04 ](https://goo.gl/kfzWfJ)
 
-1. GPU 정보를 확인합니다. :`$ lspci | grep -i nvidia`
+1. GPU 정보를 확인합니다. :`apt-get install pciutils && lspci | grep -i nvidia`
 
 2. [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
   
