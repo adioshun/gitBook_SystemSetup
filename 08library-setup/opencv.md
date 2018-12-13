@@ -3,7 +3,20 @@
 # 1. OpenCV 설치 
  
  apt-get install libopencv-dev libcv-bridge-dev
- 
+
+
+```bash
+# python3
+conda install -c https://conda.binstar.org/menpo opencv3 #conda install -c menpo opencv3=3.2.0
+pip3 install opencv_python
+
+#pytbon2
+pip install opencv_python
+
+# apt-get install libgtk2.0-0 #opencv에러시
+```
+
+
  
 ## 2. python-opencv 설치  
  
