@@ -7,6 +7,11 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update && sudo apt install peek
 ```
 
+## img to gif 
+
+
+convert -delay 10 -loop 0 *.png animation.gif
+
 ## 녹화 
 
 \[ 우분투 16.04에서 obs로 화면 녹화하기\)\([http://www.kwangsiklee.com/ko/2017/12/우분투-16-04에서-obs로-화면-녹화하기/](http://www.kwangsiklee.com/ko/2017/12/우분투-16-04에서-obs로-화면-녹화하기/)\)
