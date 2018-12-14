@@ -24,6 +24,13 @@ docker build --tag gingertea/centos-nginx:0.1 .
 > docker build <옵션><Dockerfile 경로> : `docker build -t kunfengchen/u14-indigo-autoware` . #-t tag옵션
 
 
+## Image rename 
+
+```
+docker tag server:latest myname/server:latest
+docker tag d583c3ac45fd myname/server:latest
+```
+
 ## List the DL images  
 ```
 docker images
