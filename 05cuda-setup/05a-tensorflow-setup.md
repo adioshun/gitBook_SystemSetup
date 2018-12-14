@@ -1,6 +1,5 @@
-# Tensorflow Setup
+# [Tensorflow Setup](https://www.tensorflow.org/install/)
 
-> GPU설치시 [CUDA installation](https://github.com/adioshun/Blog_Jekyll/blob/master/2017-07-18-CUDA_CuDNN_Installation.md)
 
 ## 1. pip 이용 설치
 
