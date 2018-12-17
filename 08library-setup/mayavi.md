@@ -24,14 +24,7 @@ $ jupyter nbextension install --py mayavi --user
 $ jupyter nbextension enable --py mayavi --user
 ```
 
-테스트 코드 
 
-```python 
-from mayavi import mlab
-mlab.init_notebook()
-s = mlab.test_plot3d()
-s
-```
 
 ###### Conda 설치  
 
@@ -60,6 +53,20 @@ OR
 - python2 : `conda install -c anaconda mayavi`
 - python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
 
+
+
+테스트 코드 
+
+```python 
+from mayavi import mlab
+mlab.init_notebook()
+s = mlab.test_plot3d()
+s
+```
+
+
+
+---
 
 ## 에러 처리 
 
