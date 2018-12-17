@@ -45,14 +45,15 @@ $ conda create -n pyconda python=3.5 pyqt=4
 $ source activate pyconda
 $ conda install -c menpo mayavi
 
-
 ```
 OR 
-- conda install -c anaconda vtk 
 
-- python2 : `conda install -c anaconda mayavi`
-- python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
+```python
+$ conda install -c anaconda vtk 
 
+$ python2 : `conda install -c anaconda mayavi`
+$ python3 : `conda install -c clinicalgraphics vtk=7.1.0; pip install mayavi`
+```
 
 
 테스트 코드 
