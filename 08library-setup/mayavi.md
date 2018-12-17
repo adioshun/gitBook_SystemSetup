@@ -1,3 +1,5 @@
+# Mayavi 
+
 ###### Pip 설치 
 
 요구 사항 
@@ -37,12 +39,11 @@ s
 ```python 
 
 ## python 2.7
-$ conda create --name pyforge python=2.7 #conda create --name pyforge --clone root # 
 $ conda config --add channels conda-forge
-$ source activate pyforge
+
 $ conda install vtk
 $ conda install pyqt=4
-$ conda install mayavi
+$ conda install -c conda-forge mayavi 
 $ mayavi2 #테스트 
 
 
