@@ -304,6 +304,9 @@ nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <
 > `Error: Can't open display: :0` 에러시 : `xhost +` 실행  [[x11_Connection]](https://github.com/adioshun/System_Setup/wiki/x11_Connection)
 
 ---
+![](https://github.com/wagoodman/dive/raw/master/.data/demo.gif)
+
+도커이미지 탐색 : [dive](https://github.com/wagoodman/dive/blob/master/README.md)
 
 ---
 [좋은도커이미지만들기](https://dayone.me/1740z5r)
