@@ -9,7 +9,7 @@
 > [홈페이지상 설치 방법](http://docs.enthought.com/mayavi/mayavi/installation.html#), [깃북](https://adioshun.gitbooks.io/pcl/content/visualization.html) 
 
 ```python
-$ sudo apt-get install vtk6 libvtk6-dev #tcl-vtk python-vtk   #python3-vtk는 없음 
+$ sudo apt-get install vtk6 libvtk6-dev tcl-vtk python-vtk   #python3-vtk는 없음 
 $ python3 -c "import vtk"
 
 $ pip3 install numpy mayavi
