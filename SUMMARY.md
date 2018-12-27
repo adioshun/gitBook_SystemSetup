@@ -44,4 +44,5 @@
   * [jupyterbook](c800-c791-b3c4-ad6c/jupyterbook.md)
   * [Screen](c800-c791-b3c4-ad6c/screen.md)
   * [github](c800-c791-b3c4-ad6c/github.md)
+* [jetson\_tx2](jetsontx2.md)
 
