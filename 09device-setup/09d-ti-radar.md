@@ -12,3 +12,5 @@
 [TI mmWave ROS Package (Customized)](https://github.com/radar-lab/ti_mmwave_rospkg): 깃허브 
 
 [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
+
+[mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
