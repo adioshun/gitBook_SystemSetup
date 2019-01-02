@@ -1,6 +1,6 @@
 [mmWave SDK EVM Out-of-Box Demo](https://training.ti.com/mmwave-sdk-evm-out-box-demo)
 
-[mmWave Demo Visualizer](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf
+[mmWave Demo Visualizer](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf, [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/)
 
 [DCA1000EVM Data Capture Card](http://www.ti.com/lit/ug/spruij4/spruij4.pdf): pdf
 
