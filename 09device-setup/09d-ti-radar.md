@@ -14,3 +14,12 @@
 [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
 
 [mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
+
+
+
+
+---
+
+- ttyS0 is the device for the first UART serial port on x86 and x86_64 architectures. If you have a PC motherboard with serial ports you'd be using a ttySn to attach a modem or a serial console.
+- ttyUSB0 is the device for the first USB serial convertor. If you have an USB serial cable you'd be using a ttyUSBn to connect to the serial port of a router.
+- ttyAMA0 is the device for the first serial port on ARM architecture. If you have an ARM-based TV box with a serial console and running Android or OpenELEC, you'd be using a ttyAMAn to attach a console to it.
