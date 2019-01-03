@@ -1,4 +1,4 @@
-0. usb 드라이버 다운로드 : [XDS Emulation Software Package]()
+0. usb 드라이버 다운로드 : [XDS Emulation Software Package](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
 
 1. 롬(??) 업데이트
     - 업데이터 툴 설치 : [다운로드](http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash)
