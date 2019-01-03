@@ -1,6 +1,10 @@
+[TI 포럼](https://e2e.ti.com/support/sensors/f/1023)
+
 [mmWave SDK EVM Out-of-Box Demo](https://training.ti.com/mmwave-sdk-evm-out-box-demo)
 
-[mmWave Demo Visualizer](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf, [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/)
+[웹앱 갤러리](http://dev.ti.com/gallery/)
+- [mmWave Demo Visualizer 메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf, 
+- [mmWave Demo Visualizer 웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/)
 
 [DCA1000EVM Data Capture Card](http://www.ti.com/lit/ug/spruij4/spruij4.pdf): pdf
 
