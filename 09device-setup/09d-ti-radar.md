@@ -2,6 +2,8 @@
 - 업데이터 툴 설치 : [다운로드](http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash)
 -  xwr16xx_mmw_demo.bin 다운로드 : [sdk 설치시](http://www.ti.com/tool/MMWAVE-SDK) 자동 다운로드 
 - 설명서 : [UniFlash v4 User Guide for mmWave Devices](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
+- 점퍼 설정 : SOP2 연결 -> 재부팅 
+
 ---
 
 
