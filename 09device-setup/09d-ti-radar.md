@@ -22,13 +22,23 @@
 
 ## ROS 연계 (ubuntu)
 
-[TI mmWave ROS Driver Setup Guide](http://dev.ti.com/tirex/content/mmwave_training_1_6_1/labs/lab0006-ros-driver/lab0006_ros_driver_pjt/TI_mmWave_ROS_Driver_Setup_Guide.pdf) : pdf, 
+> [TI mmWave ROS Driver Setup Guide: [pdf](http://dev.ti.com/tirex/content/mmwave_training_1_6_1/labs/lab0006-ros-driver/lab0006_ros_driver_pjt/TI_mmWave_ROS_Driver_Setup_Guide.pdf) , [깃허브](https://github.com/ibcn-cloudlet/ti_mmwave_rospkg), [깃허브-개선버젼](https://github.com/radar-lab/ti_mmwave_rospkg) 
 
+```python 
+sudo apt-get install ros-kinetic-pcl-ros ros-kinetic-pcl-msgs ros-kinetic-pcl-conversions ros-kinetic-perception-pcl
+cd ~/catkin_ws/src
+git clone https://github.com/radar-lab/ti_mmwave_rospkg.git
+git clone https://github.com/wjwwood/serial.git
+cd ~/catkin_ws
+catkin_make
 
-[ROS driver for TI mmwave sensor boards](https://github.com/ibcn-cloudlet/ti_mmwave_rospkg) : 깃허브 
+sudo chmod 666 /dev/ttyACM0
+sudo chmod 666 /dev/ttyACM1
 
-[TI mmWave ROS Package (Customized)](https://github.com/radar-lab/ti_mmwave_rospkg): 깃허브 
+roslaunch ti_mmwave_rospkg 1642es2_short_range.launch
 
+rostopic echo /ti_mmwave/radar_scan
+```
 
 
 
