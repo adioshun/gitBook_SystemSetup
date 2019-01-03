@@ -5,12 +5,12 @@
     -  xwr16xx_mmw_demo.bin 다운로드 : [sdk 설치시](http://www.ti.com/tool/MMWAVE-SDK) 자동 다운로드 (`C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw`)
     - 설명서 : [UniFlash v4 User Guide for mmWave Devices](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
     - 점퍼 설정 : SOP2 연결 -> 재부팅 
-    - 윈도우 장치 관리자 에서 포트 번호 확인 
+    - 윈도우 장치 관리자 에서 포트 번호 확인 후 `XDS110 Class Application/User UART`를 설정에 입력
 
 
 
 
-간편한 시각화 mmWave Demo Visualizer [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/): [메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf), [웹앱 갤러리](http://dev.ti.com/gallery/)
+3. 간편한 시각화 mmWave Demo Visualizer [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/): [메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf), [웹앱 갤러리](http://dev.ti.com/gallery/)
 
 ---
 
