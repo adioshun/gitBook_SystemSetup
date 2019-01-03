@@ -40,7 +40,7 @@ roslaunch ti_mmwave_rospkg 1642es2_short_range.launch
 rostopic echo /ti_mmwave/radar_scan
 ```
 
-
+> 에러 발생시 참고 : https://github.com/radar-lab/ti_mmwave_rospkg#troubleshooting
 
 ---
 
