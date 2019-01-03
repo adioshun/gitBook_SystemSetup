@@ -1,11 +1,16 @@
-0. usb 드라이버 다운로드 : [XDS Emulation Software Package](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
+0. usb 드라이버 다운로드 : [ stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
 
 1. 롬(??) 업데이트
     - 업데이터 툴 설치 : [다운로드](http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash)
     -  xwr16xx_mmw_demo.bin 다운로드 : [sdk 설치시](http://www.ti.com/tool/MMWAVE-SDK) 자동 다운로드 (`C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw`)
     - 설명서 : [UniFlash v4 User Guide for mmWave Devices](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
     - 점퍼 설정 : SOP2 연결 -> 재부팅 
-    
+
+
+
+
+간편한 시각화 mmWave Demo Visualizer [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/): [메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf), [웹앱 갤러리](http://dev.ti.com/gallery/)
+
 ---
 
 
@@ -18,9 +23,12 @@
 - chmod +x *.bin
 - [User Guide](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/1023/mmwave_5F00_sdk_5F00_user_5F00_guide-_2800_1_2900_.pdf)
 
-[웹앱 갤러리](http://dev.ti.com/gallery/)
-- [mmWave Demo Visualizer 메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf, 
-- [mmWave Demo Visualizer 웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/)
+
+
+간편한 시각화 mmWave Demo Visualizer [웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/): [메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf), [웹앱 갤러리](http://dev.ti.com/gallery/)
+
+
+
 
 [DCA1000EVM Data Capture Card](http://www.ti.com/lit/ug/spruij4/spruij4.pdf): pdf
 
