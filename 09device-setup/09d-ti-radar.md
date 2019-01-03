@@ -2,7 +2,7 @@
 
 ## 초기 설치 (윈도우 권장)
 
-> DCA1000EVM대신 IWR 1642에 직접 연결 후 작업 
+> DCA1000EVM대신 IWR 1642에 직접 연결 후 작업, [[Ref Tutorial]](https://training.ti.com/mmwave-sdk-evm-out-box-demo) 
 
 1. usb 드라이버 다운로드 : [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
 
