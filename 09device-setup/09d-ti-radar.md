@@ -5,6 +5,7 @@
     -  xwr16xx_mmw_demo.bin 다운로드 : [sdk 설치시](http://www.ti.com/tool/MMWAVE-SDK) 자동 다운로드 (`C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw`)
     - 설명서 : [UniFlash v4 User Guide for mmWave Devices](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
     - 점퍼 설정 : SOP2 연결 -> 재부팅 
+    - 윈도우 장치 관리자 에서 포트 번호 확인 
 
 
 
