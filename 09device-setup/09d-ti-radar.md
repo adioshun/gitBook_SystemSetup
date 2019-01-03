@@ -44,19 +44,28 @@
 
 
 ---
-[TI 포럼](https://e2e.ti.com/support/sensors/f/1023)
 
-[mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
+
+
+## [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
+- [Traffic Monitoring Overview](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FTraffic%20Monitoring)
+- [ROS Point Cloud Visualizer](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FROS%20Point%20Cloud%20Visualizer)
+- People Counting Demo
+- Zone Occupancy Detection 
+- Gesture Recognition 
+
+
+Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
+
+
+---
+## [mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
 - 다운로드(Linus) : http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/lts-latest/exports/mmwave_sdk_02_01_00_04-Linux-x86-Install.bin
 - chmod +x *.bin
 - [User Guide](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/1023/mmwave_5F00_sdk_5F00_user_5F00_guide-_2800_1_2900_.pdf)
 
-[TI Resouce Explorer](http://dev.ti.com/tirex/#/)
 
 
-- [Traffic Monitoring Overview](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FTraffic%20Monitoring)
-
-Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
 
 ---
 
@@ -76,6 +85,8 @@ Download the latest CCS : http://processors.wiki.ti.com/index.php/Download_CCS
 
 
 ---
+
+- [TI 포럼](https://e2e.ti.com/support/sensors/f/1023)
 
 - ttyS0 is the device for the first UART serial port on x86 and x86_64 architectures. If you have a PC motherboard with serial ports you'd be using a ttySn to attach a modem or a serial console.
 - ttyUSB0 is the device for the first USB serial convertor. If you have an USB serial cable you'd be using a ttyUSBn to connect to the serial port of a router.
