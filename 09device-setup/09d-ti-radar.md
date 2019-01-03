@@ -2,9 +2,10 @@
 
 ## 초기 설치 (윈도우 권장)
 
-1. usb 드라이버 다운로드 : 
-    - [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
-    - [DCA1000EVM : 드라이버/mmWave studio](https://downloads.ti.com/downloads/ra-processors/esd/MMWAVE-STUDIO/latest/mmwave_studio_02_00_00_02_win32.exe?__gda__=1547022129_a6064df5c19ef3383b7510adfe062512)
+> DCA1000EVM대신 IWR 1642에 직접 연결 후 작업 
+
+1. usb 드라이버 다운로드 : [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
+
     
 
 2. 롬(??) 업데이트
@@ -28,9 +29,8 @@
 - [홈페이지](http://www.ti.com/tool/dca1000evm)
 - [Quick Start Guide](http://www.ti.com/lit/ml/spruik7/spruik7.pdf)
 - [User guide](http://www.ti.com/lit/ug/spruij4/spruij4.pdf)
+- [드라이버/mmWave studio](https://downloads.ti.com/downloads/ra-processors/esd/MMWAVE-STUDIO/latest/mmwave_studio_02_00_00_02_win32.exe?__gda__=1547022129_a6064df5c19ef3383b7510adfe062512)
 
-
-### IWR 1642
 
 
 ---
