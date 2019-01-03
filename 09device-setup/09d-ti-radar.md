@@ -2,6 +2,11 @@
 
 [mmWave SDK EVM Out-of-Box Demo](https://training.ti.com/mmwave-sdk-evm-out-box-demo)
 
+[mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
+- 다운로드(Linus) : http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/lts-latest/exports/mmwave_sdk_02_01_00_04-Linux-x86-Install.bin
+- chmod +x *.bin
+- [User Guide](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf)
+
 [웹앱 갤러리](http://dev.ti.com/gallery/)
 - [mmWave Demo Visualizer 메뉴얼 ](http://www.ti.com/lit/ug/swru529b/swru529b.pdf): pdf, 
 - [mmWave Demo Visualizer 웹앱](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/)
@@ -17,7 +22,19 @@
 
 [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
 
-[mmWave software development kit (SDK)](http://www.ti.com/tool/MMWAVE-SDK)
+
+
+
+Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
+
+
+
+---
+
+# mmWaveLib
+- [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 50page
+- mmWaveLib is a collection of algorithms that provide basic functionality needed for FMCW radar-cube processing. 
+- This component is available for **xWR16xx** only and contains optimized library routines for C674 DSP architecture only. 
 
 
 
