@@ -27,6 +27,11 @@
 
 Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
 
+---
+
+# Code Composer Studio(CCS)
+
+Download the latest CCS : http://processors.wiki.ti.com/index.php/Download_CCS
 
 
 ---
