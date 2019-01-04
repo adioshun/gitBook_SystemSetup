@@ -64,6 +64,7 @@ rostopic echo /ti_mmwave/radar_scan
 - Zone Occupancy Detection 
 - Gesture Recognition 
 
+> 사전 설치 : [Matlab runtime_R2017a (9.2)](https://kr.mathworks.com/products/compiler/matlab-runtime.html)
 
 Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
 
