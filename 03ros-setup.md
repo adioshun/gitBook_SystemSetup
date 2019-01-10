@@ -123,3 +123,22 @@ apt-get install ros-$ROS_DISTRO-velodyne
 - Install the missing package `sudo apt install qtbase5-dev`
 
 > ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
+
+
+--- 
+
+# Tip
+
+- 여러 컴퓨터에 설치 
+
+```
+vi /etc/host 
+192.168.0.65 jetson
+192.168.0.17 lidar0
+```
+
+```
+export ROS_HOSTNAME=jetson
+export ROS_MASTER_URI=http://lidar0:11311
+```
+
