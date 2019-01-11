@@ -124,10 +124,24 @@ serialstats -d /dev/ttySX -i 1 &
 - 실행 : roslaunch rviz_1642_2d.launch #실행 안해도 자동으로 값 출력 
 - 확인 : moserial -> data port 지정 
 
-```python 
+
+```python
+# 설정 파일 전달 
 import serial
 
-#data serial port #9600
+CLIport = serial.Serial('/dev/ttyACM0', 115200)
+
+config = [line.rstrip('\r\n') for line in open(path+'/profile1.cfg')]
+for i in config:
+    CLIport.write(i+'\n')
+    time.sleep(0.01)
+```
+
+
+```python 
+# Data read
+import serial
+
 data_serial = serial.Serial(
     port='/dev/ttyACM1',\
     baudrate=921600,\
@@ -139,6 +153,9 @@ data_serial = serial.Serial(
 while 1 == 1:
     print ser.readline()
 ```                
+
+- [python Parser](https://e2e.ti.com/support/sensors/f/1023/t/684872)
+- [mmw Demo Data Structure v0.1](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/1023/mmw-Demo-Data-Structure_5F00_8_5F00_16_2D00_7.pdf): ppt
 
 
 ---
