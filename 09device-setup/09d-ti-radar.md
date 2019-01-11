@@ -28,6 +28,23 @@
 - Webapp : [Uniflash](https://dev.ti.com/uniflash/#!/)
 
 
+
+---
+
+
+
+## [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
+- [Traffic Monitoring Overview](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FTraffic%20Monitoring)
+- [ROS Point Cloud Visualizer](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FROS%20Point%20Cloud%20Visualizer)
+- People Counting Demo : [설명자료](https://training.ti.com/kr/mmwave-sensors-people-counting-demo-english?cu=1128486)
+- Zone Occupancy Detection 
+- Gesture Recognition 
+
+> 사전 설치 : [Matlab runtime_R2017a (9.2)](https://kr.mathworks.com/products/compiler/matlab-runtime.html)
+
+Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
+
+---
 ## ROS 연계 (ubuntu)
 
 > [TI mmWave ROS Driver Setup Guide: [pdf](http://dev.ti.com/tirex/content/mmwave_training_1_6_1/labs/lab0006-ros-driver/lab0006_ros_driver_pjt/TI_mmWave_ROS_Driver_Setup_Guide.pdf) , [공식](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FROS%20Point%20Cloud%20Visualizer), [깃허브](https://github.com/ibcn-cloudlet/ti_mmwave_rospkg), [깃허브-개선버젼](https://github.com/radar-lab/ti_mmwave_rospkg) 
@@ -50,31 +67,6 @@ rostopic echo /ti_mmwave/radar_scan
 
 > 에러 발생시 참고 : https://github.com/radar-lab/ti_mmwave_rospkg#troubleshooting
 
----
-
-### DCA1000EVM
-- DCA1000EVM(http://www.ti.com/tool/DCA1000EVM)은 TI mmWave EVM과 연결하여 Raw ADC 데이터 캡쳐를 할 수 있게 하는 인터페이스 보드입니다.
-- [홈페이지](http://www.ti.com/tool/dca1000evm)
-- [Quick Start Guide](http://www.ti.com/lit/ml/spruik7/spruik7.pdf)
-- [User guide](http://www.ti.com/lit/ug/spruij4/spruij4.pdf)
-- [드라이버/mmWave studio](https://downloads.ti.com/downloads/ra-processors/esd/MMWAVE-STUDIO/latest/mmwave_studio_02_00_00_02_win32.exe?__gda__=1547022129_a6064df5c19ef3383b7510adfe062512)
-
-
-
----
-
-
-
-## [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
-- [Traffic Monitoring Overview](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FTraffic%20Monitoring)
-- [ROS Point Cloud Visualizer](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FROS%20Point%20Cloud%20Visualizer)
-- People Counting Demo
-- Zone Occupancy Detection 
-- Gesture Recognition 
-
-> 사전 설치 : [Matlab runtime_R2017a (9.2)](https://kr.mathworks.com/products/compiler/matlab-runtime.html)
-
-Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
 
 
 ---
@@ -99,6 +91,15 @@ Download the latest CCS : http://processors.wiki.ti.com/index.php/Download_CCS
 - [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 50page
 - mmWaveLib is a collection of algorithms that provide basic functionality needed for FMCW radar-cube processing. 
 - This component is available for **xWR16xx** only and contains optimized library routines for C674 DSP architecture only. 
+
+
+### DCA1000EVM
+- DCA1000EVM(http://www.ti.com/tool/DCA1000EVM)은 TI mmWave EVM과 연결하여 Raw ADC 데이터 캡쳐를 할 수 있게 하는 인터페이스 보드입니다.
+- [홈페이지](http://www.ti.com/tool/dca1000evm)
+- [Quick Start Guide](http://www.ti.com/lit/ml/spruik7/spruik7.pdf)
+- [User guide](http://www.ti.com/lit/ug/spruij4/spruij4.pdf)
+- [드라이버/mmWave studio](https://downloads.ti.com/downloads/ra-processors/esd/MMWAVE-STUDIO/latest/mmwave_studio_02_00_00_02_win32.exe?__gda__=1547022129_a6064df5c19ef3383b7510adfe062512)
+
 
 
 
