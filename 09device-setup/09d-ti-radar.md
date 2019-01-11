@@ -118,6 +118,15 @@ serialstats -d /dev/ttySX -i 1 &
 
 ```
 
+## GUI Tool 
+
+- 센서 :  (C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw)로 플래싱
+- 실행 : roslaunch rviz_1642_2d.launch
+- 확인 : moserial -> data port 지정 
+
+
+
+
 ---
 
 - [TI 포럼](https://e2e.ti.com/support/sensors/f/1023)
