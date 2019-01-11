@@ -101,8 +101,22 @@ Download the latest CCS : http://processors.wiki.ti.com/index.php/Download_CCS
 - [드라이버/mmWave studio](https://downloads.ti.com/downloads/ra-processors/esd/MMWAVE-STUDIO/latest/mmwave_studio_02_00_00_02_win32.exe?__gda__=1547022129_a6064df5c19ef3383b7510adfe062512)
 
 
+---
+
+# UART Read 
+
+http://processors.wiki.ti.com/index.php/Linux_Core_UART_User%27s_Guide
 
 
+https://github.com/nsekhar/serialcheck
+
+```
+~/serialcheck$ gcc -o serialcheck serialcheck.c CROSS_COMPILE=arm-linux-gnueabihf-
+~/serialcheck$ gcc -o serialstats serialstats.c CROSS_COMPILE=arm-linux-gnueabihf-
+
+serialstats -d /dev/ttySX -i 1 &
+
+```
 
 ---
 
