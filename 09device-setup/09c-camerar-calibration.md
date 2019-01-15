@@ -55,4 +55,7 @@ rostopic echo /camera_info  #칼리브레이션 정보 D,K,R,P 확인
 ---
 
 
+FoV가 큰 어안렌즈 캘리브레이션 방법
+- 문제 : 기존 OpenCV의 Fish eye calibration은 180도이상이면 지원이 안되는걸로 알고있고,
+- 해결 : [OcamCalib](https://sites.google.com/site/scarabotix/ocamcalib-toolbox) 360도와 fisheye 지원  
 
