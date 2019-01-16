@@ -42,7 +42,7 @@
 
 > 사전 설치 : [Matlab runtime_R2017a (9.2)](https://kr.mathworks.com/products/compiler/matlab-runtime.html)
 
-Configuration (.cfg) File Format : [SDK 메뉴얼](http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/latest/exports/mmwave_sdk_user_guide.pdf) 14page
+
 
 ---
 ## ROS 연계 (ubuntu)
@@ -130,6 +130,59 @@ serialstats -d /dev/ttySX -i 1 &
 
 설정에 따른 성능 변화 : [바로가기](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FChirp%20Database)
 ![](https://i.imgur.com/EIirwPZ.png)
+
+```
+% ***************************************************************
+% Created for SDK ver:02.00
+% Created using Visualizer ver:2.0.0.0
+% Frequency:77
+% Platform:xWR16xx
+% Scene Classifier:best_range_res
+% Azimuth Resolution(deg):15
+% Range Resolution(m):0.044
+% Maximum unambiguous Range(m):9.08
+% Maximum Radial Velocity(m/s):5.06
+% Radial velocity resolution(m/s):0.64
+% Frame Duration(msec):33.333
+% Range Detection Threshold (dB):9
+% Doppler Detection Threshold (dB):0
+% Range Peak Grouping:disabled
+% Doppler Peak Grouping:enabled
+% Static clutter removal:enabled
+% ***************************************************************
+sensorStop
+flushCfg
+dfeDataOutputMode 1
+channelCfg 15 3 0
+adcCfg 2 1
+adcbufCfg -1 0 0 1 0
+profileCfg 0 77 39 7 57.14 0 0 70 1 256 5209 0 0 30
+chirpCfg 0 0 0 0 0 0 0 1
+chirpCfg 1 1 0 0 0 0 0 2
+frameCfg 0 1 16 0 33.333 1 0
+lowPower 0 1
+guiMonitor -1 1 0 0 0 0 0
+cfarCfg -1 0 0 8 4 4 0 3072
+cfarCfg -1 1 0 4 2 3 0 3072
+peakGrouping -1 1 0 1 1 255
+multiObjBeamForming -1 1 0.5
+clutterRemoval -1 1 #노이즈 제 
+calibDcRangeSig -1 0 -5 8 256
+extendedMaxVelocity -1 0
+bpmCfg -1 0 0 1
+lvdsStreamCfg -1 0 0 0
+nearFieldCfg -1 0 0 0
+compRangeBiasAndRxChanPhase 0.0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+measureRangeBiasAndRxChanPhase 0 1.5 0.2
+CQRxSatMonitor 0 3 5 123 0
+CQSigImgMonitor 0 127 4
+analogMonitor 1 1
+sensorStart
+```
+
+Configuration (.cfg) File Format : [SDK 메뉴얼](http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/latest/exports/mmwave_sdk_user_guide.pdf) 14page
+
+[mmWave sensing Estimation](https://dev.ti.com/gallery/view/1792614/mmWaveSensingEstimator/ver/1.3.0/)툴을 이용하여 설정값 변경이 더편함 
 
 ---
 
