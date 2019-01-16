@@ -124,7 +124,12 @@ serialstats -d /dev/ttySX -i 1 &
 - 실행 : roslaunch rviz_1642_2d.launch #실행 안해도 자동으로 값 출력 
 - 확인 : moserial -> data port 지정 
 
+---
 
+## 설정 
+
+설정에 따른 성능 변화 : [바로가기](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FChirp%20Database)
+![](https://i.imgur.com/EIirwPZ.png)
 
 ---
 
