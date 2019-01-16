@@ -128,7 +128,7 @@ serialstats -d /dev/ttySX -i 1 &
 
 ## 설정 
 
-설정에 따른 성능 변화 : [바로가기](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FChirp%20Database)
+
 ![](https://i.imgur.com/EIirwPZ.png)
 
 ```
@@ -182,7 +182,8 @@ sensorStart
 
 Configuration (.cfg) File Format : [SDK 메뉴얼](http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/latest/exports/mmwave_sdk_user_guide.pdf) 14page
 
-[mmWave sensing Estimation](https://dev.ti.com/gallery/view/1792614/mmWaveSensingEstimator/ver/1.3.0/)툴을 이용하여 설정값 변경이 더편함 
+[mmWave sensing Estimation](https://dev.ti.com/gallery/view/1792614/mmWaveSensingEstimator/ver/1.3.0/)툴을 이용하여 설정값 변경이 더편함, Scene Parameter설정시 [참고](http://dev.ti.com/tirex/content/mmwave_industrial_toolbox_3_1_1/.metadata/.html/chirps.html)
+
 
 ---
 
