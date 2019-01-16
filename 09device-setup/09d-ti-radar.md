@@ -42,7 +42,7 @@
 
 > 사전 설치 : [Matlab runtime_R2017a (9.2)](https://kr.mathworks.com/products/compiler/matlab-runtime.html)
 
-Configuration (.cfg) File Format : [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 14page
+Configuration (.cfg) File Format : [SDK 메뉴얼](http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/latest/exports/mmwave_sdk_user_guide.pdf) 14page
 
 ---
 ## ROS 연계 (ubuntu)
@@ -88,7 +88,7 @@ Download the latest CCS : http://processors.wiki.ti.com/index.php/Download_CCS
 ---
 
 # mmWaveLib
-- [SDK 메뉴얼](file:///home/adioshun/Downloads/mmwave_sdk_user_guide.pdf) 50page
+- [SDK 메뉴얼](http://software-dl.ti.com/ra-processors/esd/MMWAVE-SDK/latest/exports/mmwave_sdk_user_guide.pdf) 50page
 - mmWaveLib is a collection of algorithms that provide basic functionality needed for FMCW radar-cube processing. 
 - This component is available for **xWR16xx** only and contains optimized library routines for C674 DSP architecture only. 
 
