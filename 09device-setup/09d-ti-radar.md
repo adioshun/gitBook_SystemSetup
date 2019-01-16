@@ -28,6 +28,13 @@
 - Webapp : [Uniflash](https://dev.ti.com/uniflash/#!/)
 
 
+```
+    <param name="command_port" value="/dev/ttyACM0"  />
+    <param name="command_rate" value="115200"   />
+    <param name="data_port" value="/dev/ttyACM1"  />
+    <param name="data_rate" value="921600"   />
+
+```
 
 ---
 
@@ -118,11 +125,11 @@ serialstats -d /dev/ttySX -i 1 &
 
 ```
 
-## GUI Tool 
+## Commnad CLI 접속 
 
 - 센서 :  (C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw)로 플래싱
 - 실행 : roslaunch rviz_1642_2d.launch #실행 안해도 자동으로 값 출력 
-- 확인 : moserial -> data port 지정 
+- 확인 : moserial -> data port 지정 ,  echo uncheck
 
 ---
 
