@@ -69,7 +69,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # 추천 유틸
 
-- 디스크공간 `apt-get install ncdu`
+
 
 - 동영상 포맷 변환 : handbrake.fr
 
@@ -91,6 +91,18 @@ uname -r #현커널 확인
 apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic linux-image-extra-xx-genric 
 #boot공간 확보 
 ```
+
+
+- 디스크공간 `apt-get install ncdu`
+
+![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
+
+```
+sudo add-apt-repository ppa:nathan-renniewaldock/qdirstat
+
+sudo apt-get update
+```
+
 
 
 ## 멀티 부팅 USB 만들기
