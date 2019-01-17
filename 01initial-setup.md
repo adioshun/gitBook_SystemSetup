@@ -99,8 +99,8 @@ apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic l
 
 ```
 sudo add-apt-repository ppa:nathan-renniewaldock/qdirstat
-
 sudo apt-get update
+sudo apt install qdirstat
 ```
 
 
