@@ -302,7 +302,76 @@ if __name__ == "__main__":
 		print  
 ```                
 
+---
 
+# People tracking Demo 
+
+> * C:\ti\mmwave_industrial_toolbox_3_1_1\labs\lab0011-pplcount\lab0011_pplcount_quickstart\
+
+
+```
+===========================================================
+[IWR1642] v3.1.1
+===========================================================
+dfeDataOutputMode 1
+channelCfg 15 3 0
+adcCfg 2 1
+adcbufCfg 0 1 1 1
+profileCfg 0 77 30 7 62 0 0 60 1 128 2500 0 0 30
+chirpCfg 0 0 0 0 0 0 0 1
+chirpCfg 1 1 0 0 0 0 0 2
+frameCfg 0 1 128 0 50 1 0
+lowPower 0 1
+guiMonitor 1 1 0 0
+cfarCfg 6 4 4 4 4 16 16 4 4 50 62 0
+doaCfg 600 1875 30 1
+SceneryParam -6 6 0.05 6
+GatingParam 4 3 2 0
+StateParam 10 5 10 100 5
+AllocationParam 450 0.01 25 1 2
+VariationParam 0.289 0.289 1.0
+PointCloudEn 1
+trackingCfg 1 2 250 20 200 50 90
+sensorStart
+
+left wall: -6
+R wall: 6
+front wall: 6
+back wall: 0
+------------------
+```
+
+```
+===========================================================
+[IWR6843] v3.1.1
+===========================================================
+flushCfg
+dfeDataOutputMode 1
+channelCfg 15 5 0
+adcCfg 2 1
+adcbufCfg 0 1 1 1
+profileCfg 0 60.6 30 10 62 0 0 53 1 128 2500 0 0 30
+chirpCfg 0 0 0 0 0 0 0 1
+chirpCfg 1 1 0 0 0 0 0 4
+frameCfg 0 1 128 0 50 1 0
+lowPower 0 1
+guiMonitor 1 1 0 0
+cfarCfg 6 4 4 4 4 16 16 4 4 50 62 0
+doaCfg 600 1875 30 1 1 0
+SceneryParam -6 6 0.5 6
+GatingParam 4 3 2 0
+StateParam 10 5 100 100 5
+AllocationParam 250 250 0.25 10 1 2
+AccelerationParam 1 1 1
+trackingCfg 1 2 250 20 52 82 50 90
+sensorStart
+
+left wall: -6
+R wall: 6
+front wall: 6
+back wall: 0
+------------------
+```
 
 
 
