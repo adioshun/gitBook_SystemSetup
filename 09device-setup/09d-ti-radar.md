@@ -43,7 +43,7 @@
 ## [TI Resouce Explorer](http://dev.ti.com/tirex/#/)
 - [Traffic Monitoring Overview](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FTraffic%20Monitoring)
 - [ROS Point Cloud Visualizer](http://dev.ti.com/tirex/#/?link=Software%2FmmWave%20Sensors%2FIndustrial%20Toolbox%2FLabs%2FROS%20Point%20Cloud%20Visualizer)
-- People Counting Demo : [설명자료](https://training.ti.com/kr/mmwave-sensors-people-counting-demo-english?cu=1128486)
+- People Counting Demo : [설명자료](https://training.ti.com/kr/mmwave-sensors-people-counting-demo-english?cu=1128486), [pdf](https://training.ti.com/sites/default/files/docs/MainDemoSlidesMAINEDIT_V1p11_0.pdf)
 - Zone Occupancy Detection 
 - Gesture Recognition 
 
