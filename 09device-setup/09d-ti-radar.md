@@ -331,7 +331,56 @@ back wall: 0
 ------------------
 ```
 
+```
+var getXYZ_type2 = function (vec, vecIdx, Params, numDetecObj, sizeObj) 
+{
+    var x_coord = [];
+    var y_coord = [];
+    var z_coord = [];
+    var doppler = [];
+    var i, startIdx;
+    var subFrameNum = Params.currentSubFrameNumber;
 
+    /* list of detected objs
+    for platform = 68xx
+    typedef struct DPIF_PointCloudCartesian_t
+    {
+        x - coordinate in meters
+        float  x;
+        y - coordinate in meters
+        float  y;
+        z - coordinate in meters
+        float  z;        
+        Doppler in m/s 
+        float    doppler;
+    }DPIF_PointCloudCartesian;
+    */
+    for (i = 0; i < numDetecObj; i++)  
+    {
+        /*start index in bytevec for this detected obj*/
+        startIdx = vecIdx + i*sizeObj;
+
+        x_coord[i] = getFloat(vec[startIdx + 0],  vec[startIdx + 1],  vec[startIdx + 2],  vec[startIdx + 3]);
+        y_coord[i] = getFloat(vec[startIdx + 4],  vec[startIdx + 5],  vec[startIdx + 6],  vec[startIdx + 7]);
+        z_coord[i] = getFloat(vec[startIdx + 8],  vec[startIdx + 9],  vec[startIdx + 10], vec[startIdx + 11]);
+        doppler[i] = getFloat(vec[startIdx + 12], vec[startIdx + 13], vec[startIdx + 14], vec[startIdx + 15]);
+    }
+
+    var range;
+    range = math.sqrt(math.add(math.dotMultiply(z_coord, z_coord), math.add(math.dotMultiply(x_coord, x_coord), math.dotMultiply(y_coord, y_coord))));
+
+    var rangeIdx = math.map(range, function (value) {
+        return Math.round(value / Params.dataPath[subFrameNum].rangeIdxToMeters);
+    });
+
+    var dopplerIdx = math.map(doppler, function (value) {
+        return Math.round(value / Params.dataPath[subFrameNum].dopplerResolutionMps);
+    });
+
+    return { rangeIdx: rangeIdx, dopplerIdx: dopplerIdx, x_coord: x_coord, y_coord: y_coord, z_coord: z_coord, doppler: doppler}
+
+}
+```
 
 ---
 
