@@ -392,3 +392,7 @@ var getXYZ_type2 = function (vec, vecIdx, Params, numDetecObj, sizeObj)
 
 
 ![](https://i.imgur.com/79W5Hj4.png)
+
+Since there is no guide explaining the data output structure, you will have to view the source code to understand the output.  You will be interested in three files 
+- `mss_main.c`,: transmits the data, 
+- `mmw_messages.h` and `<SDK_INSTALL_DIR>/packages/ti/demo/io_interface/mmw_output.h`:define the output. 
