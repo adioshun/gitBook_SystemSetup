@@ -102,7 +102,7 @@ Download the latest CCS : [http://processors.wiki.ti.com/index.php/Download\_CCS
 
 # UART Read
 
-\[[http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\]\(http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide](http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide]%28http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide)\)
+\[\[[http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\]\(http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\]\(http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\]\(http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\)\](http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide]%28http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide]%28http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide]%28http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide%29\)\)
 
 [https://github.com/nsekhar/serialcheck](https://github.com/nsekhar/serialcheck)
 
