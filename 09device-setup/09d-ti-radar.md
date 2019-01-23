@@ -6,7 +6,7 @@
 
 1. usb 드라이버 다운로드 : [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
 
-1. 롬\(??\) 업데이트 [\[UniFlash v4 User Guide for mmWave Devices\]](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
+2. 롬\(??\) 업데이트 [\[UniFlash v4 User Guide for mmWave Devices\]](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
 
    * 업데이터 툴 설치 : [다운로드](http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash)
    * xwr16xx\_mmw\_demo.bin 다운로드 : [sdk 설치시](http://www.ti.com/tool/MMWAVE-SDK) 자동 다운로드 \(`C:\ti\mmwave_sdk_02_01_00_04\packages\ti\demo\xwr16xx\mmw`\)
@@ -15,7 +15,7 @@
    * 윈도우 장치 관리자 에서 포트 번호 확인 후 `XDS110 Class Application/User UART`를 설정에 입력
    * 점퍼 원복 
 
-2. 확인 : [mmWave Demo Visualizer](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/), [\[메뉴얼 \]](http://www.ti.com/lit/ug/swru529b/swru529b.pdf)
+3. 확인 : [mmWave Demo Visualizer](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/ver/3.1.0/), [\[메뉴얼 \]](http://www.ti.com/lit/ug/swru529b/swru529b.pdf)
 
 ## Uniflash 설치
 
@@ -102,7 +102,7 @@ Download the latest CCS : [http://processors.wiki.ti.com/index.php/Download\_CCS
 
 # UART Read
 
-[http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide](http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide)
+\[[http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide\]\(http://processors.wiki.ti.com/index.php/Linux\_Core\_UART\_User's\_Guide](http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide]%28http://processors.wiki.ti.com/index.php/Linux_Core_UART_User's_Guide)\)
 
 [https://github.com/nsekhar/serialcheck](https://github.com/nsekhar/serialcheck)
 
@@ -372,6 +372,7 @@ var getXYZ_type2 = function (vec, vecIdx, Params, numDetecObj, sizeObj)
 * ttyS0 is the device for the first UART serial port on x86 and x86\_64 architectures. If you have a PC motherboard with serial ports you'd be using a ttySn to attach a modem or a serial console.
 
 * ttyUSB0 is the device for the first USB serial convertor. If you have an USB serial cable you'd be using a ttyUSBn to connect to the serial port of a router.
+
 * ttyAMA0 is the device for the first serial port on ARM architecture. If you have an ARM-based TV box with a serial console and running Android or OpenELEC, you'd be using a ttyAMAn to attach a console to it.
 
 ![](https://i.imgur.com/79W5Hj4.png)
