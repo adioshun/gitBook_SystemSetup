@@ -209,53 +209,60 @@ def validateChecksum(header):
 
 
 
-def parsePoint(data, tlvLength):
+def parsePoint(data, tlvLength):    # Type : x06
     point_data = np.zeros([tlvLength/struct.calcsize('4f'),3],dtype=np.float32)
     for i in range(tlvLength/struct.calcsize('4f')):
         if(struct.calcsize('4f') == len(data[16*i:16*i+16])):
             parse_range, parse_angle, parse_doppler, parse_snr = struct.unpack('4f', data[16*i:16*i+16])  #struct.unpack('3H3h', data[4+12*i:4+12*i+12]) # heder 4, payload 12
-            print("Point : {}, {}".format(parse_range, parse_angle))
+            #print("Point : {}, {}".format(parse_range, parse_angle))
             x,y = rect(parse_range, parse_angle)
             datas = np.array([x,y,0])
             point_data[i,]=datas
             #np.append(point_data, datas)
             #point_data = np.vstack((point_data,datas))
         else:
-            print("** parsePoint Error **")
+            # print("** parsePoint Error [{}]**".format(len(data[16*i:16*i+16])))
+            pass
+    
+    #pc = pcl.PointCloud(point_data)
+    #pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
+    #out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
+    #pub_point.publish(out_ros_msg)
+
+def parseTargetIndex(data, tlvLength):    # Type : x08   
+    index_data = np.zeros([tlvLength/struct.calcsize('B'),3],dtype=np.float32)  # 'I16f' for little endian , '>I16f' for big endian 
+    for i in range(tlvLength/struct.calcsize('B')):
+        if(struct.calcsize('B') == len(data[1*i:1*i+1])):
+            targetID  = struct.unpack('B', data[1*i:1*i+1])  #76, 144, 212, 280
+            print("TargetID : {}".format(targetID))
+            datas = np.array([targetID,0,0])
+            index_data[i,]=datas
+            #np.append(taget_data, datas)
+            #point_data = np.vstack((taget_data,datas))
+        else:
+            print("** parseTargetIndex Error [{}]**".format(len(data[1*i:1*i+1])))
             #pass
-    
-    pc = pcl.PointCloud(point_data)
-    pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
 
-    out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
-    pub_point.publish(out_ros_msg)
 
-def parseTargetIndex(data, tlvLength):
-    if(struct.calcsize('B') == len(data[:1])):
-        targetID  = struct.unpack('B', data[:1])
-        print("targetID : {}".format(targetID))
 
-def parseTargetList(data, tlvLength):
-    
+def parseTargetList(data, tlvLength):    # Type : x07
     target_data = np.zeros([tlvLength/struct.calcsize('I16f'),3],dtype=np.float32)  # 'I16f' for little endian , '>I16f' for big endian 
-
     for i in range(tlvLength/struct.calcsize('I16f')):
         if(struct.calcsize('I16f') == len(data[68*i:68*i+68])):
             tid, posX, posY, velX, velY, accX, accY, EC1, EC2,EC3,EC4,EC5,EC6,EC7,EC8,EC9, g  = struct.unpack('I16f', data[68*i:68*i+68])  #76, 144, 212, 280
-            #print("Detect[{}] : {}, {}".format(tid, posX, posY))
+            print("Detect[{}] : {}, {}".format(tid, posX, posY))
             datas = np.array([posX,posY,0])
             target_data[i,]=datas
             #np.append(taget_data, datas)
             #point_data = np.vstack((taget_data,datas))
         else:
-            #print("** parseTargetList Error **")
-            pass
+            print("** parseTargetList Error [{}]**".format(len(data[68*i:68*i+68])))
+            #pass
 
-    pc = pcl.PointCloud(target_data)
-    pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
-
-    out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
-    pub_track.publish(out_ros_msg)
+    #pc = pcl.PointCloud(target_data)
+    #pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
+    #out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
+    #pub_track.publish(out_ros_msg)
 
 def tlvHeader(data):
     while data:       
@@ -280,14 +287,14 @@ def tlvHeader(data):
             if (len(data) != 0): 
                 tlvType, tlvLength = tlvHeaderDecode(data[:8])                               
                 data = data[8:]  # after TLV header 
-                if (tlvType == 7):
-                    parseTargetList(data, tlvLength-8)
-                #elif (tlvType == 8):
-                    #parseTargetIndex(data, tlvLength-8)                    
-                #elif (tlvType == 6): 
-                    #parsePoint(data, tlvLength-8)
-                #else:                    
-                    #print("- Unidentified tlv type :", hex(tlvType))  # this line print 0x02, 0x04
+                if (tlvType == 6):
+                    parsePoint(data, tlvLength-8)
+                elif (tlvType == 7):
+                    parseTargetList(data, tlvLength-8)               
+                elif (tlvType == 8): 
+                    parseTargetIndex(data, tlvLength-8) 
+                else:                    
+                    print("- Unidentified tlv type :", hex(tlvType))  # this line print 0x02, 0x04
                 data = data[tlvLength:]
                 pendingBytes -= (8+tlvLength)
         data = data[pendingBytes:]
@@ -303,9 +310,9 @@ def tlvHeaderDecode(data):
 
 if __name__ == "__main__":
     
-    rospy.init_node('radar', anonymous=True)
-    pub_point = rospy.Publisher("/radar_point", PointCloud2, queue_size=1)
-    pub_track = rospy.Publisher("/radar_track", PointCloud2, queue_size=1)
+    #rospy.init_node('radar', anonymous=True)
+    #pub_point = rospy.Publisher("/radar_point", PointCloud2, queue_size=1)
+    #pub_track = rospy.Publisher("/radar_track", PointCloud2, queue_size=1)
     
     if sys.byteorder == "little":
         print("Little-endian platform.")
@@ -322,6 +329,7 @@ if __name__ == "__main__":
         rawData = rawData[offset:]
         for length, frameNum in tlvHeader(rawData):
 		    continue
+
 
 
 
