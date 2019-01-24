@@ -142,106 +142,190 @@ Configuration \(.cfg\) File Format : [SDK 메뉴얼](http://software-dl.ti.com/r
 [mmw Demo Data Structure v0.1](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/1023/mmw-Demo-Data-Structure_5F00_8_5F00_16_2D00_7.pdf): Out-of-box Demo 플래슁
 
 ```python
+#!/usr/bin/env python3
+# coding: utf-8
+
+from __future__ import print_function
+#import warnings; warnings.simplefilter('ignore')
+import os
+import sys
+sys.path.append("/workspace/include")
+import pcl_helper
+
+import rospy
+from sensor_msgs.msg import PointCloud2
+import sensor_msgs.point_cloud2 as pc2
+
+
+import pcl
+import pcl_msg
+
+
 import struct
 import sys
 import time
+import numpy as np
 
-#
-# TODO 1: (NOW FIXED) Find the first occurrence of magic and start from there
-# TODO 2: Warn if we cannot parse a specific section and try to recover
-# TODO 3: Remove error at end of file if we have only fragment of TLV
-# https://e2e.ti.com/support/sensors/f/1023/t/684872
-#
+import math
 
-def tlvHeaderDecode(data):
-    tlvType, tlvLength = struct.unpack('2I', data)
-    return tlvType, tlvLength
+def rect(r, theta):
+    """theta in degrees
 
-def parseDetectedObjects(data, tlvLength):
-    numDetectedObj, xyzQFormat = struct.unpack('2H', data[:4])
-    print("\tDetect Obj:\t%d "%(numDetectedObj))
-    for i in range(numDetectedObj):
-        #print("\tObjId:\t%d "%(i))
-    if(struct.calcsize('3H3h') == len(data[4+12*i:4+12*i+12])):        
-        rangeIdx, dopplerIdx, peakVal, x, y, z = struct.unpack('3H3h', data[4+12*i:4+12*i+12])
-        print("\t\tDopplerIdx:\t%d "%(dopplerIdx))
-        print("\t\tRangeIdx:\t%d "%(rangeIdx))
-        print("\t\tPeakVal:\t%d "%(peakVal))
-        print("\t\tX:\t\t%07.3f "%(x*1.0/(1 << xyzQFormat)))
-        print("\t\tY:\t\t%07.3f "%(y*1.0/(1 << xyzQFormat)))
-        print("\t\tZ:\t\t%07.3f "%(z*1.0/(1 << xyzQFormat)))
+    returns tuple; (float, float); (x,y)
+    """
+    x = r * math.cos(theta) #math.cos(math.radians(theta))
+    y = r * math.sin(theta) #math.sin(math.radians(theta))
+    return x,y
 
-def parseRangeProfile(data, tlvLength):
-    for i in range(256):
-        rangeProfile = struct.unpack('H', data[2*i:2*i+2])
-        print("\tRangeProf[%d]:\t%07.3f "%(i, rangeProfile[0] * 1.0 * 6 / 8  / (1 << 8)))
-    print("\tTLVType:\t%d "%(2))
+def polar(x, y):
+    """returns r, theta(degrees)
+    """
+    r = (x ** 2 + y ** 2) ** .5
+    if y == 0:
+        theta = 180 if x < 0 else 0
+    elif x == 0:
+        theta = 90 if y > 0 else 270
+    else:
+        theta = math.degrees(math.atan(float(y) / x))
+    return r, theta
 
-def parseStats(data, tlvLength):
-    interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
-    print("\tOutputMsgStats:\t%d "%(6))
-    print("\t\tChirpMargin:\t%d "%(chirpMargin))
-    print("\t\tFrameMargin:\t%d "%(frameMargin))
-    print("\t\tInterCPULoad:\t%d "%(interCPULoad))
-    print("\t\tActiveCPULoad:\t%d "%(activeCPULoad))
-    print("\t\tTransmitOut:\t%d "%(transmitOut))
-    print("\t\tInterprocess:\t%d "%(interProcess))
+
+def validateChecksum(header):
+    #h = typecast(uint8(header),'uint16');
+    header = np.uint8(header)
+    h = np.array(header, dtype=np.uint16)
+    #a = uint32(sum(h));
+    a = sum(h)
+    a = np.uint32(a)
+    #b = uint16(sum(typecast(a,'uint16')));
+    b = np.array(a, dtype=np.uint16)
+    b = sum(b)
+    b = np.uint16(b)
+    #CS = uint16(bitcmp(b));
+    CS = ~b
+    CS = np.uint16(CS)
+    return CS
+
+
+
+
+def parsePoint(data, tlvLength):
+    point_data = np.zeros([tlvLength/struct.calcsize('4f'),3],dtype=np.float32)
+    for i in range(tlvLength/struct.calcsize('4f')):
+        if(struct.calcsize('4f') == len(data[16*i:16*i+16])):
+            parse_range, parse_angle, parse_doppler, parse_snr = struct.unpack('4f', data[16*i:16*i+16])  #struct.unpack('3H3h', data[4+12*i:4+12*i+12]) # heder 4, payload 12
+            print("Point : {}, {}".format(parse_range, parse_angle))
+            x,y = rect(parse_range, parse_angle)
+            datas = np.array([x,y,0])
+            point_data[i,]=datas
+            #np.append(point_data, datas)
+            #point_data = np.vstack((point_data,datas))
+        else:
+            print("** parsePoint Error **")
+            #pass
+    
+    pc = pcl.PointCloud(point_data)
+    pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
+
+    out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
+    pub_point.publish(out_ros_msg)
+
+def parseTargetIndex(data, tlvLength):
+    if(struct.calcsize('B') == len(data[:1])):
+        targetID  = struct.unpack('B', data[:1])
+        print("targetID : {}".format(targetID))
+
+def parseTargetList(data, tlvLength):
+    
+    target_data = np.zeros([tlvLength/struct.calcsize('I16f'),3],dtype=np.float32)  # 'I16f' for little endian , '>I16f' for big endian 
+
+    for i in range(tlvLength/struct.calcsize('I16f')):
+        if(struct.calcsize('I16f') == len(data[68*i:68*i+68])):
+            tid, posX, posY, velX, velY, accX, accY, EC1, EC2,EC3,EC4,EC5,EC6,EC7,EC8,EC9, g  = struct.unpack('I16f', data[68*i:68*i+68])  #76, 144, 212, 280
+            #print("Detect[{}] : {}, {}".format(tid, posX, posY))
+            datas = np.array([posX,posY,0])
+            target_data[i,]=datas
+            #np.append(taget_data, datas)
+            #point_data = np.vstack((taget_data,datas))
+        else:
+            #print("** parseTargetList Error **")
+            pass
+
+    pc = pcl.PointCloud(target_data)
+    pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pc, [255,255,255])  
+
+    out_ros_msg = pcl_helper.pcl_to_ros(pcl_xyzrgb)
+    pub_track.publish(out_ros_msg)
 
 def tlvHeader(data):
-    while data:
-
-        headerLength = 36
+    while data:       
+        headerLength = 52
         try:
-            magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I', data[:headerLength])
+            magic, version, platform, cpuCycles, length, frameNum, subframeNumber, chirpMargin, frameMargin, uartSentTime, trackProcessTime, numTLVs, checksum = struct.unpack('Q10I2H', data[:headerLength])        
+            #print("numTLVs : ", numTLVs)
+            #print("length : ", length-52) #exclude header length 52
         except:
-            print "Improper TLV structure found: ", (data,)
             break
-        print("Packet ID:\t%d "%(frameNum))
-        print("Version:\t%x "%(version))
-        print("TLV:\t\t%d "%(numTLVs))
-        print("Detect Obj:\t%d "%(numObj))
-        print("Platform:\t%X "%(platform))
-    if version > 0x01000005:
-        subFrameNum = struct.unpack('I', data[36:40])[0]
-        headerLength = 40
-        print("Subframe:\t%d "%(subFrameNum))
+        
+        """checksum
+        header = struct.unpack('52c', data[:headerLength])
+        cs = validateChecksum(header)
+        print (" checksum : {} == {}".format(cs, checksum))
+        """
+
         pendingBytes = length - headerLength
         data = data[headerLength:]
 
-
-        for i in range(numTLVs):             
-
-                tlvType, tlvLength = tlvHeaderDecode(data[:8])
-                data = data[8:]
-                if (tlvType == 1):
-                    parseDetectedObjects(data, tlvLength)
-                elif (tlvType == 2):
-                    parseRangeProfile(data, tlvLength)
-                elif (tlvType == 6):
-                    parseStats(data, tlvLength)
-                else:
-                    print("Unidentified tlv type %d"%(tlvType))
+        for i in range(numTLVs):
+            if (len(data) != 0): 
+                tlvType, tlvLength = tlvHeaderDecode(data[:8])                               
+                data = data[8:]  # after TLV header 
+                if (tlvType == 7):
+                    parseTargetList(data, tlvLength-8)
+                #elif (tlvType == 8):
+                    #parseTargetIndex(data, tlvLength-8)                    
+                #elif (tlvType == 6): 
+                    #parsePoint(data, tlvLength-8)
+                #else:                    
+                    #print("- Unidentified tlv type :", hex(tlvType))  # this line print 0x02, 0x04
                 data = data[tlvLength:]
                 pendingBytes -= (8+tlvLength)
         data = data[pendingBytes:]
         yield length, frameNum
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: parseTLV.py inputFile.bin")
-        sys.exit()
+def tlvHeaderDecode(data):    
+    if(struct.calcsize('2I') == len(data)):
+        tlvType, tlvLength = struct.unpack('2I', data)
+        return tlvType, tlvLength
+    else:
+        return 0,0
 
-    fileName = sys.argv[1]
+
+if __name__ == "__main__":
+    
+    rospy.init_node('radar', anonymous=True)
+    pub_point = rospy.Publisher("/radar_point", PointCloud2, queue_size=1)
+    pub_track = rospy.Publisher("/radar_track", PointCloud2, queue_size=1)
+    
+    if sys.byteorder == "little":
+        print("Little-endian platform.")
+    else:
+        print("Big-endian platform.")
+
+    fileName = "/dev/ttyACM1"
     rawDataFile = open(fileName, "rb")
+    print("Read Data From : ", fileName)    
     while(1):
         rawData = rawDataFile.read()
-        #print(type(rawDataFile))
-        #rawDataFile.close()
         magic = b'\x02\x01\x04\x03\x06\x05\x08\x07'
         offset = rawData.find(magic)
         rawData = rawData[offset:]
         for length, frameNum in tlvHeader(rawData):
-        print
+		    continue
+
+
+
+
 ```
 
 ---
