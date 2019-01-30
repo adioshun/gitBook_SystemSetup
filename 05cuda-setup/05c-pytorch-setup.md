@@ -19,6 +19,9 @@ $ conda install pytorch torchvision -c soumith
 # conda (python3.6, GPU, CUDA8.0)
 $ conda install pytorch torchvision cuda80 -c soumith
 
+
+#OR
+conda install -c anaconda pytorch-gpu 
 ```
 
 
