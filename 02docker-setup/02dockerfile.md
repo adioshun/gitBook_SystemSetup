@@ -4,7 +4,7 @@
 
 Docker image to provide HTML5 VNC interface to access ROS kinetic on Ubuntu 16.04 with the LXDE desktop environment.
 
-```python 
+```bash
 docker pull ct2034/vnc-ros-kinetic-full  #1GB
 docker run -it --rm -p 6080:80 ct2034/vnc-ros-kinetic-full
 Browse http://127.0.0.1:6080/
@@ -13,7 +13,7 @@ Browse http://127.0.0.1:6080/
 
 ## 2. Tor Browser
 
-```python 
+```sh
 docker pull hkjn/tor-browser #250M
 docker run -it --rm --name tor-browser -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=unix$DISPLAY hkjn/tor-browser
 
