@@ -7,15 +7,15 @@
 apt 이용 설치 
 
 ```bash
-apt-get install -y python3-pip python3-dev
+apt-get install -y python3-pip python3-dev  #python3.5도 같이 설치 
 pip3 install --upgrade pip
 ```
 
-스크립트 이용 설치 
+특정 버젼만 설치시 스크립트 이용 설치 
 
 ```
 wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
+python3.6 get-pip.py
 
 # Upgrade
 pip install -U pip
