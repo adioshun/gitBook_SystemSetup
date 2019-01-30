@@ -1,11 +1,10 @@
-# PyTorch installation 
+# [PyTorch installation](http://pytorch.org/)
 
-> http://pytorch.org/
 
+```
 pip install torch torchvision
-
 pip3 install torch torchvision
-
+```
 
 ```bash 
 # conda (python2.7, CPU)
