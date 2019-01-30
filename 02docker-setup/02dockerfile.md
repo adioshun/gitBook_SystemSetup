@@ -11,12 +11,15 @@ Browse http://127.0.0.1:6080/
 ```
 
 
-## 2. Tor Browser
+## 2. [Tor Browser](https://hub.docker.com/r/hkjn/tor-browser)
 
 ```sh
 docker pull hkjn/tor-browser #250M
-docker run -it --rm --name tor-browser -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=unix$DISPLAY hkjn/tor-browser
 
+docker run -it --rm --name tor-browser \
+           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+           -e DISPLAY=unix$DISPLAY \
+           hkjn/tor-browser
 ```
 
 
