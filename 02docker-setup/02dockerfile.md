@@ -30,6 +30,7 @@ docker run -it --rm --name tor-browser \
 |16.4|9.0|7|`docker pull nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04 `|720M|
 |16.4|8.0||||
 |16.4|7.0|||||
+|18.4|9.2|7|`docker pull nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04` |2GB|
 
 - base: starting from CUDA 9.0, contains the bare minimum (libcudart) to deploy a pre-built CUDA application.
 Use this image if you want to manually select which CUDA packages you want to install.
