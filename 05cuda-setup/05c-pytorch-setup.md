@@ -6,24 +6,9 @@ pip install torch torchvision
 pip3 install torch torchvision
 ```
 
-```bash 
-# conda (python2.7, CPU)
-$ conda install pytorch torchvision -c soumith
-
-# conda (python2.7, GPU, CUDA8.0)
-$ conda install pytorch torchvision cuda80 -c soumith
-
-# conda (python3.6, CPU)
-$ conda install pytorch torchvision -c soumith
-
-# conda (python3.6, GPU, CUDA8.0)
-$ conda install pytorch torchvision cuda80 -c soumith
-
-
-#OR
-conda install -c anaconda pytorch-gpu 
 ```
-
+conda install pytorch torchvision -c pytorch #cuda 9.0 , CPU/GUP버젼 구분 없음 
+```
 
 ## Visdom for PyTorch Visualization
 ```bash
