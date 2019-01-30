@@ -50,7 +50,7 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 
 ubuntu-drivers devices
-apt install nvidia-driver-390
+apt install nvidia-driver-390 
 
 # OR 
 
@@ -59,7 +59,7 @@ apt install nvidia-settings
 
 
 ```
-
+![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
 
 ## 2. CUDA 설치 
 
@@ -76,7 +76,7 @@ sudo apt install nvidia-cuda-toolkit
 
 ### 2.2 Ubuntu 18.04 - CUDA 9
 
-> NVIDIA proprietary driver \(390 for CUDA 9\)
+
 
 ```
 sudo apt update && sudo apt install nvidia-cuda-toolkit gcc-6 g++-6  #18.04
