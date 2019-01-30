@@ -1,8 +1,27 @@
 
 apt-get install python-pip python-dev build-essential 
 
+# Python 설치 
 
-> [주피터설정하기](https://github.com/adioshun/Blog_Jekyll/blob/master/2017-07-18_Jupyter_setup.md)
+> Ubuntu리눅스 16.04에는 기본 3.5가 설치 되어 있음 [[3.6을 기본으로 바꾸기]](http://w3devlabs.net/wp/?p=16901)
+
+## apt-get 이용 설치 
+
+```
+$ sudo apt-get install python3.6
+
+#OR
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt-get update
+$ sudo apt-get install python3.6
+```
+
+
+
+---
+
+# Python IDE
 
 ### 3.2 Debugger 
 
