@@ -19,10 +19,17 @@ $ sudo apt-get install python3.6
 ```
 > Ubuntu리눅스 16.04에는 기본 3.5가 설치 되어 있음
 
-[[3.6을 기본으로 바꾸기]](http://w3devlabs.net/wp/?p=16901)
+[[3.6을 기본으로 바꾸기]](https://unipro.tistory.com/237)
 
 ```
+# 등록
+sudo rm /usr/bin/python
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 3
 
+#선택
+sudo update-alternatives --config python
 
 ```
 
