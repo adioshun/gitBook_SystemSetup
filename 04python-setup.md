@@ -6,7 +6,7 @@ apt-get install python-pip python-dev build-essential
 
 ## apt-get 이용 설치 
 
-```python
+```sh
 $ sudo apt-get install python3 # 3.5설치 
 
 ## 3.6설치 
@@ -21,7 +21,7 @@ $ sudo apt-get install python3.6
 
 [[3.6을 기본으로 바꾸기]](https://unipro.tistory.com/237)
 
-```
+```sh
 # 등록
 sudo rm /usr/bin/python
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
