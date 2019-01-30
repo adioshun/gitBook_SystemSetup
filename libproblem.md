@@ -8,5 +8,9 @@ $ ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.
 $ cd ~
 ```
 
+OSError: libcuda.so.1: cannot open shared object file:
+
+`export LD_LIBRARY_PATH="/path/to/sdk/lib"`
+
 
 
