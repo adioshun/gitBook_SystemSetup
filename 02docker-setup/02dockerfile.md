@@ -38,7 +38,9 @@ Use this image if you want to manually select which CUDA packages you want to in
 Use this image if you have a pre-built application using multiple CUDA libraries.
 - **devel**: extends the runtime image by adding the compiler toolchain, the debugging tools, the headers and the static libraries. Use this image to compile a CUDA application from sources.
 
-> CUDA 9.2 이상은 NVIDIA Driver버젼이 [396+ 이어야 함](https://github.com/NVIDIA/nvidia-docker/issues/753) `Error response from daemon: OCI runtime create failed`
+설치전 CUDA NVIDIA Driver버젼 확인 필요 
+
+![](https://i.imgur.com/Eqsmxsu.png)
 
 ---
 
