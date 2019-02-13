@@ -11,18 +11,6 @@
 * 멀티창 : `sudo apt-get install terminator`
 
 
-## 테마 
-
-> [paper 테마](https://snwh.org/paper)
-
-```python
-sudo add-apt-repository -u ppa:snwh/ppa
-sudo apt-get update
-sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
-#추천 배경 : http://www.technocrazed.com/wp-content/uploads/2015/12/Linux-Wallpaper-32.png
-```
-
-gnome-tweak를 통해 변경 
 
 
 ## Chrome
@@ -49,6 +37,20 @@ google-chrome
 - GUI Tool : `sudo add-apt-repository ppa:danielrichter2007/grub-customizer` - `sudo apt-get install grub-customizer`
 
 추천 로고 : https://www.windowslatest.com/wp-content/uploads/2017/07/Ubuntu-on-Windows-10-696x348.jpg
+
+## 테마 
+
+> [paper 테마](https://snwh.org/paper)
+
+```python
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt-get update
+sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
+#추천 배경 : http://www.technocrazed.com/wp-content/uploads/2015/12/Linux-Wallpaper-32.png
+```
+
+gnome-tweak를 통해 변경 
+
 
 
 
