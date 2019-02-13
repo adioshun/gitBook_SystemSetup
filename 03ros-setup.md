@@ -17,6 +17,7 @@ sudo apt-get update
 
 # INSTALL THE DESKTOP FULL VERSION
 sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install ros-melodic-desktop-fullcd ~/
 
 sudo apt-get install ros-kinetic-vision-opencv #ros-kinetic-opencv3 ros-kinetic-cv-bridge 
 
