@@ -6,6 +6,8 @@
 
 * leafpad : `sudo apt install leafpad`
 
+* code : 'https://go.microsoft.com/fwlink/?LinkID=760868'
+
 ## Terminal 
 
 * 멀티창 : `sudo apt-get install terminator`
@@ -31,6 +33,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo gdebi google-chrome-stable_current_amd64.deb
 google-chrome
 ```
+
+## 
 
 ### 멀티 부팅 
 - [GRUB](http://programmingskills.net/archives/190) 설정
