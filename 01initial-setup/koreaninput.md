@@ -12,6 +12,8 @@ sudo apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
 ```
 
+[uim이용 설정](http://progtrend.blogspot.com/2018/06/ubuntu-1804-uim.html)
+
 ## ubuntu 16
 
 ibus : [http://techlog.gurucat.net/288](http://techlog.gurucat.net/288)
