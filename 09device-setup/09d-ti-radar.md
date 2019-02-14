@@ -4,7 +4,7 @@
 
 > DCA1000EVM대신 IWR 1642에 직접 연결 후 작업, [\[Ref Tutorial\]](https://training.ti.com/mmwave-sdk-evm-out-box-demo)
 
-1. usb 드라이버 다운로드 : [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7)
+1. usb 드라이버 다운로드 : [IWR1642: stand alone XDS110 drivers](https://downloads.ti.com/downloads/dsps/dsps_public_sw/sdo_ccstudio/emulation/ti_emupack_setup_8.0.903.4_win_32.exe?__gda__=1547020113_3fbdeab41d0759de936f41c4cc3e13e7), http://processors.wiki.ti.com/index.php/XDS_Emulation_Software_Package
 
 2. 롬\(??\) 업데이트 [\[UniFlash v4 User Guide for mmWave Devices\]](http://processors.wiki.ti.com/images/f/f5/Mmwave_uniflash_user_guide_v1.0.pdf)
 
