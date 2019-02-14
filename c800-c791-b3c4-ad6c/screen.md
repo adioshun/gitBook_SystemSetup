@@ -20,3 +20,10 @@ convert -delay 10 -loop 0 *.png animation.gif
 ## markdown용 스크린샷 URL생성 
 
 [Gnome Shell extension for making and uploading screenshots](https://github.com/OttoAllmendinger/gnome-shell-screenshot)
+```
+sudo apt install gnome-shell-extensions
+sudo apt install chrome-gnome-shell
+
+
+visit : https://extensions.gnome.org/extension/1112/screenshot-tool/
+```
