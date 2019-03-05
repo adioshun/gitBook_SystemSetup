@@ -34,7 +34,6 @@ sudo gdebi google-chrome-stable_current_amd64.deb
 google-chrome
 ```
 
-## 
 
 ### 멀티 부팅 
 - [GRUB](http://programmingskills.net/archives/190) 설정
@@ -56,6 +55,9 @@ sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
 gnome-tweak를 통해 변경 
 
 
+## apt-source list update 
+
+[Ubuntu Sources List Generator](https://repogen.simplylinux.ch/index.php)
 
 
 ---
