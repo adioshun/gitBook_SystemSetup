@@ -12,6 +12,8 @@
 
 * 멀티창 : `sudo apt-get install terminator`
 
+* guake : `sudo apt-get install guake`  #/usr/bin/guake ㅅㅣㅈㅏㄱㅁㅔㄴㅠ ㅊㅜㄱㅏ 
+
 
 
 
