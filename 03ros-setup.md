@@ -17,7 +17,7 @@ sudo apt-get update
 
 # INSTALL THE DESKTOP FULL VERSION
 sudo apt-get install ros-kinetic-desktop-full
-sudo apt-get install ros-melodic-desktop-fullcd ~/
+sudo apt-get install ros-melodic-desktop-full cd ~/
 
 sudo apt-get install ros-kinetic-vision-opencv #ros-kinetic-opencv3 ros-kinetic-cv-bridge 
 
@@ -40,8 +40,6 @@ pip install PyYAML rospkg catkin_pkg && pip3 install PyYAML rospkg catkin_pkg
 # 머신러닝 관련 패키지
 pip install scikit-learn && pip3 install scikit-learn
 pip install scipy && pip3 install scipy
-
-
 ```
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
@@ -76,7 +74,6 @@ mkdir src
 catkin init
 ```
 
-
 ---
 
 ## 2. 패키지 설치 방법
@@ -99,7 +96,8 @@ apt-get install ros-$ROS_DISTRO-velodyne
 
 #### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
-- apt-get install apt-file && apt-file update
+* apt-get install apt-file && apt-file update
+
   ```python
   Could not find a package configuration file provided by "Qt5Core"
     (requested version 5.0) with any of the following names:
@@ -111,26 +109,26 @@ apt-get install ros-$ROS_DISTRO-velodyne
     "Qt5Core_DIR" to a directory containing one of the above files.  If
     "Qt5Core" provides a separate development package or SDK, be sure it has
     been installed.
-```
+  ```
 
-- run `apt-file search Qt5CoreConfig.cmake`
-  - review the result
+* run `apt-file search Qt5CoreConfig.cmake`
+
+  * review the result
 
   ```python
   qtbase5-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
   qtbase5-gles-dev: /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake
   ```
 
-- Install the missing package `sudo apt install qtbase5-dev`
+* Install the missing package `sudo apt install qtbase5-dev`
 
 > ref [What package do I need to build...](https://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application/374775)
 
-
---- 
+---
 
 # Tip
 
-- 여러 컴퓨터에 설치 
+* 여러 컴퓨터에 설치 
 
 ```
 vi /etc/host 
@@ -142,4 +140,6 @@ vi /etc/host
 export ROS_HOSTNAME=jetson
 export ROS_MASTER_URI=http://lidar0:11311
 ```
+
+
 
