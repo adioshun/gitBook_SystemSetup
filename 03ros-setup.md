@@ -27,6 +27,8 @@ rosdep update #rosdep fix-permissions && rosdep update
 
 # ENVIRONMENT SETUP
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+
 source ~/.bashrc
 
 # Dependencies for building packages

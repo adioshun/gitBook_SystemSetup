@@ -22,8 +22,12 @@ docker run -it --rm --name tor-browser \
            hkjn/tor-browser
 ```
 
+## 3. pcl
 
-## 3. [CUDA](https://hub.docker.com/r/nvidia/cuda/tags)
+docker pull adioshun/ros16:python23-pcl_opend3d_161226
+
+
+## 4. [CUDA](https://hub.docker.com/r/nvidia/cuda/tags)
 
 |Ubuntu|CUDA|CuDNN|tag|Size|
 |-|-|-|-|-|
