@@ -1,7 +1,7 @@
 # How to use
 
 ```python
-docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+docker run --runtime=nvidia -it --privileged --network=host -v -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
 ```
 
 
