@@ -68,6 +68,11 @@ rostopic echo /ti_mmwave/radar_scan
 
 > 에러 발생시 참고 : [https://github.com/radar-lab/ti\_mmwave\_rospkg\#troubleshooting](https://github.com/radar-lab/ti_mmwave_rospkg#troubleshooting)
 
+
+## TI Radar CNN
+
+https://github.com/radar-lab/ti-mmwave-cnn
+
 ---
 
 ## [mmWave software development kit \(SDK\)](http://www.ti.com/tool/MMWAVE-SDK)
