@@ -1,5 +1,22 @@
 ## 4. Mount
 
+### 4.0 [FreeFileSync](https://www.tecmint.com/freefilesync-compare-synchronize-files-in-ubuntu/)
+
+```
+$ wget https://freefilesync.org/download/FreeFileSync_10.9_Linux.tar.gz #
+$ cd Downloads/
+$ sudo tar xvf FreeFileSync_*.tar.gz -C /opt/
+$ cd /opt/
+$ ls
+$ sudo unzip FreeFileSync/Resources.zip -d /opt/FreeFileSync/Resources/
+$ ./FreeFileSync
+```
+
+
+> https://freefilesync.org/download.php
+
+
+
 ### 4.1 gcsfuse (Google Cloud)
 
 installation
@@ -90,18 +107,5 @@ sshfs root@211.112.123.123:/home/backup /mybackup -o allow_other #root 이외의
 - [CIFS 유틸리티 이용](http://goproprada.tistory.com/198)
 
 
-### 4.5 [FreeFileSync](https://www.tecmint.com/freefilesync-compare-synchronize-files-in-ubuntu/)
 
-```
-$ wget https://freefilesync.org/download/FreeFileSync_10.9_Linux.tar.gz #
-$ cd Downloads/
-$ sudo tar xvf FreeFileSync_*.tar.gz -C /opt/
-$ cd /opt/
-$ ls
-$ sudo unzip FreeFileSync/Resources.zip -d /opt/FreeFileSync/Resources/
-$ ./FreeFileSync
-```
-
-
-> https://freefilesync.org/download.php
 
