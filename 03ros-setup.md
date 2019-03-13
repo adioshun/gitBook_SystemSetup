@@ -33,7 +33,7 @@ source ~/.bashrc
 
 # Dependencies for building packages
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
-sudo apt-get install python-catkin-tools python3-dev python3-catkin-pkg-modules python3-numpy python3-yaml ros-kinetic-cv-bridge
+sudo apt-get install python-catkin-tools python3-dev python3-catkin-pkg-modules python3-numpy python3-yaml -y
 
 
 pip install PyYAML rospkg catkin_pkg && pip3 install PyYAML rospkg catkin_pkg
