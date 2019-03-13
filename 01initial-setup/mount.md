@@ -3,7 +3,7 @@
 ### 4.0 [FreeFileSync](https://www.tecmint.com/freefilesync-compare-synchronize-files-in-ubuntu/)
 
 ```
-$ wget https://freefilesync.org/download/FreeFileSync_10.9_Linux.tar.gz #
+$ wget https://freefilesync.org/download/FreeFileSync_10.10_Linux.tar.gz
 $ cd Downloads/
 $ sudo tar xvf FreeFileSync_*.tar.gz -C /opt/
 $ cd /opt/
