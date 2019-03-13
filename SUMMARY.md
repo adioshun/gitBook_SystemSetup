@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [README](README.md)
 * [01\_Initial\_setup](01initial-setup.md)
   * [01\_Aws\_GCP](01initial-setup/01a-vm-setup.md)
   * [01\_B\_x11\_setup](01initial-setup/01b-x11setup.md)
