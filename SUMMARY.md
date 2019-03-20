@@ -23,7 +23,6 @@
   * [05\_A\_Tensorflow\_setup](05cuda-setup/05a-tensorflow-setup.md)
   * [05\_B\_Caffe\_setup](05cuda-setup/05b-caffe-setup.md)
   * [05\_C\_PyTorch\_setup](05cuda-setup/05c-pytorch-setup.md)
-  * KERAS
 * [08\_Library\_setup](08library-setup.md)
   * [opencv](08library-setup/opencv.md)
   * [Mayavi](08library-setup/mayavi.md)
