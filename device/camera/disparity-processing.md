@@ -35,7 +35,7 @@ vi left_camera.launch
 
 
 
-### 2.2 pointgrey 제공 stereo.launch 실행 
+### 2.2 pointgrey 제공 stereo.launch 실행 (추천)
 
 ```xml
 <launch>
@@ -53,6 +53,7 @@ vi left_camera.launch
 1. roslaunch pointgrey_camera_driver stereo.launch
 2. <image_rect_color> 자동 생성 
 3. <stereo_image_proc> 자동 실행 with _approximate_sync:=True 
+  - `rosnode info /stereo_view_{TAB}` 으로 확
 
 
 # 3. 시각화 
