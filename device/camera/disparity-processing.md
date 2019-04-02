@@ -5,7 +5,7 @@
 - `sudo apt-get install ros-melodic-stereo-image-proc`
 
 
-## 2. 카메라 설정 
+## 2. 실행 
 
 ### 2.1 두개의 camera.launch 실행 
 
@@ -29,7 +29,7 @@ vi left_camera.launch
   - `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc` 
   - `$ ROS_NAMESPACE=stereo/right rosrun image_proc image_proc`
   - `rostopic echo /stereo/right/camera_info`로 확인 
-3. `$ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc`
+3. `$ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc _approximate_sync:=True`
 
 
 
@@ -52,17 +52,14 @@ vi left_camera.launch
 
 1. roslaunch pointgrey_camera_driver stereo.launch
 2. <image_rect_color> 자동 생성 
-3. <stereo_image_proc> 자동 실행 
-
-### 3. 실행 
-
-```python
+3. <stereo_image_proc> 자동 실행 with _approximate_sync:=True 
 
 
+# 3. 시각화 
 
-#시각화 
+```python 
 ## rosrun image_view stereo_view stereo:=<stereo namespace> image:=<image topic identifier>
-$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color _queue_size:=20 _approximate_sync:=True
+$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color 
 
 ```
 
