@@ -51,11 +51,14 @@ vi left_camera.launch
 
 ### 3. 실행 
 
-```
+```python
 $ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc
 
+
 #시각화 
+## rosrun image_view stereo_view stereo:=<stereo namespace> image:=<image topic identifier>
 $ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color _queue_size:=20 _approximate_sync:=True
+
 ```
 
 rivz이용 pintcloud2도 확인 가능 
