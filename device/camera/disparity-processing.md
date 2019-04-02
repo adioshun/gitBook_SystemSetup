@@ -56,7 +56,14 @@ vi left_camera.launch
 
 
 
-# 3. 시각화 
+## 3. 시각화 
+
+출력 
+- disparity images (stereo/disparity) 
+- point clouds (stereo/points2).
+
+### 3.1 Image
+
 
 ```python 
 ## rosrun image_view stereo_view stereo:=<stereo namespace> image:=<image topic identifier>
