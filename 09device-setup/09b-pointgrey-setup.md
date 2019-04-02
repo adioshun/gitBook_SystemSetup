@@ -56,6 +56,7 @@ List detected cameras:`rosrun pointgrey_camera_driver list_cameras`
 
 Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 
+여러 카메라 실행 : `roslaunch pointgrey_camera_driver camera.launch camera_serial:=12345678`
 
 ---
 
