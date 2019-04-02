@@ -95,6 +95,9 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
    * Applications -&gt; Point Grey Research -&gt; FlyCapture
    * `$ FlyCap2`
 
+
+에러 : `could not find glade file 'FlyCapture2GUI_GTK.glade` -> 'locate FlyCapture2GUI_GTK.glade` -> copy to `~/flycapture/src/FlyCapture2Test`
+
 > [Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/tan/10548)
 
 #### B. Spinnaker \(Strongly recommended ubuntu 16\)
