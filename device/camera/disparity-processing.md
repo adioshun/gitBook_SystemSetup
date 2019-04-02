@@ -26,10 +26,13 @@ vi left_camera.launch
 
 2. image_rect_color를 활용 하므로 
   - `$ ~/.ros/camera_info/18060111.yaml & 18060129.yaml`
-  - `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc`
+  - `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc` 
   - `$ ROS_NAMESPACE=stereo/right rosrun image_proc image_proc`
+  - `rostopic echo /stereo/right/camera_info`로 확인 
+3. `$ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc`
 
-> `rostopic echo /stereo/right/camera_info`로 확인 
+
+
 
 
 ### 2.2 pointgrey 제공 stereo.launch 실행 
@@ -49,12 +52,12 @@ vi left_camera.launch
 
 1. roslaunch pointgrey_camera_driver stereo.launch
 2. <image_rect_color> 자동 생성 
-
+3. <stereo_image_proc> 자동 실행 
 
 ### 3. 실행 
 
 ```python
-$ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc
+
 
 
 #시각화 
