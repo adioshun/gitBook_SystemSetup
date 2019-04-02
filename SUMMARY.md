@@ -38,6 +38,7 @@
     * [Camera-Calibration](device/camera/camera-calibration.md)
     * [Disparity-Processing](device/camera/disparity-processing.md)
   * [Lidar+Camera](device/lidar+camera/README.md)
+    * [paper\_2017\_Lidar-Camera calibration using 3D-3D point correspoindances](device/lidar+camera/paper2017-lidar-camera-calibration-using-3d-3d-point-correspoindances.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
 * [06\_Dev\_Tools](06dev-tools.md)
