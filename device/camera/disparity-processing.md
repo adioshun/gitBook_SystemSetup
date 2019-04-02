@@ -53,15 +53,15 @@ vi left_camera.launch
 1. roslaunch pointgrey_camera_driver stereo.launch
 2. <image_rect_color> 자동 생성 
 3. <stereo_image_proc> 자동 실행 with _approximate_sync:=True 
-  - `rosnode info /stereo_view_{TAB}` 으로 확
+
 
 
 # 3. 시각화 
 
 ```python 
 ## rosrun image_view stereo_view stereo:=<stereo namespace> image:=<image topic identifier>
-$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color 
-
+$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color _queue_size:=20
+# `rosnode info /stereo_view_{TAB}` 으로 확인 
 ```
 
 rivz이용 pintcloud2도 확인 가능 
