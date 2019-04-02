@@ -33,6 +33,7 @@
   * [09\_C\_Lidar-Camera-Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
   * [09\_C\_Camerar-Calibration](09device-setup/09c-camerar-calibration.md)
   * [09\_D\_ti\_radar](09device-setup/09d-ti-radar.md)
+  * [Camera](device/camera/README.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
 * [06\_Dev\_Tools](06dev-tools.md)
