@@ -62,8 +62,6 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 
 ### 2.1 자체 툴 (IP등 카메라 설정)
 
-> 윈도우용 툴 권장 (리눅스 툴은 불안정)
-
 [Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/KB/10548)
 
 #### A. flycapture2 \(ubuntu 14, 16\)
@@ -110,14 +108,14 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 
 3. `sudo sh install_spinnaker.sh`
 
-## 1. PointGrey for Python
+
+
+
+#### C. PointGrey for Python : [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
 
 pip install pyflycap2
 
-> [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
 
-
----
 
 
 
