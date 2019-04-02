@@ -28,6 +28,7 @@
   * [Mayavi](08library-setup/mayavi.md)
 * [09\_Device\_setup](09device-setup.md)
   * [09\_C\_Lidar-Camera-Calibration](09device-setup/09c-fusion-velo-ptgrey.md)
+* [Device_setup](device/README.md)
   * [Lidar](device/lidar/README.md)
     * [velodyne](device/lidar/velodyne.md)
   * [Radar](device/radar/README.md)
