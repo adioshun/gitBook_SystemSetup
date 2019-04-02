@@ -22,13 +22,12 @@ vi left_camera.launch
 """
 ```
 
-각 launch 파일 실행 
+1. 각 launch 파일 실행 
 
-### 2.2 camera_calibration 후 image_rect_color를 활용 하므로 
-
-- `$ ~/.ros/camera_info/18060111.yaml & 18060129.yaml`
-- `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc`
-- `$ ROS_NAMESPACE=stereo/right rosrun image_proc image_proc`
+2. image_rect_color를 활용 하므로 
+  - `$ ~/.ros/camera_info/18060111.yaml & 18060129.yaml`
+  - `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc`
+  - `$ ROS_NAMESPACE=stereo/right rosrun image_proc image_proc`
 
 > `rostopic echo /stereo/right/camera_info`로 확인 
 
@@ -47,6 +46,9 @@ vi left_camera.launch
   <arg name="right_camera_serial" default="18060111" />
   <arg name="right_camera_calibrated" default="0" />
 ```
+
+1. roslaunch pointgrey_camera_driver stereo.launch
+2. <image_rect_color> 자동 생성 
 
 
 ### 3. 실행 
