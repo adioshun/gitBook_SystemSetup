@@ -22,6 +22,16 @@ vi left_camera.launch
 """
 ```
 
+각 launch 파일 실행 
+
+### 2.2 camera_calibration 후 image_rect_color를 활용 하므로 
+
+- `$ ~/.ros/camera_info/18060111.yaml & 18060129.yaml`
+- `$ ROS_NAMESPACE=stereo/left rosrun image_proc image_proc`
+- `$ ROS_NAMESPACE=stereo/right rosrun image_proc image_proc`
+
+> `rostopic echo /stereo/right/camera_info`로 확인 
+
 
 ### 2.2 pointgrey 제공 stereo.launch 실행 
 
@@ -38,14 +48,14 @@ vi left_camera.launch
   <arg name="right_camera_calibrated" default="0" />
 ```
 
+
 ### 3. 실행 
 
 ```
 $ ROS_NAMESPACE=stereo rosrun stereo_image_proc stereo_image_proc
 
 #시각화 
-$ rosrun image_view image_view image:=/stereo/left/image_rect_color
-$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color
+$ rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color _queue_size:=20 _approximate_sync:=True
 ```
 
 rivz이용 pintcloud2도 확인 가능 
