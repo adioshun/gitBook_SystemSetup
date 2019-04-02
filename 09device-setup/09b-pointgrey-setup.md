@@ -60,7 +60,9 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 
 ---
 
-### 2.1 자체 툴
+### 2.1 자체 툴 (IP등 카메라 설정)
+
+> 윈도우용 툴 권장 (리눅스 툴은 불안정)
 
 [Getting Started with FlyCapture 2.x and Linux](https://www.ptgrey.com/KB/10548)
 
