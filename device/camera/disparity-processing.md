@@ -9,7 +9,7 @@
 
 ### 2.1 두개의 camera.launch 실행 
 
-```python 
+```xml
 cp camera.launch left_camera.launch
 cp camera.launch right_camera.launch
 vi left_camera.launch 
@@ -25,6 +25,18 @@ vi left_camera.launch
 
 ### 2.2 pointgrey 제공 stereo.launch 실행 
 
+```xml
+<launch>
+  <!-- Common parameters -->
+  <arg name="camera_name" default="camera" />
+  <arg name="frame_rate" default="10" />
+
+  <arg name="left_camera_serial" default="18060129" />
+  <arg name="left_camera_calibrated" default="0" />
+
+  <arg name="right_camera_serial" default="18060111" />
+  <arg name="right_camera_calibrated" default="0" />
+```
 
 ### 3. 실행 
 
