@@ -38,7 +38,7 @@ vi left_camera.launch
 ```xml
 <launch>
   <!-- Common parameters -->
-  <arg name="camera_name" default="camera" />
+  <arg name="camera_name" default="stereo" />
   <arg name="frame_rate" default="10" />
 
   <arg name="left_camera_serial" default="18060129" />
