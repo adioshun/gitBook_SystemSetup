@@ -36,7 +36,7 @@
     * [PointGrey](device/camera/pointgrey.md)
     * [USB-Camera](device/camera/usb-camera.md)
     * [Camera-Calibration](device/camera/camera-calibration.md)
-    * Disparity-Processing
+    * [Disparity-Processing](device/camera/disparity-processing.md)
   * [Lidar+Camera](device/lidar+camera/README.md)
 * [10\_References](10references.md)
   * [11\_Paper\_3D3D\_Calibration](11paper-3d3d-calibration.md)
