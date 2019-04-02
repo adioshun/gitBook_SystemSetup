@@ -24,6 +24,16 @@ pip install -U pip
 ### 1.2 Viretual Env.
 
 
+```bash 
+sudo pip install pipenv
+pipenv shell --fancy  
+
+Run `pipenv install` to create a new empty pipenv virtualenv
+Run `pipenv shell`.
+
+```
+
+
 ```bash
 pip install virtualenv
 virtualenv -p /usr/bin/python2.7 venv
