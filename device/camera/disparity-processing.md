@@ -55,8 +55,8 @@ vi left_camera.launch
 ```
 
 1. roslaunch pointgrey_camera_driver stereo.launch
-2. <image_rect_color> 자동 생성 
-3. <stereo_image_proc> 자동 실행 with _approximate_sync:=True 
+2. `<image_rect_color>` 자동 생성 
+3. `<stereo_image_proc>` 자동 실행 with _approximate_sync:=True 
 
 
 
