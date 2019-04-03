@@ -2,34 +2,6 @@
 
 [BFLY-PGE-31S4C-C](http://www.av-iq.com/avcat/ctl17578/index.cfm?manufacturer=point-grey-research-flir&product=bfly-pge-31s4c-c) : Blackfly 3.2 MP Color GigE PoE (Sony IMX265), 2048x1536 
 
-Ethernet 기반 카메라 데이터 전송을 위한 전처리 
-
-```python
-sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576
-sudo sh -c 'echo 1024 > /sys/module/usbcore/parameters/usbfs_memory_mb'
- 
-echo "net.core.rmem_max=1048576" >> /etc/sysctl.conf
-echo "net.core.rmem_default=1048576" >> /etc/sysctl.conf
-
-sudo sysctl -p
-```
-
-
-
-| 에러코드 | 해결책 |
-| --- | --- |
-| Failed to start with error: PointGreyCamera::start Failed to start capture \| FlyCapture2::ErrorType 33 Error starting isochronous stream | [reducing the frame rate](https://stackoverflow.com/questions/12070778/trouble-in-driving-point-grey-grasshoper-cameras) `modprobe usbcore usbfs_memory_mb=1024` <br>[\[영구 설정\]](https://stackoverflow.com/questions/43297480/failed-isochronous-start-error-0x2-when-starting-reading-from-2-cameras-ptgre) |
-| IMAGE\_CONSISTENCY\_ERRORS | [sudo sysctl -w net.core.rmem\_max=1048576 net.core.rmem\_default=1048576](http://www.ptgrey.com/KB/10016), <br>Packet size 중간, Packet delay 높게, Jumbo packet\(MTU\) 최대 |
-| Low level failure writing register 0x60c with value 0x8004. Error: 0x3 |  |
-| FlyCapture2::ErrorType 1 Failed to discover GigE packet size | `sudo ip link set eth0 mtu 9000`<br> `ip link show eth0` |
-
-
-
-
-https://answers.ros.org/question/258537/pointgrey-camera-works-only-once/
-
-
-
 
 ## 2. PointGrey for ROS
 
@@ -114,6 +86,38 @@ Launch camera: `roslaunch pointgrey_camera_driver camera.launch`
 #### C. PointGrey for Python : [PyFlyCap2](https://matham.github.io/pyflycap2/index.html)
 
 pip install pyflycap2
+
+
+---
+
+Ethernet 기반 카메라 데이터 전송을 위한 전처리 
+
+```python
+sudo sysctl -w net.core.rmem_max=1048576 net.core.rmem_default=1048576
+sudo sh -c 'echo 1024 > /sys/module/usbcore/parameters/usbfs_memory_mb'
+ 
+echo "net.core.rmem_max=1048576" >> /etc/sysctl.conf
+echo "net.core.rmem_default=1048576" >> /etc/sysctl.conf
+
+sudo sysctl -p
+```
+
+
+
+| 에러코드 | 해결책 |
+| --- | --- |
+| Failed to start with error: PointGreyCamera::start Failed to start capture \| FlyCapture2::ErrorType 33 Error starting isochronous stream | [reducing the frame rate](https://stackoverflow.com/questions/12070778/trouble-in-driving-point-grey-grasshoper-cameras) `modprobe usbcore usbfs_memory_mb=1024` <br>[\[영구 설정\]](https://stackoverflow.com/questions/43297480/failed-isochronous-start-error-0x2-when-starting-reading-from-2-cameras-ptgre) |
+| IMAGE\_CONSISTENCY\_ERRORS | [sudo sysctl -w net.core.rmem\_max=1048576 net.core.rmem\_default=1048576](http://www.ptgrey.com/KB/10016), <br>Packet size 중간, Packet delay 높게, Jumbo packet\(MTU\) 최대 |
+| Low level failure writing register 0x60c with value 0x8004. Error: 0x3 |  |
+| FlyCapture2::ErrorType 1 Failed to discover GigE packet size | `sudo ip link set eth0 mtu 9000`<br> `ip link show eth0` |
+
+
+
+
+https://answers.ros.org/question/258537/pointgrey-camera-works-only-once/
+
+
+
 
 
 
