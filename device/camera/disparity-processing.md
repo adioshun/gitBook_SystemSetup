@@ -39,11 +39,17 @@ vi left_camera.launch
 
 ### 2.2 pointgrey 제공 stereo.launch 실행 (추천)
 
+수정 항목 
+- camera_name : camera -> stereo 
+- frame_rate : 10 -> 1
+- camera_serial
+
+
 ```xml
 <launch>
   <!-- Common parameters -->
   <arg name="camera_name" default="stereo" />
-  <arg name="frame_rate" default="10" />
+  <arg name="frame_rate" default="1" />
 
   <arg name="left_camera_serial" default="18060129" />
   <arg name="left_camera_calibrated" default="0" />
