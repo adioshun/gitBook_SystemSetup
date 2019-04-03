@@ -1,8 +1,6 @@
-
-
-https://eehoeskrap.tistory.com/103
-
 # [ROS stereo_image_proc](http://wiki.ros.org/stereo_image_proc)
+
+> 이론 설명은 [[요기]](https://eehoeskrap.tistory.com/103)로 
 
 ## 1. 설치 
 - `sudo apt-get install ros-indigo-stereo-image-proc`
