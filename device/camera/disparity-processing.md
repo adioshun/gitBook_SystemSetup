@@ -83,3 +83,6 @@ rivz이용 pintcloud2도 확인 가능
 
 
 ## [Choosing Good Stereo Parameters](http://wiki.ros.org/stereo_image_proc/Tutorials/ChoosingGoodStereoParameters)
+
+Dynamic Reconfiture 활용 : `rosrun rqt_reconfigure rqt_reconfigure`
+
