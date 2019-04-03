@@ -1,65 +1,53 @@
 # CUDA 활용 환경 구성
 
-## 1. Nvidia 드라이버 설치
+## 1. Nvidia 드라이버 설치 [[Download]](http://www.nvidia.com/Download/index.aspx?lang=en-us)
 
- nvidia graphic driver : [설치](http://www.nvidia.com/Download/index.aspx?lang=en-us), [Nvidia Driver Instalation-14.04 ](https://goo.gl/kfzWfJ)
+### 1.1 그래픽 카드 확인 
 
-1. GPU 정보를 확인합니다. :`apt-get install pciutils && lspci | grep -i nvidia`
+``` 
+# ubunutu 18.04
+$ ubuntu-drivers devices
 
-2. [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌 `sudo apt-get --purge remove xserver-xorg-video-nouveau`
+# ubunut 16.04
+$ lspci | grep -i nvidia #apt-get install pciutils
+$ lshw -numeric -C display
+$ lspci -vnn | grep VGA
+
+```
+
+> [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌   
+```
+sudo apt-get --purge remove xserver-xorg-video-nouveau
+
+# Disable nouveau
+lsmod | grep nouveau
+vi /etc/modprobe.d/blacklist-nouveau.conf
+sudo update-initramfs -u
+reboot
+```
   
-  ```
-  # Disable nouveau
-  lsmod | grep nouveau
-  vi /etc/modprobe.d/blacklist-nouveau.conf
-  sudo update-initramfs -u
-  reboot
-  ```
-  
-### 1.1 일방적 방법 
-
-
+### 1.2 드라이버 설치 
 
 ```python
-sudo apt purge nvidia-*
+#ubuntu 18.04
+sudo ubuntu-drivers autoinstall
+
+#ubunutu 16.04
+sudo apt purge nvidia-* 
 sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
 sudo apt update
-sudo apt install nvidia-current #nvidia-390
-# cd /usr/lib/nvidia-xxxx 로 확인 가능
+sudo apt install nvidia-current #nvidia-390 #ubuntu-drivers devices로 확인된 값
 ```
 
-> NVIDIA 드라이버 설치 확인 : `cat /proc/driver/nvidia/version` 미 설치시 하단 설명 참고
+### 1.3  드라이버 설치 확인 : 
 
-```
-sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install --no-install-recommends libboost-all-dev
-sudo apt-get update
-sudo apt-get install linux-generic (VM 사용시 설치)
-```
+`cat /proc/driver/nvidia/version` 미 설치시 하단 설명 참고
 
 
-
-### 1.2 [ubuntu 18](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
-
-> 18부터 `ubuntu-drivers autoinstall` 지원 
-
-```
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-
-ubuntu-drivers devices
-apt install nvidia-driver-390 
-
-# OR 
-
-ubuntu-drivers autoinstall
-apt install nvidia-settings
-
-
-```
 ![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
+
+
+---
 
 ## 2. CUDA 설치 
 
@@ -154,9 +142,9 @@ echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local
 
 ---
 
-## 2. cuDNN 설치
+## 3. cuDNN 설치
 
-### 2.1 소스코드 설치 cuDNN v6.0 Library for Linux
+### 3.1 소스코드 설치 cuDNN v6.0 Library for Linux
 
 * Download : [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) -&gt;  cuDNN 5.1 \(August 10, 2016\) for CUDA 8.0
 
@@ -185,7 +173,7 @@ sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.39 /usr/lib/nvidia-375/libEGL.so.1
 sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.so.1
 ```
 
-## 2.2 삭제
+## 3.2 삭제
 
 해당 볼더 제거
 
