@@ -109,26 +109,42 @@ Disparity post-filtering
 ## 설정 예시 
 
 
-What's this junk on the tabletop?
-|![](https://i.imgur.com/KVTKhlV.png)|![](https://i.imgur.com/cZpBbpR.png)|
+### 1. What's this junk on the tabletop?
 
-
-|-|-|
-
-What's this junk on the tabletop?
-|
-
-speckle filter controlled by 
+문제 : 얼룩같은 잡음이 많음 
+해결 : speckle filter
 - `speckle_size` is the number of pixels below which a disparity blob is dismissed as "speckle." 
 - `speckle_range` controls how close in value disparities must be to be considered part of the same blob. 
-- eg. In this case the objects in the scene are relatively large, so we can crank speckle_size up to 1000 pixels:
-|![](https://i.imgur.com/KVTKhlV.png)|![](https://i.imgur.com/cZpBbpR.png)|
-|-|-|
+- eg. In this case the objects in the scene are relatively large, so we can crank speckle_size up to 1000 pixels
 
 |![](https://i.imgur.com/KVTKhlV.png)|![](https://i.imgur.com/cZpBbpR.png)|
 |-|-|
 
 
 
-But where are the table and object?
 
+### 2. But where are the table and object?
+
+문제 : 테이블과 대상 물건이 사라짐
+원인 : the table is too close to the camera for the stereo block matcher to "see" it. 
+해결 : search range
+- `disparity_range` is how many pixels to slide the window over. The larger it is, the larger the range of visible depths, but more computation is required.
+- `min_disparity` controls the offset from the x-position of the left pixel at which to begin searching.
+
+![](https://i.imgur.com/OercAdy.png)
+
+문제 : 병 왼쪽 뒤에 blank 생김 
+원인 : 오른쪽 카메라가 감지 못함 `That area is visible to the left camera but occluded by the bottle in the right camera`
+해결 : disparity_range
+- `min_disparity` is normally set to zero, meaning the block matcher can "see" out to infinity. 
+  - If you have a pair of stereo cameras that are verged, or inclined towards each other, it's possible to have negative disparities and you might set min_disparity to a negative value. 
+  - If you want to detect objects very close to the camera (disparity > 128), you could set min_disparity to a positive value, shifting the horopter towards the camera and sacrificing far-field for near-field perception.
+
+### 3. Other parameters
+
+- `correlation_window_size` controls the size of the sliding SAD (sum of absolute differences) window used to find matching points between the left and right images. Larger window sizes will smooth over small gaps in the disparity image but will also smear object boundaries. The default (15x15) is normally adequate; for comparison, this disparity image used correlation_window_size = 9 and has more gaps:
+
+
+- `uniqueness_ratio` controls another post-filtering step. If the best matching disparity is not sufficiently better than every other disparity in the search range, the pixel is filtered out. You can try tweaking this if texture_threshold and the speckle filtering are still letting through spurious matches.
+
+- `prefilter_size` and `prefilter_cap` control the pre-filtering phase, which normalizes image brightness and enhances texture in preparation for block matching. Normally you should not need to adjust these.
