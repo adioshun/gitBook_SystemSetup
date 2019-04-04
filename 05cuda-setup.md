@@ -15,18 +15,29 @@ $ lspci -vnn | grep VGA
 
 ```
 
-> [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제): 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌   
-```
+### 1.2 [nouveau 해제](https://gist.github.com/haje01/f13053738853f39ce5a2#nouveau-해제)
+> 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌   
+
+```python 
 sudo apt-get --purge remove xserver-xorg-video-nouveau
 
 # Disable nouveau
-lsmod | grep nouveau
-vi /etc/modprobe.d/blacklist-nouveau.conf
-sudo update-initramfs -u
-reboot
+$ lsmod | grep nouveau
+$ vi /etc/modprobe.d/blacklist-nouveau.conf
+  """
+  blacklist nouveau
+  blacklist lbm-nouveau
+  options nouveau modeset=0
+  alias nouveau off
+  alias lbm-nouveau off
+  """
+  
+$ echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+$ sudo update-initramfs -u
+$ reboot
 ```
   
-### 1.2 드라이버 설치 
+### 1.3 Nvidia 드라이버 설치 
 
 ```python
 #ubuntu 18.04
@@ -41,7 +52,10 @@ sudo apt install nvidia-current #nvidia-390 #ubuntu-drivers devices로 확인된
 
 ### 1.3  드라이버 설치 확인 : 
 
-`cat /proc/driver/nvidia/version` 미 설치시 하단 설명 참고
+```
+$ nvidia-smi  
+$ cat /proc/driver/nvidia/version
+```
 
 
 ![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
