@@ -58,6 +58,7 @@ $ nvidia-smi
 $ cat /proc/driver/nvidia/version
 ```
 
+> BIOS의 SecureBoot OFF필요 
 
 ![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
 
