@@ -19,8 +19,6 @@ $ lspci -vnn | grep VGA
 > 오픈소스 드라이버입니다. 이것이 NVIDIA 드라이버의 커널 모듈과 충돌   
 
 ```python 
-sudo apt-get --purge remove xserver-xorg-video-nouveau
-
 # Disable nouveau
 $ lsmod | grep nouveau
 $ sudo vi /etc/modprobe.d/blacklist-nouveau.conf
@@ -35,6 +33,8 @@ alias lbm-nouveau off
 $ echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
 $ sudo update-initramfs -u
 $ reboot
+
+#$sudo apt-get --purge remove xserver-xorg-video-nouveau
 ```
   
 ### 1.3 Nvidia 드라이버 설치 
@@ -47,7 +47,7 @@ sudo ubuntu-drivers autoinstall
 sudo apt purge nvidia-* 
 sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
 sudo apt update
-sudo apt install nvidia-current #nvidia-390 #ubuntu-drivers devices로 확인된 값
+sudo apt install nvidia-driver-390 #nvidia-current #ubuntu-drivers devices로 확인된 값
 ```
 
 ### 1.3  드라이버 설치 확인 : 
