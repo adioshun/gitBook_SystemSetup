@@ -48,6 +48,7 @@ sudo apt purge nvidia-*
 sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
 sudo apt update
 sudo apt install nvidia-driver-390 #nvidia-current #ubuntu-drivers devices로 확인된 값
+#modprobe nvidia
 ```
 
 ### 1.3  드라이버 설치 확인 : 
