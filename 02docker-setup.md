@@ -4,6 +4,24 @@
 
 # Install
 
+
+## 0. [docker-nvidia for ubuntu 18](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+
+```
+2032  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+2033  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+2034  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+2035  sudo apt update
+2036  apt-cache policy docker-ce
+2037  sudo apt install docker-ce
+2038  sudo systemctl status docker
+2040  sudo apt-get install -y nvidia-docker2
+2041  sudo pkill -SIGHUP dockerd
+2042  docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
+
+```
+
+
 ## 1. docker 설치 \(CPU지원 도커\)
 
 ```
