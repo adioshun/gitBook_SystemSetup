@@ -19,6 +19,7 @@ python3.6 get-pip.py
 
 # Upgrade
 pip install -U pip
+# Python pip 업데이트 후 from pip import main ImportError: cannot import name 'main' 에러  --> `$ hash -d pip3`
 ```
 
 ### 1.2 Viretual Env.
