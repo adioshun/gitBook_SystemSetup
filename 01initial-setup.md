@@ -94,15 +94,17 @@ apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic l
 ```
 
 
-- 디스크공간 `apt-get install ncdu`
+- 디스크공간(CLI) `apt-get install ncdu`
 
-![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
+
 
 ```
 sudo add-apt-repository ppa:nathan-renniewaldock/qdirstat
 sudo apt-get update
 sudo apt install qdirstat
 ```
+
+![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
 
 
 
