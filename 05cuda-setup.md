@@ -1,6 +1,6 @@
 # CUDA 활용 환경 구성
 
-> cuda 10을 위해 nvidia 410.48 
+> cuda 10을 위해 nvidia 410.48, cuda설치시 드라이버 같이 설치 됨 
 
 ## 1. Nvidia 드라이버 설치 [[Download]](http://www.nvidia.com/Download/index.aspx?lang=en-us)
 
