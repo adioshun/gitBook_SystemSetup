@@ -162,6 +162,8 @@ echo "export PATH=/usr/local/cuda/bin/:\$PATH; export LD_LIBRARY_PATH=/usr/local
 
 ## 3. cuDNN 설치
 
+확인 : `cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2`
+
 ### 3.1 소스코드 설치 cuDNN v6.0 Library for Linux
 
 * Download : [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) -&gt;  cuDNN 5.1 \(August 10, 2016\) for CUDA 8.0
