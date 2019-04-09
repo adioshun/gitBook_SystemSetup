@@ -75,37 +75,6 @@ gnome-tweak를 통해 변경
 - 동영상 포맷 변환 : handbrake.fr
 
 
-## 공간 환보
-
-```
-apt-get clean
-pip clean?
-
-#용량큰 폴더는 
-$ cd /
-$ sudo du -ckx | sort -n > /tmp/duck-root
-```
-
-- 이전 커널 삭제 
-```
-uname -r #현커널 확인
-apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic linux-image-extra-xx-genric 
-#boot공간 확보 
-```
-
-
-- 디스크공간(CLI) `apt-get install ncdu`
-
-
-
-```
-sudo add-apt-repository ppa:nathan-renniewaldock/qdirstat
-sudo apt-get update
-sudo apt install qdirstat
-```
-
-![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
-
 
 
 ## 멀티 부팅 USB 만들기
