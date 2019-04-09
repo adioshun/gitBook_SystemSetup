@@ -69,11 +69,8 @@ $ cat /proc/driver/nvidia/version
 
 ## 2. CUDA 설치 
 
-- 버젼  확인: `nvcc --version`
-
+- 버젼  확인: `nvcc --version` #export PATH=/usr/local/cuda-10.0/bin/:$PATH
 - 실행 확인 : `cd ~/NVIDIA_CUDA-10.0_Samples/1_Utilities/bandwidthTest && make && ./badhwidthTest`
-
-
 - 삭제 : `apt-get purge cuda` or `/usr/local/cuda/uninstall.xx.sh`
 
 ### 2.1 일반적 방법 
