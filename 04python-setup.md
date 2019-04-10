@@ -11,11 +11,22 @@ $ sudo apt-get install python3 # 3.5설치
 
 ## 3.6설치 
 $ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo add-apt-repository ppa:deadsnakes/ppa #ppa:jonathonf/python-3.6
 $ sudo apt-get update
 $ sudo apt-get install python3.6
 
-
+## 소스설치 
+$ mkdir -p /tmp/intall_python3.6
+$ cd /tmp/intall_python3.6
+$ wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
+$ tar -xvf Python-3.6.3.tgz
+$ cd Python-3.6.3
+$ sudo ./configure --enable-optimizations
+$ sudo make -j8
+$ sudo make install 
+$ python3 --version #새 터미널 에서 
+$ cd /tmp
+$ rm -rf install_python3.6/
 ```
 > Ubuntu리눅스 16.04에는 기본 3.5가 설치 되어 있음
 
