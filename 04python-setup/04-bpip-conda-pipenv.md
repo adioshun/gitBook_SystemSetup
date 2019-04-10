@@ -2,6 +2,8 @@
 
 ## 1. Pip
 
+SSl오류시 : python -m pip --trusted-host [패키지]
+
 ### 1.1 Installation
 
 apt 이용 설치 
