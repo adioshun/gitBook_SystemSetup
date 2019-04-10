@@ -309,22 +309,7 @@ nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <
 
 도커이미지 탐색 : [dive](https://github.com/wagoodman/dive/blob/master/README.md)
 
----
-[좋은도커이미지만들기](https://dayone.me/1740z5r)
 
-### 1. Clean the APT Cache (And Do It Regularly)
-
-```
-sudo apt-get autoremove
-#sudo apt-get autoclean
-#sudo apt-get clean
-#du -sh /var/cache/apt/archives
-```
-
-## 2. Remove Old Kernels (If No Longer Required)
-```
-sudo apt-get autoremove --purge
-```
 
 
 

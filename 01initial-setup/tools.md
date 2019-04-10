@@ -57,7 +57,7 @@ sudo apt install qdirstat
 ![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
 
 
-## 공간 환보
+## 공간 확보 
 
 ```
 apt-get clean
@@ -74,6 +74,27 @@ uname -r #현커널 확인
 apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic linux-image-extra-xx-genric 
 #boot공간 확보 
 ```
+
+[좋은도커이미지만들기](https://dayone.me/1740z5r)
+
+### 1. Clean the APT Cache (And Do It Regularly)
+
+```
+sudo apt-get autoremove
+#sudo apt-get autoclean
+#sudo apt-get clean
+#du -sh /var/cache/apt/archives
+```
+
+## 2. Remove Old Kernels (If No Longer Required)
+```
+sudo apt-get autoremove --purge
+```
+
+
+
+
+
 
 
 
