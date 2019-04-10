@@ -4,6 +4,14 @@
 
 SSl오류시 : python -m pip --trusted-host [패키지]
 
+```
+$ cat ~/.config/pip/pip.conf
+[global]
+proxy = http://my-proxy:8080
+index-url = http://mirrors.aliyun.com/pypi/simple/
+trusted-host = mirrors.aliyun.com
+```
+
 ### 1.1 Installation
 
 apt 이용 설치 
