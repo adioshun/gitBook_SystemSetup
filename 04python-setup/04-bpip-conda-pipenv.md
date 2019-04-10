@@ -3,7 +3,7 @@
 ## 1. Pip
 
 SSl오류시 : `python -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org [패키지명]`
-```
+
 
 ### 1.1 Installation
 
