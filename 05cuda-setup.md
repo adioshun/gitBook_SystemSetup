@@ -8,7 +8,7 @@
 
 ``` 
 # ubunutu 18.04
-$ ubuntu-drivers devices
+$ ubuntu-drivers devices #apt-get install ubuntu-drivers-common
 
 # ubunut 16.04
 $ lspci | grep -i nvidia #apt-get install pciutils
@@ -47,7 +47,8 @@ sudo ubuntu-drivers autoinstall
 
 #ubunutu 16.04
 sudo apt purge nvidia-* 
-sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa
+#apt-get install software-properties-common
+sudo add-apt-repository ppa:graphics-drivers/ppa #ppa:xorg-edgers/ppa 
 sudo apt update
 sudo apt install nvidia-driver-390 #nvidia-current #ubuntu-drivers devices로 확인된 값
 #modprobe nvidia
