@@ -1,4 +1,4 @@
-# Docker Image 
+# Docker Image
 
 ## 1. [ROS-Kinetic with VNC](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full)
 
@@ -9,7 +9,6 @@ docker pull ct2034/vnc-ros-kinetic-full  #1GB
 docker run -it --rm -p 6080:80 ct2034/vnc-ros-kinetic-full
 Browse http://127.0.0.1:6080/
 ```
-
 
 ## 2. [Tor Browser](https://hub.docker.com/r/hkjn/tor-browser)
 
@@ -24,41 +23,38 @@ docker run -it --rm --name tor-browser \
 
 ## 3. pcl
 
-docker pull adioshun/ros16:python23-pcl_opend3d_161226
-
+docker pull adioshun/ros16:python23-pcl\_opend3d\_161226
 
 ## 4. [CUDA](https://hub.docker.com/r/nvidia/cuda/tags)
 
-|Ubuntu|CUDA/CuDNN|tag|Size|etc|
-|-|-|-|-|-|
-|16.4|9.0/7|`docker pull nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04 `|720M||
-|16.4|8.0/||||
-|16.4|7.0/||||
-|18.4|9.2/7|`docker pull nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04` |2GB||
-|18.04|10.0/7|`docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04`|||
-|16.04|10.0/7|'docker pull pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel`|6.17G |pytorch 1.0.1- |
+| Ubuntu | CUDA/CuDNN | tag | Size | etc |
+| --- | --- | --- | --- | --- |
+| 16.4 | 9.0/7 | `docker pull nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04` | 720M |  |
+| 16.4 | 8.0/ |  |  |  |
+| 16.4 | 7.0/ |  |  |  |
+| 18.4 | 9.2/7 | `docker pull nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04` | 2GB |  |
+| 18.04 | 10.0/7 | `docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04` |  |  |
+| 16.04 | 10.0/7 | 'docker pull pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel\` | 6.17G | pytorch 1.0.1- |
 
-- base: starting from CUDA 9.0, contains the bare minimum (libcudart) to deploy a pre-built CUDA application.
-Use this image if you want to manually select which CUDA packages you want to install.
-- runtime: extends the base image by adding all the shared libraries from the CUDA toolkit.
-Use this image if you have a pre-built application using multiple CUDA libraries.
-- **devel**: extends the runtime image by adding the compiler toolchain, the debugging tools, the headers and the static libraries. Use this image to compile a CUDA application from sources.
+* base: starting from CUDA 9.0, contains the bare minimum \(libcudart\) to deploy a pre-built CUDA application.
+  Use this image if you want to manually select which CUDA packages you want to install.
+* runtime: extends the base image by adding all the shared libraries from the CUDA toolkit.
+  Use this image if you have a pre-built application using multiple CUDA libraries.
+* **devel**: extends the runtime image by adding the compiler toolchain, the debugging tools, the headers and the static libraries. Use this image to compile a CUDA application from sources.
 
-설치전 CUDA NVIDIA Driver버젼 확인 필요 
+설치전 CUDA NVIDIA Driver버젼 확인 필요
 
 ![](https://i.imgur.com/Eqsmxsu.png)
 
 ---
 
-# dockerfile 
+# dockerfile
 
 docker build --tag hello:0.1 .
 
-ref : https://rampart81.github.io/post/dockerfile_instructions/
+ref : [https://rampart81.github.io/post/dockerfile\_instructions/](https://rampart81.github.io/post/dockerfile_instructions/)
 
-
-
-## 1. 자동 실행 /데몬 
+## 1. 자동 실행 /데몬
 
 ```
 FROM adioshun/pcls:pcl
@@ -74,7 +70,6 @@ CMD ["jupyter notebook --allow-root", "-D"]
 
 ENTRYPOINT ["/entrypoint.sh"]
 ```
-
 
 ## 2. ssh 샘플
 
@@ -100,13 +95,9 @@ RUN apt-get clean && \
 EXPOSE 22
 
 CMD    ["/usr/sbin/sshd", "-D"]
-
 ```
 
-
-
-
-## 3. conda 
+## 3. conda
 
 ```
 FROM debian:latest
@@ -125,13 +116,7 @@ RUN apt-get -qq update && apt-get -qq -y install curl bzip2 \
     && conda clean --all --yes
 
 ENV PATH /opt/conda/bin:$PATH
-
-
-
-
 ```
-
-
 
 ```
 # SSH enabled docker 
@@ -169,9 +154,6 @@ docker pull rastasheep/ubuntu-sshd:16.04
     $ ssh root@localhost -p 49154
     # The password is `root`
     root@test_sshd $
-
-
-
 
 
 
