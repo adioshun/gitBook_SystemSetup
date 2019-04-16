@@ -17,7 +17,7 @@
 
 
 
-## Chrome
+## Browser
 
 ```
 snap install chrome
@@ -29,6 +29,8 @@ sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 # sudo dpkg -P google-chrome-stable #삭제 
 ```
+
+Tor Browser : `sudo apt install torbrowser-launcher`
 
 ## VScode
 
