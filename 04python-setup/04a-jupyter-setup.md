@@ -88,7 +88,8 @@ python -m ipykernel install --user --name py2torch --display-name "Python2(pytor
 conda create -n pyton3 python=3 ipykernel
 
 jupyter kernelspec list #설치된 커널 확인 
-conda install notebook ipykernel
+pip3 install notebook ipykernel
+#conda install notebook ipykernel
 ipython kernel install --user
 ```
 
