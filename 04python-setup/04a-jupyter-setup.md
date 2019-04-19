@@ -1,10 +1,9 @@
-# Jupyter 
+# Jupyter
 
+### 설치
 
-### 설치 
-
-- pip 이용 설치 : `pip install jupyter` / `pip3 install jupyter`
-- conda이용 설치 : `conda install -y ipython jupyter`
+* pip 이용 설치 : `pip install jupyter` / `pip3 install jupyter`
+* conda이용 설치 : `conda install -y ipython jupyter`
 
 ### Jupyter Configuration
 
@@ -16,7 +15,9 @@ wget https://gist.githubusercontent.com/adioshun/383e4f722712e94dcc9a5d8c9fda2bf
 jupyter notebook --generate-config --allow-root
 vi /root/.jupyter/jupyter_notebook_config.py
 ```
+
 `jupyter_notebook_config.py` 설정파일
+
 ```
 # -*- coding: utf-8 -*- 
 
@@ -30,45 +31,50 @@ c.NotebookApp.password = 'sha1:a8dee43a3a44:b18f1ad149a60efb4838da44cf127985d64a
 c.NotebookApp.notebook_dir = '/workspace' # L195 기본 디렉터리를 지정시켜준다.
 ```
 
-
 > 실행:jupyter notebook --allow-root
 
-jupyter 테마: [#1](https://github.com/powerpak/jupyter-dark-theme), [#2](http://haanjack.github.io/jupyter/theme/2016/03/08/jupyter-theme.html), [#3](https://github.com/dunovank/jupyter-themes)
+jupyter 테마: [\#1](https://github.com/powerpak/jupyter-dark-theme), [\#2](http://haanjack.github.io/jupyter/theme/2016/03/08/jupyter-theme.html), [\#3](https://github.com/dunovank/jupyter-themes)
 
 ### Jupyter Lab설치
 
 Unonffical
+
 ```
 # you will need jupyter notebook >= v4.2
 pip3 install jupyterlab
 jupyter serverextension enable --py jupyterlab --sys-prefix
 jupyter lab
 ```
+
 ### Jupyter Extension설치
+
 ##### Official:[ref](https://docs.continuum.io/anaconda/jupyter-notebook-extensions)
+
 ```
 conda install nb_conda -c conda-forge
 # conda install nb_conda
 # conda install -c anaconda-nb-extensions nbpresent
-
 ```
+
 > UnsatisfiableError: [solved](https://github.com/ContinuumIO/anaconda-issues/issues/1423)
 
-- [K3D-jupyter](https://github.com/K3D-tools/K3D-jupyter): Jupyter notebook extension for 3D visualization.
+* [K3D-jupyter](https://github.com/K3D-tools/K3D-jupyter): Jupyter notebook extension for 3D visualization.
 
 ##### Unofficial:[ref](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
+
 ```
 #conda install -c conda-forge jupyter_contrib_nbextensions
 pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 jupyter contrib nbextension install --user
 ```
+
 [참고](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
 
 ### Jupyter 다중커널설정
 
-> [conda install nb_conda](https://blog.naver.com/ryu_0108/221198673685)
+> [conda install nb\_conda](https://blog.naver.com/ryu_0108/221198673685)
 
-기존 Jupyter에 새 커널 추가 하기 (conda사용시)
+기존 Jupyter에 새 커널 추가 하기 \(conda사용시\)
 
 ```
 jupyter kernelspec list
@@ -86,15 +92,15 @@ conda install notebook ipykernel
 ipython kernel install --user
 ```
 
-또는 
+또는
+
 ```
 python2 -m pip install ipykernel
 python2 -m ipykernel install --user
 ```
 
-> - [Docker 이미지로 설치한 Jupyter에 커널 추가하기](http://mazdah.tistory.com/784)
-> - [Installing the IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html)
-
+> * [Docker 이미지로 설치한 Jupyter에 커널 추가하기](http://mazdah.tistory.com/784)
+> * [Installing the IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html)
 
 ### [jupyter-tensorboard ](https://github.com/lspvic/jupyter_tensorboard)
 
@@ -115,8 +121,6 @@ python2 -m ipykernel install --user
 3. 자동으로 실행되거나 run에 가면 실행시킨 tensorboard로 이동할 수 있습니다.
 ```
 
-
-
 #### 2. Python 용 R 설치 \(/w conda\)
 
 ```bash
@@ -126,8 +130,9 @@ conda install -c r r-essentials
 
 ###### ipython에서 R 패지키 설치 방법 \(R 콘솔에서 실행??\)
 
-sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libcurl4-openssl-dev  
 sudo apt-get install libssl-dev
+
 ```
 #R쉘진입
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
@@ -135,11 +140,10 @@ devtools::install_github('IRkernel/IRkernel')
 IRkernel::installspec()
 ```
 
-> 패키지설치시: install.packages("ldavis", "/home/user/anaconda3/lib/R/library")
+> 패키지설치시: install.packages\("ldavis", "/home/user/anaconda3/lib/R/library"\)  
 > [메뉴얼필독](https://www.r-bloggers.com/jupyter-and-r-markdown-notebooks-with-r/amp/)
 
-
-## 3. C++용 Jupyter 
+## 3. C++용 Jupyter
 
 [Blog](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92)
 
@@ -148,9 +152,9 @@ IRkernel::installspec()
 std::cout << "some output" << std::endl;
 ```
 
-## 3.1 소스 설치 (ubuntu 16기준)
+## 3.1 소스 설치 \(ubuntu 16기준\)
 
-> https://askubuntu.com/questions/899313/how-to-install-cling-kernel-in-jupyter-notebook [[Download]](https://root.cern.ch/download/cling/)
+> [https://askubuntu.com/questions/899313/how-to-install-cling-kernel-in-jupyter-notebook](https://askubuntu.com/questions/899313/how-to-install-cling-kernel-in-jupyter-notebook) [\[Download\]](https://root.cern.ch/download/cling/)
 
 ```sh
 # 기존 커널 삭제 
@@ -174,30 +178,29 @@ sudo jupyer kernelspec install cling-cpp11
 cd ~ && jupyter notebook
 ```
 
+### 3.2 바이너리 설치
 
-### 3.2 바이너리 설치 
+> [https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks\(caffe2,-tensorflow\)/](https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks%28caffe2,-tensorflow%29/)
 
-> https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks(caffe2,-tensorflow)/
+zeromq설치
 
-zeromq설치 
-- apt-get install zeromq 또는 
-- wget https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh (sudo 명령어 삭제필요)
+* apt-get install zeromq 또는 
+* wget [https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh](https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh) \(sudo 명령어 삭제필요\)
 
-cling 설치 
-- 18 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu18.tar.bz2
-- 16 : wget https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu16.tar.bz2
-- tar xvf {파일명}
-- vi ~/.bashrc -> `PATH=/root/cling_2018-11-05_ubuntu16/bin:$PATH`
-- source ~/.bashrc
-- $cd cling_2018-11-05_ubuntu16/share/cling/Jupyter/kernel/
-- $pip3 install -e .
-- $jupyter-kernelspec install --user cling-cpp17
+cling 설치
 
+* 18 : wget [https://root.cern.ch/download/cling/cling\_2018-11-05\_ubuntu18.tar.bz2](https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu18.tar.bz2)
+* 16 : wget [https://root.cern.ch/download/cling/cling\_2018-11-05\_ubuntu16.tar.bz2](https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu16.tar.bz2)
+* tar xvf {파일명}
+* vi ~/.bashrc -&gt; `PATH=/root/cling_2018-11-05_ubuntu16/bin:$PATH`
+* source ~/.bashrc
+* $cd cling\_2018-11-05\_ubuntu16/share/cling/Jupyter/kernel/
+* $pip3 install -e .
+* $jupyter-kernelspec install --user cling-cpp17
 
-### 3.3 Conda 설치 
+### 3.3 Conda 설치
 
-> https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake 
-
+> [https://xeus-cling.readthedocs.io/en/latest/installation.html\#from-source-with-cmake](https://xeus-cling.readthedocs.io/en/latest/installation.html#from-source-with-cmake)
 
 ```
 conda create -n cling
@@ -205,23 +208,25 @@ source activate cling
 conda install xeus-cling notebook -c QuantStack -c conda-forge
 ```
 
-
-
---- 
+---
 
 # Jupyter Tips
 
-- [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
 
-- [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
+* [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
 
 ```
 from IPython.core.display import display, HTML
 display(HTML("<style>.container { width:100% !important; }</style>"))
 ```
 
-- [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분 
+* [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분
 
-- 슬라이드로 만들기 
-    - View → Cell Toolbar → Slideshow
-    - jupyter nbconvert Jupyter\ Slides.ipynb --to slides --post serve
+* 슬라이드로 만들기
+
+  * View → Cell Toolbar → Slideshow
+  * jupyter nbconvert Jupyter Slides.ipynb --to slides --post serve
+
+
+
