@@ -14,3 +14,15 @@ OSError: libcuda.so.1: cannot open shared object file:
 
 
 
+## [Python Lib. 문제 ](https://ssaru.github.io/tip/2019/04/11/opencv_with_virtualenv.html?fbclid=IwAR38eKCpyR_dG9MbpxG5eKsoQwlV9uDuPPDQKPuUy9LWyjRX2CydveEnGcY)
+
+python3 패키지가 설치되는 경로를 확인할 수 있다.
+
+```python
+import site
+site.getsitepackages()
+>> ['/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.6/dist-packages']
+
+```
+
+패지명.so 파일 복사 `cv2.cpython-36m-x86_64-linux-gnu.so`
