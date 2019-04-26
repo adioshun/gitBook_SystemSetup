@@ -21,3 +21,6 @@ tasks.json (task.json)
     
     
 > http://robotslam.blogspot.com/2018/03/open3d-modern-library-for-3d-data.html
+
+
+## [[Python] Visual Studio Code를 파이썬 IDE 로 이용해 보기](http://egloos.zum.com/mcchae/v/11262544)
