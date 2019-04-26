@@ -53,6 +53,10 @@ deactivate
 #### B. pipenv
 
 - pip와 virtualenv를 따로 쓸 필요가 없다. 동시에 사용이 된다.
+- Pipenv는 Pipfile와 Pipfile.lock을 requirements.txt를 대신하여 사용한다.
+- 해쉬가 자동생성된다. (보안)
+- 의존성 그래프를 제공함으로서 insight를 제공한다 (e.g. $ pipenv graph).
+- `.env` 파일들을 사용한 스트림라인 개발 워크플로우
 
 ```bash 
 sudo pip install pipenv
