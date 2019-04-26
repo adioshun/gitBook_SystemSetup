@@ -32,18 +32,9 @@ pip install -U pip
 
 
 
-### 1.2 Viretual Env.
+### 1.2 가상환경 
 
-
-```bash 
-sudo pip install pipenv
-pipenv shell --fancy  
-
-Run `pipenv install` to create a new empty pipenv virtualenv
-Run `pipenv shell`.
-
-```
-
+#### A. virtulenv
 
 ```bash
 pip install virtualenv
@@ -55,6 +46,25 @@ virtualenv --system-site-packages venv # global패키지 사용이 가능하다�
 source venv/bin/activate
 deactivate
 ```
+
+
+
+
+#### B. pipenv
+
+- pip와 virtualenv를 따로 쓸 필요가 없다. 동시에 사용이 된다.
+
+```bash 
+sudo pip install pipenv
+pipenv shell --fancy  
+
+Run `pipenv install` to create a new empty pipenv virtualenv
+Run `pipenv shell`.
+
+```
+
+
+
 
 
 ###### [Tip] requirements.txt 파일이용하여한번에설치하기
