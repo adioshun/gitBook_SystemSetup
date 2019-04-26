@@ -50,7 +50,7 @@ deactivate
 
 
 
-#### B. pipenv
+#### B. [pipenv](https://velog.io/@doondoony/pipenv-101)
 
 - pip와 virtualenv를 따로 쓸 필요가 없다. 동시에 사용이 된다.
 - Pipenv는 Pipfile와 Pipfile.lock을 requirements.txt를 대신하여 사용한다.
@@ -58,8 +58,25 @@ deactivate
 - 의존성 그래프를 제공함으로서 insight를 제공한다 (e.g. $ pipenv graph).
 - `.env` 파일들을 사용한 스트림라인 개발 워크플로우
 
-```bash 
-sudo pip install pipenv
+```python 
+# 설치 
+$sudo pip install pipenv
+
+#가상환경 생성 
+pipenv --python 3.6 #python 3.6버전을 기준으로 한 프로젝트가 생성
+
+#가상환경내 실행 
+pipenv [명령어] 
+pipenv install 
+
+# 정리 
+$ mkdir pipenv-test && cd pipenv-test  # 테스트해볼 폴더를 하나 만들어요
+$ pipenv shell  # 이따 설명하겠지만, 가상환경 시작 명령어 입니다
+(pipenv-test-tXHIoQb5) $ python --version  # 이제 더 이상 python3 --version 이 아닌점도 참고하세요
+(pipenv-test-tXHIoQb5) $ pipenv --rm  # 확인했으니 지웁시다
+(pipenv-test-tXHIoQb5) $ exit  # 이 쉘에서 나가서
+
+
 pipenv shell --fancy  
 
 Run `pipenv install` to create a new empty pipenv virtualenv
