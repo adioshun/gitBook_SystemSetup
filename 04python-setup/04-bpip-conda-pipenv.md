@@ -63,7 +63,7 @@ deactivate
 $sudo pip install pipenv
 
 #가상환경 생성 
-pipenv --python 3.6 #python 3.6버전을 기준으로 한 프로젝트가 생성
+pipenv --python 3.6 or pipenv shell #python 3.6버전을 기준으로 한 프로젝트가 생성
 
 #가상환경내 실행 
 pipenv [명령어] 
