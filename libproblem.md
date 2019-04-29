@@ -36,3 +36,9 @@ site.getsitepackages()
 > echo | gcc -v -x c -E - 
 > echo | gcc -v -x c++ -E - 
 
+
+## 제대로 라이브러리를 가져오는지 알아보려면
+
+sudo ldconfig -v
+
+
