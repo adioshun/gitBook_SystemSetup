@@ -26,3 +26,10 @@ site.getsitepackages()
 ```
 
 패지명.so 파일 복사 `cv2.cpython-36m-x86_64-linux-gnu.so`
+
+
+
+---
+
+> echo | gcc -v -x c -E - 
+
