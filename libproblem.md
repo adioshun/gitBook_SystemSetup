@@ -32,4 +32,5 @@ site.getsitepackages()
 ---
 
 > echo | gcc -v -x c -E - 
+> echo | gcc -v -x c++ -E - 
 
