@@ -31,6 +31,8 @@ site.getsitepackages()
 
 ---
 
+
+## [gcc default include path 확인 방법](http://jinyongjeong.github.io/2016/06/06/gcc_default_include_path_confirm/)
 > echo | gcc -v -x c -E - 
 > echo | gcc -v -x c++ -E - 
 
