@@ -1,11 +1,18 @@
 # ROS
 
+> !!! 아나콘다 삭제후 진행 anaconda is not recommended [\[Solution\]](https://github.com/udacity/RoboND-Python-StarterKit/blob/master/doc/linux_ros_anaconda_warning.md)
 
+## 1. ROS 설치 
+
+### 1.1 스크립트 설치 
+
+```
 melodic 18: https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_melodic.sh
 kinetic 16: https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_kinetic.sh
+```
 
 
-!!! 아나콘다 삭제후 진행 anaconda is not recommended [\[Solution\]](https://github.com/udacity/RoboND-Python-StarterKit/blob/master/doc/linux_ros_anaconda_warning.md)
+### 1.2 Line-by-Line cmd 설치 
 
 ```bash
 apt-get install lsb-release
@@ -51,7 +58,24 @@ pip install scipy && pip3 install scipy
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
 
-## Create a ROS Workspace
+---
+
+## 3. Create a ROS Workspace
+
+### 3.1 [catkin build](http://korearosnews.blogspot.com/2015/03/catkin-catkintools.html)
+
+```python
+#apt-get install python-catkin-tools
+
+mkdir ~/catkin_workspace
+cd ~/catkin_workspace
+mkdir src
+catkin init
+```
+
+
+
+### 3.2 catkin make 
 
 ```python
 # SOURCING  ENVIRONMENT - for kinetic version
@@ -64,28 +88,20 @@ cd ./build
 make -j4 -l4
 
 
+### 3.3 후처리 
+
 # SOURCING  CATKIN ENVIRONMENT - and automatically get it to source from now on
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/catkin_ws/devel/setup.bash; source ~/.bashrc
 echo $ROS_PACKAGE_PATH
 ```
 
-## [Create a ROS Workspace 2](http://korearosnews.blogspot.com/2015/03/catkin-catkintools.html)
-
-```python
-#apt-get install python-catkin-tools
-
-mkdir ~/catkin_workspace
-cd ~/catkin_workspace
-mkdir src
-catkin init
-```
 
 ---
 
-## 2. 패키지 설치 방법
+## 3. 패키지 설치 방법
 
-### 2.1 소스 설치
+### 3.1 소스 설치
 
 ```python
 # INDIGO VERSION
@@ -95,13 +111,18 @@ rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
 cd ~/catkin_ws/ && catkin_make
 ```
 
-### 2.2 apt설치
+### 3.2 apt설치
 
 ```
 apt-get install ros-$ROS_DISTRO-velodyne
 ```
 
-#### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
+
+---
+
+## 4. 에러 처리 
+
+###### \[패키지 설치시 에러처리\] Could not find a package configuration file provided by
 
 * apt-get install apt-file && apt-file update
 
@@ -133,7 +154,7 @@ apt-get install ros-$ROS_DISTRO-velodyne
 
 ---
 
-# Tip
+## 5.Tip
 
 * 여러 컴퓨터에 설치 
 
