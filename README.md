@@ -44,5 +44,6 @@
   * [jupyterbook](c800-c791-b3c4-ad6c/jupyterbook.md)
   * [Screen](c800-c791-b3c4-ad6c/screen.md)
   * [github](c800-c791-b3c4-ad6c/github.md)
+  * [주유의 IT 책 쓰기 불바다 강론](http://bit.ly/2Jqik3N)
 * [jetson\_tx2](jetsontx2.md)
 
