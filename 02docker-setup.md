@@ -4,7 +4,6 @@
 
 # Install
 
-
 ## 0. [docker-nvidia for ubuntu 18](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 ```
@@ -18,9 +17,9 @@ sudo systemctl status docker
 sudo apt-get install -y nvidia-docker2
 sudo pkill -SIGHUP dockerd
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
-
 ```
 
+---
 
 ## 1. docker 설치 \(CPU지원 도커\)
 
@@ -54,9 +53,11 @@ root@ubuntu16:/tmp# sudo apt-get install docker-ce={17.12.0~ce-0~ubuntu}
 
 Add User : sudo usermod -aG docker adioshun
 
+---
+
 ## 2. nvidia-docker 설치 \(GPU지원 도커\)
 
-###### \# 버젼 1
+### 2.1 버젼 1
 
 ```python
 # nvidia-docker 다운로드
@@ -71,7 +72,7 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 
 > Ndivia-docker binary : [Download](https://github.com/NVIDIA/nvidia-docker/releases), [Manual](https://github.com/NVIDIA/nvidia-docker)
 
-###### \# 버젼 2
+### 2.2 버젼 2
 
 ```python
 # If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
@@ -96,9 +97,6 @@ sudo pkill -SIGHUP dockerd
 # Test nvidia-smi with the latest official CUDA image
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 ```
-
-
-
 
 
 
