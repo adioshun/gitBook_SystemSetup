@@ -14,8 +14,6 @@
   * [02\_A\_Vagrant](02docker-setup/02a-vagrant.md)
   * [02\_B\_Singularity](02docker-setup/02b-singularity.md)
 * [03\_ROS\_setup](03ros-setup.md)
-  * [03\_A\_Autoware](03ros-setup/03a-autoware.md)
-  * [03\_B\_Apollo](03ros-setup/03b-apollo.md)
 * [04\_Python\_setup](04python-setup.md)
   * [04-B-Pip\_Conda\_Pipenv](04python-setup/04-bpip-conda-pipenv.md)
   * [04\_A\_Jupyter\_setup](04python-setup/04a-jupyter-setup.md)
@@ -48,5 +46,4 @@
   * [github](c800-c791-b3c4-ad6c/github.md)
   * [test](c800-c791-b3c4-ad6c/test.md)
   * [주유의 IT 책 쓰기 불바다 강론](http://bit.ly/2Jqik3N)
-
 
