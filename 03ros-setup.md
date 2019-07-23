@@ -14,7 +14,7 @@ kinetic 16: https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/i
 
 ### 1.2 Line-by-Line cmd 설치 
 
-```bash
+```python 
 apt-get install lsb-release
 
 # ADD TO APT REPOSITORY LIST
@@ -58,6 +58,8 @@ pip install scipy && pip3 install scipy
 
 > Ref :[Ronny](http://ronny.rest/blog/post_2017_03_29_ros/)
 
+
+환경 설정 확인 :`printenv | grep ROS`
 ---
 
 ## 3. Create a ROS Workspace
