@@ -1,6 +1,13 @@
 # 초기 설정
 
 
+ [Repository 변경 ](https://webdir.tistory.com/201)
+
+```python 
+sudo vi /etc/apt/sources.list
+:%s/kr.archive.ubuntu.com/ftp.daum.net/g
+```
+
 
 ## Editor
 
