@@ -1,60 +1,49 @@
 # 초기 설정
 
 
- [Repository 변경 ](https://webdir.tistory.com/201)
+## 1. 필수 패키지 설치 
+
 
 ```python 
-sudo vi /etc/apt/sources.list
+# [Repository 변경 ](https://webdir.tistory.com/201)
+# [Ubuntu Sources List Generator](https://repogen.simplylinux.ch/index.php)
+$ sudo vi /etc/apt/sources.list
 :%s/kr.archive.ubuntu.com/ftp.daum.net/g
-```
+$ sudo update
 
+# leafpad :https://go.microsoft.com/fwlink/?LinkID=760868
+$ sudo apt install leafpad
 
-## Editor
+# Terminal 
+$ sudo apt-get install terminator
+$ sudo apt-get install guake  #/usr/bin/guake ㅅㅣㅈㅏㄱㅁㅔㄴㅠ ㅊㅜㄱㅏ 
 
-* leafpad : `sudo apt install leafpad`
-
-* code : 'https://go.microsoft.com/fwlink/?LinkID=760868'
-
-## Terminal 
-
-* 멀티창 : `sudo apt-get install terminator`
-
-* guake : `sudo apt-get install guake`  #/usr/bin/guake ㅅㅣㅈㅏㄱㅁㅔㄴㅠ ㅊㅜㄱㅏ 
-
-
-
-
-## Browser
-
-```
-snap install chrome
-```
-
-```
+# Browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-# sudo dpkg -P google-chrome-stable #삭제 
-```
+### or $ snap install chrome
 
-Tor Browser : `sudo apt install torbrowser-launcher`
+# Tor Browser
+$ sudo apt install torbrowser-launcher
 
-## VScode
-
-https://code.visualstudio.com/
+# VScode : https://code.visualstudio.com/
 
 
+# gnome-tweak 
 ---
 
 
 
-### 멀티 부팅 
+## 2. 멀티 부팅 
 - [GRUB](http://programmingskills.net/archives/190) 설정
 - GUI Tool : `sudo add-apt-repository ppa:danielrichter2007/grub-customizer` - `sudo apt-get install grub-customizer`
 
 추천 로고 : https://www.windowslatest.com/wp-content/uploads/2017/07/Ubuntu-on-Windows-10-696x348.jpg
 
-## 테마 
+
+
+## 3. 테마 
 
 > [paper 테마](https://snwh.org/paper)
 
@@ -68,9 +57,7 @@ sudo apt-get install paper-icon-theme paper-gtk-theme paper-icon-theme
 gnome-tweak를 통해 변경 
 
 
-## apt-source list update 
 
-[Ubuntu Sources List Generator](https://repogen.simplylinux.ch/index.php)
 
 
 ---
