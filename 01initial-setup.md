@@ -9,6 +9,8 @@
 # [Ubuntu Sources List Generator](https://repogen.simplylinux.ch/index.php)
 $ sudo vi /etc/apt/sources.list
 :%s/kr.archive.ubuntu.com/ftp.daum.net/g
+:%s/archive.ubuntu.com/ftp.daum.net/g
+
 $ sudo update
 
 # leafpad :https://go.microsoft.com/fwlink/?LinkID=760868
