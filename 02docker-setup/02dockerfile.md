@@ -36,7 +36,7 @@ docker pull adioshun/ros16:python23-pcl\_opend3d\_161226
 | 16.4 | 7.0/ |  |  |  |
 | 18.4 | 9.2/7 | `docker pull nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04` | 2GB |  |
 | 18.04 | 10.0/7 | `docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04` |  |  |
-| 16.04 | 10.0/7 | 'docker pull pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel\` | 6.17G | pytorch 1.0.1- |
+| 16.04 | 10.0/7 | `docker pull pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel` | 6.17G | pytorch 1.0.1- |
 
 * base: starting from CUDA 9.0, contains the bare minimum \(libcudart\) to deploy a pre-built CUDA application.
   Use this image if you want to manually select which CUDA packages you want to install.
