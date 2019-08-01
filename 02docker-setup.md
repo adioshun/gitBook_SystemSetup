@@ -1,10 +1,22 @@
-> 참고: [Docker Official Hub](https://hub.docker.com/), [Docker Material Links](http://documents.docker.co.kr/ ), [eBook](http://www.pyrasis.com/private/2014/11/30/publish-docker-for-the-really-impatient-book),
->
-> [Tips](http://newsight.tistory.com/228): 명령어, 팁들
+# Docker 
 
-# Install
+> 참고: [Docker Official Hub](https://hub.docker.com/), [Docker Material Links](http://documents.docker.co.kr/ ), [eBook](http://www.pyrasis.com/private/2014/11/30/publish-docker-for-the-really-impatient-book),[Tips](http://newsight.tistory.com/228): 명령어, 팁들
 
-## 0. [docker-nvidia for ubuntu 18](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+```python
+docker run --runtime=nvidia -it --privileged --network=host -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+
+docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+
+
+
+```
+
+
+
+
+## 1. Install
+
+### 1.1 [docker-nvidia for ubuntu 18](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -19,9 +31,7 @@ sudo pkill -SIGHUP dockerd
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 ```
 
----
-
-## 1. docker 설치 \(CPU지원 도커\)
+### 1.2 docker 설치 \(CPU지원 도커\)
 
 ```
 # 이전 docker 삭제 
@@ -55,24 +65,7 @@ Add User : sudo usermod -aG docker adioshun
 
 ---
 
-## 2. nvidia-docker 설치 \(GPU지원 도커\)
-
-### 2.1 버젼 1
-
-```python
-# nvidia-docker 다운로드
-wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
-
-# 패키지 설치
-sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
-
-# nvidia docker 테스트
-nvidia-docker run --rm nvidia/cuda nvidia-smi
-```
-
-> Ndivia-docker binary : [Download](https://github.com/NVIDIA/nvidia-docker/releases), [Manual](https://github.com/NVIDIA/nvidia-docker)
-
-### 2.2 버젼 2
+### 1.3 nvidia-docker 설치 \(GPU지원 도커\)
 
 ```python
 # If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
@@ -101,16 +94,9 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 ---
 
-# How to use
-
-```python
-docker run --runtime=nvidia -it --privileged --network=host -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
-
-docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
+## 2. How to use
 
 
-
-```
 
 
 ## Image search on the server
