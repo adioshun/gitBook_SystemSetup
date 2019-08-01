@@ -4,7 +4,6 @@
 
 ```python
 docker run --runtime=nvidia -it --privileged --network=host -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
-
 docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY --volume /workspace:/workspace --name 'Ubuntu' <image> /bin/bash
 
 
@@ -248,7 +247,9 @@ docker load -i example.tar
 
 ---
 
-## Webcam 연결
+## 3.Tips
+
+### 3.1 Webcam 연결
 
 1. USB연결후 `lsusb`하여 연결 확인
 2. Docker RUN시 `--privileged` 옵션 추가 
@@ -278,11 +279,9 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
----
+### 3.2 모니터링 
 
-
-
-# Docker Manager 
+#### A. Docker Manager 
 - [홈페이지](https://github.com/kevana/ui-for-docker)
 
 ```
@@ -304,7 +303,7 @@ https://gist.github.com/nacyot/8366310
 
 
 
-### [docker_cli_dashboard](https://github.com/goody80/docker_cli_dashboard)
+#### B. [docker_cli_dashboard](https://github.com/goody80/docker_cli_dashboard)
 
 ![](https://raw.githubusercontent.com/goody80/docker_cli_dashboard/master/sample01.png)
 
@@ -316,7 +315,7 @@ dcs
 ```
 
 
-### [NexClipper](https://github.com/TheNexCloud/NexClipper)
+#### C. [NexClipper](https://github.com/TheNexCloud/NexClipper)
 
 ```python
 sudo docker pull nexclipper/nexclipper;
@@ -333,15 +332,13 @@ sudo docker run \
 ```
 
 
----
-
-# Docker에서 GUI(x11) 실행하기 
+###  3.3 Docker에서 GUI(x11) 실행하기 
 
 > [중요] xmamager 사용시 하기 설정 필요 없이 실행 가능 
 
 [Using GUI's with Docker](http://wiki.ros.org/docker/Tutorials/GUI)
 
-## Script로 실행 
+#### A. Script로 실행 
 
 ```bash
 ## to start this script: ./run_ros.sh
@@ -407,9 +404,9 @@ nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <
 
 ---
 
-# Docker Image
+### 3.4 추천 Docker Image
 
-## 1. [ROS-Kinetic with VNC](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full)
+####A ##. [ROS-Kinetic with VNC](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full)
 
 Docker image to provide HTML5 VNC interface to access ROS kinetic on Ubuntu 16.04 with the LXDE desktop environment.
 
