@@ -27,6 +27,16 @@
 
 > [GPU Useage를 편하게 모니터 해보자!](https://eungbean.github.io/2018/08/29/gpu-monitor-with-byobu/?fbclid=IwAR3Rv0iPd1PJjEogujyxWBWjJyLknu_QLxexY_OfIyrOTaLsAADEzFagpRE)
 
+
+* Network Usage 
+https://askubuntu.com/questions/15836/how-to-track-the-total-network-data-in-a-month
+
+```
+sudo add-apt-repository ppa:teejee2008/ppa
+sudo apt-get update
+sudo apt-get install conky-manager
+```
+
 ## 학습 모니터링
 
 * 앱기반 : [Hyperdash](https://hyperdash.io/), `pip install hyperdash && hyperdash login`
