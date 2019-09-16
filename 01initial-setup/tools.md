@@ -67,6 +67,9 @@ sudo apt install qdirstat
 ![](https://static.makeuseof.com/wp-content/uploads/2017/08/muo-linux-diskusagetools-qdirstat.png)
 
 
+--- 
+
+
 ## 공간 확보 
 
 ```
@@ -81,8 +84,15 @@ $ sudo du -ckx | sort -n > /tmp/duck-root
 - 이전 커널 삭제 
 ```
 uname -r #현커널 확인
+dpkg --list|grep linux-image #설치된 커널 확인 
 apt-get purge linux-headers-xx linux-headers-xx-heneric linux-image-xx-generic linux-image-extra-xx-genric 
-#boot공간 확보 
+#이전 버젼 만 제거 # apt-get purge linux-image-
+```
+
+```python 
+journalctl --disk-usage
+sudo vi /etc/systemd/journald.conf #SystemMaxUse=50M
+cd /var/log/journal/
 ```
 
 [좋은도커이미지만들기](https://dayone.me/1740z5r)
