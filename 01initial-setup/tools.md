@@ -72,6 +72,10 @@ sudo apt install qdirstat
 
 ## 공간 확보 
 
+> https://www.omgubuntu.co.uk/2016/08/5-ways-free-up-space-on-ubuntu
+
+자동 제거 툴 : BleachBit #sudo apt install bleachbit
+
 ```
 apt-get clean
 pip clean?
