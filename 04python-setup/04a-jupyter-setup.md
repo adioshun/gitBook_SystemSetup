@@ -122,6 +122,8 @@ python2 -m ipykernel install --user
 3. 자동으로 실행되거나 run에 가면 실행시킨 tensorboard로 이동할 수 있습니다.
 ```
 
+---
+
 #### 2. Python 용 R 설치 \(/w conda\)
 
 ```bash
@@ -230,4 +232,12 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
   * jupyter nbconvert Jupyter Slides.ipynb --to slides --post serve
 
 
+## code.py 파일을 jupyter에서 사용하기 
 
+```python
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # __file__에 따옴표 
+
+import sys; sys.argv=['']; del sys
+parser.add_argument(....)
+
+```
