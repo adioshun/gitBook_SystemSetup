@@ -7,14 +7,13 @@
 
 ### 2.1 Apt install
 
-apt-get install ros-$ROS_DISTRO-pointgrey-camera-driver
+apt-get install ros-kinetic-pointgrey-camera-driver #ubuntu 18은 지원 안함 
 
 ### 2.2 Source install
 
 [pointgrey\_camera\_driver](http://wiki.ros.org/pointgrey_camera_driver)
 
 ```
-# INDIGO VERSION
 cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/pointgrey_camera_driver.git
 cd pointgrey_camera_driver
 rosdep install --from-paths ./ --ignore-src --rosdistro $ROS_DISTRO -y
