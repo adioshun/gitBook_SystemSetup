@@ -30,7 +30,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 $ sudo apt install torbrowser-launcher
 
 # VScode : https://code.visualstudio.com/
-
+Download Link : https://go.microsoft.com/fwlink/?LinkID=760868
 
 # gnome-tweak 
 ---
