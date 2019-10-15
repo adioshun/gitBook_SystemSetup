@@ -1,15 +1,17 @@
 # CUDA 활용 환경 구성
 
-> cuda 10을 위해 nvidia 418, cuda설치시 드라이버 같이 설치 됨 
-
-
 ||ubuntu14.04|ubuntu16.04|ubuntu18.04|
 |-|-|-|-|
 |CUDA|8.0|9.0|10.0|
 
 ![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
 
+1. `nvidia-smi`상단의 드라이버 버젼 확인 
+2. 지원하는 cuda 버젼 확인 및 설치 : `sudo apt-get install cuda-10-0`
+3. cuDNN 설치 : `sudo apt-get install libcudnn7-dev`
+4. 버젼 확인 : `cat /usr/local/cuda/version.txt`
 
+---
 
 
 ## 1. Nvidia 드라이버 설치 [[Download]](http://www.nvidia.com/Download/index.aspx?lang=en-us)
