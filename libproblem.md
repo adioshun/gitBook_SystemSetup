@@ -41,4 +41,12 @@ site.getsitepackages()
 
 sudo ldconfig -v
 
+---
+
+## 9. 에러 처리 
+`apt-get install -y libcupti-dev`  #에러발생 "/sbin/ldconfig.real: /usr/lib/nvidia-375/libEGL.so.1 is not a symbolic link"
+
+libcudnn.so.5: cannot open shared object file 
+- `LD_LIBRARY_PATH="/usr/local/cuda-8.0/targets/x86_64-linux/lib` #ldconfig -v 로해당라이브러리위치확인
+- `export LD_LIBRARY_PATH` # 확인 : `echo $LD_LIBRARY_PATH`
 
