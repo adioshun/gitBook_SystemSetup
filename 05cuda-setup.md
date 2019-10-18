@@ -6,6 +6,8 @@
 
 ![](https://camo.githubusercontent.com/578cbdc3cca2ddc2fe30e6796ec1cf404aa134d4/68747470733a2f2f692e696d6775722e636f6d2f4571736d7873752e706e67)
 
+![](https://i.stack.imgur.com/Laiii.png)
+
 1. `nvidia-smi`상단의 드라이버 버젼 확인 
 2. 지원하는 cuda 버젼 확인 및 설치 : `sudo apt-get install cuda-10-0`
 3. cuDNN 설치 : `sudo apt-get install libcudnn7-dev`
