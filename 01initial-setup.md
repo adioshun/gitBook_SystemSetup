@@ -11,21 +11,17 @@ $ sudo vi /etc/apt/sources.list
 :%s/kr.archive.ubuntu.com/ftp.kaist.ac.kr/g
 :%s/archive.ubuntu.com/ftp.kaist.ac.kr/g
 
-
-$ sudo update
-
 # leafpad :https://go.microsoft.com/fwlink/?LinkID=760868
 $ sudo apt install leafpad
 
 # Terminal 
 $ sudo apt-get install terminator
-$ sudo apt-get install guake  #/usr/bin/guake ㅅㅣㅈㅏㄱㅁㅔㄴㅠ ㅊㅜㄱㅏ 
+$ sudo apt-get install guake  #/usr/bin/guake 
 
 # Browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-### or $ snap install chrome
 
 # Tor Browser
 $ sudo apt install torbrowser-launcher
@@ -34,6 +30,8 @@ $ sudo apt install torbrowser-launcher
 Download Link : https://go.microsoft.com/fwlink/?LinkID=760868
 
 # gnome-tweak 
+```
+
 ---
 
 
