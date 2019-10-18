@@ -101,4 +101,17 @@ $ sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
 #Comment:   Folder Comparison and Synchronization
 ```
 
+### [FreeFileSync](https://www.tecmint.com/freefilesync-compare-synchronize-files-in-ubuntu/)
+
+```
+$ wget https://freefilesync.org/download/FreeFileSync_10.10_Linux.tar.gz
+$ cd Downloads/
+$ sudo tar xvf FreeFileSync_*.tar.gz -C /opt/
+$ cd /opt/
+$ ls
+$ sudo unzip FreeFileSync/Resources.zip -d /opt/FreeFileSync/Resources/
+$ ./FreeFileSync
+```
+
+
 
