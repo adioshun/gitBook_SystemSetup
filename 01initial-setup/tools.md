@@ -25,6 +25,30 @@
   * intel-gpu-tools : `sudo apt-get install intel-gpu-tools`, `intel_gpu_top`
   * nvtop : (h)top like task monitor for NVIDIA GPU
 
+
+```pythn 
+#Ubuntu disco (19.04)
+sudo apt install nvtop 
+
+#Ubuntu Older
+sudo apt install cmake libncurses5-dev libncursesw5-dev git
+git clone https://github.com/Syllo/nvtop.git
+mkdir -p nvtop/build && cd nvtop/build
+cmake ..
+
+# If it errors with "Could NOT find NVML (missing: NVML_INCLUDE_DIRS)"
+# try the following command instead, otherwise skip to the build with make.
+cmake .. -DNVML_RETRIEVE_HEADER_ONLINE=True
+
+make
+make install # You may need sufficient permission for that (root)
+```
+
+|![](https://1.bp.blogspot.com/-kUlBy_kIszQ/XROIGBi-0HI/AAAAAAAAC-4/d1wfWb2Y7546ICSJedmrT8DLygUZ6fyFwCLcBGAs/s640/nvtop-screenshot.png)||
+|-|-|
+|nvtop||
+
+
 > [GPU Useage를 편하게 모니터 해보자!](https://eungbean.github.io/2018/08/29/gpu-monitor-with-byobu/?fbclid=IwAR3Rv0iPd1PJjEogujyxWBWjJyLknu_QLxexY_OfIyrOTaLsAADEzFagpRE)
 
 
