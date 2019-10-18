@@ -50,3 +50,6 @@ libcudnn.so.5: cannot open shared object file
 - `LD_LIBRARY_PATH="/usr/local/cuda-8.0/targets/x86_64-linux/lib` #ldconfig -v 로해당라이브러리위치확인
 - `export LD_LIBRARY_PATH` # 확인 : `echo $LD_LIBRARY_PATH`
 
+
+
+`for fn in libpcl_*.so.1.9.1; do sudo ln -s $fn ${fn%.1.9.1}.1.7; done`
