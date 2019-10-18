@@ -1,11 +1,98 @@
 # Jupyter
 
-### 설치
 
-* pip 이용 설치 : `pip install jupyter` / `pip3 install jupyter`
-* conda이용 설치 : `conda install -y ipython jupyter`
+## Installation 
+```python 
+## Basic 
 
-### Jupyter Configuration
+pip install jupyter
+conda install -y ipython jupyter
+
+## Jupyter Lab설치
+# you will need jupyter notebook >= v4.2
+pip3 install jupyterlab
+jupyter serverextension enable --py jupyterlab --sys-prefix
+jupyter lab
+
+## Jupyter Extension설치
+conda install nb_conda -c conda-forge
+# conda install nb_conda
+# conda install -c anaconda-nb-extensions nbpresent
+# conda install -c conda-forge jupyter_contrib_nbextensions
+
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+
+jupyter contrib nbextension install --user
+```
+
+[참고](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
+
+---
+
+## TIP 
+
+### 1. [jupyter-tensorboard ](https://github.com/lspvic/jupyter_tensorboard)
+
+> 주피터 노트북에서 tensorboard를 바로 킬 수 있게 해줍니다.
+
+설치
+
+```
+1. Be sure that tensorflow(-gpu)>=1.3.0 has been installed.
+2. Install the pip package: pip(3) install jupyter-tensorboard
+```
+
+실행
+
+```
+1. jupyter로 logdir로 이동한다.
+2. new - tensorboard
+3. 자동으로 실행되거나 run에 가면 실행시킨 tensorboard로 이동할 수 있습니다.
+```
+
+
+### 2. Ignore warning
+```python 
+import warnings
+warnings.filterwarnings('ignore')
+```
+### 3. argv in Jupyter 
+```python 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # __file__에 따옴표 
+
+import sys; sys.argv=['']; del sys
+parser.add_argument(....)
+```
+
+### 4. Print All Values
+```python
+np.set_printoptions(threshold=np.inf)
+print(batch_data)
+np.set_printoptions(threshold=1000)
+```
+
+
+### 5. [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
+
+```
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))
+```
+
+* [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분
+
+* 슬라이드로 만들기
+
+  * View → Cell Toolbar → Slideshow
+  * jupyter nbconvert Jupyter Slides.ipynb --to slides --post serve
+
+
+
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+
+
+---
+### Configuration
 
 ```bash
 mkdir ~/.jupyter && cd ~/.jupyter 
@@ -35,40 +122,6 @@ c.NotebookApp.notebook_dir = '/workspace' # L195 기본 디렉터리를 지정�
 
 jupyter 테마: [\#1](https://github.com/powerpak/jupyter-dark-theme), [\#2](http://haanjack.github.io/jupyter/theme/2016/03/08/jupyter-theme.html), [\#3](https://github.com/dunovank/jupyter-themes)
 
-### Jupyter Lab설치
-
-Unonffical
-
-```
-# you will need jupyter notebook >= v4.2
-pip3 install jupyterlab
-jupyter serverextension enable --py jupyterlab --sys-prefix
-jupyter lab
-```
-
-### Jupyter Extension설치
-
-##### Official:[ref](https://docs.continuum.io/anaconda/jupyter-notebook-extensions)
-
-```
-conda install nb_conda -c conda-forge
-# conda install nb_conda
-# conda install -c anaconda-nb-extensions nbpresent
-```
-
-> UnsatisfiableError: [solved](https://github.com/ContinuumIO/anaconda-issues/issues/1423)
-
-* [K3D-jupyter](https://github.com/K3D-tools/K3D-jupyter): Jupyter notebook extension for 3D visualization.
-
-##### Unofficial:[ref](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
-
-```
-#conda install -c conda-forge jupyter_contrib_nbextensions
-pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-jupyter contrib nbextension install --user
-```
-
-[참고](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
 
 ### Jupyter 다중커널설정
 
@@ -103,24 +156,6 @@ python2 -m ipykernel install --user
 > * [Docker 이미지로 설치한 Jupyter에 커널 추가하기](http://mazdah.tistory.com/784)
 > * [Installing the IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html)
 
-### [jupyter-tensorboard ](https://github.com/lspvic/jupyter_tensorboard)
-
-> 주피터 노트북에서 tensorboard를 바로 킬 수 있게 해줍니다.
-
-설치
-
-```
-1. Be sure that tensorflow(-gpu)>=1.3.0 has been installed.
-2. Install the pip package: pip(3) install jupyter-tensorboard
-```
-
-실행
-
-```
-1. jupyter로 logdir로 이동한다.
-2. new - tensorboard
-3. 자동으로 실행되거나 run에 가면 실행시킨 tensorboard로 이동할 수 있습니다.
-```
 
 ---
 
@@ -211,33 +246,3 @@ source activate cling
 conda install xeus-cling notebook -c QuantStack -c conda-forge
 ```
 
----
-
-# Jupyter Tips
-
-* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
-
-* [넓은 화면에서 보기](https://github.com/oscar6echo/notebook-wide-screen)
-
-```
-from IPython.core.display import display, HTML
-display(HTML("<style>.container { width:100% !important; }</style>"))
-```
-
-* [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분
-
-* 슬라이드로 만들기
-
-  * View → Cell Toolbar → Slideshow
-  * jupyter nbconvert Jupyter Slides.ipynb --to slides --post serve
-
-
-## code.py 파일을 jupyter에서 사용하기 
-
-```python
-BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # __file__에 따옴표 
-
-import sys; sys.argv=['']; del sys
-parser.add_argument(....)
-
-```
