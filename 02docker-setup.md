@@ -15,6 +15,28 @@ docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/t
 
 ## 1. Install
 
+
+```python 
+# GPU (Ubuntu 16.04/18.04, Debian Jessie/Stretch/Buster)
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+$ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+$ sudo systemctl restart docker
+
+> https://github.com/NVIDIA/nvidia-docker
+
+# CPU
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+sudo usermod -a -G docker $USER
+
+> https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+
+```
+
 ### 1.1 [docker-nvidia for ubuntu 18](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 
 ```
