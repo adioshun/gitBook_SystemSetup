@@ -8,7 +8,7 @@
 
 ![](https://i.stack.imgur.com/Laiii.png)
 
-```python 
+```
 $ release="ubuntu"$(lsb_release -sr | sed -e "s/\.//g")
 $ echo $release
 
@@ -17,6 +17,8 @@ $ sudo apt-key adv --fetch-keys "http://developer.download.nvidia.com/compute/cu
 $ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/'$release'/x86_64 /" > /etc/apt/sources.list.d/nvidia-cuda.list'
 $ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/'$release'/x86_64 /" > /etc/apt/sources.list.d/nvidia-machine-learning.list'
 $ sudo apt update
+
+$ sudo apt-get install cuda-9-0
 ```
 
 1. `nvidia-smi`상단의 드라이버 버젼 확인 
