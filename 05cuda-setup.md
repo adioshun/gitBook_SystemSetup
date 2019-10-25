@@ -8,6 +8,17 @@
 
 ![](https://i.stack.imgur.com/Laiii.png)
 
+```python 
+$ release="ubuntu"$(lsb_release -sr | sed -e "s/\.//g")
+$ echo $release
+
+$ sudo apt install sudo gnupg
+$ sudo apt-key adv --fetch-keys "http://developer.download.nvidia.com/compute/cuda/repos/"$release"/x86_64/7fa2af80.pub"
+$ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/'$release'/x86_64 /" > /etc/apt/sources.list.d/nvidia-cuda.list'
+$ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/'$release'/x86_64 /" > /etc/apt/sources.list.d/nvidia-machine-learning.list'
+$ sudo apt update
+```
+
 1. `nvidia-smi`상단의 드라이버 버젼 확인 
 2. 지원하는 cuda 버젼 확인 및 설치 : `sudo apt-get install cuda-10-0`
 3. cuDNN 설치 : `sudo apt-get install libcudnn7-dev`
