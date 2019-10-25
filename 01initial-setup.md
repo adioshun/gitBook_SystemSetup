@@ -16,7 +16,14 @@ $ sudo apt install leafpad
 
 # Terminal 
 $ sudo apt-get install terminator
-$ sudo apt-get install guake  #/usr/bin/guake 
+
+$ sudo add-apt-repository ppa:linuxuprising/guake
+$ sudo apt-get update
+$ sudo apt install guake
+$ sudo add-apt-repository ppa:linuxuprising/guake
+$ sudo add-apt-repository --remove ppa:linuxuprising/guake
+
+
 
 # Browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
