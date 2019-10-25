@@ -1,6 +1,21 @@
 # Jupyter
 
 
+```python 
+
+from IPython.display import clear_output
+
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))
+
+import warnings
+warnings.filterwarnings('ignore')
+
+import sys; sys.argv=['']; del sys
+parser.add_argument(....)
+```
+
+
 ## Installation 
 ```python 
 ## Basic 
