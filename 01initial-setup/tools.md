@@ -61,6 +61,9 @@ sudo apt-get update
 sudo apt-get install conky-manager
 ```
 
+* bmon : 'apt install bmon`
+![](https://2.bp.blogspot.com/-9gAsuNMF_P0/WKsaGcx_DgI/AAAAAAAAMk4/kiIw6OIkTa0VOCCofNsNT6W5hgHeV2yLwCLcB/s1600/bmon.png)
+
 ## 학습 모니터링
 
 * 앱기반 : [Hyperdash](https://hyperdash.io/), `pip install hyperdash && hyperdash login`
