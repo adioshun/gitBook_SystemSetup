@@ -20,6 +20,7 @@ docker run --gpus all -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X1
 
 ## 1. Install
 
+> Nvidia Docker는 일반 도커 설치후 addon으로 설치 
 
 ```python 
 # GPU (Ubuntu 16.04/18.04, Debian Jessie/Stretch/Buster)
