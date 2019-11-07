@@ -131,5 +131,5 @@ $ sudo unzip FreeFileSync/Resources.zip -d /opt/FreeFileSync/Resources/
 $ ./FreeFileSync
 ```
 
-
+> ISO to USB : [balena](https://www.balena.io/etcher/)
 
