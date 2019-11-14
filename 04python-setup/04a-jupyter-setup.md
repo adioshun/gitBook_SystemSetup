@@ -40,6 +40,12 @@ pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarb
 jupyter contrib nbextension install --user
 ```
 
+
+> 도커 이미지 : [Creating a Docker image for Jupyter + Octave](https://thicolares.com/2018/11/11/creating-a-docker-image-for-jupyter-Octave.html): Octave, Julia, R, Python3 
+
+
+
+
 [참고](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
 
 ---

@@ -434,7 +434,7 @@ nvidia-docker run -it --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY <
 
 ### 3.4 추천 Docker Image
 
-####A ##. [ROS-Kinetic with VNC](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full)
+## 1. [ROS-Kinetic with VNC](https://hub.docker.com/r/ct2034/vnc-ros-kinetic-full)
 
 Docker image to provide HTML5 VNC interface to access ROS kinetic on Ubuntu 16.04 with the LXDE desktop environment.
 
