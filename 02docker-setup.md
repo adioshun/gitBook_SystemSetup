@@ -359,8 +359,14 @@ sudo docker run \
 # NexClipper is now running (in the background) on http://localhost:10001.
 ```
 
+### 3.3. Docker Slim 
 
-###  3.3 Docker에서 GUI(x11) 실행하기 
+![](https://github.com/docker-slim/docker-slim/raw/master/assets/images/dslim/DockerSlimLogo1Big.png)
+
+
+- [깃허브](https://github.com/docker-slim/docker-slim)
+
+###  3.4 Docker에서 GUI(x11) 실행하기 
 
 > [중요] xmamager 사용시 하기 설정 필요 없이 실행 가능 
 
