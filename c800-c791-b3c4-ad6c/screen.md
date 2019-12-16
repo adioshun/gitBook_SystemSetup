@@ -7,6 +7,13 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update && sudo apt install peek
 ```
 
+
+### mp4 to gif
+
+```
+$ ffmpeg -i da-play-full.mp4 -vf scale=1024:-1 -ss 00:00:04 -to 00:00:14 da-play-full.gif
+```
+
 ## img to gif 
 
 
