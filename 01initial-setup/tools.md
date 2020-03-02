@@ -7,7 +7,7 @@
 
 
 
-## Monitoring
+## CPU/GPU Monitoring
 
 * CPU
 
@@ -51,6 +51,7 @@ make install # You may need sufficient permission for that (root)
 
 > [GPU Useage를 편하게 모니터 해보자!](https://eungbean.github.io/2018/08/29/gpu-monitor-with-byobu/?fbclid=IwAR3Rv0iPd1PJjEogujyxWBWjJyLknu_QLxexY_OfIyrOTaLsAADEzFagpRE)
 
+## Netwkrok 
 
 * Network Usage 
 https://askubuntu.com/questions/15836/how-to-track-the-total-network-data-in-a-month
@@ -63,6 +64,16 @@ sudo apt-get install conky-manager
 
 * bmon : 'apt install bmon`
 ![](https://2.bp.blogspot.com/-9gAsuNMF_P0/WKsaGcx_DgI/AAAAAAAAMk4/kiIw6OIkTa0VOCCofNsNT6W5hgHeV2yLwCLcB/s1600/bmon.png)
+
+
+
+##### 프로그램별 사용량 
+
+
+![](https://cloud.githubusercontent.com/assets/6733770/16925237/a1363dd0-4cf9-11e6-81aa-83a52e72c549.png)
+https://github.com/mbfoss/gnethogs
+
+
 
 ## 학습 모니터링
 
