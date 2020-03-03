@@ -59,9 +59,18 @@ make install # You may need sufficient permission for that (root)
 
 ```python 
 $ sudo apt-get install vnstat
-$ sudo vnstat -u -i <interface>
+$ sudo vnstat -u -i <interface>  #initialize a database first
+$ sudo systemctl start vnstat.service
+
+
 # https://askubuntu.com/questions/15836/how-to-track-the-total-network-data-in-a-month
 ```
+```
+sudo add-apt-repository ppa:teejee2008/ppa
+sudo apt-get update
+sudo apt-get install conky-manager
+```
+
 
 
 
@@ -74,11 +83,7 @@ https://github.com/mbfoss/gnethogs
 ### 2.3 통합 
 ![](https://2.bp.blogspot.com/-9gAsuNMF_P0/WKsaGcx_DgI/AAAAAAAAMk4/kiIw6OIkTa0VOCCofNsNT6W5hgHeV2yLwCLcB/s1600/bmon.png)
 
-```
-sudo add-apt-repository ppa:teejee2008/ppa
-sudo apt-get update
-sudo apt-get install conky-manager
-```
+
 
 * bmon : 'apt install bmon`
 
