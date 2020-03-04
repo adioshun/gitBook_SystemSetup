@@ -23,6 +23,8 @@ Acquire {
 }
 ```
 
+> 키서버 추가 : sudo apt-key adv --keyserver-options http-proxy=http://168.219.61.252:8080/ --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
 ## 3. pip 
 ```
 $ pip install --proxy http://proxy.252:port 패키지명 
@@ -35,6 +37,10 @@ trusted-host = pypi.org files.pythonhosted.org
 ```
 
 
+## 9. 확인 
+```
+set | grep -i proxy
+```
 
 ---
 
