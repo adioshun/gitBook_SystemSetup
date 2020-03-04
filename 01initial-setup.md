@@ -1,15 +1,6 @@
 # 초기 설정
 
-## 0. Cert Installation
 
-```
-$ sudo mkdir /usr/share/ca-certificates/samsung
-$ cp samsung.crt /usr/share/ca-certificates/samsung/
-$ sudo cp samsung.crt /usr/share/ca-certificates/samsung/
-$ sudo cp samsung.crt /etc/ssl/certs/
-$ sudo dpkg-reconfigure ca-certificates
-$ sudo update-ca-certificates
-```
 
 ## 1. 필수 패키지 설치
 

@@ -29,3 +29,18 @@ $ python -m pip install --trusted-host pypi.org --trusted-host files.pythonhoste
 trusted-host = pypi.org files.pythonhosted.org
 
 ```
+
+
+
+---
+
+## etc. Cert Installation
+
+```
+$ sudo mkdir /usr/share/ca-certificates/samsung
+$ sudo cp samsung.crt /usr/share/ca-certificates/samsung/
+$ sudo cp samsung.crt /etc/ssl/certs/
+$ sudo dpkg-reconfigure ca-certificates
+$ sudo update-ca-certificates
+```
+
