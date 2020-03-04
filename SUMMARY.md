@@ -2,8 +2,9 @@
 
 * [README](README.md)
 * [01\_Initial\_setup](01initial-setup.md)
-  * [01\_Aws\_GCP](01initial-setup/01a-vm-setup.md)
-  * [01\_B\_x11\_setup](01initial-setup/01b-x11setup.md)
+  * [프록시 설정](01initial-setup/proxy.md)
+  * [Aws\_GCP](01initial-setup/01a-vm-setup.md)
+  * [x11\_setup](01initial-setup/01b-x11setup.md)
   * [VIM\_BASH\_TMUX](01initial-setup/vimbash-tmux.md)
   * [Mount](01initial-setup/mount.md)
   * [한글 입력](01initial-setup/koreaninput.md)
