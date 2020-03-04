@@ -9,6 +9,7 @@
 # [Ubuntu Sources List Generator](https://repogen.simplylinux.ch/index.php)
 $ sudo vi /etc/apt/sources.list
 :%s/kr.archive.ubuntu.com/ftp.kaist.ac.kr/g
+:%s/kp.archive.ubuntu.com/ftp.kaist.ac.kr/g
 :%s/archive.ubuntu.com/ftp.kaist.ac.kr/g
 :%s/ftp.daum.net/ftp.kaist.ac.kr/g
 
