@@ -10,6 +10,7 @@
 $ sudo vi /etc/apt/sources.list
 :%s/kr.archive.ubuntu.com/ftp.kaist.ac.kr/g
 :%s/archive.ubuntu.com/ftp.kaist.ac.kr/g
+:%s/ftp.daum.net/ftp.kaist.ac.kr/g
 
 # leafpad :https://go.microsoft.com/fwlink/?LinkID=760868
 $ sudo apt install leafpad
