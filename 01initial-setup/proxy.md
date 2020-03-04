@@ -14,8 +14,12 @@ no_proxy="127.0.0.1, localhost, 168.219.61.*"
 ```
 #sudo vi /etc/apt/apt.conf.d/90proxy  #90숫자는 큰 의미 없음, 중복 되지 않는 숫자로 지정 
 Acquire {
-    HTTP::proxy "http:// 168.219.61.xxx:8080/";
-    HTTPS::proxy "http:// 168.219.61.xxx:8080/";
+  HTTP {
+    Proxy "http://168.219.61.xxx:8080";
+  };
+  HTTPS {
+    Proxy "https://168.219.61.xxx:8080";
+  };
 }
 ```
 
