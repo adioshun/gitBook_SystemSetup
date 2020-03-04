@@ -21,7 +21,7 @@ Acquire {
 
 ## 3. pip 
 ```
-$ pip install --proxy http://proxy.server:port 패키지명 
+$ pip install --proxy http://proxy.252:port 패키지명 
 $ python -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org [패키지명]
 
 # vi ~/.pip/pip.conf 
