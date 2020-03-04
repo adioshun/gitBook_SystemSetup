@@ -36,6 +36,18 @@ trusted-host = pypi.org files.pythonhosted.org
 
 ```
 
+## 3. wget 
+
+```
+#~/.wgetrc  or /etc/wgetrc
+use_proxy=yes
+http_proxy=168.219.61.252:8080
+https_proxy=168.219.61.252:8080
+
+$ wget ... -e use_proxy=yes -e http_proxy=127.0.0.1:8080 ...
+```
+
+
 
 ## 9. 확인 
 ```
