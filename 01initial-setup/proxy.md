@@ -4,9 +4,12 @@
 
 ```
 #bashrc
-http_proxy="http://168.219.61.xxx:8080"
-https_proxy="http://168.219.61.xxx:8080"
-no_proxy="127.0.0.1, localhost, 168.219.61.*"
+export http_proxy="http://168.219.61.xxx:8080"
+export https_proxy="http://168.219.61.xxx:8080"
+export no_proxy="127.0.0.1, localhost, 168.219.61.*"
+
+#unset http_proxy
+#unset https_proxy
 ```
 
 
@@ -22,8 +25,11 @@ Acquire {
   };
 }
 ```
-
-> 키서버 추가 : sudo apt-key adv --keyserver-options http-proxy=http://168.219.61.252:8080/ --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+```
+# 키서버 추가 : 
+$ sudo apt-key adv --keyserver-options http-proxy=http://168.219.61.252:8080/ --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+$ sudo -E add-apt-repository {ppa:alexx2000/doublecmd}
+```
 
 ## 3. pip 
 ```
