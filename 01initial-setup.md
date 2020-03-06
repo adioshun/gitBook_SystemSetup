@@ -19,15 +19,18 @@ $ sudo apt install leafpad
 # Terminal 
 $ sudo apt-get install terminator
 
+# Guakr
 $ sudo add-apt-repository ppa:linuxuprising/guake
 $ sudo apt-get update
 $ sudo apt install guake
-$ sudo add-apt-repository ppa:linuxuprising/guake
-$ sudo add-apt-repository --remove ppa:linuxuprising/guake
+$ sudo add-apt-repository --remove ppa:linuxuprising/guake #제거 
+
+# Double Commander 
+sudo add-apt-repository ppa:alexx2000/doublecmd
+sudo apt-get install doublecmd-gtk #QT버젼 doublecmd-qt
 
 
-
-# Browser
+# 크롬 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
 sudo dpkg -i google-chrome-stable_current_amd64.deb
