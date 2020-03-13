@@ -58,6 +58,14 @@ https://extensions.gnome.org/extension/1112/screenshot-tool/
 https://github.com/OttoAllmendinger/gnome-shell-screenshot/
 
 
+#NeoVIM
+$ sudo apt-get install neovim
+$ sudo apt-get install python3-neovim
+https://neovim.io/
+
+# FishShell
+https://fishshell.com/
+https://okky.kr/article/454099
 ```
 
 ---
