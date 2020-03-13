@@ -19,7 +19,7 @@ $ sudo apt install leafpad
 # Terminal 
 $ sudo apt-get install terminator
 
-# Guakr
+# Guake
 $ sudo add-apt-repository ppa:linuxuprising/guake
 $ sudo apt-get update
 $ sudo apt install guake
@@ -47,6 +47,17 @@ sudo apt install code
 > Download Link : https://go.microsoft.com/fwlink/?LinkID=760868
 
 # gnome-tweak
+
+
+# mathpix
+https://mathpix.com/
+
+#screen Shot
+설치 : ubuntu software - Add on - Shell Extensiotn - Screenshot Tool 
+https://extensions.gnome.org/extension/1112/screenshot-tool/
+https://github.com/OttoAllmendinger/gnome-shell-screenshot/
+
+
 ```
 
 ---
