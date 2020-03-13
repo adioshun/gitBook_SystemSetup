@@ -242,20 +242,22 @@ cd ~ && jupyter notebook
 > [https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks\(caffe2,-tensorflow\)/](https://hskang9.github.io/ai/2017/05/31/cpp-jupyter-for-deep-learning-frameworks%28caffe2,-tensorflow%29/)
 
 zeromq설치
-
-* apt-get install zeromq 또는 
-* wget [https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh](https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh) \(sudo 명령어 삭제필요\)
+```python 
+$ sudo apt install zeromq #ubuntu 16
+#$ sudo apt instal libzmq3-dev
+$ wget https://gist.githubusercontent.com/katopz/8b766a5cb0ca96c816658e9407e83d00/raw/bc93fda1fe2fe5c6f45648ba131596134d92f7dc/setup-zeromq.sh
+```
 
 cling 설치
-
-* 18 : wget [https://root.cern.ch/download/cling/cling\_2018-11-05\_ubuntu18.tar.bz2](https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu18.tar.bz2)
-* 16 : wget [https://root.cern.ch/download/cling/cling\_2018-11-05\_ubuntu16.tar.bz2](https://root.cern.ch/download/cling/cling_2018-11-05_ubuntu16.tar.bz2)
-* tar xvf {파일명}
-* vi ~/.bashrc -&gt; `PATH=/root/cling_2018-11-05_ubuntu16/bin:$PATH`
-* source ~/.bashrc
-* $cd cling\_2018-11-05\_ubuntu16/share/cling/Jupyter/kernel/
-* $pip3 install -e .
-* $jupyter-kernelspec install --user cling-cpp17
+```python 
+# https://root.cern.ch/download/cling/cling_2020-03-11_ubuntu18.tar.bz2
+$ tar xvf cling_2020-03-11_ubuntu18.tar.bz2
+$ cd cling_2020-03-11_ubuntu18/share/cling/Jupyter/kernel/
+$ pip3 install -e .
+$ jupyter-kernelspec install --user cling-cpp17
+$ vi ~/.bashrc -&gt; `PATH=/home/adioshun/cling_2020-03-11_ubuntu18/bin:$PATH
+$ source ~/.bashrc
+```
 
 ### 3.3 Conda 설치
 
