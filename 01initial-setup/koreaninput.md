@@ -46,5 +46,19 @@ sudo apt install nimf nimf-libhangul
 https://ncube.net/13986
 ```
 
+# 한글키다 동작 하지 않을경우 
 
+> 일부 키보드의 경우 [hangul]키를 [alt_R]로 인식 하여서 발생 
+
+```c
+xmodmap -e 'remove mod1 = Alt_R' # Alt_R의 기본 키 매핑 제거
+xmodmap -e 'keycode 108 = Hangul' # Alt_R을 Hangul 키로 매핑
+
+# 키 매핑 영구 저장
+xmodmap -pke > ~/.Xmodmap
+
+#출처 : https://kwonnam.pe.kr/wiki/linux/xmodmap
+```
+
+- [우분투 리눅스 한영전환/한자키(오른쪽 Alt Ctrl) 안 될 때](https://jimnong.tistory.com/939)
 
