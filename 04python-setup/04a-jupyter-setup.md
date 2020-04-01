@@ -100,6 +100,11 @@ from IPython.core.display import display, HTML
 display(HTML("<style>.container { width:100% !important; }</style>"))
 ```
 
+### 6. [쥬피터로 디버깅 하기](https://blog.jupyter.org/a-visual-debugger-for-jupyter-914e61716559)
+
+![](https://miro.medium.com/max/1400/0*9pVDg58cTz5Yezw8.gif)
+
+
 * [부팅시 자동 실행](https://dymaxionkim.github.io/beautiful-jekyll/2017-01-23-Jupyter/) : 중간 부분
 
 * 슬라이드로 만들기
