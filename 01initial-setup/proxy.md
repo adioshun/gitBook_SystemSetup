@@ -39,6 +39,57 @@ $ python -m pip install --trusted-host pypi.org --trusted-host files.pythonhoste
 # vi ~/.pip/pip.conf 
 [global]
 trusted-host = pypi.org files.pythonhosted.org
+```
+
+
+## conda
+
+```python
+$ conda config --set ssl_verify false
+$ vi ~/.condarc
+
+"""
+ssl_verify: false
+proxy_servers:
+ http: http://168.219.61.252:8080
+ https: http://168.219.61.252:8080
+#앞 공백은 스페이스로, tab아님 
+"""
+```
+## Docker
+
+```python 
+# Docker 버전 17.07 이상
+$ vi ~/.docker/config.json
+"""
+{
+    "proxies": {
+        "default": {
+            "httpProxy": "http://proxy.your.corp",
+            "httpsProxy": "https://proxy.your.corp",
+            "noProxy": "localhost,127.0.0.1,*.your.corp"
+        }
+    }
+}
+"""
+$ service docker restart 
+
+```
+
+## git 
+
+```python 
+$ vi ~/.gitconfig
+"""
+[http]
+      proxy = http://168.219.61.252:8080
+      sslVerify = false
+
+[https]
+	proxy = http://168.219.61.252:8080
+	sslVerify = false
+"""
+
 
 ```
 
