@@ -8,6 +8,7 @@ sudo dpkg -i ~/Downloads/code_*.deb; sudo apt -f install
 
 - python PATH : file -> preferences -> settings (User Settings)
 
+
 ```
 #/home/adioshun/.vscode/extensions/ms-python.python-2018.6.0/node_modules/vscode-uri/.vscode/settings.json
 {
@@ -24,3 +25,17 @@ tasks.json (task.json)
 
 
 ## [[Python] Visual Studio Code를 파이썬 IDE 로 이용해 보기](http://egloos.zum.com/mcchae/v/11262544)
+
+---
+
+## GIST 연동 
+
+https://github.com/settings/tokens -> [Generate New Token] -> "gist" 체크 
+
+
+VS Code 
+1. gist확장프로그램 설치 (gist, Ken howard)
+2. Command+Shift+p -> [Gist: select profile] -> 토큰 입력 
+3. Command+Shift+p -> [Gist:Insert Text From Gist File] -> 사용할 snippet 지정 
+4. https://github.com/mre/vscode-snippet  /gistpad 
+eda5663d223b154e240b23302f4f7244ba5df11c
