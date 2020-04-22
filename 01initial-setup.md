@@ -68,6 +68,8 @@ https://fishshell.com/
 https://okky.kr/article/454099
 ```
 
+- 런치바 위치 변경(gsettings set com.canonical.Unity.Launcher launcher-position Bottom`
+
 ---
 
 ## 2. 멀티 부팅
