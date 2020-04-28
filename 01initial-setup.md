@@ -57,6 +57,12 @@ https://mathpix.com/
 https://extensions.gnome.org/extension/1112/screenshot-tool/
 https://github.com/OttoAllmendinger/gnome-shell-screenshot/
 
+#원격 제어(윈도우)
+$ snap install remmina
+
+$ sudo add-apt-repository ppa:remmina-ppa-team/remmina-next
+$ sudo apt-get update
+$ sudo apt-get install remmina remmina-plugin-* libfreerdp-plugins-standard
 
 #NeoVIM
 $ sudo apt-get install neovim
