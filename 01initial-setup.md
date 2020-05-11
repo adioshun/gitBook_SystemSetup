@@ -144,4 +144,6 @@ $ ./FreeFileSync
 > ISO to USB : [balena](https://www.balena.io/etcher/)
 
 
+---
 
+Local host Search : `nmap -n -sP 192.168.137.0/24`
