@@ -1,4 +1,6 @@
+# xwindow
 
+- 로컬에서 GUI 로그인 안될때 : `sudo apt install --reinstall gnome-session ubuntu-desktop`
 
 ## 5. X11 Forwarding
 
