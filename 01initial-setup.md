@@ -64,6 +64,9 @@ $ sudo add-apt-repository ppa:remmina-ppa-team/remmina-next
 $ sudo apt-get update
 $ sudo apt-get install remmina remmina-plugin-* libfreerdp-plugins-standard
 
+# 원격제어(ubbuntu -> windows) 2x client 
+# https://www.parallels.com/kr/products/ras/download/client/
+
 #NeoVIM
 $ sudo apt-get install neovim
 $ sudo apt-get install python3-neovim
