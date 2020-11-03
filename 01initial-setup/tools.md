@@ -89,7 +89,11 @@ https://github.com/mbfoss/gnethogs
 
 
 
+### 2.3 대역폭 
 
+![](https://cdn.clien.net/web/api/file/F01/10702478/c7ac83f4a1429.png)
+
+https://www.clien.net/service/board/lecture/15489366
 
 
 ## 학습 모니터링
