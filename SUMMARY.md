@@ -2,6 +2,7 @@
 
 * [README](README.md)
 * [01\_Initial\_setup](01initial-setup.md)
+  * [추천 프로그램](01initial-setup/Recommended.md)
   * [프록시 설정](01initial-setup/proxy.md)
   * [Aws\_GCP](01initial-setup/01a-vm-setup.md)
   * [x11\_setup](01initial-setup/01b-x11setup.md)
