@@ -93,7 +93,18 @@ https://github.com/mbfoss/gnethogs
 
 ![](https://cdn.clien.net/web/api/file/F01/10702478/c7ac83f4a1429.png)
 
-https://www.clien.net/service/board/lecture/15489366
+> [speedtest](https://www.clien.net/service/board/lecture/15489366)
+
+```
+$ sudo apt-get install gnupg1 apt-transport-https dirmngr
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+$ echo "deb https://ookla.bintray.com/debian generic main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
+$ sudo apt-get update
+$ sudo apt-get install speedtest
+$ speedtest
+```
+
+
 
 
 ## 학습 모니터링
