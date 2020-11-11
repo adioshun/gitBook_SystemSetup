@@ -24,3 +24,16 @@ MS Stroe -> 선택
 3. 포트 포워딩 삭제 : 'netsh interface portproxy delete v4tov4 listenaddress=0.0.0.0 listenport=8082`
 
 4. 방확벽 해제
+
+
+# [윈도우 Insider 참여 ](https://insider.windows.com/ko-kr/getting-started#flight)
+
+
+# [WSL](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
+
+
+
+```
+
+
+
