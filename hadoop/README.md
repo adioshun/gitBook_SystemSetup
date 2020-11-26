@@ -1,3 +1,5 @@
+# [Hadoop: Setting up a Single Node Cluster.](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
+
 
 - 출처: https://private-space.tistory.com/42 [티끌모아 산을 쌓아보자]
 - https://hhgg.tistory.com/5
