@@ -16,7 +16,7 @@
 ## 사전 작업 
 ```
 $sudo apt install software-properties-common wget vim openssh-server pdsh
-
+```
 
 ## open jdk 설치
 ```
@@ -61,6 +61,7 @@ $ source ~/.bashrc
 ```
 
 ## 아래의 명령어를 입력하여 output 디렉토리에 출력이 기록되도록 한다.
+
 ```
 cd ~/hadoop-3.2.1
 mkdir input
