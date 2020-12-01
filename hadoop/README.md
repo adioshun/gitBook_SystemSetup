@@ -17,21 +17,6 @@
 ```
 $sudo apt install software-properties-common wget vim openssh-server pdsh
 
-# 사용자 추가 
-$sudo adduser hdoop
-$su - hdoop
-
-#비번 없이 접속 되도록 설정
-$ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 
-$cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
-$chmod 0600 ~/.ssh/authorized_keys 
-$ssh localhost   # 비번없이 접속 되는지 확인
-$sudo vi /etc/pdsh/rcmd_default
-"""
-ssh
-""" 
-```
-
 
 ## open jdk 설치
 ```
@@ -93,17 +78,12 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  #L54
 $vi $HADOOP_HOME/etc/hadoop/core-site.xml
 """
 <configuration>
-<property>
-  <name>hadoop.tmp.dir</name>
-  <value>/home/hdoop/tmpdata</value>
-</property>
-<property>
-  <name>fs.default.name</name>
-  <value>hdfs://localhost:9000</value>
-</property>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
 </configuration>
 """
-$mkdir /home/hdoop/tmpdata
 ```
 
 ### 3. hdfs-site.xml
@@ -116,22 +96,13 @@ $vi $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 
 """
 <configuration>
-<property>
-  <name>dfs.data.dir</name>
-  <value>/home/hdoop/dfsdata/namenode</value>
-</property>
-<property>
-  <name>dfs.data.dir</name>
-  <value>/home/hdoop/dfsdata/datanode</value>
-</property>
-<property>
-  <name>dfs.replication</name>
-  <value>1</value>
-</property>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
 </configuration>
 """
-$ mkdir -p /home/hdoop/dfsdata/namenode
-$ mkdir -p /home/hdoop/dfsdata/datanode
+
 ```
 
 ### 4. mapred-site.xml
@@ -165,3 +136,19 @@ $ hdfs namenode -format
 $ start-dfs.sh
 ```
 
+---
+
+# 사용자 추가 
+$sudo adduser hdoop
+$su - hdoop
+
+#비번 없이 접속 되도록 설정
+$ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 
+$cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
+$chmod 0600 ~/.ssh/authorized_keys 
+$ssh localhost   # 비번없이 접속 되는지 확인
+$sudo vi /etc/pdsh/rcmd_default
+"""
+ssh
+""" 
+```
