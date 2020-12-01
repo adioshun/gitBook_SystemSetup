@@ -53,14 +53,7 @@ export HADOOP_OPTS"-Djava.library.path=$HADOOP_HOME/lib/nativ"
 $ source ~/.bashrc 
 ```
 
-## 아래의 명령어를 입력하여 output 디렉토리에 출력이 기록되도록 한다.
 
-```
-cd ~/hadoop-3.2.1
-mkdir input
-cp etc/hadoop/*.xml input
-bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output 'dfs[a-z.\+'
-```
 
 ### 2. hadoop-env.sh
 ```
@@ -99,29 +92,7 @@ $vi $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 
 ```
 
-### 4. mapred-site.xml
-
-```
-$vi $HADOOP_HOME/etc/hadoop/mapred-site.xml
-#define MapReduce values
-"""
-<configuration> 
-<property> 
-  <name>mapreduce.framework.name</name> 
-  <value>yarn</value> 
-</property> 
-</configuration>
-"""
-```
-
-### 5. yarn-sit
-
-```
-$vi $HADOOP_HOME/etc/hadoop/yarn-site.xml
-# The yarn-site.xml file is used to define settings relevant to YARN. It contains configurations for the Node Manager, Resource Manager, Containers, and Application Master.
-
-```
-
+  
 
 
 
@@ -139,10 +110,70 @@ $ssh localhost   # 비번없이 접속 되는지 확인
 ```
 $ hdfs namenode -format
 $ start-dfs.sh
+http://localhost:9870
+$ stop-dfs.sh
+```
+
+---
+## 동작 테스트 
+
+```
+cd ~/hadoop-3.2.1
+mkdir input
+cp etc/hadoop/*.xml input
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output 'dfs[a-z.\+'
 ```
 
 ---
 
+# YARN on a Single Node
+
+### 4. mapred-site.xml
+
+```
+$vi $HADOOP_HOME/etc/hadoop/mapred-site.xml
+#define MapReduce values
+"""
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <property>
+        <name>mapreduce.application.classpath</name>
+        <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+    </property>
+</configuration>
+"""
+```
+
+### 5. yarn-sit
+
+```
+$vi $HADOOP_HOME/etc/hadoop/yarn-site.xml
+# The yarn-site.xml file is used to define settings relevant to YARN. It contains configurations for the Node Manager, Resource Manager, Containers, and Application Master.
+
+
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.env-whitelist</name>
+        <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+    </property>
+</configuration>
+
+
+```
+
+실행 및 확인 
+```
+$ sbin/start-yarn.sh
+http://localhost:8088/  #ResourceManager
+$ sbin/stop-yarn.sh
+```
 
 
 ---
