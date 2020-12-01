@@ -1,16 +1,5 @@
 # [Hadoop: Setting up a Single Node Cluster.](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 
-
-- 출처: https://private-space.tistory.com/42 [티끌모아 산을 쌓아보자]
-- https://hhgg.tistory.com/5
-- https://dksshddl.tistory.com/entry/Hadoop-Hadoop-%EC%84%A4%EC%B9%98-wordcount-%EC%98%88%EC%A0%9C
-- https://phoenixnap.com/kb/install-hadoop-ubuntu
-- https://private-space.tistory.com/42
-- https://it-sunny-333.tistory.com/79 
-- https://datacodingschool.tistory.com/30
-
----
-
 # 사용자 추가후 작업 추천
 ```
 $sudo adduser hdoop
@@ -134,6 +123,17 @@ $vi $HADOOP_HOME/etc/hadoop/yarn-site.xml
 ```
 
 
+
+
+## 비번 없이 접속 되도록 설정
+
+```
+$ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 
+$cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
+$chmod 0600 ~/.ssh/authorized_keys 
+$ssh localhost   # 비번없이 접속 되는지 확인
+```
+
 ## 네임노드 포맷 & 실행
 
 ```
@@ -145,13 +145,13 @@ $ start-dfs.sh
 
 
 
-#비번 없이 접속 되도록 설정
-$ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 
-$cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
-$chmod 0600 ~/.ssh/authorized_keys 
-$ssh localhost   # 비번없이 접속 되는지 확인
-$sudo vi /etc/pdsh/rcmd_default
-"""
-ssh
-""" 
-```
+---
+
+
+- 출처: https://private-space.tistory.com/42 [티끌모아 산을 쌓아보자]
+- https://hhgg.tistory.com/5
+- https://dksshddl.tistory.com/entry/Hadoop-Hadoop-%EC%84%A4%EC%B9%98-wordcount-%EC%98%88%EC%A0%9C
+- https://phoenixnap.com/kb/install-hadoop-ubuntu
+- https://private-space.tistory.com/42
+- https://it-sunny-333.tistory.com/79 
+- https://datacodingschool.tistory.com/30
