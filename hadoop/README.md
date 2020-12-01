@@ -11,7 +11,11 @@
 
 ---
 
-
+# 사용자 추가후 작업 추천
+```
+$sudo adduser hdoop
+$su - hdoop
+```
 
 ## 사전 작업 
 ```
@@ -139,9 +143,7 @@ $ start-dfs.sh
 
 ---
 
-# 사용자 추가 
-$sudo adduser hdoop
-$su - hdoop
+
 
 #비번 없이 접속 되도록 설정
 $ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 
