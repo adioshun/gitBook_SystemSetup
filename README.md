@@ -10,7 +10,7 @@
   * [Mount](01initial-setup/mount.md)
   * [한글 입력](01initial-setup/koreaninput.md)
   * [모니터링 tools](01initial-setup/tools.md)
-  * [Windows](01initial-setup/windows.md)
+  * [Windows_WSL](01initial-setup/windows.md)
 * [02\_Docker\_setup](02docker-setup.md)
 * [03\_ROS\_setup](03ros-setup.md)
 * [04\_Python\_setup](04python-setup.md)
