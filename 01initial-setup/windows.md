@@ -26,12 +26,16 @@ MS Stroe -> 선택
 4. 방확벽 해제
 
 
-# [윈도우 Insider 참여 ](https://insider.windows.com/ko-kr/getting-started#flight)
+---
+# WSL
+
+### [윈도우 Insider 참여 ](https://insider.windows.com/ko-kr/getting-started#flight)
 
 
-# [WSL](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
+### [WSL](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
 
 
+### [WSL2 초기 셋업부터 도커로 서버 실행까지](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
 
 ```
 
