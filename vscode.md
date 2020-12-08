@@ -24,6 +24,18 @@ tasks.json (task.json)
 > http://robotslam.blogspot.com/2018/03/open3d-modern-library-for-3d-data.html
 
 
+## ssh이용 원격 접속 
+
+비밀번호 인증을 지원하지 않는다고 함 
+```
+$ ssh-keygen -t rsa -b 4096
+$ scp -P 22 <유저홈디렉터리패스>/.ssh/id_rsa.pub 서버계정명@서버주소
+
+#리모트 서버에서 
+$ mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat ~/tmp.pub >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && rm -f ~/tmp.pub
+```
+출처: https://noooop.tistory.com/entry/VS-Code-Remote-사용하기-SSH-방식 [잡동사니]
+
 ## [[Python] Visual Studio Code를 파이썬 IDE 로 이용해 보기](http://egloos.zum.com/mcchae/v/11262544)
 
 ---
