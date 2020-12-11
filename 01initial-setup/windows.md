@@ -46,3 +46,5 @@ $ sudo apt install vino -y
 #설정 - 공유 - 비번 설정 
 $ gsettings set org.gnome.Vino require-encryption false
 ```
+
+> [xRDP – Easy install xRDP on Ubuntu 16.04,18.04,20.04,20.10 (Script Version 1.2.1)](https://c-nergy.be/blog/?p=15733) [[홈페이지](https://www.c-nergy.be/products.html)
