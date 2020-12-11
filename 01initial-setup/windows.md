@@ -40,4 +40,10 @@ MS Stroe -> 선택
 ```
 
 
+# [windows -> ubuntu 원격 접속 (VNC)](https://tolovefeels.tistory.com/20)
 
+```
+$ sudo apt install vino -y
+#설정 - 공유 - 비번 설정 
+$ gsettings set org.gnome.Vino require-encryption false
+```
