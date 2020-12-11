@@ -37,7 +37,6 @@ MS Stroe -> 선택
 
 ### [WSL2 초기 셋업부터 도커로 서버 실행까지](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
 
-```
 
 
 # [windows -> ubuntu 원격 접속 (VNC)](https://tolovefeels.tistory.com/20)
