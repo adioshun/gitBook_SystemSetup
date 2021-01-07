@@ -38,3 +38,6 @@ python train.py; echo "Done" | mail -s "fishished" xxxx@gmail.com
 python train.py;sudo shoutdown now
 ```
 
+---
+
+네이버 클라우드 윈도우 서버 & 원격데스크톱 https://www.ncloud.com/guideCenter/guide/3
