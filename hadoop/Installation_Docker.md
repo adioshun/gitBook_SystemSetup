@@ -1,3 +1,5 @@
+# Docker Network 
+
 ```
 $ docker network create --gateway 172.19.0.1 --subnet 172.19.0.0/21 mynet
 $ docker network ls
@@ -28,7 +30,7 @@ server01.hadoop.com
 server01
 ```
 $ cd ~
-$ apt-get install psmisc  #없으면 설치시 에러 발생생
+$ apt-get install psmisc ssh  #없으면 설치시 에러 발생생
 $ env | grep LANG # LANG=en_US.UTF-8 확인 -> dpkg-reconfigure locales
 $ wget http://archive.cloudera.com/cm5/installer/latest/cloudera-manager-installer.bin   #ubuntu 16.04까지만 지원 
 $ chmod +x cloudera-manager-installer.bin
@@ -50,10 +52,15 @@ $ apt-get update
 
 == web으로 CM 접속 후 구성
 
-` 172.19.0.101:7180`
-
-
-
+1. 172.19.0.101:7180 
+2. admin/admin
+3. CDH 클러스터 설치에 대한 호스트를 지정
+```
+server01.hadoop.com
+server02.hadoop.com
+server03.hadoop.com
+```
+4. 
 
 
 
