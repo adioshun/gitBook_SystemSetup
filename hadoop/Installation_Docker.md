@@ -1,4 +1,4 @@
-# Docker Network 
+# Docker Network (HostPC)
 
 ```
 $ docker network create --gateway 172.19.0.1 --subnet 172.19.0.0/21 mynet
@@ -11,7 +11,7 @@ $ docker run -it --privileged --hostname server01.hadoop.com --network mynet --i
 
 
 
-----
+# Docker Hosts setup (In each docker)
 ```
 vi /etc/hosts
 """
@@ -27,7 +27,7 @@ server01.hadoop.com
 """
 ```
 
-server01
+# Manager Setup (Docker #1 = server01)
 ```
 $ cd ~
 $ apt-get install psmisc ssh  #없으면 설치시 에러 발생생
@@ -35,6 +35,8 @@ $ env | grep LANG # LANG=en_US.UTF-8 확인 -> dpkg-reconfigure locales
 $ wget http://archive.cloudera.com/cm5/installer/latest/cloudera-manager-installer.bin   #ubuntu 16.04까지만 지원 
 $ chmod +x cloudera-manager-installer.bin
 $ ./cloudera-manager-installer.bin
+$ service cloudera-scm-server status
+
 ```
 삭제 
 $ sudo /usr/share/cmf/uninstall-cloudera-manager.sh
