@@ -244,6 +244,13 @@ docker push adioshun/deeplearning:opencv3
 
 ```
 
+# [Docker별 IP 설정](https://blog.leocat.kr/notes/2016/12/24/docker-assign-ip-on-docker-container)
+```bash 
+$ docker network create --gateway 172.19.0.1 --subnet 172.19.0.0/21 mynet
+$ docker network ls
+$ docker network inspect mynet
+$ docker run -it --privileged --network mynet --ip 172.19.0.101 --name 'u101' <image>  /bin/bash
+```
 
 
 # Docker 저장 위치 변경 [[참고]](https://sanenthusiast.com/change-default-image-container-location-docker/)
