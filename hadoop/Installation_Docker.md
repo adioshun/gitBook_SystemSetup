@@ -35,4 +35,44 @@ $ ./cloudera-manager-installer.bin
 삭제 
 $ sudo /usr/share/cmf/uninstall-cloudera-manager.sh
 
-웹브라우져 : 172.19.0.101:7180
+
+
+== repository 추가
+```
+# http://www.cloudera.com/documentation/enterprise/latest/topics/cm_ig_install_path_b.html
+$ wget https://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list
+$ cp cloudera.list /etc/apt/sources.list.d/
+$ apt-get update
+```
+
+
+== web으로 CM 접속 후 구성
+
+` 172.19.0.101:7180`
+
+
+
+
+
+
+
+== 기타
+
+#cloudera manager 서비스 중지하기
+
+service cloudera-scm-server stop
+
+
+
+---
+== 사용 계정에 sudo 암호 물어보지 않도록 하기. 
+```python
+http://stackoverflow.com/questions/28171755/cloudera-installation-failed-to-detect-root-privileges-on-centos
+
+sudo vi /etc/sudoers
+
+#추가
+"""
+feisia ALL =(ALL) NOPASSWD: ALL
+"""
+```
