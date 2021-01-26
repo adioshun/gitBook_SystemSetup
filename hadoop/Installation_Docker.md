@@ -71,6 +71,9 @@ server03.hadoop.com
 service cloudera-scm-server stop
 
 
+> `Cloudera에서는 /proc/sys/vm/swappiness를 최대 10으로 설정할 것을 권장합니다.` 
+> `$ vi /etc/sysctl.conf` ` sysctl vm.overcommit_memory=1` Run `sysctl -p`
+
 
 ---
 == 사용 계정에 sudo 암호 물어보지 않도록 하기. 
