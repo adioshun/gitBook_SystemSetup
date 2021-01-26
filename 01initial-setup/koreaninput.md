@@ -7,6 +7,10 @@
 1. `Gnome Tweaks` - `Additional Layout Options` - `Korean Hangul/Hanja Keys` $ `Hardware Hangul/Hanja keys`
 2. `Ubuntu 설정` - `Region & Language` - `Manage Installed Languages` - Install `ibus-hangul` 
 3. `Input sources` + `+` + `Korean (hangul)` #Korean\(hangul\)이 안보이면 reboot
+4. `English (US)` 는 `-` 버튼으로 없애고, `Korean (Hangul)` 하나만 남게
+5. "Hangul toggle key" 에서 "Hangul" 하나만 남게 "Add", "Remove"
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile9.uf.tistory.com%2Fimage%2F9982113359F6992C214038)
 
 ```
 # Manual Install [ibus-hangul]
