@@ -27,6 +27,9 @@ server01.hadoop.com
 """
 ```
 
+- root log in : vi /etc/ssh/sshd_config -> passwd setup
+
+
 # Manager Setup (Docker #1 = server01)
 ```
 $ cd ~
@@ -53,7 +56,7 @@ server01.hadoop.com
 server02.hadoop.com
 server03.hadoop.com
 ```
-4. 
+
 
 
 
