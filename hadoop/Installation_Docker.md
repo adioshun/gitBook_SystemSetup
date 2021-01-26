@@ -4,7 +4,7 @@
 $ docker network create --gateway 172.19.0.1 --subnet 172.19.0.0/21 mynet
 $ docker network ls
 $ docker network inspect mynet
-$ docker run -it --privileged --hostname server01.hadoop.com --network mynet --ip 172.19.0.101 --volume /workspace:/workspace --name 'u101' ubuntu16:20210125  /bin/bash
+$ docker run -it --privileged --hostname server01.hadoop.com --network mynet --ip 172.19.0.101 --volume /workspace:/workspace --name 'u101' cloudera:20210126  /bin/bash
 ```
 
 > https://blog.leocat.kr/notes/2016/12/24/docker-assign-ip-on-docker-container
