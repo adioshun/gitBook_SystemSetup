@@ -2,11 +2,14 @@
 
 ## ubuntu 18
 
-1. 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04)
+> 한글 입력 [패키지 설정](http://awesometic.tistory.com/87), [단축키 설정](https://steemkr.com/ubuntu/@sjc333/18-04)
 
-> Korean\(hangul\)이 안보이면 reboot
+1. `Gnome Tweaks` - `Additional Layout Options` - `Korean Hangul/Hanja Keys` $ `Hardware Hangul/Hanja keys`
+2. `Ubuntu 설정` - `Region & Language` - `Manage Installed Languages` - Install `ibus-hangul` 
+3. `Input sources` + `+` + `Korean (hangul)` #Korean\(hangul\)이 안보이면 reboot
 
 ```
+# Manual Install [ibus-hangul]
 sudo add-apt-repository ppa:createsc/3beol
 sudo apt-get update; sudo apt-get install ibus ibus-hangul
 ibus-setup #ibus-setup-hangul
