@@ -43,15 +43,6 @@ $ sudo /usr/share/cmf/uninstall-cloudera-manager.sh
 
 
 
-== repository 추가
-```
-# http://www.cloudera.com/documentation/enterprise/latest/topics/cm_ig_install_path_b.html
-$ wget https://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list
-$ cp cloudera.list /etc/apt/sources.list.d/
-$ apt-get update
-```
-
-
 == web으로 CM 접속 후 구성
 
 1. 172.19.0.101:7180 
