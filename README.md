@@ -17,7 +17,7 @@
   * [04-B-Pip\_Conda\_Pipenv](04python-setup/04-bpip-conda-pipenv.md)
   * [04\_A\_Jupyter\_setup](04python-setup/04a-jupyter-setup.md)
 * [05\_CUDA\_setup](05cuda-setup.md)
-* [하둡_빅데이터플랫폼](hadoop/README.md)
+* [하둡_빅데이터플랫폼](hadoop/)
 * [08\_Library\_setup](08library-setup.md)
   * [opencv](08library-setup/opencv.md)
   * [Mayavi](08library-setup/mayavi.md)
