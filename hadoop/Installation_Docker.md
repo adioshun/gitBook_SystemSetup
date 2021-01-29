@@ -42,9 +42,12 @@ $ wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.c
 $ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
 $ apt-get update
 
-apt-cache showpkg ambari-server
-apt-cache showpkg ambari-agent
-apt-cache showpkg ambari-metrics-assembly
+$ apt-get install ambari-server
+$ ambari-server setup
+#Username : Ambari
+#Password : bigdata
+$ service ambari-server start
+https://hostname:8080/ #admin/admin
 ```
 
 
