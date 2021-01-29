@@ -33,6 +33,27 @@ server01.hadoop.com
 - root log in : vi /etc/ssh/sshd_config -> passwd setup
 
 
+---
+
+# [Ambari ](http://ambari.apache.org/install.html)
+
+```
+$ wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.com/ambari/ubuntu18/2.x/updates/2.7.3.0/ambari.list
+$ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
+$ apt-get update
+
+apt-cache showpkg ambari-server
+apt-cache showpkg ambari-agent
+apt-cache showpkg ambari-metrics-assembly
+```
+
+
+
+---
+
+# Claudera
+
+
 # Manager Setup (Docker #1 = server01)
 ```
 $ cd ~
