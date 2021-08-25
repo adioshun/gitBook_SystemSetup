@@ -1,6 +1,9 @@
 # On Ubuntu 20.04 with python3 
+```python
 sudo docker run -it --privileged --network=host --name 'Ubuntu20' 1318b700e415 /bin/bash
+```
 
+```python
 apt update
 apt install -y sudo ssh vim dialog apt-utils 
 
@@ -23,7 +26,7 @@ sudo -u postgres createdb -O ckan_default ckan_default -E utf-8 #DB추가(=ckan_
 apt install -y solr-tomcat
 
 
-
+```
 
 
 
