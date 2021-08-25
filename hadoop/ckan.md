@@ -1,6 +1,6 @@
 # On Ubuntu 20.04 with python3 
 ```python
-sudo docker run -it --privileged --network=host --name 'Ubuntu20' 1318b700e415 /bin/bash
+sudo docker run -d --privileged --network=host --name 'Ubuntu20' 1318b700e415 /usr/sbin/init
 ```
 
 ```python
