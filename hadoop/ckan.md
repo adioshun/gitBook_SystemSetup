@@ -42,6 +42,7 @@ sudo ckan db init #
 ```
 
 - [Ubuntu, PostgreSQL 설치하기](https://noweaver.github.io/posts/Journal/2020/05/13-Ubuntu-PostgreSQL-Installation/)
+- [CKAN Source 설치 가이드 ( Ubuntu 18.04 )](https://cntechsystems.tistory.com/25) : 씨앤텍시스템즈 기술블로그
 
 
 
