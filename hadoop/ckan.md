@@ -41,7 +41,7 @@ sudo ckan db init #
 
 ```
 
-
+- [Ubuntu, PostgreSQL 설치하기](https://noweaver.github.io/posts/Journal/2020/05/13-Ubuntu-PostgreSQL-Installation/)
 
 
 
