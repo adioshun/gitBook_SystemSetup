@@ -1,6 +1,7 @@
 # On Ubuntu 20.04 with python3 
 ```python
-sudo docker run -d --privileged --network=host --name 'Ubuntu20' 1318b700e415 /usr/sbin/init
+sudo docker run -d --privileged --network=host --name 'u20' ubuntu20-systemd /sbin/init
+#System has not been booted with systemd as init system (PID 1). Can't operate.
 ```
 
 ```python
@@ -24,7 +25,19 @@ sudo -u postgres createdb -O ckan_default ckan_default -E utf-8 #DB추가(=ckan_
 
 #3. Install and configure Solr
 apt install -y solr-tomcat
+vi /etc/tomcat9/server.xml
+`<Connector port="8080" protocol="HTTP/1.1"` -> <Connector port="8983" protocol="HTTP/1.1" `
 
+sudo mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
+
+sudo service tomcat9 restart #http://localhost:8983/solr/
+
+vi /etc/ckan/default/ckan.ini
+solr_url=http://127.0.0.1:8983/solr  #L94
+ckan.site_url = http://www.bigdata-car.kr #L62
+
+sudo ckan db init #
 
 ```
 
