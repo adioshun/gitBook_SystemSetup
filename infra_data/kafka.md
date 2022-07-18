@@ -1,15 +1,19 @@
-* sudo apt install openjdk-8-jdk ​
 
-□ 다운로드 & 설치 ​
+# 사전 설치
 
-Cd ~​
+```
+sudo apt install openjdk-8-jdk ​
+```
 
-Wget https://dlcdn.apache.org/kafka/3.2.0/kafka_2.13-3.2.0.tgz​
+## 코드 설치 
 
-Tar –xvzf kafka_2.13-3.2.0.tgz​
+```
+$ cd ~
+$ wget https://dlcdn.apache.org/kafka/3.2.0/kafka_2.13-3.2.0.tgz
+$ tar –xvzf kafka_2.13-3.2.0.tgz
+```
 
-​
-
-□설정 파일​
-
+## 설정 파일
+```
  ~/kafka/config/   #핵심 설정 4개 
+```
