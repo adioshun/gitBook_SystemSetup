@@ -21,3 +21,14 @@ $ tar –xvzf kafka_2.13-3.2.0.tgz
 ```
  ~/kafka/config/   #핵심 설정 4개 
 ```
+
+## JMX enable
+bash콘솔에서 
+```
+export KAFKA_JMX_OPTS='-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false 
+  -Dcom.sun.management.jmxremote.ssl=false 
+  -Dcom.sun.management.jmxremote.port=9999 
+  -Dcom.sun.management.jmxremote.rmi.port=9999 
+  -Djava.rmi.server.hostname=192.168.48.131'
+```
+> 외부 접속을 위해 IP주소 입력
