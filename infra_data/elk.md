@@ -30,12 +30,11 @@ pipeline.workers: 2
 pipeline.batch.size: 125
 ```
 
-1. 설정 파일 저장 폴더 만들기 
+1. producer 설정 파일 저장 폴더 만들기 
 ```
 $ mkdir logstash_conf
 $ vi logstash_conf/producer.conf
-```
-```
+
 input {
     file {
         path=>"/tmp/tracks*.csv"
@@ -62,6 +61,33 @@ output {
             format => "%{message}"
         }
         # compression_type => "snappy"
+    }
+}
+```
+2. consumer 설정 파일 저장 폴더 만들기 
+
+```
+$ vi logstash_conf/producer.conf
+
+input {
+    kafka {
+      bootstrap_servers => "broker-01:9092"
+      group_id => "consumer_group_1"
+      topics => ["kafka-mon"]
+      consumer_threads => 1
+    }
+}
+
+filter {
+    sleep {
+        time => "1"   # Sleep 1 second
+        every => 1   # on every 1th event
+    }
+}
+
+output {
+    stdout{
+        codec => rubydebug
     }
 }
 ```
