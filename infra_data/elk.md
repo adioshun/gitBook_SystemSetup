@@ -7,7 +7,7 @@
 ![image](https://user-images.githubusercontent.com/17797922/179491779-127ef151-bfb9-47a8-a1aa-97e81313ca00.png)
 
 
-## 사전 작업 
+# 0. 사전 작업 
 
 ### 오류1) File Descriptor 오류 해결
 [1]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
@@ -65,6 +65,38 @@ vm.max_map_count = 262144
 vm.max_map_count = 262144
 ```
 
+
+---
+
+# 1. Elasticsearch 설치 
+
+```
+> curl -LO https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-7.10.2-linux-x86_64.tar.gz
+> tar -xzf elasticsearch-oss-7.10.2-linux-x86_64.tar.gz
+> rm -rf elasticsearch-oss-7.10.2-linux-x86_64.tar.gz
+```
+
+설정
+```
+vi config/elasticsearch.yml
+## Master Node의 후보 서버 목록을 적어준다. (여기서는 1대 이므로 본인의 서버 정보만)
+cluster.initial_master_nodes: ["kakfa-monitoring"]  # IP로 적으면 에러 발생 
+
+```
+
+실행 
+```
+$ ./bin/elasticsearch 
+$ ./bin/elasticsearch -d -p elastic_pid -> (종료) pkill -F elastic_pid
+
+```
+
+확인 
+```
+curl -X GET "localhost:9200/?pretty"
+```
+
+---
 
 # logstash 설치 
 
