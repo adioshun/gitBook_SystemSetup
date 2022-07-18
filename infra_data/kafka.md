@@ -2,7 +2,11 @@
 # 사전 설치
 
 ```
-sudo apt install openjdk-8-jdk ​
+sudo apt install openjdk-8-jdk
+sudo vi /etc/profile
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+source /etc/profile
+echo $JAVA_HOME
 ```
 
 ## 코드 설치 
