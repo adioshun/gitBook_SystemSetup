@@ -39,6 +39,19 @@ $ echo $KAFKA_JMX_OPTS
 ```
 > 외부 접속을 위해 IP주소 입력
 
+docker에 설정 하기 
+```
+# https://blog.soga.ng/story/31/
+    environment:
+      JMX_PORT: 9093 # JMX(Java Management Extension)를 사용할 포트 지정
+      KAFKA_JMX_OPTS: -Dcom.sun.management.jmxremote=true 
+                      -Dcom.sun.management.jmxremote.authenticate=false 
+                      -Dcom.sun.management.jmxremote.ssl=false 
+                      -Djava.rmi.server.hostname={카프카 컨테이너의 아이피 주소} 
+                      -Dcom.sun.management.jmxremote.rmi.port=9393 
+                      -Djava.net.preferIPv4Stack=true
+```
+
 ### 카프카 서버 설정시 JMX 지정 하여 실행 하기 
 ```
 $ env JMX_PORT=9999 bin/kafka-server-start.sh config/server.properties
