@@ -103,4 +103,35 @@ $>get MeanRate
 $>bye
 #bye
 ```
+---
 
+## CMAK
+```
+Download the CMAK and build
+> cd ~
+> curl -LO https://github.com/yahoo/CMAK/archive/refs/tags/3.0.0.5.tar.gz
+> tar xvf 3.0.0.5.tar.gz
+> rm -rf 3.0.0.5.tar.gz
+> cd CMAK-3.0.0.5/
+
+## 소스코드를 build하여 실행파일 생성
+> ./sbt clean dist
+
+## build를 통해서 생성된 실행파일(cmak-3.0.0.5.zip)을 확인한다.
+> ls target/universal/
+cmak-3.0.0.5.zip  scripts
+
+## zip파일을 압축해제한다. (현재 디렉토리에 압축 해제)
+> sudo yum install -y unzip
+> unzip target/universal/cmak-3.0.0.5.zip
+STEP 2.CMAK 실행
+## 현재 디렉토리에 압축해제된 디렉토리(cmak-3.0.0.5) 확인한다. 
+> ls ~/CMAK-3.0.0.5/cmak-3.0.0.5
+README.md  bin  conf  lib  share
+
+## 모니터링 할 kakfka cluster의 zookeeper IP:PORT를 설정파일에 추가한다. 
+> vi ~/CMAK-3.0.0.5/cmak-3.0.0.5/conf/application.conf
+cmak.zkhosts="broker-01:2181"
+
+> ~/CMAK-3.0.0.5/cmak-3.0.0.5/bin/cmak
+```
