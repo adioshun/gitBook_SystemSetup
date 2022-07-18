@@ -56,7 +56,38 @@ $ jconsole
 
 ```
 > curl -OL https://github.com/jiaqi/jmxterm/releases/download/v1.0.2/jmxterm-1.0.2-uber.jar
-$ java -jar jmxterm_xxx.jar
 ```
 
+## jmxterm 실행
 ```
+> java -jar jmxterm-1.0.2-uber.jar
+Welcome to JMX terminal. Type "help" for available commands.
+
+## broker jmx port에 접속
+$>open localhost:9999
+
+## 조회 가능한 mbeans domain(metric 그룹)을 확인한다. 
+$>domains
+
+## 위 domain 중에 조회할 domain을 선택한다. 
+$>domain kafka.server
+
+## "kafka.server" domain에서 제공하는 beans 목록을 확인한다. 
+$>beans
+
+## bean 중에서 "MessageInPerSec" metric을 선택한다. 
+$>bean kafka.server:name=MessagesInPerSec,type=BrokerTopicMetrics
+
+## "MessageInPerSec"에서 조회 가능한 값의 유형을 선택한다.
+$>info
+
+## info에서 출력된 목록 중 원하는 값의 유형을 선택한다. 
+$>get Count
+
+$>get MeanRate
+
+## JMXTERM 종료
+$>bye
+#bye
+```
+
