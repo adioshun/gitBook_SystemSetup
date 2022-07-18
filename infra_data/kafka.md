@@ -47,4 +47,16 @@ $ jconsole
 ```
 ![image](https://user-images.githubusercontent.com/17797922/179473800-018ad172-b626-40f2-b46f-486f99ca7833.png)
 
+---
 
+# JMXTerm
+![image](https://user-images.githubusercontent.com/17797922/179484025-f278f151-7de5-45e2-bbfd-2c2a73b3e59b.png)
+
+## 설치 
+
+```
+> curl -OL https://github.com/jiaqi/jmxterm/releases/download/v1.0.2/jmxterm-1.0.2-uber.jar
+$ java -jar jmxterm_xxx.jar
+```
+
+```
