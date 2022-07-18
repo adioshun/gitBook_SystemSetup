@@ -193,6 +193,12 @@ output{
 ```
 > https://github.com/freepsw/kafka-metrics-monitoring/tree/master/code/ch.04/01.setup_elasticstack
 
+
+실행 확인 
+```
+curl -X GET "localhost:9200/_cat/indices/"
+```
+
 ### 실습(file)
 
 1. logstash설정
