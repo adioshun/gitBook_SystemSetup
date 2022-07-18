@@ -136,11 +136,64 @@ $ curl -LO https://artifacts.elastic.co/downloads/logstash/logstash-oss-7.15.0-l
 $ tar xvf logstash-oss-7.15.0-linux-x86_64.tar.gz  
 $ rm -rf logstash-oss-7.15.0-linux-x86_64.tar.gz
 $ cd logstash-7.15.0
+
+## install jmx plugin(플러그인 설치)
+> bin/logstash-plugin install logstash-input-jmx
+
 ```
 
-> logstash도 일정의 consummer이다 
 
-## 설정 (실습 용도)  
+### 실습 (JMX)
+```
+> mkdir ~/jmx_conf
+> vi ~/jmx_conf/broker01.conf
+
+{
+  "host" : "broker-01", 
+  "port" : 9999,
+  "alias" : "broker01",
+  "queries" : [
+  {
+    "object_name" : "kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec",
+    "attributes" : [ "OneMinuteRate" ],
+    "object_alias" : "${type}.${name}"
+  }
+ ]
+}
+
+```
+
+```
+#broker01.conf에 정의된 metric 들을 수집하여,
+#elasticsearch로 전송하는 logstash 설정
+
+> mkdir ~/logstash_conf
+> vi ~/logstash_conf/logstash_jmx.conf
+
+> cd ~/logstash-7.10.2/
+> bin/logstash -f ~/logstash_conf/logstash_jmx.conf
+
+
+input {
+ jmx {
+  path => "/home/freepsw.10/jmx_conf"
+  polling_frequency => 1
+ }
+}
+
+output{
+ stdout {
+  codec => rubydebug
+ }
+ elasticsearch {
+   hosts => "localhost:9200"
+   index => "kafka_mon"
+ }
+}
+```
+> https://github.com/freepsw/kafka-metrics-monitoring/tree/master/code/ch.04/01.setup_elasticstack
+
+### 실습(file)
 
 1. logstash설정
 ```
