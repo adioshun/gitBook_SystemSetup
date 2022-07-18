@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/17797922/179491014-89dce7cb-24e5-4858-b962-83dda2c1d8b9.png)
+
 # logstash 설치 
 
 ## 사전 준비 
