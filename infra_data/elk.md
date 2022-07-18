@@ -66,9 +66,28 @@ output {
 }
 ```
 
+3. JMX 설정 
 
 ```
-#실습을 위한 임시 설정 
-Configure the logstash.yml
+> export LS_JAVA_OPTS='-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false 
+  -Dcom.sun.management.jmxremote.ssl=false 
+  -Dcom.sun.management.jmxremote.port=9998 
+  -Dcom.sun.management.jmxremote.rmi.port=9998 
+  -Djava.rmi.server.hostname=34.64.185.183'
 
+```
+
+4. 실행 
+```
+## thread 1개, batch size 1개로 데이터를 kafka로 전송
+$ ~/logstash-7.15.0/bin/logstash -w 1 -b 1 -f ~/logstash_conf/producer.conf
+```
+
+# TIP
+LS_JAVA_OPT 설정을 logstash 시작시에 기본으로 적용하는 방식
+```
+> vi logstash-7.15.0/config/jvm.options
+
+## 위 파일 내용에 아래 jmx 관련된 내용을 LS_JAVA_OPTS에 추가
+-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9998 -Dcom.sun.management.jmxremote.rmi.port=9998 -Djava.rmi.server.hostname=34.64.239.87
 ```
