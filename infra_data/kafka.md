@@ -45,4 +45,6 @@ $ env JMX_PORT=9999 bin/kafka-server-start.sh config/server.properties
 $ env JMX_PORT=9999 bin/kafka-server-start.sh -daemon config/server.properties
 $ jconsole
 ```
+![image](https://user-images.githubusercontent.com/17797922/179473800-018ad172-b626-40f2-b46f-486f99ca7833.png)
+
 
