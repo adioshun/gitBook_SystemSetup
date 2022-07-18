@@ -79,6 +79,7 @@ vm.max_map_count = 262144
 설정
 ```
 vi config/elasticsearch.yml
+node.name : node-1 #/etc/hosts 에도 
 ## Master Node의 후보 서버 목록을 적어준다. 후보가 없더라도 작성 필요 (여기서는 1대 이므로 본인의 서버 정보만)
 cluster.initial_master_nodes: ["kakfa-monitoring"]  # IP로 적으면 에러 발생 
 
