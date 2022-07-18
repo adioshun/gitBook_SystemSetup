@@ -7,6 +7,65 @@
 ![image](https://user-images.githubusercontent.com/17797922/179491779-127ef151-bfb9-47a8-a1aa-97e81313ca00.png)
 
 
+## 사전 작업 
+
+### 오류1) File Descriptor 오류 해결
+[1]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+file descriptor 갯수를 증가시켜야 한다.
+
+> 에러 : [1]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf
+
+```
+> sudo vi /etc/security/limits.conf
+# 아래 내용 추가 
+* hard nofile 70000
+* soft nofile 70000
+root hard nofile 70000
+root soft nofile 70000
+
+# 적용을 위해 콘솔을 닫고 다시 연결한다. (console 재접속)
+# 적용되었는지 확인
+> ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 59450
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 70000  #--> 정상적으로 적용됨을 확인함
+```
+
+### 오류2) virtual memory error 해결
+시스템의 nmap count를 증가기켜야 한다.
+
+> 에러 : [2]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
+
+```
+# 0) 현재 설정 값 확인
+> cat /proc/sys/vm/max_map_count
+65530
+
+# 아래 3가지 방법 중 1가지를 선택하여 적용 가능
+# 1-1) 현재 서버상태에서만 적용하는 방식
+> sudo sysctl -w vm.max_map_count=262144
+
+# 1-2) 영구적으로 적용 (서버 재부팅시 자동 적용)
+> sudo vi /etc/sysctl.conf
+# 아래 내용 추가
+vm.max_map_count = 262144
+
+# 1-3) 또는 아래 명령어 실행 
+> echo vm.max_map_count=262144 | sudo tee -a /etc/sysctl.conf
+
+# 3) 시스템에 적용하여 변경된 값을 확인
+> sudo sysctl -p
+vm.max_map_count = 262144
+```
+
+
 # logstash 설치 
 
 ## 사전 준비 
