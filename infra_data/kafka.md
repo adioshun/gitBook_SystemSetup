@@ -23,6 +23,8 @@ $ vi config/server.properties
 # advertised.listeners=PLAINTEXT://broker-01:9092 #hostname 지정
 ```
 
+--- 
+
 ## JMX enable
 bash콘솔에서 
 ```
@@ -37,9 +39,10 @@ $ echo $KAFKA_JMX_OPTS
 ```
 > 외부 접속을 위해 IP주소 입력
 
-## 카프카 서버 설정시 JMX 지정 하여 실행 하기 
+### 카프카 서버 설정시 JMX 지정 하여 실행 하기 
 ```
 $ env JMX_PORT=9999 bin/kafka-server-start.sh config/server.properties
 $ env JMX_PORT=9999 bin/kafka-server-start.sh -daemon config/server.properties
-
+$ jconsole
 ```
+
