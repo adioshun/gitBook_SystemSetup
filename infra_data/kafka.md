@@ -19,7 +19,8 @@ $ tar –xvzf kafka_2.13-3.2.0.tgz
 
 ## 설정 파일
 ```
- ~/kafka/config/   #핵심 설정 4개 
+$ vi config/server.properties
+# advertised.listeners=PLAINTEXT://broker-01:9092 #hostname 지정
 ```
 
 ## JMX enable
