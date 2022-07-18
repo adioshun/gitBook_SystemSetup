@@ -3,6 +3,10 @@
 
 - kibana : 일라스틱 서치 전용 시각화툴, 다른것은 안됨, 일라스틱의 내용은 풍부하게 시각화 
 
+
+![image](https://user-images.githubusercontent.com/17797922/179491779-127ef151-bfb9-47a8-a1aa-97e81313ca00.png)
+
+
 # logstash 설치 
 
 ## 사전 준비 
