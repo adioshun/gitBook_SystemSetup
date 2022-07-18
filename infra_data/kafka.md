@@ -159,4 +159,6 @@ akhq:
 > cd ~
 > java -Dmicronaut.config.files=akhq_config_simple.yml -jar akhq.jar
 
+# 추가 설정 들 : https://github.com/freepsw/kafka-metrics-monitoring/tree/master/code/ch.03/07.setup_akhq
+
 ```
