@@ -79,7 +79,7 @@ vm.max_map_count = 262144
 설정
 ```
 vi config/elasticsearch.yml
-## Master Node의 후보 서버 목록을 적어준다. (여기서는 1대 이므로 본인의 서버 정보만)
+## Master Node의 후보 서버 목록을 적어준다. 후보가 없더라도 작성 필요 (여기서는 1대 이므로 본인의 서버 정보만)
 cluster.initial_master_nodes: ["kakfa-monitoring"]  # IP로 적으면 에러 발생 
 
 ```
@@ -94,6 +94,30 @@ $ ./bin/elasticsearch -d -p elastic_pid -> (종료) pkill -F elastic_pid
 확인 
 ```
 curl -X GET "localhost:9200/?pretty"
+```
+
+---
+
+# 2. Kibana 설치 
+
+설치 
+```
+$ curl -OL https://artifacts.elastic.co/downloads/kibana/kibana-oss-7.10.2-linux-x86_64.tar.gz
+```
+
+설정 
+```
+## 외부에서 접속 할 수 있도록 설정한다. 
+> vi config/kibana.yml
+
+## 아래 내용 추가 (0.0.0.0은 모든 ip에서 접근이 가능한 설정. 운영환경에서는 특정 IP로 제한 필요)
+server.host: "0.0.0.0"
+```
+
+실행
+```
+$./bin/kibana
+#확인 http://localhost:5601
 ```
 
 ---
