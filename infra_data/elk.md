@@ -123,7 +123,8 @@ $./bin/kibana
 
 ---
 
-# logstash 설치 
+# 3. 수집기 설치 
+# 3-1. logstash 설치 
 
 ## 사전 준비 
 1. JMX 설치 및 port 설정
@@ -293,6 +294,71 @@ output {
 > mkdir ~/data
 > ~/logstash-7.15.0/bin/logstash -w 1 -b 1 --path.data ~/data/consumer_data -f ~/logstash_conf/consumer.conf
 ```
+
+
+# 3-2. MetricBeat 설치 
+
+> Filebeat, xxxBeat등이 있으며, 메트릭 정보를 수집 하는 MetricBeat 사용
+> Kafka를 기본 제공, 사용이 쉬움 -> Kibana에 자동으로 생김 
+
+![image](https://user-images.githubusercontent.com/17797922/179503629-c4ab78ac-1cbe-4f24-8985-f0fd2a77e3cd.png)
+
+![image](https://user-images.githubusercontent.com/17797922/179503851-13364aa9-96aa-4dc9-a742-97158b625f23.png)
+
+
+설치 
+```
+> curl -OL https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-oss-7.10.2-linux-x86_64.tar.gz
+```
+
+설정
+```
+## 1. 현재 활성돠된(사용 가능한) module을 확인한다. 
+> ./metricbeat modules list
+Enabled:
+system
+
+Disabled:
+apache
+docker
+http
+kafka  ## kafka는 기본으로 비활성화되어 있음. 
+....
+
+## 2. kafak module 활성화
+> ./metricbeat modules enable kafka
+Enabled kafka
+
+
+## 3. setup 명령어를 실행하면, metricbeat에서 수집한 데이터를 시각화할 화면과 index를 자동을 로딩한다. 
+> ./metricbeat setup -e kafka
+
+
+## 4. 모듈 설정 (블로커 IP주소등)
+> vi modules.d/kafka.yml
+- module: kafka
+  #metricsets:
+  #  - partition
+  #  - consumergroup
+  period: 3s
+  hosts: ["broker-01:9092"]
+```
+
+실행
+```
+> ./metricbeat -e
+```
+
+확인 
+```
+curl -X GET "localhost:9200/_cat/indices/"
+```
+
+
+
+---
+
+
 
 
 3. JMX 설정 
