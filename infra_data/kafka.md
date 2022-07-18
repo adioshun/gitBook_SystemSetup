@@ -135,3 +135,28 @@ cmak.zkhosts="broker-01:2181"
 
 > ~/CMAK-3.0.0.5/cmak-3.0.0.5/bin/cmak
 ```
+
+---
+
+# AKHQ
+
+```
+Download the AHKHQ
+> cd ~
+> curl -LO https://github.com/tchiotludo/akhq/releases/download/0.19.0/akhq.jar
+STEP 2.AKHQ 실행
+## 모니터링 할 broker 접속 정보를 config 파일에 추가
+> vi ~/akhq_config_simple.yml
+
+akhq:
+  connections:
+    local:
+      properties:
+        bootstrap.servers: "broker-01:9092"
+
+
+## AKHQ 실행
+> cd ~
+> java -Dmicronaut.config.files=akhq_config_simple.yml -jar akhq.jar
+
+```
