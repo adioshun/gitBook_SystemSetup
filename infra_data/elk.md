@@ -358,6 +358,7 @@ curl -X GET "localhost:9200/_cat/indices/"
 
 ---
 
+![image](https://user-images.githubusercontent.com/17797922/179505542-abe92e28-6965-4780-b359-4e15d0eca72d.png)
 
 
 
