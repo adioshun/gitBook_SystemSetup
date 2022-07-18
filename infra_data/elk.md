@@ -1,5 +1,8 @@
 ![image](https://user-images.githubusercontent.com/17797922/179491014-89dce7cb-24e5-4858-b962-83dda2c1d8b9.png)
 
+
+- kibana : 일라스틱 서치 전용 시각화툴, 다른것은 안됨, 일라스틱의 내용은 풍부하게 시각화 
+
 # logstash 설치 
 
 ## 사전 준비 
