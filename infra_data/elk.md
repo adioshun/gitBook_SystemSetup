@@ -151,7 +151,7 @@ $ cd logstash-7.15.0
 
 {
   "host" : "broker-01", 
-  "port" : 9999,
+  "port" : 9999,  #JMX port
   "alias" : "broker01",
   "queries" : [
   {
