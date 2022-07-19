@@ -41,15 +41,30 @@ $ echo $KAFKA_JMX_OPTS
 
 docker에 설정 하기 
 ```
-# https://blog.soga.ng/story/31/
+  kafka-1:
+    image: confluentinc/cp-kafka:latest
+    hostname: kafka1
+    depends_on:
+      - zookeeper-1
+      - zookeeper-2
+      - zookeeper-3
     environment:
-      JMX_PORT: 9093 # JMX(Java Management Extension)를 사용할 포트 지정
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper1:12181,zookeeper2:22181,zookeeper3:32181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:19092
+      
+      
+      JMX_PORT: 9999
       KAFKA_JMX_OPTS: -Dcom.sun.management.jmxremote=true 
                       -Dcom.sun.management.jmxremote.authenticate=false 
                       -Dcom.sun.management.jmxremote.ssl=false 
-                      -Djava.rmi.server.hostname={카프카 컨테이너의 아이피 주소} 
-                      -Dcom.sun.management.jmxremote.rmi.port=9393 
+                      -Djava.rmi.server.hostname=kafka1 
+                      -Dcom.sun.management.jmxremote.rmi.port=9999 
                       -Djava.net.preferIPv4Stack=true
+
+    ports:
+      - 19092:19092
+      - 9999:9999
 ```
 
 ### 카프카 서버 설정시 JMX 지정 하여 실행 하기 
